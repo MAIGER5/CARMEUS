@@ -1,0 +1,172 @@
+/* nav {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-right: 50px;
+}
+
+.ul_menu{
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-top: 10px;
+    gap: 5rem;
+
+}
+
+.ul_menu li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.ul_menu > li::after{
+    content: "\25B2";
+    display: inline-block;
+    transform: rotate(180deg);
+    font-size: 10px;
+}
+
+
+.contact{
+    border-radius: 50px;
+    background-color: rgb(18, 53, 99);
+    align-items: end;
+}
+
+.ul_menu ul{
+    display: none;
+    position: absolute;
+    width: 120px;
+    height: 180px;
+    background-color: aliceblue;
+    top: 60px;
+    left: 20px;
+    padding-top: 20px;
+    overflow: auto;
+    list-style: none;
+    color: black;
+}
+
+#aplication:hover ~ .dropDown1{
+    display: block;
+}
+
+#aplication:hover::after {
+    transform: rotate(0deg); 
+}
+
+#products:hover .dropDown2{
+    display: block;
+    left: 150px;
+}
+
+#products:hover::after {
+    transform: rotate(0deg); 
+} */
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    width: 80%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    /* border: 2px solid yellow; */
+}
+
+ul{
+    list-style: none;
+}
+
+nav img{
+    width: 150px;
+    height: 76px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) invert(100%);
+    cursor: pointer;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+    padding-top: 20px;
+}
+
+ul li a{
+    display: block;
+    padding: 10px 25px;
+    color: #ffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.boton{
+    background: rgb(8, 58, 118);
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #b44404;
+    -webkit-transition: ease-out 1s;
+    -moz-transition: ease-out 1s;
+    transition: ease-out 1s;
+}
+
+.boton:hover {
+    box-shadow: inset 300px 0 0 0 #b44404;
+    color: white;
+  }
+
+.triangulo::after{
+    content: "\25B2";
+    display: inline-block;
+    transform: rotate(180deg);
+    font-size: 10px;
+}
+
+.dropdowns li{
+    display: block;
+    color: black;
+    padding-inline: 50px;
+    padding-block: 15px;
+    cursor: pointer;
+
+}
+
+.dropdowns {
+    width: 150%;
+    background: white;
+    position: absolute;
+    z-index: 999;
+    padding-block: 20px 40px;
+    border: 0.001rem solid  rgb(201, 199, 199);
+    display: none;
+}
+    
+ul li:hover .dropdowns {
+    display: block;
+}
+
+
+ul li a:hover {
+    color: rgb(8, 146, 252);
+}
+
+ul li:hover .triangulo::after{
+    transform: rotate(0deg);
+}
+
+.dropdowns li:hover{
+    color: rgb(48, 187, 202);
+}
