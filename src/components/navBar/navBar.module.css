@@ -74,9 +74,22 @@
     margin: 0;
 }
 
+.contenedor {
+    padding-top: 10px;
+}
+
+.contenedorHome {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    background: transparent;
+    padding-top: 10px;
+
+}
+
 nav {
     width: 80%;
-    height: 90px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +99,11 @@ nav {
 
 ul{
     list-style: none;
+}
+
+nav > ul {
+    margin-top: 20px;
+    /* border: 2px solid red; */
 }
 
 nav img{
@@ -101,22 +119,22 @@ nav img{
 ul li{
     display: inline-block;
     position: relative;
-    padding-top: 20px;
 }
 
 ul li a{
     display: block;
-    padding: 10px 25px;
+    padding: 0px 35px;
     color: #ffff;
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .boton{
     background: rgb(8, 58, 118);
     border-radius: 30px;
     cursor: pointer;
+    padding-block: 10px;
     box-shadow: inset 0 0 0 0 #b44404;
     -webkit-transition: ease-out 1s;
     -moz-transition: ease-out 1s;
@@ -132,7 +150,7 @@ ul li a{
     content: "\25B2";
     display: inline-block;
     transform: rotate(180deg);
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .dropdowns li{
@@ -168,5 +186,29 @@ ul li:hover .triangulo::after{
 }
 
 .dropdowns li:hover{
-    color: rgb(48, 187, 202);
+    color: #b44404;
+}
+
+
+/*******SECTION SUPERIOS ****/
+
+div > section {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: auto;
+    /* border: 2px solid yellow; */
+
+}
+
+div > section li {
+    padding: 0px 25px;
+    color: #ffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+
 }
