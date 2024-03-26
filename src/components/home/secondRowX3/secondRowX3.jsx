@@ -3,27 +3,16 @@ import styles from './secondRowX3.module.css';
 
 export const SecondRowX3 = () => {
   return (
-    <div className={`container`}>
-        {/* <div className={`${styles.cardSmall}`}>
-            <div></div>
-            <div></div>
+    <div className={`container ${styles.contenedor}`}>
+        <div className={`${styles.cardSmall}`}>
+            <div>IMAGEN 1</div>
+            <div>TEXTO 1</div>
         </div>
         <div className={`${styles.cardSmall}`}>
-            <div></div>
-            <div></div>
+            <div>IMAGEN 2</div>
+            <div>TEXTO 2</div>
         </div>
-        <div>hola 3</div> */}
-      <div className="row border border-2 border-blue border-primary">
-        <div className="col border border-2 border-blue border-primary">
-          Column
-        </div>
-        <div className="col border border-2 border-blue border-primary">
-          Column
-        </div>
-        <div className="col-6 border border-2 border-primary">
-          Column
-        </div>
-      </div>
+        <div>IMAGEN 3</div>
     </div>
   )
 }
