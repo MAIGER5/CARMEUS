@@ -12,16 +12,8 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
 
-    transition: all .5s ease;
-    transform: translateX(0%);
 }
-
-/* .carrousel .grande.slider {
-    transition: all .5s ease;
-    transform: translateX(0%);
-} */
 
 .carrousel .imagen{
     width: calc(100% / 3);
@@ -31,9 +23,9 @@
 }
 
 .carrousel .puntos {
-    width: 100%;
+    width: 90%;
+    margin: auto;
     background-color: transparent;
-    padding: 1em;
 
     display: flex;
     flex-flow: row nowrap;
@@ -42,13 +34,14 @@
 }
 
 .carrousel .punto {
-    width: 1em;
-    height: 1em;
-    margin: 1em 1em 0;
-    border-radius: 50%;
-    border: 1px solid rgb(4, 73, 100);
+    width: 2em;
+    height: .2em;
+    margin: 0 .5em 0;
+    border-radius: px;
+    cursor: pointer;
+    background-color: rgb(187, 189, 201);
 }
 
 .carrousel .punto.activo {
-    background-color: blue;
+    background-color: orangered;
 }
