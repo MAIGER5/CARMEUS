@@ -1,3 +1,6 @@
+@import url("../../../variables.module.css");
+
+
 .contenedor {
     display: grid;
     grid-template-rows: 1fr;
@@ -5,12 +8,27 @@
     gap: 10px;
     /* border: 1px solid yellow; */
     margin: auto;
-    margin-top: 50px;
 }
 
 .contenedor div {
     border: 1px solid blue;
     text-align: center;
+    height: clamp(70px, 120px, 140px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.contenedor :nth-child(2) {
+    background-color: var(--blue2-color);
+}
+
+.contenedor :nth-child(odd) {
+    background-color: var(--blue3-color);
 }
 
 @media only screen and (max-width: 700px) {

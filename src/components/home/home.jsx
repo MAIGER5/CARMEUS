@@ -7,13 +7,16 @@ import { Carrusel } from "./carrusel/carrusel";
 
 export const Home = () => {
 
-    return (
-      <div className={`${styles.contenedor}`}>
-        <MainScreen/>
-        <FirstRowX3/>
-        {/* <SecondRowX3/> */}
-        <Carrusel/>
-      </div>
-    )
+  return (
+    <div className={`${styles.contenedor}`}>
+      <MainScreen/>
+      <h2 className={`container ${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
+      <FirstRowX3/>
+      {/* <SecondRowX3/> */}
+      {/* <Carrusel/> */}
+      <h2 className={`container ${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
+      <SecondRowX3/>
+    </div>
+  )
 
 }
