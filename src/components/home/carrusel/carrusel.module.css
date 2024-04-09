@@ -3,6 +3,7 @@
     overflow: hidden;
     margin: auto;
     padding-block: 1em;
+    /* border: 1px solid blue; */
 }
 
 .carrousel .grande {
@@ -12,14 +13,18 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 1.5em;
+    /* border: 1px solid red; */
+
+
 
 }
 
-.carrousel .imagen{
+.carrousel .cardsIndiv{
     width: calc(100% / 3);
     background-color: transparent;
     min-height: 10vh;
-    padding: 1.15em;
+    margin-inline: 40px;
 }
 
 .carrousel .puntos {
@@ -35,7 +40,7 @@
 
 .carrousel .punto {
     width: 2em;
-    height: .2em;
+    height: .3em;
     margin: 0 .5em 0;
     border-radius: px;
     cursor: pointer;

@@ -31,7 +31,7 @@
     background-color: var(--blue3-color);
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
     .contenedor {
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: 1fr;

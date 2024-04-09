@@ -1,36 +1,31 @@
 import React, { useState } from 'react';
 import styles from './carrusel.module.css'
+import { Card } from './card';
 
-const pictures = ["https://img.freepik.com/foto-gratis/retrato-abstracto-ojo-elegancia-mujeres-jovenes-generado-ai_188544-9712.jpg?size=626&ext=jpg&ga=GA1.1.1319243779.1711324800&semt=ais", "https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg", "https://img.freepik.com/foto-gratis/vibrantes-hojas-arce-otonales-belleza-natural-exhibida-generada-ia_188544-15039.jpg" ]
+const infoCards = [ 
+  {
+    id: 1,
+    image:"https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+    title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed facilis labore similique architecto ea, reprehenderi.'
+  },
+  {
+    id: 2,
+    image:"https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+    title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed facilis labore similique architecto ea, reprehenderi.'
+  },
+  {
+    id: 3,
+    image:"https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+    title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed facilis labore similique architecto ea, reprehenderi.'
+  },
+
+]
 
 
 export const Carrusel = () => {
 
   const [activeIndex, setActiveIndex ] = useState(0)
 
-  // const grande = document.querySelector('.grande');
-  // const punto = document.querySelectorAll('.punto');
-
-  //Saber la posicion de ese punto;
-  //Aplicar un transform translateX al grande
-  //QUITAR la clase activo al punto que hemos hecho CLICK
-  //AÑADIR la clase activo al punto que hemos hecho CLICK
-
-  // punto.forEach((cadaPunto, i)=>{
-  //   punto[i].addEventListener('click', ()=>{
-      
-  //     let position = i;
-  //     let opertation = position * -50;
-
-  //     grande.styles.transform = `translateX(${opertation}%)`
-
-  //     punto.forEach((cadaPunto, i)=>{
-  //       punto[i].classList.remove('activo');
-  //     });
-  //     punto[i].classList.add('activo');
-
-  //   })
-  // }
   
   const handlePointClick = (index)=>{
     setActiveIndex(index);
@@ -38,12 +33,17 @@ export const Carrusel = () => {
 
 
   return (
-    <div className={`container ${styles.carrousel}`}>
-      <div className={styles.grande} style={{transition: 'all .5s ease', transform: `translateX(${activeIndex * -33.3}%)` }}>
+    <div className={` ${styles.carrousel}`}>
+      <div className={styles.grande} style={{transition: 'all .5s ease', transform: `translateX(${activeIndex * -33.33}%)` }}>
 
         {
-          pictures.map((ele, index)=>
-            <img key={index} src={ele} alt="" className={styles.imagen}/>
+          infoCards.map((ele, index)=>
+            <Card className={styles.cardsIndiv}
+              key={index}
+              image={ele.image}
+              title={ele.title}
+            />
+            // <img key={index} src={ele} alt="" className={styles.imagen}/>
           )
         }
       </div>
