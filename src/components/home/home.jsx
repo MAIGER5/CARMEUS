@@ -4,6 +4,7 @@ import { FirstRowX3 } from "./firstRowX3/firstRowX3";
 import { SecondRowX3 } from "./secondRowX3/secondRowX3";
 import { Carrusel } from "./carrusel/carrusel";
 import { Card } from "./carrusel/card";
+import { ThirdRowX3 } from "./thirdRowX3/thirdRowX3";
 
 
 export const Home = () => {
@@ -20,6 +21,9 @@ export const Home = () => {
       </div>
       <div className={styles.cardX3}>  {/*this className is to hidden or show the component to make responsive*/}
         <SecondRowX3/>
+      </div>
+      <div className={styles.thirdCard}>  {/*this className is to hidden or show the component to make responsive*/}
+        <ThirdRowX3/>
       </div>
       {/* <Card/> */}
     </div>

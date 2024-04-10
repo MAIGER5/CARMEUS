@@ -11,6 +11,10 @@
     display: block;
 }
 
+.thirdCard{
+    margin-top: 90px;
+}
+
 .carrusel{
     display: none;
 }
