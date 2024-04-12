@@ -10,7 +10,7 @@ export const ThirdRowX3 = () => {
 
     {
       id: 1,
-      title: "Esta es  la Card del Title",
+      title: "Componente Three",
       image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi voluptate distinctio soluta debitis ipsam perspiciatis laboriosam !',
       buttomInfo: 'Productos & Servicios',
@@ -34,7 +34,7 @@ export const ThirdRowX3 = () => {
 
 
   return (
-    <div className={``}>
+    <div>
       <DataContext.Provider value={data1}>
         <Row_1Text_2Card/>
       </DataContext.Provider>      

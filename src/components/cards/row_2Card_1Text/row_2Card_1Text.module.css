@@ -10,8 +10,10 @@
     gap: 20px;
 }
 
+
+
 .cardBig {
-    background: white;
+    background: transparent;
     background-size: cover;
     background-position: center;
     width: 50%;
@@ -22,6 +24,8 @@
 }
 
 .firstCard{
+    background: transparent;
+
     padding-inline: 40px;
     height: 90%;
     display: flex;

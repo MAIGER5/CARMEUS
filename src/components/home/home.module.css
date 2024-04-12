@@ -12,11 +12,16 @@
 }
 
 .marginTop{
-    margin-top: 90px;
+    margin-top: 120px;
 }
 
 .carrusel{
     display: none;
+}
+
+.boxSombra{
+    background-color: var(--grey6-color);
+    padding-block: 100px;
 }
 
 @media only screen and (max-width: 1100px) {

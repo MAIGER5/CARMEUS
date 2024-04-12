@@ -30,7 +30,7 @@ export const Row_2Card_1Text = () => {
         <div className={styles.cardBig}>
           <div className={`card  ${styles.firstCard}`}>
             <div className="card-body">
-              <h1 className="card-title">{data[0].title}</h1>
+              <h1 className={`card-title ${styles.colorFuente}`}>{data[0].title}</h1>
               <p className="card-text">{data[0].description}.</p>
               <ButtomProduct infoboton={data[0].buttomInfo}/>
             </div>

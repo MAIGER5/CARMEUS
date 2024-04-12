@@ -1,0 +1,20 @@
+.contenedor {
+    position: absolute;
+    top: -160px;
+    left: 0;
+    width: 80%;
+    height: 350px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(92, 88, 88, 0.7)), url("https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px;
+}
+
+.contenedor h2, p{
+    color: white;
+    padding-block: 10px;
+}

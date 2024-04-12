@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import DataContext from '../../dataContext/dataContext';
-import { Row_2Card_1Text } from '../../cards/row_2Card_1Text/row_2Card_1Text';
+import { Row_1Text_1Img } from '../../cards/row_1Text_1Img/row_1Text_1Img';
 
+export const SixRowX2 = () => {
 
-
-export const FourRowX3 = () => {
-
-  const [ data2, setData2 ] = useState([  
+  const [ data4, setData4 ] = useState([  
 
     {
       id: 1,
-      title: "Componente Four",
+      title: "Componente Three",
       image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi voluptate distinctio soluta debitis ipsam perspiciatis laboriosam !',
       buttomInfo: 'Productos & Servicios',
@@ -35,8 +33,8 @@ export const FourRowX3 = () => {
 
   return (
     <div className={``}>
-      <DataContext.Provider value={data2}>
-        <Row_2Card_1Text/>
+      <DataContext.Provider value={data4}>
+        <Row_1Text_1Img/>
       </DataContext.Provider>      
     </div>
   )
