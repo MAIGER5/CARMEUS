@@ -10,6 +10,9 @@
     gap: 20px;
 }
 
+.firstCard p{
+    color: black;
+}
 .cardBig {
     background: transparent;
     background-size: cover;

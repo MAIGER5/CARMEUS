@@ -29,9 +29,10 @@
     border: 0;
 }
 
-.firstCard h1{
+.firstCard p{
     color: black;
 }
+
 
 .cardBig h1{
     width: 70%;
