@@ -7,6 +7,7 @@ import { ThirdRowX3 } from "./thirdRowX3/thirdRowX3";
 import { FourRowX3 } from "./fourRowX3/fourRowX3";
 import { FiveRowX3 } from "./fiveRowX3/fiveRowX3";
 import { SixRowX2 } from "./sixRowX2/sixRowX2";
+import { FloatCard } from "./floatCard/floatCard";
 // import { Card } from "./carrusel/card";
 
 
@@ -14,9 +15,14 @@ export const Home = () => {
 
   return (
     <div className={`${styles.contenedor}`}>
-      <MainScreen/>
+      <div className={styles.mainScreen}>
+        <MainScreen/>
+        <FloatCard/>
+      </div>
       <h2 className={`container ${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
-      <FirstRowX3/>
+      <div className={styles.firstCards}>
+        <FirstRowX3/>
+      </div>
       {/* <SecondRowX3/> */}
       <h2 className={`container ${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
       <div className={`container ${styles.carrusel}`}> {/*this className is to hidden or show the component to make responsive*/}

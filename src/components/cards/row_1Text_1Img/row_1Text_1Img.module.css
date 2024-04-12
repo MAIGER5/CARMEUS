@@ -69,3 +69,24 @@
     line-height: 30px;
     font-size: clamp(1rem, 0.3043rem + 1.28vw, 3rem)
 }
+
+@media only screen and (max-width: 1000px){
+    .contenedor{
+        display: block;
+        height: auto;
+    }
+
+    .group{
+        display: none;
+    }
+
+    .cardBig {
+        width: 100%;
+        margin: auto;
+    }
+
+    .firstCard{
+        padding-inline: 10px;
+        height: 100%;
+    }
+}

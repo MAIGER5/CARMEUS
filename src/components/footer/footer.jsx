@@ -59,39 +59,45 @@ export const Footer = () => {
             buttomInfo: "Contactanos"
         }
     ])
+
+    
   return (
-    <div className={` ${styles.contenedor}`}>
-        <div className={`${styles.contCards1}`}>
-            <div className={`${styles.card}`}>
-                <h5>Aplicaciones</h5>
-                <h5>Productos & Servicios</h5>
-                <h5>Sustentabilidad</h5>
-                <h5>Trabaja para Carmeus</h5>
+    <div className={` ${styles.boxPrincipal}`}>
+        <div className={styles.responsiveCard}>
+            <DataContext.Provider value={data5}>
+                <CardFooter/>
+            </DataContext.Provider>
+        </div>
+        <div className={` ${styles.contenedor}`}>
+            <div className={`${styles.contCards1}`}>
+                <div className={`${styles.card}`}>
+                    <h5>Aplicaciones</h5>
+                    <h5>Productos & Servicios</h5>
+                    <h5>Sustentabilidad</h5>
+                    <h5>Trabaja para Carmeus</h5>
+                </div>
+                <div className={`${styles.card}`}>
+                    <h5>Aplicaciones</h5>
+                    <h5>Productos & Servicios</h5>
+                    <h5>Sustentabilidad</h5>
+                    <h5>Trabaja para Carmeus</h5>
+                </div>
             </div>
-            <div className={`${styles.card}`}>
-                <h5>Aplicaciones</h5>
-                <h5>Productos & Servicios</h5>
-                <h5>Sustentabilidad</h5>
-                <h5>Trabaja para Carmeus</h5>
+            <div className={`${styles.contCards2}`}>
+                <div className={`${styles.card}`}>
+                    <h5>Aplicaciones</h5>
+                    <h5>Productos & Servicios</h5>
+                    <h5>Sustentabilidad</h5>
+                    <h5>Trabaja para Carmeus</h5>
+                </div>
+                <div className={`${styles.card}`}>
+                    <h5>Aplicaciones</h5>
+                    <h5>Productos & Servicios</h5>
+                    <h5>Sustentabilidad</h5>
+                    <h5>Trabaja para Carmeus</h5>
+                </div>
             </div>
         </div>
-        <div className={`${styles.contCards2}`}>
-            <div className={`${styles.card}`}>
-                <h5>Aplicaciones</h5>
-                <h5>Productos & Servicios</h5>
-                <h5>Sustentabilidad</h5>
-                <h5>Trabaja para Carmeus</h5>
-            </div>
-            <div className={`${styles.card}`}>
-                <h5>Aplicaciones</h5>
-                <h5>Productos & Servicios</h5>
-                <h5>Sustentabilidad</h5>
-                <h5>Trabaja para Carmeus</h5>
-            </div>
-        </div>
-        <DataContext.Provider value={data5}>
-            <CardFooter/>
-        </DataContext.Provider>
     </div>
   )
 }
