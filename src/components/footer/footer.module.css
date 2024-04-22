@@ -50,6 +50,45 @@
     z-index: 999;
 }
 
+.logoCarmeus{
+    width: 150px;
+    height: 60px;
+}
+
+.logoCarmeus img{
+    width: 100%;
+}
+
+.logosRedes{
+    display: flex;
+    gap: 16px;
+    font-size: 23px;
+}
+
+.logosRedes i{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logosRedes > :first-child{
+    background-color: transparent;
+    border-radius: 50%;
+    color: brown;
+}
+
+.logosRedes > :nth-child(2){
+    background-color: transparent;
+    border-radius: 50%;
+    color: blueviolet;
+}
+/* .logosRedes > :nth-child(2){
+    color: #3b5998;
+} */
+
+
 @media only screen and (max-width:1020px) {
 
     .responsiveCard{

@@ -15,7 +15,7 @@ export const CardFloat = () => {
         <img src={data[0].image} alt="" />
       </div>
       <div className={styles.bodyText}>
-        <h3>{data[0].title}</h3>
+        <h1>{data[0].title}</h1>
         <a>{data[0].description}</a>
       </div>
       <div className={styles.Buttomes}>

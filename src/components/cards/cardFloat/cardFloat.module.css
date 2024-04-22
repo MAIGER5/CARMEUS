@@ -25,7 +25,7 @@
 
 
 .bodyText{
-    width: 40%;
+    width: 43%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,8 +33,13 @@
     color: black;
 }
 
+.bodyText h1{
+    font-size: 27px;
+    padding-block: 10px;
+}
+
 .Buttomes{
-    width: 32%;
+    width: 29%;
     display: flex;
     justify-content: center;
     align-items: end;
