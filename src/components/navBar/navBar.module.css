@@ -1,72 +1,4 @@
-/* nav {
-    width: 80%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    padding-right: 50px;
-}
 
-.ul_menu{
-    position: relative;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding-top: 10px;
-    gap: 5rem;
-
-}
-
-.ul_menu li{
-    list-style: none;
-    cursor: pointer;
-}
-
-.ul_menu > li::after{
-    content: "\25B2";
-    display: inline-block;
-    transform: rotate(180deg);
-    font-size: 10px;
-}
-
-
-.contact{
-    border-radius: 50px;
-    background-color: rgb(18, 53, 99);
-    align-items: end;
-}
-
-.ul_menu ul{
-    display: none;
-    position: absolute;
-    width: 120px;
-    height: 180px;
-    background-color: aliceblue;
-    top: 60px;
-    left: 20px;
-    padding-top: 20px;
-    overflow: auto;
-    list-style: none;
-    color: black;
-}
-
-#aplication:hover ~ .dropDown1{
-    display: block;
-}
-
-#aplication:hover::after {
-    transform: rotate(0deg); 
-}
-
-#products:hover .dropDown2{
-    display: block;
-    left: 150px;
-}
-
-#products:hover::after {
-    transform: rotate(0deg); 
-} */
 
 @import url('../../variables.module.css');
 
@@ -77,14 +9,16 @@
 
 .contenedor {
     padding-top: 10px;
+
 }
 
 .contenedorHome {
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 999;
-    background: transparent;
+    /* background: rgb(185, 9, 9); */
     padding-top: 10px;
+
 
 }
 
@@ -113,7 +47,6 @@ nav img{
     overflow: hidden;
     object-fit: cover;
     object-position: center;
-    filter: grayscale(100%) invert(100%);
     cursor: pointer;
 }
 
@@ -133,7 +66,7 @@ ul li a{
 }
 
 .boton{
-    background: rgb(8, 58, 118);
+    background: var(--blue2-color);
     border-radius: 30px;
     cursor: pointer;
     padding-block: 10px;

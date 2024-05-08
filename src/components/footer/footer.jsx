@@ -103,30 +103,34 @@ export const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <h6>Su Regón y Lenguaje</h6>
+                    <h6>Su Regón y Lenguaje
+                        <p>En</p>
+                    </h6>
                     <div>
                         <h1></h1>
                     </div>
                 </div>
                 <div className={`${styles.card}`}>
-                    <h6>Aplicaciones</h6>
-                    <h6>Productos & Servicios</h6>
-                    <h6>Sustentabilidad</h6>
-                    <h6>Trabaja para Carmeus</h6>
+                    <a>Aplicaciones</a>
+                    <a>Productos & Servicios</a>
+                    <a>Sustentabilidad</a>
+                    <a>Trabaja para Carmeus</a>
+                    <a>Soporte</a>
                 </div>
             </div>
             <div className={`${styles.contCards2}`}>
                 <div className={`${styles.card}`}>
-                    <h5>Aplicaciones</h5>
-                    <h5>Productos & Servicios</h5>
-                    <h5>Sustentabilidad</h5>
-                    <h5>Trabaja para Carmeus</h5>
+                    <h5>Carmeuse Foundation</h5>
+                    <p>Carmeuse is committed to providing financial support and volunteerism to organizations whose primary focus is to help underprivileged children in need with opportunities in education, training and mentoring.</p>
+                    <h6>Más información acerca de Fundtion</h6>
                 </div>
                 <div className={`${styles.card}`}>
-                    <h5>Aplicaciones</h5>
-                    <h5>Productos & Servicios</h5>
-                    <h5>Sustentabilidad</h5>
-                    <h5>Trabaja para Carmeus</h5>
+                    <h5>Compliance Concerns</h5>
+                    <p>If you have a compliance concern (we’ll keep it confidential).</p>
+                    <h6>Speak Up</h6>
+                    <h5>Supplier</h5>
+                    <h6>Read our Code of Conduct</h6>
+
                 </div>
             </div>
         </div>

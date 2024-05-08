@@ -8,6 +8,7 @@ import { FourRowX3 } from "./fourRowX3/fourRowX3";
 import { FiveRowX3 } from "./fiveRowX3/fiveRowX3";
 import { SixRowX2 } from "./sixRowX2/sixRowX2";
 import { FloatCard } from "./floatCard/floatCard";
+import { TextScreen } from "./textScreen/textScreen";
 // import { Card } from "./carrusel/card";
 
 
@@ -17,6 +18,8 @@ export const Home = () => {
     <div className={`${styles.contenedor}`}>
       <div className={styles.mainScreen}>
         <MainScreen/>
+        <dir className={styles.capa}></dir>
+        <TextScreen/>
         <FloatCard/>
       </div>
       <h2 className={`container ${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>

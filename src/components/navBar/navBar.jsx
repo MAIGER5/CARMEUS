@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './navBar.module.css';
+import carmeusWhite from '../utils/logos/carmeusWhite.png';
 import { useLocation } from 'react-router-dom'
 
 
@@ -10,7 +11,7 @@ export const NavBar = () => {
 
   return (
     <div className={`${location.pathname === '/'? styles.contenedorHome: styles.contenedor }`}>
-      <section>
+      <section className={styles.navbarUper}>
         <ul>
             <li>Acerca de Nosotros</li>
             <li>Actualidad</li>
@@ -18,8 +19,8 @@ export const NavBar = () => {
             <li>En</li>
         </ul>
       </section>
-      <nav className=''>
-          <img src="https://innofuelenergy.com/wp-content/uploads/2020/04/Carmeuse-Logo_2154-C.png" alt="" />
+      <nav className={styles.navbarMain}>
+          <img src={carmeusWhite} alt="" />
           <ul>
             <li><a href="">Nosotros</a></li>
             <li>

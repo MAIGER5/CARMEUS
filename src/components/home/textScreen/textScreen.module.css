@@ -1,0 +1,59 @@
+@import url('../../../variables.module.css');
+
+.contenedor {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+h1, p, button {
+    text-align: center;
+    color: white;
+}
+
+.contenedor h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.boton{
+    height: 50px;
+    width: 50%;
+    border-radius: 30px;
+    background-color: var(--orange2-color);
+    border: 0;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.3043rem + 0.85vw, 3rem);
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #ce5f28;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.8s;
+}
+
+
+
+.boton:hover {
+    box-shadow: inset 400px 0 0 0 var(--blue2-color);
+  }
+  
+
+  @media only screen and (max-width: 650px) {
+    .boton{
+        width: 100%;        
+    
+    }
+  }
+
+  @media only screen and (min-width: 761px) and (max-width: 1270px) {
+    .boton{
+        width: 70%;
+    }
+  }
