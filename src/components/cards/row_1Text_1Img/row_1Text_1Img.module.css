@@ -59,7 +59,7 @@
 
 .cardImg:hover {
     background-size: 101%; /* Escala la imagen de fondo un 5% más grande al hacer hover */
-    transition: background-size 1s; /* Aplica la transición solo en hover */
+    transition: background-size 0.6s; /* Aplica la transición solo en hover */
 }
 
 .cardImg h5 {

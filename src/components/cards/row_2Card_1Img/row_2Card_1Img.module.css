@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(196, 196, 202);
-    transition: background 1s;
+    transition: background 0.6s;
     cursor: pointer;
     font-size: clamp(1rem, 0.3043rem + 0.98vw, 3rem)
 }
@@ -39,7 +39,7 @@
 
 .group> :nth-child(2) {
     background: var(--blue2-color);
-    transition: background 0.8s;
+    transition: background 0.6s;
 
 }
 
@@ -60,7 +60,7 @@
 
 .cardImg img {
     width: 100%;
-    transition: transform 1s;
+    transition: transform 0.6s;
 }
 
 .cardSmall:hover img {
@@ -79,7 +79,7 @@
 
 
 .cardBig {
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(92, 88, 88, 0.7)), url("https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg");
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(92, 88, 88, 0.7)), url("https://www.xylem.com/es-pr/solutions/mining--quarrying--aggregates/contentassets/mining-industry.jpg");
     background-size: cover;
     background-position: center;
     width: 50%;
@@ -90,7 +90,7 @@
 
 .cardBig:hover {
     background-size: 101%; /* Escala la imagen de fondo un 5% más grande al hacer hover */
-    transition: background-size 1s; /* Aplica la transición solo en hover */
+    transition: background-size 0.6s; /* Aplica la transición solo en hover */
 }
 
 .cardBig h5 {

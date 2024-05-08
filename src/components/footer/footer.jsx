@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import styles from './footer.module.css'
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import carmeusWhite from '../utils/logos/carmeusWhite.png';
+import { FaFacebookF } from "react-icons/fa6";
+import { PiInstagramLogoLight } from "react-icons/pi";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+
+
+
+
+
+// import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import InstagramIcon from '@mui/icons-material/Instagram';
+// import YouTubeIcon from '@mui/icons-material/YouTube';
 import { CardFooter } from '../cards/cardFooter/cardFooter';
 import DataContext from '../dataContext/dataContext';
 
@@ -72,27 +84,35 @@ export const Footer = () => {
         </div>
         <div className={` ${styles.contenedor}`}>
             <div className={`${styles.contCards1}`}>
-                <div className={`${styles.card}`}>
-                    <div className={styles.logoCarmeus}><img src="https://innofuelenergy.com/wp-content/uploads/2020/04/Carmeuse-Logo_2154-C.png" alt="" /></div>
+                <div className={`${styles.card}`} id={styles.cardLogo}>
+                    <div className={styles.logoCarmeus}><img src={carmeusWhite} alt="" /></div>
                     <div>
-                        <h1>Join us on social networks</h1>
+                        <h6>Join us on social networks</h6>
                         <div className={styles.logosRedes}>
-                            <FacebookOutlinedIcon/>
-                            <LinkedInIcon/>
-                            <FacebookOutlinedIcon/>
-                            <FacebookOutlinedIcon/>
-
+                            <div className={styles.iconRedes}>
+                                <FaLinkedinIn />
+                            </div>
+                            <div className={styles.iconRedes}>
+                                <FaFacebookF />
+                            </div>
+                            <div className={styles.iconRedes}>
+                                <PiInstagramLogoLight />
+                            </div>
+                            <div className={styles.iconRedes}>
+                                <FaYoutube />
+                            </div>
                         </div>
                     </div>
+                    <h6>Su Regón y Lenguaje</h6>
                     <div>
                         <h1></h1>
                     </div>
                 </div>
                 <div className={`${styles.card}`}>
-                    <h5>Aplicaciones</h5>
-                    <h5>Productos & Servicios</h5>
-                    <h5>Sustentabilidad</h5>
-                    <h5>Trabaja para Carmeus</h5>
+                    <h6>Aplicaciones</h6>
+                    <h6>Productos & Servicios</h6>
+                    <h6>Sustentabilidad</h6>
+                    <h6>Trabaja para Carmeus</h6>
                 </div>
             </div>
             <div className={`${styles.contCards2}`}>
