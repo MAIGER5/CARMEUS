@@ -2,6 +2,7 @@
 
 .mainScreen{
     width: 100vw;
+    height: 800px;
     position: relative;
     margin-bottom: 230px;
 }
@@ -12,16 +13,24 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgb(87, 88, 87);
+    height: 800px;
+    background: rgb(197, 199, 204);
     opacity: 50%;
 
 }
 
+
 .title {
+    width: min(100% - 40px, 1300px);
+    margin: auto;
     margin-bottom: 30px;
     color: var(--grey1-color);
     font-weight: 500;
+    text-align: left;
+}
+
+.cardFloatResponsive{
+    display: none;
 }
 
 .firstCards{
@@ -30,25 +39,62 @@
 
 .cardX3{
     display: block;
+    width: min(100% - 40px, 1300px);
+    margin: auto;
+
 }
 
 .marginTop{
+    width: min(100% - 40px, 1300px);
+    margin: auto;
     margin-top: 120px;
+}
+
+/******* ESTE MARGINTOP2 ES PARA LAS TARJETAS QUE TIENEN UN BOX GRIS */
+.marginTop2{
+    width: min(100% - 40px, 1300px);
+    margin: auto;
 }
 
 .carrusel{
     display: none;
+    width: min(100% - 40px, 1300px);
+    margin: auto;
+
 }
 
 .boxSombra{
+    width: 100%;
     background-color: var(--grey6-color);
-    padding-block: 100px;
+    padding-block: 50px;
+    margin-top: 120px;
+
 }
 
-@media only screen and (max-width: 760px) {
-    .mainScreen{
 
-        margin-bottom: 50px;
+
+
+@media only screen and (max-width: 760px) {
+    
+    .mainScreen{
+        margin-bottom: 0px;
+        height: 700px;
+    }
+
+    .capa {
+        height: 700px;
+    }
+
+    .cardFloatNormal{
+        display: none;
+    }
+    
+    .cardFloatResponsive{
+        display: block;
+    }
+
+    #exploraPoductos{
+        display: none;
     }
     
 }
@@ -63,6 +109,17 @@
     }
     
     .marginTop{
-        margin-top: 30px;
+        margin-top: 0px;
     }
+
+    .firstCards{
+        margin-bottom: 50px;
+    }
+
+    .boxSombra{
+
+        margin-top: 20px;
+    
+    }
+
 }

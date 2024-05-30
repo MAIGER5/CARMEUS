@@ -8,22 +8,21 @@ export const SixRowX2 = () => {
 
     {
       id: 1,
-      title: "Componente SIX",
-      image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+      title: "COMPONENTE SIX",
+      image: "nueve",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi voluptate distinctio soluta debitis ipsam perspiciatis laboriosam !',
       buttomInfo: 'Productos & Servicios',
     },
     {
       id: 2,
-      title: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+      title: "nada",
+      image: "nueve",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.!',
       buttomInfo: 'Productos & Servicios',
     },
     {
       id: 3,
-      title: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+      title: "nueve",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       buttomInfo: 'Productos & Servicios',
     },

@@ -5,8 +5,6 @@
     width: 100%;
     height: 400px;
     display: flex;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 2fr; */
     gap: 20px;
 }
 
@@ -71,6 +69,7 @@
 .textInt {
     width: 100%;
     height: 50%;
+    font-size: calc(13px + .4vw);
     font-weight: 500;
     padding: 20px;
     margin-left: 5px;
@@ -79,25 +78,49 @@
 
 
 .cardBig {
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(92, 88, 88, 0.7)), url("https://www.xylem.com/es-pr/solutions/mining--quarrying--aggregates/contentassets/mining-industry.jpg");
-    background-size: cover;
-    background-position: center;
+    position: relative;
     width: 50%;
     overflow: hidden;
-    display: flex;
-    align-items: flex-end;
+
 }
 
-.cardBig:hover {
-    background-size: 101%; /* Escala la imagen de fondo un 5% más grande al hacer hover */
-    transition: background-size 0.6s; /* Aplica la transición solo en hover */
+.cardBig img{
+    width: 100%;
+    transition: transform 0.6s;
+
+}
+
+.cardBig::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b7e2f1;
+    background: linear-gradient(224deg,#b7e2f1 0%, #244a62 80%);
+    background: -webkit-linear-gradient(224deg,#b7e2f1 0%, #244a62 80%);
+    background: -moz-linear-gradient(224deg,#b7e2f1 0%, #244a62 80%);
+    opacity: 30%;
+    z-index: 1;
+
+
+
+}
+.cardBig:hover img {
+    transform: scale(1.05, 1.05);
+    z-index: 0;
 }
 
 .cardBig h5 {
+    position: absolute;
+    top: 65%;
+    left: 0;
     color: white;
     width: 80%;
     padding: 30px;
     line-height: 30px;
-    font-size: clamp(1rem, 0.3043rem + 1.28vw, 3rem)
+    font-size: calc(13px + .4vw);
+    z-index: 2;
 }
 

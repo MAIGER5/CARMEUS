@@ -1,59 +1,209 @@
 @import url('../../../variables.module.css');
 
 .contenedor {
-    width: 60%;
+    width: 30%;
+    height: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 20%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
+    background: var(--blue2-color);
+    opacity: 70%;
+    backdrop-filter: blur(5px);
+    padding-inline: 40px;
+    border: 2px solid rgb(209, 212, 219);
+    border-radius: 1px;
 }
 
-h1, p, button {
+h1, p {
     text-align: center;
     color: white;
+    padding-block: 15px;
+}
+
+button {
+    text-align: center;
+    color: var(--blue2-color);
+    padding-block: 15px;
 }
 
 .contenedor h1{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
 }
 
+
 .boton{
     height: 50px;
-    width: 50%;
+    width: 65%;
     border-radius: 30px;
-    background-color: var(--orange2-color);
-    border: 0;
+    background-color: white;
+    border: none;
     letter-spacing: 1.2px;
-    font-weight: 600;
-    font-size: clamp(1rem, 0.3043rem + 0.85vw, 3rem);
+    font-weight: 700;
+    font-size: calc(.6rem + .3vw);
     cursor: pointer;
-    box-shadow: inset 0 0 0 0 #ce5f28;
+    box-shadow: inset 0 0 0 0 var(--orange2-color);
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.8s;
+    padding-inline: 5px;
 }
 
 
 
 .boton:hover {
-    box-shadow: inset 400px 0 0 0 var(--blue2-color);
+    box-shadow: inset 400px 0 0 0 var(--orange2-color);
   }
   
 
-  @media only screen and (max-width: 650px) {
-    .boton{
-        width: 100%;        
+  @media only screen and (max-width: 320px) {
+
+    .contenedor {
+        height: 55%;
+        width: 80%;
+        left: 50%;
+        padding-inline: 20px;
+
+    }
+
+    .contenedor h1{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 13px;
+    }
     
+    .boton{
+        height: 40px;
+        width: 100%;
+
+    }
+    
+
+  }
+
+  @media (321px <= width <= 480px) {
+
+    .contenedor {
+        height: 55%;
+        width: 80%;
+        left: 50%;
+        padding-inline: 20px;
+
+    }
+
+    .contenedor h1{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+    
+    .boton{
+        height: 40px;
+        width: 100%;
+        font-size: 12px;
+        padding-block: 0px;
+
+
+    }
+    
+  }
+
+  @media (481px <= width <= 768px) {
+
+    .contenedor {
+        height: 45%;
+        width: 70%;
+        left: 50%;
+        padding-inline: 20px;
+
+    }
+
+    .contenedor h1{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+    
+    .boton{
+        height: 40px;
+        width: 75%;
+        font-size: 12px;
+        padding-block: 0px;
+
+
+    }
+    
+  }
+
+  @media (769px <= width <= 1024px) {
+
+    .contenedor {
+        height: 60%;
+        width: 40%;
+        left: 30%;
+        padding-inline: 20px;
+
+    }
+
+    .contenedor h1{
+        font-size: 40px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+    
+    .boton{
+        height: 40px;
+        width: 75%;
+        font-size: 14px;
+        padding-block: 0px;
     }
   }
+
+  @media (1025px <= width <= 1440px) {
+
+    .contenedor {
+        height: 60%;
+        width: 40%;
+        left: 30%;
+        padding-inline: 20px;
+
+    }
+
+    .contenedor h1{
+        font-size: 40px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+    
+    .boton{
+        height: 40px;
+        width: 75%;
+        font-size: 14px;
+        padding-block: 0px;
+    }
+  }
+
+
 
   @media only screen and (min-width: 761px) and (max-width: 1270px) {
     .boton{
         width: 70%;
     }
+
+
   }

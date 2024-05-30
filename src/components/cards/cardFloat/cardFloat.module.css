@@ -1,9 +1,9 @@
 .contenedor {
+    width: min(100% - 40px, 1000px);
     position: absolute;
     top: 101%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(90% - 20px, 900px);
     display: flex;
     height: 270px;
     background-color: var(--grey6-color);
@@ -12,6 +12,7 @@
 
 .images{
     width: 28%;
+    height: auto;
     overflow: hidden;
 }
 
@@ -21,8 +22,6 @@
     object-fit: cover;
     object-position: center;
 }
-
-
 
 .bodyText{
     width: 43%;
@@ -34,8 +33,18 @@
 }
 
 .bodyText h1{
-    font-size: 27px;
+    font-size: 29px;
     padding-block: 10px;
+    color: var(--grey1-color);
+    text-align: left;
+}
+
+.bodyText h6{
+    font-size: 15px;
+    line-height: 25px;
+    padding-block: 10px;
+    color: rgb(108, 115, 119);
+    text-align: left;
 }
 
 .Buttomes{
@@ -46,16 +55,19 @@
     padding-bottom: 30px;
 }
 
-
 @media only screen and (max-width: 760px) {
+
     .contenedor{
+        flex-direction: column;
+        gap: 30px;
         position: relative;
         top: 0;
         left: 0;
         transform: translate(0, 0);
         width: 100%;
-        margin: auto;display: block;
+        margin: auto;
         height: auto;
+        margin-bottom: 30px;
     }
 
     .images{
@@ -63,15 +75,19 @@
         height: 300px;
         overflow: hidden;
     }
-    
-    .images img{
-    }
 
     .bodyText{
         width: 100%;
+        padding: 0px 5px 0px 30px;
         padding-inline: 30px;
 
     }
+    .bodyText h1, .bodyText h6{
+        padding-block: 0px;
+
+
+    }
+
 
     .Buttomes{
         width: 100%;

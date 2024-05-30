@@ -2,7 +2,7 @@
 
 
 .contenedor{
-    height: 43px;
+    height: 50px;
     width: 50%;
     border-radius: 30px;
     background-color: var(--blue2-color);
@@ -24,15 +24,24 @@
   }
   
 
-  @media only screen and (max-width: 650px) {
+@media only screen and (max-width: 640px) {
     .contenedor{
         width: 100%;        
     
     }
-  }
+}
 
-  @media only screen and (min-width: 761px) and (max-width: 1270px) {
+@media only screen and (min-width: 641px) and (max-width: 1220px) {
+  .contenedor{
+      width: 35%;
+      align-self: flex-start;
+  }
+}
+
+
+  @media only screen and (min-width: 1021px) {
     .contenedor{
-        width: 70%;
+        width: 50%;
+        align-self: flex-start;
     }
   }

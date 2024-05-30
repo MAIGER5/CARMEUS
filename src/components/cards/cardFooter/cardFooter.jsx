@@ -18,7 +18,7 @@ export const CardFooter = () => {
           ? (
               <div key={dt.id}>
                 <h2>{dt.title}</h2>
-                <p>{dt.title}</p>
+                {/* <p>{dt.title}</p> */}
                 <ButtomProduct infoboton={dt.buttomInfo}/>
               </div>
             )

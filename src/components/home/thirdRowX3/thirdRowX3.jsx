@@ -10,22 +10,22 @@ export const ThirdRowX3 = () => {
 
     {
       id: 1,
-      title: "Componente Three",
-      image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+      title: "COMPONENTE THREE",
+      image: "tres",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi voluptate distinctio soluta debitis ipsam perspiciatis laboriosam !',
       buttomInfo: 'Productos & Servicios',
     },
     {
       id: 2,
       title: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+      image: "cuatro",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.!',
       buttomInfo: 'Productos & Servicios',
     },
     {
       id: 3,
       title: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
+      image: "cuatro",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       buttomInfo: 'Productos & Servicios',
     },

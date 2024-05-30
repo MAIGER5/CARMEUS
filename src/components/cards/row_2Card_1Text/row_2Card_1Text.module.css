@@ -8,6 +8,7 @@
     /* display: grid;
     grid-template-columns: 1fr 1fr 2fr; */
     gap: 20px;
+    /* border: 1px solid red; */
 }
 
 
@@ -25,23 +26,25 @@
 
 .firstCard{
     background: transparent;
-
-    padding-inline: 40px;
-    height: 90%;
+    height: 100%;
     display: flex;
-    align-items: end;
+    align-items: self-start;
     border: 0;
+    padding-inline: 50px;
 }
 
 .firstCard p{
     color: black;
+    text-align: left;
 }
 
 .cardBig h1{
-    width: 70%;
-    font-size: 50px;
-    font-weight: 400;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
     color: var(--blue2-color);
+    text-align: left;
+    padding-top: 0;
 }
 
 .group{
@@ -52,9 +55,12 @@
 
 
 .firstCard> :first-child{
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .cardSmall {
@@ -76,6 +82,10 @@
 
 }
 
+.group> :first-child {
+    background: var(--blue3-color);
+}
+
 .group> :nth-child(-n+2):hover {
     background: var(--orange2-color);
 }
@@ -83,6 +93,8 @@
 .textInt{
     display: flex;
     align-items: end;
+    font-size: calc(13px + .4vw);
+
 }
 
 .cardImg {
@@ -116,7 +128,8 @@
 
 @media only screen and (max-width: 1000px){
     .contenedor{
-        display: block;
+        display: grid;
+        gap: 0;
         height: auto;
     }
 
@@ -130,7 +143,7 @@
     }
 
     .firstCard{
-        padding-inline: 10px;
         height: 100%;
+        padding-inline: 0;
     }
 }

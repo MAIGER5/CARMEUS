@@ -20,15 +20,20 @@ export const Home = () => {
         <MainScreen/>
         <dir className={styles.capa}></dir>
         <TextScreen/>
+        <div className={styles.cardFloatNormal}>
+          <FloatCard/>
+        </div>
+      </div>
+      <div className={styles.cardFloatResponsive}>
         <FloatCard/>
       </div>
-      <h2 className={`container ${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
+      <h2 id={styles.exploraPoductos} className={`${styles.title}`}>Explora Nuestros Productos</h2>
       <div className={styles.firstCards}>
         <FirstRowX3/>
       </div>
       {/* <SecondRowX3/> */}
-      <h2 className={`container ${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
-      <div className={`container ${styles.carrusel}`}> {/*this className is to hidden or show the component to make responsive*/}
+      <h2 className={`${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
+      <div className={`${styles.carrusel}`}> {/*this className is to hidden or show the component to make responsive*/}
         <Carrusel/>
       </div>
       <div className={styles.cardX3}>  {/*this className is to hidden or show the component to make responsive*/}
@@ -37,14 +42,19 @@ export const Home = () => {
       <div className={styles.marginTop}>  {/*this className is to hidden or show the component to make responsive*/}
         <ThirdRowX3/>
       </div>
-      <div className={`${styles.marginTop} ${styles.boxSombra}`}>  {/*this className is to hidden or show the component to make responsive*/}
-        <FourRowX3/>
+      <div className={`${styles.boxSombra}`}>  {/*this className is to hidden or show the component to make responsive*/}
+        <div className={styles.marginTop2}>
+          <FourRowX3/>
+        </div>
       </div>
       <div className={styles.marginTop}>  {/*this className is to hidden or show the component to make responsive*/}
         <FiveRowX3/>
       </div>
-      <div className={`${styles.marginTop} ${styles.boxSombra}`}>  {/*this className is to hidden or show the component to make responsive*/}
-        <SixRowX2/>
+      <div className={`${styles.boxSombra}`}>  {/*this className is to hidden or show the component to make responsive*/}
+        <div className={styles.marginTop2}>
+          <SixRowX2/>
+        </div>
+
       </div>
       {/* <Card/> */}
     </div>

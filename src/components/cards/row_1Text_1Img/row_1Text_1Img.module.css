@@ -3,7 +3,7 @@
 
 .contenedor {
     width: 100%;
-    height: 350px;
+    height: auto;
     display: flex;
     /* display: grid;
     grid-template-columns: 1fr 1fr 2fr; */
@@ -12,6 +12,7 @@
 
 .firstCard p{
     color: black;
+    text-align: left;
 }
 .cardBig {
     background: transparent;
@@ -20,49 +21,82 @@
     width: 50%;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .firstCard{
+    width: 100%;
     background: transparent;
-
-    padding-inline: 40px;
     height: 90%;
     display: flex;
     align-items: end;
     border: 0;
 }
 
-.cardBig h1{
-    width: 70%;
-    font-size: 50px;
-    font-weight: 400;
-    color: var(--blue2-color);
+.firstCard > :first-child{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid black; */
 }
 
-.group{
-    width: 50%;
-    display: flex;
-    gap: 20px;
+
+.cardBig h1{
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--blue2-color);
+    text-align: left;
 }
+
 
 .cardImg {
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(92, 88, 88, 0.7)), url("https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+    position: relative;
+    width: 50%;
     overflow: hidden;
-    display: flex;
-    align-items: flex-end;
 }
 
-.cardImg:hover {
-    background-size: 101%; /* Escala la imagen de fondo un 5% más grande al hacer hover */
-    transition: background-size 0.6s; /* Aplica la transición solo en hover */
+.cardImg::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #b7e2f1;
+    background: linear-gradient(224deg,#b7e2f1 0%, #244a62 80%);
+    background: -webkit-linear-gradient(224deg,#b7e2f1 0%, #244a62 80%);
+    background: -moz-linear-gradient(224deg,#b7e2f1 0%, #244a62 80%);
+    opacity: 70%;
+    z-index: 1;
+}
+
+.cardImg img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s;
+    z-index: 0;
+
+}
+
+.cardImg:hover img{
+    transform: scale(1.05, 1.05);
+    z-index: 0;
+}
+
+.cardImg:hover::before {
+    z-index: 2; 
 }
 
 .cardImg h5 {
+    position: absolute;
+    top: 70%;
     color: white;
     width: 80%;
     padding: 30px;
@@ -70,13 +104,13 @@
     font-size: clamp(1rem, 0.3043rem + 1.28vw, 3rem)
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1020px){
     .contenedor{
-        display: block;
+        display: grid;
         height: auto;
     }
 
-    .group{
+    .cardImg{
         display: none;
     }
 
@@ -86,7 +120,6 @@
     }
 
     .firstCard{
-        padding-inline: 10px;
         height: 100%;
     }
 }

@@ -103,12 +103,12 @@ export const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <h6>Su Regón y Lenguaje
-                        <p>En</p>
-                    </h6>
-                    <div>
+                    <h6>Su Regón y Lenguaje <br /> <br />
+                    En</h6>
+                    {/* <p>En</p> */}
+                    {/* <div>
                         <h1></h1>
-                    </div>
+                    </div> */}
                 </div>
                 <div className={`${styles.card}`}>
                     <a>Aplicaciones</a>

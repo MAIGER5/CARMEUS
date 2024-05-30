@@ -8,13 +8,17 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-start;
-    padding: 90px;
+    padding: 10%;
 }
 
-.contenedor h2, p{
+h2{
+    width: 100%;
     color: white;
     padding-block: 10px;
+    text-align: center;
+
 }
 
 

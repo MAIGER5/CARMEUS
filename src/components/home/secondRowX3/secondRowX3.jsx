@@ -10,17 +10,17 @@ export const SecondRowX3 = () => {
   const [ data, setData ] = useState([  
     {
       id: 1,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaG88lIZ2nsmo2oCRx0GlvBmOFmbwlF3MV2DPqkShMcg&s",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi voluptate distinctio soluta debitis ipsam perspiciatis laboriosam !',
+      image: "uno",
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptates accusantium ducimus labore sequi soluta',
     },
     {
       id: 2,
-      image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi voluptate distinctio soluta debitis ipsam perspiciatis laboriosam !',
+      image: "dos",
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptates accusantium ducimus labore sequi soluta',
     },
     {
       id: 3,
-      image: "https://www.xylem.com/es-pr/solutions/mining--quarrying--aggregates/contentassets/mining-industry.jpg",
+      image: "imgUno",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptates accusantium ducimus labore sequi soluta',
     },
   ])
