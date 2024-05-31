@@ -7,18 +7,73 @@
     margin: 0;
 }
 
-.contenedor {
-    padding-top: 10px;
-}
-
-.contenedorHome {
+.contenedor{
     width: 100vw;
     position: fixed;
     z-index: 999;
-    /* background: rgb(185, 9, 9); */
-    padding-top: 10px;
+
+}
 
 
+.contenedorScrolled{
+    position: fixed;
+    background-color: white;
+    padding-block: 30px;
+    
+    & a{
+        color: var(--blue2-color);
+    };
+
+    & .navbarUper{
+        display: none;
+    };
+
+    & .boton{
+        color: white;
+    }
+
+    & nav img{
+        height: 67px;
+    }
+
+    & .contenedorIcons > :nth-child(2) {
+        background-color: var(--blue3-color);
+    }
+
+    & .contenedorIcons > :first-child {
+        color: var(--blue3-color);
+    }
+}
+
+.contenedorScrolled2{
+    position: fixed;
+    background-color: white;
+    padding-block: 30px;
+    
+    & a{
+        color: var(--blue2-color);
+    };
+
+    & .boton{
+        color: white;
+    }
+
+    & nav img{
+        height: 85px;
+    }
+
+    & .navbarUper li{
+        color: var(--grey3-color);
+        font-weight: 600;
+    };
+    
+    & .contenedorIcons > :nth-child(2) {
+        background-color: var(--blue3-color);
+    }
+
+    & .contenedorIcons > :first-child {
+        color: var(--blue3-color);
+    }
 }
 
 nav {
@@ -63,7 +118,7 @@ ul li{
 a{
     display: block;
     /* padding: 0px 25px; */
-    color: var(--blue2-color);
+    color: white;
     text-decoration: none;
     text-align: center;
     font-size: 17px;
@@ -267,6 +322,14 @@ div > section li:hover {
     
     .contenedorHome{
         padding-top: 0;
+    }
+
+    .contenedorScrolled{
+        padding-block: 0px;
+    }
+
+    .contenedorScrolled2{
+        padding-block: 0px;
     }
 
     .menuMobil{

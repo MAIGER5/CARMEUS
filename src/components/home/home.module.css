@@ -14,8 +14,23 @@
     left: 0;
     width: 100%;
     height: 800px;
-    background: rgb(197, 199, 204);
-    opacity: 50%;
+    background: #292020;
+    background: linear-gradient(46deg,#292020 40%, #6f757a 100%);
+    background: -webkit-linear-gradient(46deg,#292020 40%, #6f757a 100%);
+    background: -moz-linear-gradient(46deg,#292020 40%, #6f757a 100%);
+    opacity: 50%; 
+    
+    /* background: #453434;
+    background: linear-gradient(181deg,#453434 10%, #6f757a 80%);
+    background: -webkit-linear-gradient(181deg,#453434 10%, #6f757a 80%);
+    background: -moz-linear-gradient(181deg,#453434 10%, #6f757a 80%);
+    */
+
+    /* background: rgb(78, 78, 80); */
+    /* background: #453434;
+    background: linear-gradient(46deg,#453434 10%, #6f757a 80%);
+    background: -webkit-linear-gradient(46deg,#453434 10%, #6f757a 80%);
+    background: -moz-linear-gradient(46deg,#453434 10%, #6f757a 80%); */
 
 }
 

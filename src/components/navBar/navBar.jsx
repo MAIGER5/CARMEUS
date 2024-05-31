@@ -1,18 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './navBar.module.css';
 import { VscMenu } from "react-icons/vsc";
 import { IoSearchSharp } from "react-icons/io5";
 import carmeusWhite from '../utils/logos/carmeusWhite.png';
-import { useLocation } from 'react-router-dom'
+import carmeusBlue from '../utils/logos/blue.png';
+import { Link, useLocation } from 'react-router-dom'
 
 
 export const NavBar = () => {
 
   const location = useLocation();
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(()=>{
+    const handelScrolled = ()=>{
+      window.scrollY > 0 ? setScrolled(true): setScrolled(false)
+    };
+
+    window.addEventListener('scroll', handelScrolled);
+
+    return ()=>{
+      window.removeEventListener('scroll', handelScrolled);
+    };
+
+  },[])
+
+  const colorChangeNavbar = !scrolled && location.pathname ==='/'? styles.contenedorHome: scrolled && location.pathname ==='/'? styles.contenedorScrolled: !scrolled && location.pathname !=='/'? styles.contenedorScrolled2: styles.contenedorScrolled
+
+  const logoChange = !scrolled && location.pathname ==='/'? carmeusWhite : scrolled && location.pathname ==='/'? carmeusBlue: !scrolled && location.pathname !=='/'? carmeusBlue: carmeusBlue
+  
+  const logoChangeMobil = !scrolled && location.pathname ==='/'? carmeusWhite : scrolled && location.pathname ==='/'? carmeusBlue: !scrolled && location.pathname !=='/'? carmeusBlue: carmeusBlue
+
 
   return (
-    <div className={`${location.pathname === '/'? styles.contenedorHome: styles.contenedor }`}>
+    <div className={`${styles.contenedor} ${colorChangeNavbar}`}>
       <section className={styles.navbarUper}>
         <ul>
             <li>Acerca de Nosotros</li>
@@ -21,10 +43,11 @@ export const NavBar = () => {
             <li>En</li>
         </ul>
       </section>
-      <nav className={styles.navbarMain}>
-          <img src={carmeusWhite} alt="" />
+      <nav className={logoChange}>
+          <img src={logoChange} alt="" />
           <ul>
-            <li><a href="">Nosotros</a></li>
+            <li><Link to={'/aboutUs'}> <a href="">Nosotros</a> </Link>
+            </li>
             <li>
               <a className={styles.triangulo} href="">Aplicaciones </a>
               <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
@@ -78,7 +101,7 @@ export const NavBar = () => {
       </nav>
       <div className={styles.menuMobil}>
         <div className={styles.contenedorLogo}>
-          <img src={carmeusWhite} alt="" />
+          <img src={logoChangeMobil} alt="" />
         </div>
         <div className={styles.contenedorIcons}>
           <div><IoSearchSharp/></div>

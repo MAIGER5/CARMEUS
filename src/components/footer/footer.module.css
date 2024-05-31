@@ -14,7 +14,7 @@
     display: flex;
     gap: 16px;
     justify-content: space-between;
-    padding: 90px;
+    padding-inline: 230px;
     padding-top: 220px;
     margin-top: 230px;
     /* border: 1px solid blue; */
@@ -119,7 +119,7 @@
     gap: 40px;
 }
 
-@media only screen and (max-width:1020px) {
+@media only screen and (max-width:1200px) {
 
     .responsiveCard{
         position: relative;
@@ -130,6 +130,7 @@
 
     .contenedor{
         padding-top: 70px;
+        padding-inline: 100px;
         height: auto;
         margin-top: 0;
     }
@@ -146,7 +147,7 @@
 @media only screen and (max-width:640px) {
     .contenedor{
         flex-direction: column;
-        padding: 20px;
+        padding-inline: 50px;
         height: auto;
     }
 
@@ -161,3 +162,8 @@
     }
 }
 
+@media (1440px >= width >= 1201px){
+    .contenedor{
+        padding-inline: 100px;
+    }
+}

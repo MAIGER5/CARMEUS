@@ -1,0 +1,41 @@
+@import url('../../variables.module.css');
+
+
+
+.cards{
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-block: 150px;
+}
+
+
+.cards :first-child{
+    margin-block: 30px;
+}
+
+@media (470px >= width){
+    .cards{
+        margin-top: 390px;
+    }
+
+}
+
+@media (470px <= width <= 870px){
+    .cards{
+        margin-top: 300px;
+    }
+
+}
+
+
+@media (1020px >= width) {
+    .cards :first-child{
+        margin-block: 10px;
+    }
+
+    .cards{
+        width: 100%;
+        padding-inline: 25px;
+    }
+}

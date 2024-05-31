@@ -1,0 +1,50 @@
+@import url('../../../variables.module.css');
+
+
+.contenedor{
+    height: 50px;
+    width: auto;
+    background: transparent;
+    border: 0;
+    letter-spacing: 1.2px;
+    font-size: calc(.6rem + .3vw);
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    text-align: left;
+    color: var(--blue3-color);
+}
+
+
+
+.contenedor:hover {
+    color: var(--orange2-color);
+    background: transparent;
+    border: 0;
+    font-weight: 600;
+
+
+  }
+  
+
+@media only screen and (max-width: 640px) {
+    .contenedor{
+      width: 100%;        
+      font-size: calc(.6rem + .9vw);
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1220px) {
+  .contenedor{
+      width: 35%;
+      align-self: flex-start;
+
+  }
+}
+
+
+  @media only screen and (min-width: 1021px) {
+    .contenedor{
+        width: 50%;
+        align-self: flex-start;
+    }
+  }
