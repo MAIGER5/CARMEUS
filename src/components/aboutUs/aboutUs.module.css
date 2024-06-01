@@ -1,6 +1,11 @@
 @import url('../../variables.module.css');
 
 
+.contenedor{
+    position: relative;
+    margin-top: 152px;
+    /* border: 1px solid green; */
+}
 
 .cards{
     width: 80%;

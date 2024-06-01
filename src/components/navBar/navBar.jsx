@@ -4,10 +4,12 @@ import { VscMenu } from "react-icons/vsc";
 import { IoSearchSharp } from "react-icons/io5";
 import carmeusWhite from '../utils/logos/carmeusWhite.png';
 import carmeusBlue from '../utils/logos/blue.png';
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
 export const NavBar = () => {
+
+  const navigate = useNavigate();
 
   const location = useLocation();
 
@@ -32,6 +34,10 @@ export const NavBar = () => {
   
   const logoChangeMobil = !scrolled && location.pathname ==='/'? carmeusWhite : scrolled && location.pathname ==='/'? carmeusBlue: !scrolled && location.pathname !=='/'? carmeusBlue: carmeusBlue
 
+  const handleCickNavigate = (path)=>{
+    navigate(path)
+  }
+
 
   return (
     <div className={`${styles.contenedor} ${colorChangeNavbar}`}>
@@ -44,9 +50,9 @@ export const NavBar = () => {
         </ul>
       </section>
       <nav className={logoChange}>
-          <img src={logoChange} alt="" />
+          <img onClick={()=>handleCickNavigate('/')} src={logoChange} alt="" />
           <ul>
-            <li><Link to={'/aboutUs'}> <a href="">Nosotros</a> </Link>
+            <li onClick={()=>handleCickNavigate('/aboutUs')}><a href="">Nosotros</a>
             </li>
             <li>
               <a className={styles.triangulo} href="">Aplicaciones </a>
@@ -63,7 +69,7 @@ export const NavBar = () => {
               </ul>
             </li>
             <li>
-              <a className={styles.triangulo} href="">Productos </a>
+              <a onClick={()=>handleCickNavigate('/products')} className={styles.triangulo} href="">Productos </a>
               <ul id={styles.dropDos} className={`${styles.dropdowns}`}>
                 <li>
                   <h6>Cales</h6>
@@ -101,7 +107,7 @@ export const NavBar = () => {
       </nav>
       <div className={styles.menuMobil}>
         <div className={styles.contenedorLogo}>
-          <img src={logoChangeMobil} alt="" />
+          <img onClick={()=>handleCickNavigate('/')} src={logoChangeMobil} alt="" />
         </div>
         <div className={styles.contenedorIcons}>
           <div><IoSearchSharp/></div>

@@ -7,18 +7,28 @@
     margin: 0;
 }
 
-.contenedor{
-    width: 100vw;
+.contenedor {
+    width: 100%;
+    height: auto;
     position: fixed;
     z-index: 999;
-
-}
+    top: 0; /* Siempre está en la parte superior */
+    /* border: 1px solid red; */
+  }
+  
+  .contenedorHome {
+    top: 0;
+  }
+  
+  .contenedorScrolled, .contenedorScrolled2 {
+    top: 0;
+  }
 
 
 .contenedorScrolled{
     position: fixed;
     background-color: white;
-    padding-block: 30px;
+    padding-block: 20px;
     
     & a{
         color: var(--blue2-color);
@@ -48,7 +58,7 @@
 .contenedorScrolled2{
     position: fixed;
     background-color: white;
-    padding-block: 30px;
+    padding-block: 20px;
     
     & a{
         color: var(--blue2-color);
@@ -78,6 +88,7 @@
 
 nav {
     width: 80%;
+    margin: auto;
     margin-inline: auto;
     height: 60px;
     display: flex;
@@ -237,6 +248,7 @@ div > section {
     justify-content: end;
     align-items: center;
     margin: auto;
+    padding-top: 10px;
     /* border: 2px solid yellow; */
 
 }

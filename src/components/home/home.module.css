@@ -1,7 +1,7 @@
 @import url('../../variables.module.css');
 
 .mainScreen{
-    width: 100vw;
+    width: 100%;
     height: 800px;
     position: relative;
     margin-bottom: 230px;

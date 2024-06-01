@@ -1,0 +1,201 @@
+@import url('../../../variables.module.css');
+
+
+.contenedor{
+    position: relative;
+    margin: auto;
+    margin-top: 220px;
+    width: 80%;
+    height: auto;
+    /* border: 1px solid green; */
+}
+
+.products{
+    width: 90%;
+    display: block;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.products> h1{
+    color: var(--blue2-color);
+    text-align: left;
+    padding: 10px;
+}
+
+.description{
+    display: flex;
+    gap: 40px;
+    margin: 10px;
+    /* border: 1px solid black; */
+
+}
+
+.titles{
+    width: 40%;
+    display: flex;
+    align-items: center;
+
+}
+
+.titles> :first-child{
+    height: 90%;
+    border-left: 1px solid var(--blue2-color);
+    padding-left: 20px;
+}
+
+.titles p{
+    text-align: left;
+    color: var(--blue2-color);
+    font-weight: 400;
+    padding-block: 7px;
+    
+
+}
+
+.texto{
+    padding: 20px;
+    padding-inline: 60px;
+
+    /* border: 1px solid black; */
+
+}
+
+.cardProduct{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    margin-block: 90px;
+    /* border: 1px solid orange; */
+}
+
+.cardText{
+    width: 60%;
+    height: 100%;
+    /* background-color: var(--blue2-color); */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 90px;
+    /* border: 1px solid rgb(17, 17, 17); */
+
+}
+
+.contenedor > :nth-child(2),
+.contenedor > :nth-child(4) {
+    background-color: var(--blue2-color);
+}
+
+.contenedor > :nth-child(3) {
+    background-color: var(--blue3-color);
+}
+
+.cardText> h1, p{
+    text-align: left;
+}
+
+
+.cardText> button{
+    padding-inline: 40px;
+    color: var(--blue2-color);
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+}
+
+.cardImage{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(211, 177, 28);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images{
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    /* border: 1px solid orange; */
+}
+
+.images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border: 1px solid orange; */
+}
+
+.cardImage> :first-child,
+.cardImage> :nth-child(3){
+    border-right: 4px solid white;
+}
+
+.cardImage> :first-child,
+.cardImage> :nth-child(2){
+    border-bottom: 4px solid white;
+}
+
+
+@media (1022px >= width){
+    
+    .contenedor{
+        width: 100%;
+    }
+
+    .products{
+        width: 90%;
+    }
+
+    .products> h1{
+        padding: 0px;
+    }
+
+    .description{
+        flex-direction: column;
+        margin: 0px;
+
+    }
+
+    .titles> :first-child{
+        border-left: none;
+    }
+
+    .titles p{
+        padding-block: 3px;
+        
+
+    }
+
+    .texto{
+        padding: 0px;
+        padding-inline: 7px;
+        /* border: 1px solid black; */
+    }
+
+
+    .cardProduct{
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin-block: 90px;
+        /* border: 1px solid orange; */
+    }
+    
+    .cardText{
+        width: 100%;
+        padding: 40px;    
+    }
+
+    
+    .cardImage{
+        display: none;
+    }
+    
+    .contenedor{
+        margin-top: 190px;
+
+    }
+}
