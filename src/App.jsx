@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Home } from './components/home/home';
 import { NavBar } from './components/navBar/navBar';
@@ -12,7 +12,7 @@ import { ProductsGRAL } from './components/products/productsGRAL/productsGRAL';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <NavBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -20,7 +20,7 @@ function App() {
         <Route path='/products' element={<ProductsGRAL/>}/>
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

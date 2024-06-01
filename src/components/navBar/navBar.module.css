@@ -24,15 +24,19 @@
     top: 0;
   }
 
+  .menuPrincipal{
+    cursor: pointer;
+  }
 
 .contenedorScrolled{
     position: fixed;
     background-color: white;
     padding-block: 20px;
-    
-    & a{
+
+
+    & .menuPrincipal{
         color: var(--blue2-color);
-    };
+    }
 
     & .navbarUper{
         display: none;
@@ -60,9 +64,9 @@
     background-color: white;
     padding-block: 20px;
     
-    & a{
+    & .menuPrincipal{
         color: var(--blue2-color);
-    };
+    }
 
     & .boton{
         color: white;
@@ -126,7 +130,7 @@ ul li{
     position: relative;
 }
 
-a{
+.menuPrincipal{
     display: block;
     /* padding: 0px 25px; */
     color: white;
@@ -149,6 +153,7 @@ h6{
     padding: 0px 35px;
     background: var(--orange2-color);
     color: white;
+    border: none;
     border-radius: 30px;
     cursor: pointer;
     padding-block: 10px;
