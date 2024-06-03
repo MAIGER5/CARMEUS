@@ -1,0 +1,27 @@
+@import url('../../../variables.module.css');
+
+
+.contenedor{
+    display: flex;
+    height: 180px;
+    border: 1px solid green;
+}
+
+.contenedor> :first-child{
+    width: 30%;
+    height: 100%;
+    background: red;
+}
+
+.contenedor> :nth-child(2){
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contenedor> :nth-child(2) img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

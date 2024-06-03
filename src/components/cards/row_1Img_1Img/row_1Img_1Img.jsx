@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
-import styles from './row_2Card_1Img.module.css';
+import styles from './row_1Img_1Img.module.css';
 import { useLocation } from 'react-router-dom'
 import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage} from '@cloudinary/react';
 import DataContext from '../../dataContext/dataContext';
 
 
-export const Row_2Card_1Img = () => {
+export const Row_1Img_1Img = () => {
 
   const location = useLocation();
 
@@ -36,12 +36,6 @@ export const Row_2Card_1Img = () => {
                 <AdvancedImage cldImg={myImageCero} />
               </div>
               <div className={`${styles.textInt}`}>{data[0].description}</div>
-          </div>
-          <div className={`${styles.cardSmall}`}>
-              <div className={styles.cardImg}>
-                <AdvancedImage cldImg={myImageUno} />
-              </div>
-              <div className={`${styles.textInt}`}>{data[1].description}</div>
           </div>
         </div>
 
