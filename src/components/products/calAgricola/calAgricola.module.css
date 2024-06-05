@@ -1,0 +1,20 @@
+@import url('../../../variables.module.css');
+
+
+.contenedor{
+    position: relative;
+    margin-top: 152px;
+    /* border: 1px solid green; */
+}
+
+.cards{
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-block: 150px;
+}
+
+
+.cards :first-child{
+    margin-block: 30px;
+}

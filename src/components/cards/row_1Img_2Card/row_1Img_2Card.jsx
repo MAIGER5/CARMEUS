@@ -22,9 +22,9 @@ export const Row_1Img_2Card = () => {
     }
   });
 
-  const myImageCero = cld.image(data[0].image);
-  const myImageUno = cld.image(data[1].image);
-  const myImageBig = cld.image(data[2].image);
+  const myImageCero = cld.image(data[4].image);
+  const myImageUno = cld.image(data[5].image);
+  const myImageBig = cld.image(data[3].image);
   // console.log(data);
 
   return (
@@ -32,20 +32,20 @@ export const Row_1Img_2Card = () => {
 
         <div className={styles.cardBig}>
           <AdvancedImage cldImg={myImageBig} />
-          <h5>{data[2].description}</h5>
+          <h5>{data[3].description}</h5>
         </div>
         <div className={styles.group}>
           <div className={`${styles.cardSmall}`}>
               <div className={styles.cardImg}>
                 <AdvancedImage cldImg={myImageCero} />
               </div>
-              <div className={`${styles.textInt}`}>{data[0].description}</div>
+              <div className={`${styles.textInt}`}>{data[4].description}</div>
           </div>
           <div className={`${styles.cardSmall}`}>
               <div className={styles.cardImg}>
                 <AdvancedImage cldImg={myImageUno} />
               </div>
-              <div className={`${styles.textInt}`}>{data[1].description}</div>
+              <div className={`${styles.textInt}`}>{data[5].description}</div>
           </div>
         </div>
 

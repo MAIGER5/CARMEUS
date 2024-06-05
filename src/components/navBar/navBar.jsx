@@ -60,7 +60,7 @@ export const NavBar = () => {
           <li>
             <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones</span>
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
-              <li onClick={() => handleClickNavigate('/agriculture')}>Soluciones Agricolas</li>
+              <li onClick={() => handleClickNavigate('/CalAgricola')}>Soluciones Agricolas</li>
               <li onClick={() => handleClickNavigate('/construction')}>Ingenieria Civil & Construcción</li>
               <li onClick={() => handleClickNavigate('/chemical')}>Industria Químca</li>
               <li onClick={() => handleClickNavigate('/gas')}>Tratamiento de Gases & Combustión</li>
