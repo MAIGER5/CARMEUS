@@ -11,10 +11,16 @@
     width: 80%;
     margin: auto;
     display: block;
-    margin-block: 150px;
+    margin-block: 90px;
+    
 }
 
 
 .cards :first-child{
-    margin-block: 30px;
+    margin-top: 30px;
+}
+
+.cards2{
+    width: 80%;
+    margin: auto;
 }

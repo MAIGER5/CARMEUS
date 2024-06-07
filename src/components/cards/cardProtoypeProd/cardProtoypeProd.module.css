@@ -2,9 +2,11 @@
 
 .contenedor{
     margin: auto;
-    margin-top: 150px;
+    margin-top: 220px;
     height: auto;
     width: 80%;
+    display: flex;
+    flex-direction: column;
     /* border: 1px solid red; */
 }
 
@@ -12,8 +14,8 @@
     display: flex;
     padding: 0px 0px 00px 50px;
     gap: 60px;
-    margin-top: 250px;
-    background-color:var(--grey7-color);
+    /* margin-top: 250px; */
+    background-color:var(--grey6-color);
     box-shadow: -0.2px -0px 1px 0px rgba(81,84,84,0.42);
     -webkit-box-shadow: -0.2px -0px 1px 0px rgba(81,84,84,0.42);
     -moz-box-shadow: -0.2px -0px 1px 0px rgba(81,84,84,0.42);
@@ -22,7 +24,7 @@
 
 .cardDesciption{
     width: 60%;
-    padding: 50px 30px 0 20px;
+    padding: 50px 30px 30px 20px;
     /* border: 1px solid green; */
 
 }
@@ -34,9 +36,10 @@
 }
 
 .cardDesciption > p{
+    width: 90%;
     font-size: 1.25rem;
     color: var(--grey2-color);
-    text-align: justify;
+    text-align: justify
 
 }
 
@@ -52,6 +55,43 @@
     font-size: 32px;
 }
 
+.preguntas{
+    margin-top: 20px;
+}
+
+.preguntas > p{
+    color: var(--grey2-color);
+    font-size: 13px;
+    margin-bottom: 1px;
+}
+
+.preguntas > button{
+    background: var(--orange2-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+
+.cifrasEstad > h1{
+    color: var(--blue2-color);
+    text-align: left;
+}
+
+.cifrasEstad > span{
+    color: var(--grey3-color);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+
+
+.contEstadistic{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .cardConsiderations ul{
     list-style-type: none;

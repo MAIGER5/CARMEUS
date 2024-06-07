@@ -14,7 +14,6 @@
 
 .cardText{
     width: 50%;
-    height: 100%;
     padding-inline: 30px;
     padding-top: 10px;
     padding-bottom: 30px;
@@ -22,7 +21,7 @@
     /* border: 1px solid red; */
 }
 
-.cardText> h1{
+.cardText > h1{
     color: var(--blue2-color);
     text-align: left;
     font-size: 22px;
@@ -31,10 +30,39 @@
     /* border: 1px solid red; */
 }
 
-.cardText> span{
+.cardText > h6{
+    color: var(--grey2-color);
+    text-align: center;
+    opacity: 90%;
+    /* font-size: 22px; */
+    padding-block: 20px;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+.cardText span{
     color: var(--grey2-color);
     text-align: justify;
     line-height: 27px;
     
     /* border: 1px solid red; */
+}
+
+.especificacion  strong{
+    color: var(--grey2-color);
+    text-align: left;
+    font-weight: 00;
+    margin-bottom: 1px;
+}
+
+.especificacion > div{
+    padding-top: 10px;
+}
+
+.listaBenef{
+    margin-top: 30px;
+}
+
+.listaBenef strong{
+    color: var(--orange2-color);
 }

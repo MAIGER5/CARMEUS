@@ -10,6 +10,10 @@ export const CardFloat = () => {
 
   const data = useContext(DataContext);
 
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    return <div>No data available</div>;
+  }
+
   const cld = new Cloudinary({
     cloud: {
       cloudName: 'dbn2bb4e2'
