@@ -58,7 +58,7 @@ export const NavBar = () => {
         <ul>
           <li onClick={() => handleClickNavigate('/aboutUs')} className={`${styles.menuPrincipal}`}>Nosotros</li>
           <li>
-            <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones</span>
+            <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones  </span>
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
               <li onClick={() => handleClickNavigate('/CalAgricola')}>Soluciones Agricolas</li>
               <li onClick={() => handleClickNavigate('/construction')}>Ingenieria Civil & Construcción</li>
@@ -72,7 +72,7 @@ export const NavBar = () => {
             </ul>
           </li>
           <li>
-            <span onClick={()=> handleClickNavigate('/products')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Productos</span>
+            <span onClick={()=> handleClickNavigate('/products')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Productos  </span>
             <ul id={styles.dropDos} className={`${styles.dropdowns}`}>
               <li>
                 <h6>Cales</h6>

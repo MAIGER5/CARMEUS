@@ -19,11 +19,10 @@
     border-radius: 1px; */
 }
 
-h1, p {
+.contenedor > h1, p {
     text-align: center;
     color: white;
     padding-block: 15px;
-    text-wrap: balance;
 }
 
 button {

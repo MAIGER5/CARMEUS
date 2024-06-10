@@ -18,7 +18,7 @@ export const Home = () => {
     <div className={`${styles.contenedor}`}>
       <div className={styles.mainScreen}>
         <MainScreen/>
-        <dir className={styles.capa}></dir>
+        <div className={styles.capa}></div>
         <TextScreen/>
         <div className={styles.cardFloatNormal}>
           <FloatCard/>

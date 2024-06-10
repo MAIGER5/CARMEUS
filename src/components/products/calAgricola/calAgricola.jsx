@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
 import styles from './calAgricola.module.css';
 import DataContext from '../../dataContext/dataContext';
+import { LuDownload } from "react-icons/lu";
 import { ScreenForm1 } from '../../screens/screenFom1';
 import { CardText_X2_Prod } from '../../cards/cardText_X2_Prod/cardText_X2_Prod';
 import { CardProtoypeProd } from '../../cards/cardProtoypeProd/cardProtoypeProd';
 import { CardMercados } from '../../cards/cardMercados/cardMercados';
-
+import { SlChemistry } from "react-icons/sl";
+import { BsBuildingGear } from "react-icons/bs";
+import { LuConstruction } from "react-icons/lu";
+import { MdOutlineAgriculture } from "react-icons/md";
+import { MdOutlineGasMeter } from "react-icons/md";
+import { SiEquinixmetal } from "react-icons/si";
+import { FaHandHoldingWater } from "react-icons/fa";
+import { LiaNewspaper } from "react-icons/lia";
+import { GiMineTruck } from "react-icons/gi";
+import { BsMinecartLoaded } from "react-icons/bs";
+import { GiMiningHelmet } from "react-icons/gi";
+import { AiOutlineGold } from "react-icons/ai";
+import { GiMirrorMirror } from "react-icons/gi";
+import { CardDatasheet } from '../../cards/cardDatasheet/cardDatasheet';
 
 
 export const CalAgricola = () => {
@@ -68,50 +82,69 @@ export const CalAgricola = () => {
 
     {
       id:1,
-      icon: 'LuConstruction',
+      icon: <SlChemistry/>,
       title: "Cal Agricola",
     },
     {
       id:2,
-      icon: 'LuConstruction',
+      icon: <BsBuildingGear/>,
       title: "Cal Agricola",
     },
     {
       id:3,
-      icon: 'LuConstruction',
+      icon: <LuConstruction/>,
       title: "Cal Agricola",
     },
     {
       id:4,
-      icon: 'LuConstruction',
+      icon: <MdOutlineAgriculture/>,
       title: "Cal Agricola",
     },
     {
       id:5,
-      icon: 'LuConstruction',
+      icon: <MdOutlineGasMeter/>,
       title: "Cal Agricola",
     },
     {
       id:6,
-      icon: 'LuConstruction',
+      icon: <SiEquinixmetal/>,
       title: "Cal Agricola",
     },
     {
       id:7,
-      icon: 'LuConstruction',
+      icon: <FaHandHoldingWater/>,
       title: "Cal Agricola",
     },
     {
       id:8,
-      icon: 'LuConstruction',
+      icon: <LiaNewspaper/>,
       title: "Cal Agricola",
     },
     {
       id:9,
-      icon: 'LuConstruction',
+      icon: <AiOutlineGold/>,
       title: "Cal Agricola",
     },
   ])
+
+  const [ dataSheet, setDataSheet ] = useState([
+
+    {
+      id:1,
+      title: "Cal Agricola - Español",
+      icon: <LuDownload/>
+    },
+    {
+      id:2,
+      title: "Cal Agricola - Ingles",
+      icon: <LuDownload/>
+    },
+
+  ])
+
+
+
+
   return (
     <div className={styles.contenedor}>
       <DataContext.Provider value={dataScreen}>
@@ -128,6 +161,11 @@ export const CalAgricola = () => {
       <div className={styles.cards2}>
         <DataContext.Provider value={dataMercados}>
           <CardMercados/>
+        </DataContext.Provider>
+      </div>
+      <div className={styles.cards2}>
+        <DataContext.Provider value={dataSheet}>
+          <CardDatasheet/>
         </DataContext.Provider>
       </div>
     </div>

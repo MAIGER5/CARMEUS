@@ -24,9 +24,9 @@ h1{
 }
 
 .cards > :first-child {
-  font-size: 50px;
-  color: var(--grey2-color);
-  font-weight: 400;
+  font-size: 30px;
+  color: var(--blue2-color);
+  font-weight: 20px;
 }
 
 .cards > :nth-child(2) {

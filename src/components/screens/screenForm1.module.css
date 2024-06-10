@@ -41,8 +41,9 @@
     z-index: 3;
 }
 
-.cardDescription h1{
+.cardDescription > h1{
     text-align: justify;
+    color: white;
 }
 
 .cardDescription p{
