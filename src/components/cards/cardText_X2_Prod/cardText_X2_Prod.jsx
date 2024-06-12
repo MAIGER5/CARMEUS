@@ -18,8 +18,12 @@ export const CardText_X2_Prod = () => {
     const height1 = cardRef1.current.offsetHeight;
     const height2 = cardRef2.current.offsetHeight;
     const maxHeight = Math.max(height1, height2);
-    cardRef1.current.style.height = `${maxHeight}px`;
-    cardRef2.current.style.height = `${maxHeight}px`;
+    !window.innerWidth > 1250 ? (
+      cardRef1.current.style.height = `${maxHeight}px`,
+      cardRef2.current.style.height = `${maxHeight}px`
+    ) : null;
+    
+    
   }, []);
 
   return (
@@ -47,15 +51,7 @@ export const CardText_X2_Prod = () => {
             <span><strong>&#9632;   </strong>{data[0].vineta3}</span><br />
         </div>
       </div>
-      {/* <div className={styles.cardText} ref={cardRef2}>
-        <h1>{data[0].title2}</h1>
-        <span>{data[0].description2}</span>
-        <ol>
-          <li>{data[0].vineta1}</li> tengo problemas en este item el cual tiene un buttom muy excesivo
-          <li>{data[0].vineta2}</li>
-          <li>{data[0].vineta3}</li>
-        </ol>
-      </div> */}
+
     </div>
   );
 }

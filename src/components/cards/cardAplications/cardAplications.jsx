@@ -3,6 +3,7 @@ import styles from './cardAplications.module.css';
 import DataContext from '../../dataContext/dataContext';
 import {AdvancedImage} from '@cloudinary/react';
 import { Cloudinary } from '@cloudinary/url-gen/index';
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,17 +26,17 @@ export const CardAplications = () => {
 
   return (
 
-    <>
+    <div className={styles.contenedor}>
       {
-        data.map((ele)=>(
-          <div className={styles.contenedor}>
+        data.map((ele, index)=>(
+          <Link to={ele.link} className={styles.card} key={index}>
             <div>{ele.description}</div>
             <div>
               <AdvancedImage cldImg={cld.image(ele.image)} />
             </div>
-          </div>
+          </Link>
         ))
       }
-    </>
+    </div>
   )
 }

@@ -37,7 +37,7 @@
 
 .cardDesciption > p{
     width: 90%;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--grey2-color);
     text-align: justify
 
@@ -114,4 +114,33 @@
 .cardConsiderations li{
     padding-block: 10px;
     text-align: justify;
+}
+
+@media(width < 1250px){
+    .contenedor{
+        width: 100%;
+        margin-top: 0;
+    }
+    .cartFirstText{
+        background-color: transparent;
+
+    }
+    .contenedor .cartFirstText{
+        display: block;
+        padding: 0;
+        gap: 0;
+    }
+
+    .cardDesciption, .cardConsiderations{
+        width: 100%;
+        padding-inline: 20px;
+    }
+
+    .cardDesciption, .cardConsiderations > h1{
+        padding-bottom: 20px;
+    }
+
+    .cardDesciption > p{
+        width: 100%;
+    }
 }

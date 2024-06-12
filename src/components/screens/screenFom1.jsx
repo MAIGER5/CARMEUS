@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from 'react-router-dom'
 import styles from './screenForm1.module.css';
 import DataContext from "../dataContext/dataContext";
 import { Cloudinary } from "@cloudinary/url-gen";
@@ -7,6 +8,8 @@ import { useContext } from "react";
 
 
 export const ScreenForm1 = () =>{
+
+    const location = useLocation();
 
     const data = useContext(DataContext)
 
@@ -22,6 +25,19 @@ export const ScreenForm1 = () =>{
 
     const myImage = cld.image(data[0].image); 
 
+
+    const paths = {
+        path1: 'CalAgricola',
+        path2: 'CalHidratada',
+        path3: 'CalDolomita',
+        path4: 'CalViva',
+        path5: 'PiedraCaliza',
+        path6: 'Carbonato',
+        path7: 'Neutramol',
+    }
+
+    // const shouldDisplayDiv = Object.values(paths).every(path => location.pathname !== `/${path}`);
+
     return (
         <div className={styles.contenedor}>
             <AdvancedImage
@@ -32,6 +48,12 @@ export const ScreenForm1 = () =>{
                 <h1>{data[0].title}</h1>
                 <p>{data[0].description}</p>
             </div>
+            {/* {shouldDisplayDiv && (
+                <div className={styles.cardDescription}>
+                    <h1>{data[0].title}</h1>
+                    <p>{data[0].description}</p>
+                </div>
+            )} */}
         </div>
     );
 };

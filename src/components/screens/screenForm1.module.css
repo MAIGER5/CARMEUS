@@ -36,7 +36,7 @@
     transform: translate(-50%, -50%);
     width: 500px;
     background-color: var(--blue2-color);
-    padding: 60px;
+    padding: 70px 70px 30px 70px;
     opacity: 85%;
     z-index: 3;
 }
