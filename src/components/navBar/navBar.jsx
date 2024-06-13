@@ -1,17 +1,30 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from './navBar.module.css';
+import NavBarContext from '../dataContext/navBarContext';
 import { VscMenu } from "react-icons/vsc";
 import { IoSearchSharp } from "react-icons/io5";
 import carmeusWhite from '../utils/logos/carmeusWhite.png';
 import carmeusBlue from '../utils/logos/blue.png';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { AplicationPrototype } from '../aplications/aplicationPrototype/aplicationPrototype';
 
 export const NavBar = () => {
+
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
+  // document.addEventListener('DOMContentLoaded', (event) => {
+  //   const element = document.getElementById('navBar');
+  //   if (element) {
+  //       const height = element.offsetHeight;
+  //       console.log(height);
+  //   } else {
+  //       console.log('Elemento no encontrado');
+  //   }
+  // });
+  
   useEffect(() => {
     const handleScrolled = () => {
       window.scrollY > 0 ? setScrolled(true) : setScrolled(false);
@@ -38,8 +51,10 @@ export const NavBar = () => {
     navigate(path);
   };
 
+
+
   return (
-    <div className={`${styles.contenedor} ${colorChangeNavbar}`}>
+    <div id={styles.navBar} className={`${styles.contenedor} ${colorChangeNavbar}`}>
       <section className={styles.navbarUper}>
         <ul>
           <li onClick={() => handleClickNavigate('/aboutUs')}>Acerca de Nosotros</li>
@@ -98,7 +113,7 @@ export const NavBar = () => {
               </li>
             </ul>
           </li>
-          <li onClick={() => handleClickNavigate('/sustainability')}  className={`${styles.menuPrincipal} `}>Sostenibilidad</li>
+          <li onClick={() => handleClickNavigate('/plasticRubber')}  className={`${styles.menuPrincipal} `}>Sostenibilidad</li>
           <li onClick={() => handleClickNavigate('/services')} className={`${styles.menuPrincipal} `}>Servicios</li>
         </ul>
         <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>
@@ -117,6 +132,9 @@ export const NavBar = () => {
           <div onClick={() => handleClickNavigate('/menu')}><VscMenu/></div>
         </div>
       </div>
+      {/* <NavBarContext.Provider value={navbarHeight}>
+        <AplicationPrototype/>
+      </NavBarContext.Provider> */}
     </div>
   );
 };

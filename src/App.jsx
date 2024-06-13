@@ -16,6 +16,7 @@ import { Carbonato } from './components/products/carbonato/carbonato';
 import { Neutramol } from './components/products/neutramol/neutramol';
 import { Chemestry } from './components/aplications/chemestry/chemestry';
 import { AplicationPrototype } from './components/aplications/aplicationPrototype/aplicationPrototype';
+import { PlasticRubber } from './components/aplications/plastic&Rubber/plasticRubber';
 
 
 
@@ -50,7 +51,7 @@ function App() {
         <Route path='/pcc' element={<Neutramol/>}/>
         <Route path='/water' element={<Neutramol/>}/> */}
 
-        <Route path='/chemical/plasticRubber' element={<AplicationPrototype/>}/>
+        <Route path='/plasticRubber' element={<PlasticRubber/>}/>
 
       </Routes>
       <Footer/>

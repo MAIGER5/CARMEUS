@@ -29,7 +29,7 @@ export const CardAplications = () => {
     <div className={styles.contenedor}>
       {
         data.map((ele, index)=>(
-          <Link to={ele.link} className={styles.card} key={index}>
+          <Link to={`/${ele.link}`} className={styles.card} key={index}>
             <div>{ele.description}</div>
             <div>
               <AdvancedImage cldImg={cld.image(ele.image)} />
