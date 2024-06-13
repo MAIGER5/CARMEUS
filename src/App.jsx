@@ -15,6 +15,7 @@ import { PiedraCaliza } from './components/products/piedraCaliza/piedraCaliza';
 import { Carbonato } from './components/products/carbonato/carbonato';
 import { Neutramol } from './components/products/neutramol/neutramol';
 import { Chemestry } from './components/aplications/chemestry/chemestry';
+import { AplicationPrototype } from './components/aplications/aplicationPrototype/aplicationPrototype';
 
 
 
@@ -49,7 +50,7 @@ function App() {
         <Route path='/pcc' element={<Neutramol/>}/>
         <Route path='/water' element={<Neutramol/>}/> */}
 
-        <Route path='/plasticRubber' element={<Chemestry/>}/>
+        <Route path='/chemical/plasticRubber' element={<AplicationPrototype/>}/>
 
       </Routes>
       <Footer/>
