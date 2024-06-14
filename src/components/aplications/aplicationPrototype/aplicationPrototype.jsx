@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import styles from './aplicationPrototype.module.css';
 import Data2Context from '../../dataContext/data2Context';
 import { Cloudinary } from '@cloudinary/url-gen';
@@ -25,6 +25,77 @@ export const AplicationPrototype = () => {
   const myimage = cld.image(info[0].image)
   
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const menu = document.getElementById('menuFijar');
+      if (window.scrollY > 500 && window.scrollY <= 2200 && window.innerWidth >= 1240) {
+        menu.classList.add(styles.fixedUp);
+      } else {
+        menu.classList.remove(styles.fixedUp);
+        menu.classList.remove(styles.fixedDown);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+    const caracteristicasRef = useRef(null);
+    const productosRef = useRef(null);
+    const serviciosRef = useRef(null);
+  
+    const [activeRef, setActiveRef] = useState(null);
+
+    const scrollToRef = (ref) => {
+      window.scrollTo({
+        top: ref.current.offsetTop,
+        behavior: 'smooth'
+      });
+    };
+  
+    useEffect(() => {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            switch (entry.target) {
+              case caracteristicasRef.current:
+                setActiveRef(caracteristicasRef);
+                break;
+              case productosRef.current:
+                setActiveRef(productosRef);
+                break;
+              case serviciosRef.current:
+                setActiveRef(serviciosRef);
+                break;
+              default:
+                break;
+            }
+          }
+        });
+      }, options);
+  
+      if (caracteristicasRef.current) observer.observe(caracteristicasRef.current);
+      if (productosRef.current) observer.observe(productosRef.current);
+      if (serviciosRef.current) observer.observe(serviciosRef.current);
+  
+      // Cleanup observer on component unmount
+      return () => {
+        if (caracteristicasRef.current) observer.unobserve(caracteristicasRef.current);
+        if (productosRef.current) observer.unobserve(productosRef.current);
+        if (serviciosRef.current) observer.unobserve(serviciosRef.current);
+      };
+    }, []);
+
   return (
     <div className={styles.contenedor}>
 
@@ -43,15 +114,26 @@ export const AplicationPrototype = () => {
       </div>
 
       {/* este es la segunda card donde esta la barra de menu  a la izquierda*/}
-      <h1 className={styles.titlesComponents}>Caracteristicas & Beneficios</h1>
+      <h1 className={styles.titlesComponents} ref={caracteristicasRef}>Caracteristicas & Beneficios</h1>
       <div className={styles.contSecondCard}>
         {/**Barra lateral Izquierda**/}
-        <div id={styles.menuFijar} className={styles.menuLeft}>
+        <div id='menuFijar' className={styles.menuLeft}>
           <div>
-            <p>Características & Beneficios</p>
-            <p>Diseño Técnico</p>
-            <p>Productos Relacionados</p>
-          </div>
+            <p 
+              onClick={() => scrollToRef(caracteristicasRef)} 
+              className={activeRef === caracteristicasRef ? styles.activeMenuLeftItem: styles.menuLeftItem}>
+              Características & Beneficios
+            </p>
+            <p 
+              onClick={() => scrollToRef(productosRef)} 
+              className={activeRef === productosRef ? styles.activeMenuLeftItem: styles.menuLeftItem}>
+              Productos Relacionados
+            </p>
+            <p 
+              onClick={() => scrollToRef(serviciosRef)} 
+              className={activeRef === serviciosRef ? styles.activeMenuLeftItem: styles.menuLeftItem}>
+              Servicios Relacionados
+            </p>          </div>
           <div>
             <span>¿Tiene alguna pregunta sobre esta aplicación? Pregunte a nuestros especialistas.  </span>
             <button>CONTACTANOS</button>
@@ -86,7 +168,7 @@ export const AplicationPrototype = () => {
       </div>
 
       {/**Empieza aqui componente de productos relacionados**/}
-      <h1 className={styles.titlesComponents}>Productos Relacionados</h1>
+      <h1 className={styles.titlesComponents} ref={productosRef}>Productos Relacionados</h1>
       <div className={styles.productRelationed}>
         {
           info[2].data.length > 0?
@@ -107,7 +189,7 @@ export const AplicationPrototype = () => {
       {/**Termina aqui**/}
 
       {/**Empieza aqui componente de servicos relacionados**/}
-      <h1 className={styles.titlesComponents}>Servicios Relacionados</h1>
+      <h1 className={styles.titlesComponents} ref={serviciosRef}>Servicios Relacionados</h1>
       <div className={styles.productRelationed}>
       {
           info[3].data.length > 0?
