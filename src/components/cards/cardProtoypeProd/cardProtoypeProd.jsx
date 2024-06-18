@@ -40,7 +40,7 @@ export const CardProtoypeProd = () => {
           </div>
         </div>
         <div className={styles.cardConsiderations}>
-          <h1>Consideraciones Claves</h1>
+          <h1>CONSIDERACIONES CLAVES</h1>
           <ul>
             {
               data[0].consideraciones?

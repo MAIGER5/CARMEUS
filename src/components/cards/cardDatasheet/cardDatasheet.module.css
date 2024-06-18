@@ -1,5 +1,10 @@
 @import url('../../../variables.module.css');
 
+.container{
+  display: grid;
+  gap: 30px;
+}
+
 .container > h1{
   color: var(--blue2-color);
   text-align: left;

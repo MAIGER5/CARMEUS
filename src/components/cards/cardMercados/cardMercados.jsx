@@ -30,7 +30,7 @@ export const CardMercados = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Mercados Relacionados</h1>
+      <h1>MERCADOS RELACIONADOS</h1>
       <section className={styles.contenedor}>
         {
           data?

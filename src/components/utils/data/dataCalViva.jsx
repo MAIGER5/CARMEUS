@@ -64,6 +64,32 @@ const dataCalViva = {
     }
   ],
 
+  CardUses: [
+    {
+      id: 1,
+      title1: "PRODUCCION & ESPECIFICACIONES",
+      title2: "USOS DE LA CAL VIVA",
+      description1: 'Carmeuse suministra piedra caliza de alto contenido en calcio con un 95% o más de carbonato cálcico puro a través de una amplia red de minas subterráneas y de superficie. La piedra caliza con alto contenido en calcio se produce en una variedad de tamaños para satisfacer las necesidades de nuestros clientes, ya sea como piedra en bruto o como carbonato cálcico molido.',
+      description2: 'La piedra caliza con alto contenido en calcio es un material versátil que se utiliza en diversas industrias. Algunos de los principales usos de la piedra caliza con alto contenido en calcio son:',
+      benefits: [
+        'Fabricación de acero BOF y EAF como agente fundente para conseguir una química y propiedades físicas adecuadas de la escoria, eliminando así las impurezas del acero fundido.', 
+        'Reduce los patógenos en los biosólidos agrícolas.', 
+        'Reactivo para la neutralización de ácidos y el ajuste del pH.',
+        'Tratamiento del agua/eliminación de contaminantes.',
+        'Se utiliza para remediar los emplazamientos de lodos residuales y neutralizar el drenaje ácido de las minas.',
+        'Procesamiento de minerales - controla la flotación ajustando el pH y/o consumido en una reacción de metátesis.',
+        'Centrales eléctricas - Reduce las emisiones de gases ácidos al medio ambiente, lo que se conoce como tratamiento de gases de combustión (FGT) o desulfuración de gases de combustión (FGD).',
+        'Producción de papel - Mejora la eficacia de la caustificación.',
+      ] ,
+
+      // formula: 'CaCo3 + heat --> Cao = CO2',
+      especificacion1: 'Pureza del CaCO3:',
+      especificacion2: 'Tamaño:',
+      especificacion1Text: '95-98%.',
+      especificacion2Text: '2,5" hasta 7 micras',
+    }
+  ],
+
   Mercados: [
     {
       id: 1,

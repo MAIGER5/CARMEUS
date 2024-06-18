@@ -1,5 +1,9 @@
 @import url('../../../variables.module.css');
 
+
+.container{
+  margin-top: 80px;
+}
 .contenedor {
   width: 100%;
   display: flex;
@@ -13,7 +17,6 @@
     color: var(--blue2-color);
     text-align: left;
     margin-bottom: 30px;
-    padding: 20px;
 }
 .cards {
   width: 200px;

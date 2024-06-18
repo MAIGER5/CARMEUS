@@ -5,9 +5,8 @@ import { ScreenForm1 } from '../../screens/screenFom1';
 import { CardText_X2_Prod } from '../../cards/cardText_X2_Prod/cardText_X2_Prod';
 import { CardProtoypeProd } from '../../cards/cardProtoypeProd/cardProtoypeProd';
 import { CardMercados } from '../../cards/cardMercados/cardMercados';
-
-
 import { CardDatasheet } from '../../cards/cardDatasheet/cardDatasheet';
+import { CardUses } from '../../cards/cardUses/cardUses';
 import dataCalHidratada from '../../utils/data/dataCalHidratada';
 
 
@@ -15,11 +14,12 @@ export const CalHidratada = () => {
 
   const data = dataCalHidratada;
 
-  const [ dataScreen, setDataScreen ] = useState(data.Screen)
-  const [ dataCardProduct, setDataCardProduct ] = useState(data.CardProduct)
-  const [ dataCardTexct, setDataCardTexct ] = useState(data.CardTexct)
-  const [ dataMercados, setDataMercados ] = useState(data.Mercados)
-  const [ dataSheet, setDataSheet ] = useState(data.Sheet)
+  const [ dataScreen ] = useState(data.Screen)
+  const [ dataCardProduct ] = useState(data.CardProduct)
+  const [ dataCardTexct ] = useState(data.CardTexct)
+  const [ dataCardUses ] = useState(data.CardUses)
+  const [ dataMercados ] = useState(data.Mercados)
+  const [ dataSheet ] = useState(data.Sheet)
 
 
 
@@ -37,6 +37,9 @@ export const CalHidratada = () => {
           <CardText_X2_Prod/>
         </DataContext.Provider>
       </div>
+      <DataContext.Provider value={dataCardUses} >
+        <CardUses/>
+      </DataContext.Provider>
       <div className={styles.cards2}>
         <DataContext.Provider value={dataMercados}>
           <CardMercados/>

@@ -13,7 +13,7 @@ const dataCalDolomita = {
   Screen: [
     {
       id: 1,
-      image: 'agricola',
+      image: 'dolomita',
       title: "CAL DOLOMITA",
       description: 'Nuestra Cal viva Dolomítica tiene el contenido de magnesio adecuado para equilibrar y proteger sus refractarios. El contenido en calcio de la cal dolomítica se utiliza en combinación con la cal de alto contenido en calcio como agente fundente para conseguir una química de la escoria y unas propiedades físicas adecuadas. La cal viva dolomítica es fundamental para producir acero de calidad y controlar sus costes.'
     }
@@ -65,6 +65,25 @@ const dataCalDolomita = {
       especificacion1Text: '56-59%',
       especificacion2Text: '37-41%',
       especificacion3Text: 'de 2 ¼" a 0',
+    }
+  ],
+  CardUses: [
+    {
+      id: 1,
+      title1: "PRODUCCION & ESPECIFICACIONES",
+      title2: "USOS DE LA CAL DOLOMITA",
+      description2: 'Muchos procesos y sistemas industriales requieren cal viva dolomítica, o dolomía, para aplicaciones específicas, entre las que se incluyen:',
+      benefits: [
+        'Fabricación de acero BOF y EAF - se utiliza en combinación con cal de alto contenido en calcio como agente fundente para conseguir una química de la escoria y unas propiedades físicas adecuadas; un contenido adecuado de magnesio protege el refractario.',
+        'Fabricación de hidróxido de Ca-Mg: contenido máximo de calcio y magnesio.',
+        'Producción de fibra de vidrio: sirve como fundente para modificar la viscosidad, evitar la desvitrificación y aumentar la durabilidad del producto final y la resistencia al desgaste químico.',
+      ] ,
+
+      // formula: 'CaCo3 + heat --> Cao = CO2',
+      especificacion1: 'Pureza del CaCO3:',
+      especificacion2: 'Tamaño:',
+      especificacion1Text: '95-98%.',
+      especificacion2Text: '2,5" hasta 7 micras',
     }
   ],
 
@@ -119,12 +138,12 @@ const dataCalDolomita = {
   Sheet: [
     {
       id: 1,
-      title: "Cal Viva - Español",
+      title: "Cal Dolomita - Español",
       icon: <LuDownload />
     },
     {
       id: 2,
-      title: "Cal Viva - Ingles",
+      title: "Cal Dolomita - Ingles",
       icon: <LuDownload />
     },
   ]

@@ -8,6 +8,7 @@ import { CardProtoypeProd } from '../../cards/cardProtoypeProd/cardProtoypeProd'
 import { CardMercados } from '../../cards/cardMercados/cardMercados';
 import { CardDatasheet } from '../../cards/cardDatasheet/cardDatasheet';
 import dataCalDolomita from '../../utils/data/dataCalDolomita';
+import { CardUses } from '../../cards/cardUses/cardUses';
 
 
 export const CalDolomita = () => {
@@ -15,11 +16,12 @@ export const CalDolomita = () => {
 
   const data = dataCalDolomita;
 
-  const [ dataScreen, setDataScreen ] = useState(data.Screen)
-  const [ dataCardProduct, setDataCardProduct ] = useState(data.CardProduct)
-  const [ dataCardTexct, setDataCardTexct ] = useState(data.CardTexct)
-  const [ dataMercados, setDataMercados ] = useState(data.Mercados)
-  const [ dataSheet, setDataSheet ] = useState(data.Sheet)
+  const [ dataScreen ] = useState(data.Screen)
+  const [ dataCardProduct ] = useState(data.CardProduct)
+  const [ dataCardTexct ] = useState(data.CardTexct)
+  const [ dataCardUses ] = useState(data.CardUses)
+  const [ dataMercados ] = useState(data.Mercados)
+  const [ dataSheet ] = useState(data.Sheet)
 
 
 
@@ -38,6 +40,9 @@ export const CalDolomita = () => {
           <CardText_X2_Prod/>
         </DataContext.Provider>
       </div>
+      <DataContext.Provider value={dataCardUses} >
+        <CardUses/>
+      </DataContext.Provider>
       <div className={styles.cards2}>
         <DataContext.Provider value={dataMercados}>
           <CardMercados/>

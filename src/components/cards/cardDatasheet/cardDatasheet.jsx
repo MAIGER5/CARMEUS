@@ -18,7 +18,7 @@ export const CardDatasheet = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Documentación</h1>
+      <h1>DOCUMENTACION</h1>
       <section className={styles.contenedor}>
         <h1>Ficha Técnica</h1>
         <div>

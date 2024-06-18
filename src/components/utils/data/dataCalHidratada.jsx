@@ -13,7 +13,7 @@ const dataCalHidratada = {
   Screen: [
     {
       id: 1,
-      image: 'agricola',
+      image: 'hidratada',
       title: "CAL HIDRATADA",
       description: 'La Cal Hidratada de Carmeuse Colombia es de alta calidad y baja en contaminantes, siendo ideal para el proceso de trefilado en frío. En el tratamiento de aguas y efluentes industriales, la cal hidratada libera poco calor exotérmico al entrar en contacto con el agua, lo que facilita y hace más seguro su uso en determinadas aplicaciones en comparación con la cal viva.'
     }
@@ -53,14 +53,13 @@ const dataCalHidratada = {
       description1: 'La cal hidratada (Ca(OH)2) se produce al mezclar cal viva (CaO) con una cantidad de agua cuidadosamente controlada. Se obtiene así un producto de hidróxido cálcico seco, prácticamente exento de humedad y, por tanto, fácil de manipular y almacenar.',
       // description2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cumque soluta explicabo. Quos saepe amet dolore quis vero. Earum odio quaerat',
       benefits: [
-        'Agricultura - La cal hidratada con alto contenido en calcio es un material fácil de utilizar para la desinfección agrícola de camas de animales en establos y naves avícolas.',
-        '  Tratamiento del agua - ayuda a eliminar una amplia variedad de contaminantes del agua para mejorar la calidad, ajustar el pH y reducir los metales pesados en las aguas residuales.',
-        'Tratamiento de gases de combustión - Se utiliza en aplicaciones de lavado en seco para reducir los gases ácidos y los metales pesados.',
-        'Hierro y acero - La cal hidratada se utiliza en las fundiciones de hierro y acero como revestimiento de cal en los moldes para evitar que se peguen y proporcionar una protección temporal contra la corrosión de los productos acabados. También se utiliza en el tratamiento del agua en acerías.',
-        'Construcción - la cal hidratada es un aditivo antidesgaste probado para mitigar los agregados susceptibles a la humedad en mezclas asfálticas en caliente y templadas, aumentando el rendimiento y la esperanza de vida de los pavimentos.',
-        'Procesamiento químico - se utiliza como fuente de álcali, para ajustar el pH, como acelerante o en una reacción de metátesis.',
-        'No ferrosos - La cal hidratada se utiliza en instalaciones de procesamiento de minerales para reaccionar con y/o separar componentes valiosos como el cobre, el oro o el litio de su roca madre o salmuera.' 
+        'Alto contenido en calcio para un rendimiento superior.', 
+        'Alta pureza constante para obtener un rendimiento crítico por cada tonelada.', 
+        'Libera muy poco calor exotérmico al entrar en contacto con el agua, lo que facilita y hace más seguro su uso en determinadas aplicaciones en comparación con la cal viva con alto contenido en calcio o la sosa cáustica.',
+        'Varios grados disponibles para satisfacer sus necesidades específicas.',
+        'Se entrega in situ y lista para usar.',
       ] ,
+
 
       formula: 'CaO + H2O --> Ca(OH)2 + heat',
       especificacion1: 'Química:',
@@ -70,6 +69,30 @@ const dataCalHidratada = {
     }
   ],
 
+    CardUses: [
+    {
+      id: 1,
+      title1: "PRODUCCION & ESPECIFICACIONES",
+      title2: "USOS DE LA CAL HIDRATADA",
+      description1: 'Carmeuse suministra piedra caliza de alto contenido en calcio con un 95% o más de carbonato cálcico puro a través de una amplia red de minas subterráneas y de superficie. La piedra caliza con alto contenido en calcio se produce en una variedad de tamaños para satisfacer las necesidades de nuestros clientes, ya sea como piedra en bruto o como carbonato cálcico molido.',
+      description2: 'La piedra caliza con alto contenido en calcio es un material versátil que se utiliza en diversas industrias. Algunos de los principales usos de la piedra caliza con alto contenido en calcio son:',
+      benefits: [
+        'Agricultura - La cal hidratada con alto contenido en calcio es un material fácil de utilizar para la desinfección agrícola de camas de animales en establos y naves avícolas.',
+        '  Tratamiento del agua - ayuda a eliminar una amplia variedad de contaminantes del agua para mejorar la calidad, ajustar el pH y reducir los metales pesados en las aguas residuales.',
+        'Tratamiento de gases de combustión - Se utiliza en aplicaciones de lavado en seco para reducir los gases ácidos y los metales pesados.',
+        'Hierro y acero - La cal hidratada se utiliza en las fundiciones de hierro y acero como revestimiento de cal en los moldes para evitar que se peguen y proporcionar una protección temporal contra la corrosión de los productos acabados. También se utiliza en el tratamiento del agua en acerías.',
+        'Construcción - la cal hidratada es un aditivo antidesgaste probado para mitigar los agregados susceptibles a la humedad en mezclas asfálticas en caliente y templadas, aumentando el rendimiento y la esperanza de vida de los pavimentos.',
+        'Procesamiento químico - se utiliza como fuente de álcali, para ajustar el pH, como acelerante o en una reacción de metátesis.',
+        'No ferrosos - La cal hidratada se utiliza en instalaciones de procesamiento de minerales para reaccionar con y/o separar componentes valiosos como el cobre, el oro o el litio de su roca madre o salmuera.' 
+      ] ,
+
+      // formula: 'CaCo3 + heat --> Cao = CO2',
+      especificacion1: 'Pureza del CaCO3:',
+      especificacion2: 'Tamaño:',
+      especificacion1Text: '95-98%.',
+      especificacion2Text: '2,5" hasta 7 micras',
+    }
+  ],
   Mercados: [
     {
       id: 1,
