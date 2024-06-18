@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './aplicationPrototype.module.css';
 import Data2Context from '../../dataContext/data2Context';
 import { Cloudinary } from '@cloudinary/url-gen';
@@ -190,23 +191,27 @@ export const AplicationPrototype = () => {
 
       {/**Empieza aqui componente de servicos relacionados**/}
       <h1 className={styles.titlesComponents} ref={serviciosRef}>Servicios Relacionados</h1>
-      <div className={styles.productRelationed}>
+      <Link to={'/services'} className={styles.productRelationed}>
       {
           info[3].data.length > 0?
           info[3].data.map((ele, index)=> (
             <div className={styles.cardProductRelationed} key={index}>
-              <div> 
+              <div className={styles.cardImg}> 
                 <AdvancedImage cldImg={cld.image(ele.image)}/>
               </div>
               <div>
                 <h1>{ele.title}</h1>
-                <span>{ele.description}</span>
+                <span>{
+                  Array.isArray(ele.description)? 
+                  ele.description.map((item, ind)=> (<li key={ind}>{item}</li>))
+                  : ele.description
+                }</span>
               </div>
             </div>
           ))
           : <p>Error No hay Informacion</p>
         }
-      </div>
+      </Link>
       {/**Termina aqui**/}
 
 

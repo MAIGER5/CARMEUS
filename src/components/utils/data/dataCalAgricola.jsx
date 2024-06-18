@@ -1,0 +1,129 @@
+import React from 'react';
+import { SlChemistry } from 'react-icons/sl';
+import { BsBuildingGear } from 'react-icons/bs';
+import { LuConstruction, LuDownload } from 'react-icons/lu';
+import { MdOutlineAgriculture, MdOutlineGasMeter } from 'react-icons/md';
+import { SiEquinixmetal } from 'react-icons/si';
+import { FaHandHoldingWater } from 'react-icons/fa';
+import { LiaNewspaper } from 'react-icons/lia';
+import { AiOutlineGold } from 'react-icons/ai';
+
+const dataCalAgricola = {
+  
+  Screen: [
+    {
+      id: 1,
+      image: 'agricola',
+      title: "CAL AGRICOLA",
+      description: 'Como productor líder de cal viva con alto contenido en calcio, Carmeuse trabaja con usted para suministrarle un producto de alto rendimiento que satisfaga sus necesidades específicas. La cal viva con alto contenido de calcio, conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.'
+    }
+  ],
+
+  CardProduct: [
+    {
+      id: 1,
+      title1: "CAL AGRICOLA",
+      title2: "BENEFICIOS",
+      description: 'Nuestra cal viva Carmeuse con alto contenido en calcio procede de yacimientos selectos de caliza con alto contenido en calcio que no contienen más de un 5% de magnesio. Nuestro material se somete a pruebas rutinarias de calidad y consistencia, para garantizar la química y las propiedades físicas adecuadas para las aplicaciones industriales.',
+      cifra1: 10000,
+      cifra2: 17,
+      cifra3: 50,
+      cifra1text: 'Ton de Acero / año',
+      cifra2text: 'Ton de Acero / año',
+      cifra3text: 'Ton de Acero / año',
+      formula: 'CaCO3 • MgCO3 + heat --> CaO • MgO + 2 CO2',
+      consideraciones: [
+        'Proporciona un alto rendimiento. ',
+        'Atributos rentables y respetuosos con el medio ambiente.',
+        'Ventajas para numerosas aplicaciones industriales.',
+      
+      ]
+    }
+  ],
+
+  CardTexct: [
+    {
+      id: 1,
+      title1: "PRODUCCION & ESPECIFICACIONES",
+      title2: "BENEFICIOS",
+      description1: 'La Cal Viva con alto contenido en calcio (CaO) se produce cuando la piedra caliza, o carbonato cálcico (CaCO3), se calienta en un horno mediante el proceso de calcinación.',
+      // description2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cumque soluta explicabo. Quos saepe amet dolore quis vero. Earum odio quaerat',
+      benefits: [
+        'El alto contenido en calcio (CaO) proporciona un rendimiento superior para las necesidades de la aplicació.', 
+        'Fuente eficaz para el ajuste del pH y el control de la acidez.', 
+        'Uno de los materiales alcalinos más rentables, en comparación con los cáusticos y otros.', 'Fácilmente disponible a través de nuestra red de plantas en una variedad de tamaños, desde guijarros hasta finos', 'Ventajas de seguridad en comparación con la sosa cáustica',
+      ] ,
+
+      formula: 'CaCo3 + heat --> Cao = CO2',
+      especificacion1: 'Intervalo de contenido de calcio (CaO):',
+      especificacion2: 'Gama de tamaños:',
+      especificacion3: 'Reactividad:',
+      especificacion1Text: '93-97%',
+      especificacion2Text: 'de 2 ¼" a 0',
+      especificacion3Text: '30-50 °C aumento térmico mínimo de 3 minutos',
+    }
+  ],
+
+  Mercados: [
+    {
+      id: 1,
+      icon: <SlChemistry />,
+      title: "Industria Química ",
+    },
+    {
+      id: 2,
+      icon: <BsBuildingGear />,
+      title: "Ingenieria Civil & Construcción",
+    },
+    {
+      id: 3,
+      icon: <LuConstruction />,
+      title: "Hierro & Acero",
+    },
+    {
+      id: 4,
+      icon: <MdOutlineAgriculture />,
+      title: "Soluciones Agricolas",
+    },
+    {
+      id: 5,
+      icon: <MdOutlineGasMeter />,
+      title: "Tratamiento de Gases & Combustión",
+    },
+    {
+      id: 6,
+      icon: <SiEquinixmetal />,
+      title: "Cerámica & Vidrio",
+    },
+    {
+      id: 7,
+      icon: <FaHandHoldingWater />,
+      title: "Tratamiento de Agua",
+    },
+    {
+      id: 8,
+      icon: <LiaNewspaper />,
+      title: "PCC y Pulpa & Paper",
+    },
+    {
+      id: 9,
+      icon: <AiOutlineGold />,
+      title: "Minería & Metales No Ferrosos",
+    },
+  ],
+
+  Sheet: [
+    {
+      id: 1,
+      title: "Cal Viva - Español",
+      icon: <LuDownload />
+    },
+    {
+      id: 2,
+      title: "Cal Viva - Ingles",
+      icon: <LuDownload />
+    },
+  ]
+}
+
+export default dataCalAgricola;

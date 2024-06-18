@@ -132,9 +132,6 @@ export const NavBar = () => {
           <div onClick={() => handleClickNavigate('/menu')}><VscMenu/></div>
         </div>
       </div>
-      {/* <NavBarContext.Provider value={navbarHeight}>
-        <AplicationPrototype/>
-      </NavBarContext.Provider> */}
     </div>
   );
 };

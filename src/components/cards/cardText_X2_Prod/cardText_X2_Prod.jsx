@@ -46,9 +46,13 @@ export const CardText_X2_Prod = () => {
         <h1>{data[0].title2}</h1>
         <span>{data[0].description2}</span>
         <div className={styles.listaBenef}>
-            <span><strong>&#9632;   </strong>{data[0].vineta1}</span><br />
-            <span><strong>&#9632;   </strong>{data[0].vineta2}</span><br />
-            <span><strong>&#9632;   </strong>{data[0].vineta3}</span><br />
+          {
+            data[0].benefits?
+            data[0].benefits.map((ele, ind)=> (
+              <li key={ind}>{ele}</li>
+            ))
+            : 'No hay Beneficios'
+          }
         </div>
       </div>
 

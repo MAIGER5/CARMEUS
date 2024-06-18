@@ -29,7 +29,7 @@ export const Chemestry = () => {
       id: 2,
       image: "compuestoQuimico",
       description: 'Compuesto Químico',
-      link: 'plasticRubber'
+      link: 'chemicalCompounds'
     },
     {
       id: 3,

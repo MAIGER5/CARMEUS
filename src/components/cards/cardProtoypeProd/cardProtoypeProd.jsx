@@ -35,7 +35,7 @@ export const CardProtoypeProd = () => {
             </div>
           </div>
           <div className={styles.preguntas}>
-            <p>Tiene alguna pregunta  acerca de este producto</p>
+            <p>Tiene alguna pregunta  acerca de este producto?</p>
             <button>Pregunta a nuestros Especialistas</button>
           </div>
         </div>

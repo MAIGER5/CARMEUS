@@ -65,12 +65,25 @@
     padding-top: 10px;
 }
 
-.listaBenef{
-    margin-top: 30px;
+.listaBenef {
+    list-style: none; /* Quita el estilo de lista por defecto */
+    padding: 0; /* Quita el padding por defecto del ul */
 }
 
-.listaBenef strong{
+.listaBenef > li {
+    position: relative; /* Necesario para que el pseudo-elemento se posicione correctamente */
+    padding-left: 20px; /* Ajusta este valor según el tamaño de tu símbolo y el espacio que necesites */
+    text-indent: 0px; /* Debe ser el mismo valor que padding-left */
+    margin-bottom: 9px;
+}
+
+.listaBenef > li::before {
+    content: '\25A0';
     color: var(--orange2-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-right: 8px; /* Ajusta el espacio entre el símbolo y el texto */
 }
 
 

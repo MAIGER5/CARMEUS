@@ -17,6 +17,8 @@ import { Neutramol } from './components/products/neutramol/neutramol';
 import { Chemestry } from './components/aplications/chemestry/chemestry';
 import { AplicationPrototype } from './components/aplications/aplicationPrototype/aplicationPrototype';
 import { PlasticRubber } from './components/aplications/plastic&Rubber/plasticRubber';
+import { Services } from './components/services/services';
+import { ChemicalCompounds } from './components/aplications/chemicalCompounds/chemicalCompounds';
 
 
 
@@ -52,7 +54,9 @@ function App() {
         <Route path='/water' element={<Neutramol/>}/> */}
 
         <Route path='/plasticRubber' element={<PlasticRubber/>}/>
+        <Route path='/chemicalCompounds' element={<ChemicalCompounds/>}/>
 
+        <Route path='/services' element={<Services/>}/>
       </Routes>
       <Footer/>
     </HashRouter>

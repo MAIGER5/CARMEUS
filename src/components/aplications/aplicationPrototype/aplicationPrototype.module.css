@@ -246,13 +246,18 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-left: auto;
+    text-decoration: none;
 }
 
 .cardProductRelationed{
     width: 40%;
     border: 1px solid  var(--grey4-color);
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color .7s;
 
 }
+
 
 .cardProductRelationed > :first-child{
     width: 100%;
@@ -265,17 +270,21 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: transform .7s;
 }
 
 .cardProductRelationed > :nth-child(2){
-    padding: 30px 30px 0px 30px;
+    padding: 30px 30px 10px 30px;
+    height: auto;
     display: grid;
     gap: 10px;
     text-align: justify;
+    transition: background .7s;
+    transition: color .7s;
 }
 
 .cardProductRelationed > :nth-child(2) h1{
-    font-size: 28px;
+    font-size: 24px;
     color: var(--orange2-color);
 }
 
@@ -283,7 +292,31 @@
     color: var(--grey3-color);
     margin-bottom: 1px;
     padding-bottom: 1px;
+    font-size: 15px;
 }
+
+
+.cardProductRelationed:hover img{
+    transform: scale(1.07);
+
+}
+
+.cardProductRelationed:hover {
+    background-color: var(--orange2-color);
+
+}
+
+.cardProductRelationed:hover span{
+    color: white;
+
+}
+
+.cardProductRelationed:hover h1{
+    color: white;
+
+}
+
+
 
 @media (width < 1240px) {
 
