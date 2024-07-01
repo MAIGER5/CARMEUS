@@ -35,7 +35,7 @@ export const Chemestry = () => {
       id: 3,
       image: "salesCalcio",
       description: 'Sales de Calcio',
-      link: 'plasticRubber'
+      link: 'chemicalCalciumSalts'
     },
   ])
 

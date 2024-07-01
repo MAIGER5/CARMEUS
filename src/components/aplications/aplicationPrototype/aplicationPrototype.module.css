@@ -54,9 +54,8 @@
 .firstCard > :nth-child(2){
     flex: 1;
     width: 40%;
+    height: 450px;
     overflow: hidden;
-    border: 1px solid green;
-    background: green;
 }
 
 .firstCard > :nth-child(2) img{
@@ -170,6 +169,7 @@
 }
 
 .feuatures{
+    width: 50%;
     padding: 30px;
     display: grid;
     gap: 20px;
@@ -197,9 +197,11 @@
 }
 
 .benefits{
+    width: 50%;
     background-color: var(--blue2-color);
     padding: 30px;
     display: grid;
+    align-content: start;
     gap: 20px;
     color: white;
     text-align: justify;
@@ -251,6 +253,7 @@
 
 .cardProductRelationed{
     width: 40%;
+    height: 500px;
     border: 1px solid  var(--grey4-color);
     background-color: transparent;
     cursor: pointer;
@@ -275,7 +278,8 @@
 
 .cardProductRelationed > :nth-child(2){
     padding: 30px 30px 10px 30px;
-    height: auto;
+    height: 55%;
+    align-content: start;
     display: grid;
     gap: 10px;
     text-align: justify;
@@ -316,7 +320,18 @@
 
 }
 
+#cardServRelationed{
+    background: var(--blue2-color);
+    transition: background .7s;
+}
 
+#cardServRelationed > h1, #cardServRelationed > span{
+    color: white;
+}
+
+#cardServRelationed:hover{
+    background: var(--orange2-color);
+}
 
 @media (width < 1240px) {
 
@@ -354,13 +369,14 @@
    }
 
    .feuatures{
+        width: 100%;
         order: 2;
         padding: 20px 20px 0 10px;
-        border: 1px solid red;
 
    }
 
    .benefits{
+        width: 100%;
         order: 1;
         padding: 20px 20px 0 10px;
    }

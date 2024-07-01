@@ -16,9 +16,13 @@ import { Carbonato } from './components/products/carbonato/carbonato';
 import { Neutramol } from './components/products/neutramol/neutramol';
 import { Chemestry } from './components/aplications/chemestry/chemestry';
 import { AplicationPrototype } from './components/aplications/aplicationPrototype/aplicationPrototype';
-import { PlasticRubber } from './components/aplications/plastic&Rubber/plasticRubber';
+import { PlasticRubber } from './components/aplications/chemestry/plastic&Rubber/plasticRubber';
 import { Services } from './components/services/services';
-import { ChemicalCompounds } from './components/aplications/chemicalCompounds/chemicalCompounds';
+import { ChemicalCompounds } from './components/aplications/chemestry/chemicalCompounds/chemicalCompounds';
+import { ChemicalCalciumSalts } from './components/aplications/chemestry/chemicalCalciumSalts/chemicalCalciumSalts';
+import { IronSteel } from './components/aplications/ironSteel/ironSteel';
+import { Iron } from './components/aplications/ironSteel/iron/iron';
+import { Acero } from './components/aplications/ironSteel/acero/acero';
 
 
 
@@ -46,6 +50,7 @@ function App() {
         {/* <Route path='/agricola' element={<Neutramol/>}/>
         <Route path='/construction' element={<Neutramol/>}/> */}
         <Route path='/chemical' element={<Chemestry/>}/>
+        <Route path='/steel' element={<IronSteel/>}/>
         {/* <Route path='/gas' element={<Neutramol/>}/>
         <Route path='/ceramics' element={<Neutramol/>}/>
         <Route path='/steel' element={<Neutramol/>}/>
@@ -55,8 +60,12 @@ function App() {
 
         <Route path='/plasticRubber' element={<PlasticRubber/>}/>
         <Route path='/chemicalCompounds' element={<ChemicalCompounds/>}/>
+        <Route path='/chemicalCalciumSalts' element={<ChemicalCalciumSalts/>}/>
 
-        <Route path='/services' element={<Services/>}/>
+        <Route path='/chemicalCalciumSalts' element={<ChemicalCalciumSalts/>}/>
+
+        <Route path='/iron' element={<Iron/>}/>
+        <Route path='/acero' element={<Acero/>}/>
       </Routes>
       <Footer/>
     </HashRouter>

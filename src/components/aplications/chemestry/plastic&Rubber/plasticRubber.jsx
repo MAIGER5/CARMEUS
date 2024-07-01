@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import styles from './chemicalCompounds.module.css';
-import Data2Context from '../../dataContext/data2Context';
-import { AplicationPrototype } from '../aplicationPrototype/aplicationPrototype';
+import styles from './plasticRubber.module.css';
+import Data2Context from '../../../dataContext/data2Context';
+import { AplicationPrototype } from '../../aplicationPrototype/aplicationPrototype';
 
 
 
-export const ChemicalCompounds = () => {
+export const PlasticRubber = () =>{
 
 
-  const [ data, setData ] = useState([
+  const [ data ] = useState([
 
     {
       id: 1,
       nombre: 'componente1',
-      title: 'COMPUESTOS QUIMICOS',
+      title: 'PLASTICO & CAUCHO',
       description: 'Los productos minerales a base de calcio se utilizan ampliamente en la producción de plásticos y cauchos en todo el mundo. Las funciones de los productos a base de calcio van desde agentes de relleno y compactación hasta agentes estabilizantes y de manipulación de alta gama personalizados. Dentro de la cartera de Carmeuse contamos con una gama de productos que cumplen química y físicamente las especificaciones altamente exigentes requeridas en estas aplicaciones.',
-      image: 'chemical1',
+      image: 'plasticoCaucho',
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ export const ChemicalCompounds = () => {
       data:[
         {
           id: 1,
-          image: 'chemical1',
+          image: 'calciumSal',
           title: 'Carbonato de Calcio',
           description: 'Carmeuse es uno de los principales productores de carbonato cálcico molido. El carbonato cálcico (CaCO3) es un compuesto químico muy común que constituye el 4% de la corteza terrestre y es el componente principal de la piedra caliza.',
         },
@@ -41,7 +41,7 @@ export const ChemicalCompounds = () => {
       data:[
         {
           id: 1,
-          image: 'chemical1',
+          image: 'nueve',
           title: 'Nuestros Servicios',
           description: [
             'Carga y Logística',

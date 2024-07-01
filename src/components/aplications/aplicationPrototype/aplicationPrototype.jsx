@@ -199,7 +199,7 @@ export const AplicationPrototype = () => {
               <div className={styles.cardImg}> 
                 <AdvancedImage cldImg={cld.image(ele.image)}/>
               </div>
-              <div>
+              <div id={styles.cardServRelationed}>
                 <h1>{ele.title}</h1>
                 <span>{
                   Array.isArray(ele.description)? 
