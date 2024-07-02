@@ -8,7 +8,7 @@
     margin: auto;
 }
 
-.contenedor div {
+.boxes {
     width: 33%;
     height: clamp(70px, 120px, 140px);
     display: flex;
@@ -19,6 +19,7 @@
     font-weight: 500;
     color: white;
     transition: background 0.8s;
+    text-decoration: none;
 }
 
 h3{

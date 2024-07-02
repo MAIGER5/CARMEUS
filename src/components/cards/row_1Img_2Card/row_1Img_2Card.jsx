@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styles from './row_1Img_2Card.module.css';
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage} from '@cloudinary/react';
 import DataContext from '../../dataContext/dataContext';
@@ -30,23 +30,23 @@ export const Row_1Img_2Card = () => {
   return (
     <div className={`${styles.contenedor}`}>
 
-        <div className={styles.cardBig}>
+        <Link to={`/${data[3].link}`} className={styles.cardBig}>
           <AdvancedImage cldImg={myImageBig} />
           <h5>{data[3].description}</h5>
-        </div>
+        </Link>
         <div className={styles.group}>
-          <div className={`${styles.cardSmall}`}>
+          <Link to={`/${data[4].link}`} className={`${styles.cardSmall}`}>
               <div className={styles.cardImg}>
                 <AdvancedImage cldImg={myImageCero} />
               </div>
               <div className={`${styles.textInt}`}>{data[4].description}</div>
-          </div>
-          <div className={`${styles.cardSmall}`}>
+          </Link>
+          <Link to={`/${data[5].link}`} className={`${styles.cardSmall}`}>
               <div className={styles.cardImg}>
                 <AdvancedImage cldImg={myImageUno} />
               </div>
               <div className={`${styles.textInt}`}>{data[5].description}</div>
-          </div>
+          </Link>
         </div>
 
         

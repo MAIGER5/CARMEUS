@@ -76,14 +76,14 @@ export const NavBar = () => {
             <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones  </span>
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
               <li onClick={() => handleClickNavigate('/agricola')}>Soluciones Agricolas</li>
-              <li onClick={() => handleClickNavigate('/construction')}>Ingenieria Civil & Construcción</li>
+              <li onClick={() => handleClickNavigate('/engeneerBuilding')}>Ingenieria Civil & Construcción</li>
               <li onClick={() => handleClickNavigate('/chemical')}>Industria Químca</li>
-              <li onClick={() => handleClickNavigate('/gas')}>Tratamiento de Gases & Combustión</li>
-              <li onClick={() => handleClickNavigate('/ceramics')}>Cerámica & Vidrio</li>
+              <li onClick={() => handleClickNavigate('/flueGasTreatment')}>Tratamiento de Gases & Combustión</li>
+              <li onClick={() => handleClickNavigate('/glassCeramic')}>Cerámica & Vidrio</li>
               <li onClick={() => handleClickNavigate('/steel')}>Hierro & Acero</li>
-              <li onClick={() => handleClickNavigate('/mining')}>Minería & Metales No Ferrosos</li>
-              <li onClick={() => handleClickNavigate('/pcc')}>PCC y Pulpa & Paper</li>
-              <li onClick={() => handleClickNavigate('/water')}>Tratamiento de Agua</li>
+              <li onClick={() => handleClickNavigate('/noFerrousMining')}>Minería & Metales No Ferrosos</li>
+              <li onClick={() => handleClickNavigate('/pccPulPaper')}>Pulpa & Papel</li>
+              <li onClick={() => handleClickNavigate('/waterTreatment')}>Tratamiento de Agua</li>
             </ul>
           </li>
           <li>

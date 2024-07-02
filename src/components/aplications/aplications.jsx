@@ -31,108 +31,58 @@ export const Aplications = () => {
       id: 1,
       image: "Agriculture",
       description: 'Soluciones Agricolas',
+      link: 'solutionAgrico',
     },
     {
       id: 2,
       image: "building",
       description: 'Ingenieria Civil & Construcción',
+      link: 'engeneerBuilding'
     },
     {
       id: 3,
       image: "chemical3",
       description: 'Industria Química',
+      link: 'chemical',
     },
     {
       id: 4,
       image: "desulfuration_mulqte",
       description: 'Tratamiento de Gases & Combustión',
+      link: 'flueGasTreatment'
     },
     {
       id: 5,
       image: "vidrio",
       description: 'Cerámica & Vidrio',
+      link: 'glassCeramic'
     },
     {
       id: 6,
       image: "metalurgica_qhjycc",
       description: 'Hierro & Acero',
+      link: 'steel'
     },
     {
       id: 7,
       image: "construccion_n6hksp",
-      description: 'Minerias & Metales No Ferrosos',
+      description: 'Mineria & Metales No Ferrosos',
+      link: 'noFerrousMining'
     },
     {
       id: 8,
       image: "paper_mhw9sk",
       description: 'Pulpa & Papel',
+      link: 'pccPulPaper'
     },
     {
       id: 9,
       image: "agua",
       description: 'Tratamiento de Agua',
+      link: 'waterTreatment'
     },
   ]);
 
-  // const [ dataCard1ApliOpcional, setdataCard1ApliOpcional] = useState([  
-  //   {
-  //     id: 1,
-  //     image: "agriculture2_ctqakk",
-  //     description: 'Soluciones Agricolas',
-  //   },
-  //   {
-  //     id: 2,
-  //     image: "Agriculture",
-  //     description: 'Agricultura',
-  //   },
-  //   {
-  //     id: 3,
-  //     image: "Agriculture",
-  //     description: 'Ingenieria Civil & Construcción',
-  //   },
-  //   {
-  //     id: 4,
-  //     image: "Agriculture",
-  //     description: 'Industria Química',
-  //   },
-  //   {
-  //     id: 5,
-  //     image: "Agriculture",
-  //     description: 'Tratamiento de Gases & Combustión',
-  //   },
-  //   {
-  //     id: 6,
-  //     image: "Agriculture",
-  //     description: 'Cerámica & Vidrio',
-  //   },
-  //   {
-  //     id: 7,
-  //     image: "Agriculture",
-  //     description: 'Hierro & Acero',
-  //   },
-  //   {
-  //     id: 8,
-  //     image: "Agriculture",
-  //     description: 'Minería & Metales No Ferrosos',
-  //   },
-  //   {
-  //     id: 9,
-  //     image: "Agriculture",
-  //     description: 'PCC y Pulpa & Paper',
-  //   },
-  //   {
-  //     id: 10,
-  //     image: "Agriculture",
-  //     description: 'Tratamiento de Agua',
-  //   },
-  //   {
-  //     id: 11,
-  //     image: "Agriculture",
-  //     description: 'Canal Retails',
-  //   },
-
-
-  // ])
 
   return (
     <div className={styles.contenedor}>
@@ -158,15 +108,6 @@ export const Aplications = () => {
           <Row_1Img/>
         </DataContext.Provider>
       </div>
-
-
-      {/* <div className={styles.cardX3}> 
-        <DataContext.Provider value={dataCard1ApliOpcional}>
-          <CardAplications/>
-        </DataContext.Provider>
-      </div> */}
-      
-
     </div>
   )
 }

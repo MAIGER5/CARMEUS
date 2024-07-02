@@ -170,7 +170,7 @@
 
 .feuatures{
     width: 50%;
-    padding: 30px;
+    padding: 30px 30px 30px 50px;
     display: grid;
     gap: 20px;
     text-align: justify;
