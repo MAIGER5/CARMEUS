@@ -83,11 +83,11 @@ export const NavBar = () => {
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
               <li onClick={() => handleClickNavigate('/agricola')}><MdOutlineAgriculture/> <span>Soluciones Agricolas</span></li>
               <li onClick={() => handleClickNavigate('/engeneerBuilding')}><BsBuildingGear/> <span>Ingenieria Civil & Construcción</span> <span className={styles.triangulo2}></span></li>
-                <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
+                {/* <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
                     <li onClick={() => handleClickNavigate('/quicklime')}>Agregados</li>
                     <li onClick={() => handleClickNavigate('/hydratedlime')}>Asfalto</li>
                     <li onClick={() => handleClickNavigate('/dolomiticlime')}>Tratamiento de Suelos</li>
-                  </ul>
+                  </ul> */}
               <li onClick={() => handleClickNavigate('/chemical')}><SlChemistry/> <span>Industria Químca</span> <span className={styles.triangulo2}></span></li>
               <li onClick={() => handleClickNavigate('/flueGasTreatment')}><MdOutlineGasMeter/> <span>Tratamiento de Gases & Combustión</span></li>
               <li onClick={() => handleClickNavigate('/glassCeramic')}><SiEquinixmetal/> <span>Cerámica & Vidrio</span></li>
