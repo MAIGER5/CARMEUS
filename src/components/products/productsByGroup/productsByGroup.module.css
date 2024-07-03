@@ -5,16 +5,78 @@
   position: relative;
   margin: auto;
   margin-top: 220px;
-  width: 80%;
+  width: 90%;
   height: auto;
-  /* border: 1px solid green; */
 }
 
+.contenedor> section{
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 0px 0px 70px 0px;
+}
+
+.contenedor> section div{
+  width: 50%;
+  height: 100%;
+}
+
+.contenedor> section> :nth-child(2) {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.boxLink{
+  width: 11vw;
+  height: 11vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(16px + .1vw);
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 10px;
+  transition: background .5s;
+}
+
+
+.colorBox1{
+  background: var(--blue2-color);
+}
+
+.colorBox2{
+  background: var(--blue3-color);
+}
+
+.colorBox1:hover, .colorBox2:hover{
+  background: var(--orange2-color);
+  color: white;
+}
+
+.contenedor> section> :first-child {
+  overflow: hidden;
+}
+.contenedor> section> :first-child img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
 .products{
-  width: 90%;
+  width: 80%;
   display: block;
   margin: auto;
-  /* border: 1px solid black; */
+  margin-bottom: 70px;
 }
 
 .products > h1{
@@ -27,7 +89,6 @@
   display: flex;
   gap: 40px;
   margin: 10px;
-  /* border: 1px solid black; */
 
 }
 
@@ -38,8 +99,8 @@
 
 }
 
-.titles > :first-child{
-  height: 90%;
+.titles> :first-child{
+  height: auto;
   border-left: 1px solid var(--blue2-color);
   padding-left: 20px;
 }
@@ -47,21 +108,75 @@
 .titles > div p{
   text-align: left;
   color: var(--blue2-color);
-  font-weight: 400;
+  font-weight: 600;
   padding-block: 7px;
-  
+  cursor: pointer;
+  transition: color .3s;
+}
 
+.titles > div p:hover{
+  color: var(--orange2-color);
 }
 
 .texto{
+  display: block;
   padding: 20px;
   padding-inline: 60px;
+}
 
-  /* border: 1px solid black; */
+.texto> p{
+  color: var(--grey2-color);
+  font-size: 16px;
+  text-align: justify;
+}
 
+.boton{
+  padding: 10px 35px;
+  background: var(--orange2-color);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  padding-block: 10px;
+  box-shadow: inset 0 0 0 0 var(--blue2-color);
+  -webkit-transition: ease-out .6s;
+  -moz-transition: ease-out .6s;
+  transition: ease-out .6s;
+}
+
+.boton:hover {
+  box-shadow: inset 300px 0 0 0 var(--blue2-color);
+  background: var(--blue2-color);
 }
 
 
+.boxServices{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  margin-bottom: 300px;
+}
+
+.boxServices> div{
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.boxServices> div> h1{
+  font-size: 24px;
+  color: var(--grey2-color);
+}
+
+.boxServices> div> span{
+  font-size: 12px;
+  color: var(--grey2-color);
+}
 
 
 @media (1022px >= width){
@@ -71,7 +186,8 @@
   }
 
   .products{
-      width: 90%;
+      width: 100%;
+      padding: 10px;
   }
 
   .products> h1{
@@ -97,11 +213,67 @@
   .texto{
       padding: 0px;
       padding-inline: 7px;
-      /* border: 1px solid black; */
   }
   
   .contenedor{
-      margin-top: 190px;
+      margin-top: 130px;
 
+  }
+
+  .contenedor> section{
+    width: 100%;
+    padding: 10px 10px 100px 10px;
+    display: grid;
+    gap: 30px;
+  }
+
+  .contenedor> section div{
+    width: 100%;
+  }
+
+  .contenedor> section> :nth-child(2){
+    gap: 20px;
+    padding: 0px;
+  }
+
+  .boxLink{
+    width: 160px;
+    height: 160px;
+  }
+
+  .boxServices{
+    margin-bottom: 100px;
+  }
+  
+}
+
+
+@media (740px >= width){
+  
+  .contenedor> section> :nth-child(2){
+    gap: 20px;
+    padding: 0px;
+  }
+
+  .boxLink{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 0px;
+  }
+
+  .boxServices{
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+  
+  .boxServices> div{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }

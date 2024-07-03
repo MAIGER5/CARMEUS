@@ -226,6 +226,27 @@ h6{
 #dropUno li{
    padding-bottom: 5px;
    padding-right: 50px;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+
+}
+
+#dropUno li> :first-child{
+   font-size: 25px;
+}
+
+#dropUno li> :nth-child(3){
+   font-size: 25px;
+   margin-left: auto;
+   display: flex;
+}
+
+.triangulo2::after{
+    content: "\25B2";
+    display: inline-block;
+    transform: rotate(90deg);
+    font-size: 11px;
 }
 
 ul li:hover .dropdowns {

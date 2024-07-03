@@ -1,13 +1,19 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from './navBar.module.css';
-import NavBarContext from '../dataContext/navBarContext';
 import { VscMenu } from "react-icons/vsc";
 import { IoSearchSharp } from "react-icons/io5";
+import { SlChemistry } from 'react-icons/sl';
+import { BsBuildingGear } from 'react-icons/bs';
+import { LuConstruction, LuDownload } from 'react-icons/lu';
+import { MdOutlineAgriculture, MdOutlineGasMeter } from 'react-icons/md';
+import { SiEquinixmetal } from 'react-icons/si';
+import { FaHandHoldingWater } from 'react-icons/fa';
+import { LiaNewspaper } from 'react-icons/lia';
+import { AiOutlineGold } from 'react-icons/ai';
 import carmeusWhite from '../utils/logos/carmeusWhite.png';
 import carmeusBlue from '../utils/logos/blue.png';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { AplicationPrototype } from '../aplications/aplicationPrototype/aplicationPrototype';
 
 export const NavBar = () => {
 
@@ -75,15 +81,20 @@ export const NavBar = () => {
           <li>
             <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones  </span>
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
-              <li onClick={() => handleClickNavigate('/agricola')}>Soluciones Agricolas</li>
-              <li onClick={() => handleClickNavigate('/engeneerBuilding')}>Ingenieria Civil & Construcción</li>
-              <li onClick={() => handleClickNavigate('/chemical')}>Industria Químca</li>
-              <li onClick={() => handleClickNavigate('/flueGasTreatment')}>Tratamiento de Gases & Combustión</li>
-              <li onClick={() => handleClickNavigate('/glassCeramic')}>Cerámica & Vidrio</li>
-              <li onClick={() => handleClickNavigate('/steel')}>Hierro & Acero</li>
-              <li onClick={() => handleClickNavigate('/noFerrousMining')}>Minería & Metales No Ferrosos</li>
-              <li onClick={() => handleClickNavigate('/pccPulPaper')}>Pulpa & Papel</li>
-              <li onClick={() => handleClickNavigate('/waterTreatment')}>Tratamiento de Agua</li>
+              <li onClick={() => handleClickNavigate('/agricola')}><MdOutlineAgriculture/> <span>Soluciones Agricolas</span></li>
+              <li onClick={() => handleClickNavigate('/engeneerBuilding')}><BsBuildingGear/> <span>Ingenieria Civil & Construcción</span> <span className={styles.triangulo2}></span></li>
+                <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
+                    <li onClick={() => handleClickNavigate('/quicklime')}>Agregados</li>
+                    <li onClick={() => handleClickNavigate('/hydratedlime')}>Asfalto</li>
+                    <li onClick={() => handleClickNavigate('/dolomiticlime')}>Tratamiento de Suelos</li>
+                  </ul>
+              <li onClick={() => handleClickNavigate('/chemical')}><SlChemistry/> <span>Industria Químca</span> <span className={styles.triangulo2}></span></li>
+              <li onClick={() => handleClickNavigate('/flueGasTreatment')}><MdOutlineGasMeter/> <span>Tratamiento de Gases & Combustión</span></li>
+              <li onClick={() => handleClickNavigate('/glassCeramic')}><SiEquinixmetal/> <span>Cerámica & Vidrio</span></li>
+              <li onClick={() => handleClickNavigate('/steel')}><LuConstruction/> <span>Hierro & Acero</span> <span className={styles.triangulo2}></span></li>
+              <li onClick={() => handleClickNavigate('/noFerrousMining')}><AiOutlineGold/> <span>Minería & Metales No Ferrosos</span></li>
+              <li onClick={() => handleClickNavigate('/pccPulPaper')}><LiaNewspaper/> <span>Pulpa & Papel</span></li>
+              <li onClick={() => handleClickNavigate('/waterTreatment')}><FaHandHoldingWater/> <span>Tratamiento de Agua</span> <span className={styles.triangulo2}></span></li>
             </ul>
           </li>
           <li>

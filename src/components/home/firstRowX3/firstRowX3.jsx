@@ -13,11 +13,11 @@ export const FirstRowX3 = () => {
         <h5>Cales</h5>
         <h3>{signo}</h3>
       </Link>
-      <Link to={'/'} className={styles.boxes}>
+      <Link to={'/stone'} className={styles.boxes}>
         <h5>Piedra</h5>
         <h3>{signo}</h3>
       </Link>
-      <Link to={'/'} className={styles.boxes}>
+      <Link to={'/neutramol'} className={styles.boxes}>
         <h5>Neutramol</h5>
         <h3>{signo}</h3>
       </Link>

@@ -33,6 +33,7 @@ import { DrinkWater } from './components/aplications/waterTreatment/drinkingWate
 import { WasteWater } from './components/aplications/waterTreatment/wasteWater/wasteWater';
 import { IndustryWater } from './components/aplications/waterTreatment/industryWater/industryWater';
 import { Cales } from './components/products/productsByGroup/cales/cales';
+import { Piedra } from './components/products/productsByGroup/piedra/piedra';
 
 
 
@@ -57,6 +58,7 @@ function App() {
         <Route path='/neutramol' element={<Neutramol/>}/>
 
         <Route path='/cales' element={<Cales/>}/>
+        <Route path='/stone' element={<Piedra/>}/>
 
         <Route path='/engeneerBuilding' element={<EngeneerBuilding/>}/>
         <Route path='/chemical' element={<Chemestry/>}/>
