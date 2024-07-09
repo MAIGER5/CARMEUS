@@ -34,6 +34,7 @@ import { WasteWater } from './components/aplications/waterTreatment/wasteWater/w
 import { IndustryWater } from './components/aplications/waterTreatment/industryWater/industryWater';
 import { Cales } from './components/products/productsByGroup/cales/cales';
 import { Piedra } from './components/products/productsByGroup/piedra/piedra';
+import { Newsroom } from './components/newsroom/newsroom';
 
 
 
@@ -46,42 +47,46 @@ function App() {
       <Routes>
 
         <Route path='/' element={<Home/>}/>
+
+        <Route path='/newsroom' element={<Newsroom/>}/>
+        
         <Route path='/aboutUs' element={<AboutUs/>}/>
         <Route path='/products' element={<ProductsGRAL/>}/>
         <Route path='/aplications' element={<Aplications/>}/>
-        <Route path='/quicklime' element={<CalViva/>}/>
-        <Route path='/hydratedlime' element={<CalHidratada/>}/>
-        <Route path='/dolomiticlime' element={<CalDolomita/>}/>
-        <Route path='/agriculturallime' element={<CalAgricola/>}/>
-        <Route path='/limestone' element={<PiedraCaliza/>}/>
-        <Route path='/carbonate' element={<Carbonato/>}/>
-        <Route path='/neutramol' element={<Neutramol/>}/>
+        <Route path='/products/cales/quicklime' element={<CalViva/>}/>
+        <Route path='/products/cales/hydratedlime' element={<CalHidratada/>}/>
+        <Route path='/products/cales/dolomiticlime' element={<CalDolomita/>}/>
+        <Route path='/products/cales/agriculturallime' element={<CalAgricola/>}/>
+        <Route path='/products/stone/limestone' element={<PiedraCaliza/>}/>
+        <Route path='/products/stone/carbonate' element={<Carbonato/>}/>
+        <Route path='/products/neutramol' element={<Neutramol/>}/>
 
-        <Route path='/cales' element={<Cales/>}/>
-        <Route path='/stone' element={<Piedra/>}/>
+        <Route path='/products/cales' element={<Cales/>}/>
+        <Route path='/products/stone' element={<Piedra/>}/>
 
-        <Route path='/engeneerBuilding' element={<EngeneerBuilding/>}/>
-        <Route path='/chemical' element={<Chemestry/>}/>
-        <Route path='/steel' element={<IronSteel/>}/>
-        <Route path='/flueGasTreatment' element={<FlueGasTreatment/>}/>
-        <Route path='/glassCeramic' element={<GlassCeramic/>}/>
-        <Route path='/noFerrousMining' element={<NoFerrousMining/>}/>
-        <Route path='/pccPulPaper' element={<PccPulPaper/>}/>
-        <Route path='/waterTreatment' element={<WaterTreatment/>}/>
+        <Route path='/Aplications/engeneerBuilding' element={<EngeneerBuilding/>}/>
+        <Route path='/Aplications/chemical' element={<Chemestry/>}/>
+        <Route path='/Aplications/steel' element={<IronSteel/>}/>
+        <Route path='/Aplications/flueGasTreatment' element={<FlueGasTreatment/>}/>
+        <Route path='/Aplications/glassCeramic' element={<GlassCeramic/>}/>
+        <Route path='/Aplications/noFerrousMining' element={<NoFerrousMining/>}/>
+        <Route path='/Aplications/pccPulPaper' element={<PccPulPaper/>}/>
+        <Route path='/Aplications/waterTreatment' element={<WaterTreatment/>}/>
 
-        <Route path='/plasticRubber' element={<PlasticRubber/>}/>
-        <Route path='/chemicalCompounds' element={<ChemicalCompounds/>}/>
-        <Route path='/chemicalCalciumSalts' element={<ChemicalCalciumSalts/>}/>
-        <Route path='/iron' element={<Iron/>}/>
-        <Route path='/acero' element={<Acero/>}/>
+        <Route path='/Aplications/chemical/plasticRubber' element={<PlasticRubber/>}/>
+        <Route path='/Aplications/chemical/chemicalCompounds' element={<ChemicalCompounds/>}/>
+        <Route path='/Aplications/chemical/chemicalCalciumSalts' element={<ChemicalCalciumSalts/>}/>
+        
+        <Route path='/Aplications/steel/iron' element={<Iron/>}/>
+        <Route path='/Aplications/steel/acero' element={<Acero/>}/>
 
-        <Route path='/aggregado' element={<Aggregado/>}/>
-        <Route path='/asphalt' element={<Asphalt/>}/>
-        <Route path='/soilTreatment' element={<SoilTreatment/>}/>
+        <Route path='/Aplications/engeneerBuilding/aggregado' element={<Aggregado/>}/>
+        <Route path='/Aplications/engeneerBuilding/asphalt' element={<Asphalt/>}/>
+        <Route path='/Aplications/engeneerBuilding/soilTreatment' element={<SoilTreatment/>}/>
 
-        <Route path='/drinkWater' element={<DrinkWater/>}/>
-        <Route path='/wasteWater' element={<WasteWater/>}/>
-        <Route path='/industryWater' element={<IndustryWater/>}/> 
+        <Route path='/Aplications/waterTreatment/drinkWater' element={<DrinkWater/>}/>
+        <Route path='/Aplications/waterTreatment/wasteWater' element={<WasteWater/>}/>
+        <Route path='/Aplications/waterTreatment/industryWater' element={<IndustryWater/>}/> 
         
       </Routes>
       <Footer/>

@@ -173,6 +173,7 @@ h6{
     display: inline-block;
     transform: rotate(180deg);
     font-size: 11px;
+    width: 19px;
 }
 
 .dropdowns li{
@@ -197,6 +198,26 @@ h6{
     transition: opacity 1s, visibility 0s 1s; /* Transición de opacidad */
 }
 
+.dropdowns2Nivel {
+    display: none;
+    left: 366px;
+    top: 1%;
+    position: absolute;
+    background: white;
+    border: solid 0.1px var(--grey4-color);
+
+}
+
+
+
+.dropdowns2Nivel li {
+    color: var(--blue2-color);
+}
+
+.prueba:hover .dropdowns2Nivel{
+    display: block;
+}
+
 #dropDos{
     width: auto;
     display: flex;
@@ -219,11 +240,17 @@ h6{
    padding-right: 50px;
 }
 
+.dropUnoPuntoUno{
+    width: 350px;
+    padding-block: 15px;
+}
+
 #dropUno{
     width: 400px;
 }
 
-#dropUno li{
+#dropUno> li,
+.dropUnoPuntoUno> li{
    padding-bottom: 5px;
    padding-right: 50px;
    display: flex;
@@ -232,11 +259,13 @@ h6{
 
 }
 
-#dropUno li> :first-child{
+#dropUno li> :first-child,
+.dropUnoPuntoUno li> :first-child{
    font-size: 25px;
 }
 
-#dropUno li> :nth-child(3){
+#dropUno li> :nth-child(3),
+.dropUnoPuntoUno li> :nth-child(3){
    font-size: 25px;
    margin-left: auto;
    display: flex;
@@ -249,11 +278,15 @@ h6{
     font-size: 11px;
 }
 
-ul li:hover .dropdowns {
+ul li:hover .dropdowns{
     opacity: 1; /* Al pasar el ratón, se hace visible */
     visibility: visible; /* Al pasar el ratón, se hace visible */
     transition-delay: 0s; /* Reiniciamos el retraso de la transición */
 }
+
+/* .dropdowns> :nth-child(2):hover .dropdowns2Nivel{
+    display: block;
+} */
 
 ul li:hover .triangulo::after{
     transform: rotate(0deg);

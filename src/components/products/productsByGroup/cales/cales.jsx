@@ -17,19 +17,19 @@ export const Cales = () => {
       boxProduct: [
         {
           name: 'CAL VIVA',
-          link: 'quicklime',
+          link: 'products/cales/quicklime',
         },
         {
           name: 'CAL HIDRATADA',
-          link: 'hydratedlime',
+          link: 'products/cales/hydratedlime',
         },
         {
           name: 'CAL DOLOMITA',
-          link: 'dolomiticlime',
+          link: 'products/cales/dolomiticlime',
         },
         {
           name: 'CAL AGRICOLA',
-          link: 'agriculturallime',
+          link: 'products/cales/agriculturallime',
         }
       ],
     }

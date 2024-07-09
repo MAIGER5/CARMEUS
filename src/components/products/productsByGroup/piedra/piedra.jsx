@@ -17,11 +17,11 @@ export const Piedra = () => {
       boxProduct: [
         {
           name: 'PIEDRA CALIZA',
-          link: 'limestone',
+          link: 'products/stone/limestone',
         },
         {
           name: 'CARBONATO DE CALCIO',
-          link: 'carbonate',
+          link: 'products/stone/carbonate',
         },
       ],
     }

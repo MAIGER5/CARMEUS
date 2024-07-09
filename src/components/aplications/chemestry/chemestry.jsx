@@ -23,19 +23,19 @@ export const Chemestry = () => {
       id: 1,
       image: "plasticoCaucho",
       description: 'Plástico & Caucho',
-      link: 'plasticRubber'
+      link: 'Aplications/chemical/plasticRubber'
     },
     {
       id: 2,
       image: "compuestoQuimico",
       description: 'Compuesto Químico',
-      link: 'chemicalCompounds'
+      link: 'Aplications/chemical/chemicalCompounds'
     },
     {
       id: 3,
       image: "salesCalcio",
       description: 'Sales de Calcio',
-      link: 'chemicalCalciumSalts'
+      link: 'Aplications/chemical/chemicalCalciumSalts'
     },
   ])
 

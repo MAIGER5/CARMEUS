@@ -23,19 +23,19 @@ export const EngeneerBuilding = () => {
       id: 1,
       image: "aggregates",
       description: 'Agregados',
-      link: 'aggregado'
+      link: 'Aplications/engeneerBuilding/aggregado'
     },
     {
       id: 2,
       image: "asphalt",
       description: 'Asfalto',
-      link: 'asphalt'
+      link: 'Aplications/engeneerBuilding/asphalt'
     },
     {
       id: 2,
       image: "soilTreatment",
       description: 'Tratamiento de Suelos',
-      link: 'soilTreatment'
+      link: 'Aplications/engeneerBuilding/soilTreatment'
     },
 
   ])

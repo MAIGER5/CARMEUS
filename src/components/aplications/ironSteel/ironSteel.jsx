@@ -23,13 +23,13 @@ export const IronSteel = () => {
       id: 1,
       image: "hierro",
       description: 'Producción de Hierro',
-      link: 'iron'
+      link: 'Aplications/steel/iron'
     },
     {
       id: 2,
       image: "acero",
       description: 'Producción de Acero',
-      link: 'acero'
+      link: 'Aplications/steel/acero'
     },
 
   ])

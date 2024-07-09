@@ -2,9 +2,12 @@ import React from 'react'
 import styles from './productsGRAL.module.css';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage} from '@cloudinary/react';
+import { useNavigate } from 'react-router-dom';
 
 
 export const ProductsGRAL = () => {
+
+  const navigate = useNavigate();
 
   const cld = new Cloudinary({
     cloud: {
@@ -31,7 +34,9 @@ export const ProductsGRAL = () => {
     cld.image('siete')
   ];
 
-
+  const handleClickNavigate = (path)=> {
+    navigate(path)
+  }
 
   return (
     <div className={styles.contenedor}>
@@ -52,7 +57,7 @@ export const ProductsGRAL = () => {
         <div className={styles.cardText}>
           <h1>PRODUCTOS CALES</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ratione vitae doloribus est omnis qui voluptatibus impedit sint sit officiis obcaecati reiciendis, consequatur repudiandae numquam beatae illum ab. Ipsa, commodi?</p>
-          <button>Explorar Mas</button>
+          <button onClick={()=> handleClickNavigate('/products/cales')}>Explorar Mas</button>
         </div>
         <div className={styles.cardImage}>
           <div className={styles.images}><AdvancedImage cldImg={myImageCales[0]}/></div>
@@ -65,7 +70,7 @@ export const ProductsGRAL = () => {
         <div className={styles.cardText}>
           <h1>PIEDRA CALIZAR & CARBONATO</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ratione vitae doloribus est omnis qui voluptatibus impedit sint sit officiis obcaecati reiciendis, consequatur repudiandae numquam beatae illum ab. Ipsa, commodi?</p>
-          <button>Explorar Mas</button>
+          <button onClick={()=> handleClickNavigate('/products/stone')}>Explorar Mas</button>
         </div>
         <div className={styles.cardImage}>
           <div className={styles.images}><AdvancedImage cldImg={myImagePiedra[0]}/></div>
@@ -78,7 +83,7 @@ export const ProductsGRAL = () => {
         <div className={styles.cardText}>
           <h1>NEUTRAMOL</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ratione vitae doloribus est omnis qui voluptatibus impedit sint sit officiis obcaecati reiciendis, consequatur repudiandae numquam beatae illum ab. Ipsa, commodi?</p>
-          <button>Explorar Mas</button>
+          <button onClick={()=> handleClickNavigate('/products/neutramol')}>Explorar Mas</button>
         </div>
         <div className={styles.cardImage}>
           <div className={styles.images}><AdvancedImage cldImg={myImageNeutramol[0]}/></div>

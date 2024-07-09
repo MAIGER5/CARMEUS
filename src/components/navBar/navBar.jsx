@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import styles from './navBar.module.css';
 import { VscMenu } from "react-icons/vsc";
@@ -16,21 +15,11 @@ import carmeusBlue from '../utils/logos/blue.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export const NavBar = () => {
-
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
-  // document.addEventListener('DOMContentLoaded', (event) => {
-  //   const element = document.getElementById('navBar');
-  //   if (element) {
-  //       const height = element.offsetHeight;
-  //       console.log(height);
-  //   } else {
-  //       console.log('Elemento no encontrado');
-  //   }
-  // });
-  
   useEffect(() => {
     const handleScrolled = () => {
       window.scrollY > 0 ? setScrolled(true) : setScrolled(false);
@@ -57,7 +46,13 @@ export const NavBar = () => {
     navigate(path);
   };
 
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
 
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
 
   return (
     <div id={styles.navBar} className={`${styles.contenedor} ${colorChangeNavbar}`}>
@@ -79,52 +74,122 @@ export const NavBar = () => {
         <ul>
           <li onClick={() => handleClickNavigate('/aboutUs')} className={`${styles.menuPrincipal}`}>Nosotros</li>
           <li>
-            <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones  </span>
+            <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones</span>
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
-              <li onClick={() => handleClickNavigate('/agricola')}><MdOutlineAgriculture/> <span>Soluciones Agricolas</span></li>
-              <li onClick={() => handleClickNavigate('/engeneerBuilding')}><BsBuildingGear/> <span>Ingenieria Civil & Construcción</span> <span className={styles.triangulo2}></span></li>
-                {/* <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
-                    <li onClick={() => handleClickNavigate('/quicklime')}>Agregados</li>
-                    <li onClick={() => handleClickNavigate('/hydratedlime')}>Asfalto</li>
-                    <li onClick={() => handleClickNavigate('/dolomiticlime')}>Tratamiento de Suelos</li>
-                  </ul> */}
-              <li onClick={() => handleClickNavigate('/chemical')}><SlChemistry/> <span>Industria Químca</span> <span className={styles.triangulo2}></span></li>
-              <li onClick={() => handleClickNavigate('/flueGasTreatment')}><MdOutlineGasMeter/> <span>Tratamiento de Gases & Combustión</span></li>
-              <li onClick={() => handleClickNavigate('/glassCeramic')}><SiEquinixmetal/> <span>Cerámica & Vidrio</span></li>
-              <li onClick={() => handleClickNavigate('/steel')}><LuConstruction/> <span>Hierro & Acero</span> <span className={styles.triangulo2}></span></li>
-              <li onClick={() => handleClickNavigate('/noFerrousMining')}><AiOutlineGold/> <span>Minería & Metales No Ferrosos</span></li>
-              <li onClick={() => handleClickNavigate('/pccPulPaper')}><LiaNewspaper/> <span>Pulpa & Papel</span></li>
-              <li onClick={() => handleClickNavigate('/waterTreatment')}><FaHandHoldingWater/> <span>Tratamiento de Agua</span> <span className={styles.triangulo2}></span></li>
+              <li onClick={() => handleClickNavigate('/agricola')}>
+                <MdOutlineAgriculture /> <span>Soluciones Agricolas</span>
+              </li>
+              <li 
+                className={`${styles.prueba}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                
+              >
+                <BsBuildingGear /> <span className={`${styles.prueba}`} onClick={() => handleClickNavigate('/Aplications/engeneerBuilding')}>Ingenieria Civil & Construcción</span> 
+                <span className={styles.triangulo2}></span>
+                {hovered && (
+                  <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
+                    <li onClick={() => handleClickNavigate('/Aplications/engeneerBuilding/aggregado')}>Agregados</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/engeneerBuilding/asphalt')}>Asfalto</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/engeneerBuilding/soilTreatment')}>Tratamiento de Suelos</li>
+                  </ul>
+                )}
+              </li>
+              <li 
+                className={`${styles.prueba}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <SlChemistry /> <span 
+                                  className={`${styles.prueba}`} 
+                                  onClick={() => handleClickNavigate('/Aplications/chemical')}
+                                >Industria Quimica</span> 
+                <span className={styles.triangulo2}></span>
+                {hovered && (
+                  <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
+                    <li onClick={() => handleClickNavigate('/Aplications/chemical/plasticRubber')}>Plástico y Cauhco</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/chemical/chemicalCompounds')}>Compuesto Químico</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/chemical/chemicalCalciumSalts')}>Sales de Calcio</li>
+                  </ul>
+                )}
+              </li>
+              <li onClick={() => handleClickNavigate('/Aplications/flueGasTreatment')}>
+                <MdOutlineGasMeter /> <span>Tratamiento de Gases & Combustión</span>
+              </li>
+              <li onClick={() => handleClickNavigate('/Aplications/glassCeramic')}>
+                <SiEquinixmetal /> <span>Cerámica & Vidrio</span>
+              </li>
+              <li 
+                className={`${styles.prueba}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <LuConstruction /><span 
+                                    className={`${styles.prueba}`}
+                                    onClick={() => handleClickNavigate('/Aplications/steel')}
+                                  >Hiero & Acero</span> 
+                <span className={styles.triangulo2}></span>
+                {hovered && (
+                  <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
+                    <li onClick={() => handleClickNavigate('/Aplications/steel/iron')}>Producción de Hierro</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/steel/acero')}>Producción de Acero</li>
+                  </ul>
+                )}
+              </li>
+              <li onClick={() => handleClickNavigate('/Aplications/noFerrousMining')}>
+                <AiOutlineGold /> <span>Minería & Metales No Ferrosos</span>
+              </li>
+              <li onClick={() => handleClickNavigate('/Aplications/pccPulPaper')}>
+                <LiaNewspaper /> <span>Pulpa & Papel</span>
+              </li>
+              <li 
+                className={`${styles.prueba}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <FaHandHoldingWater /><span 
+                                        className={`${styles.prueba}`}
+                                        onClick={() => handleClickNavigate('/Aplications/waterTreatment')}
+                                      >Tratamiento de Agua</span> 
+                <span className={styles.triangulo2}></span>
+                {hovered && (
+                  <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
+                    <li onClick={() => handleClickNavigate('/Aplications/waterTreatment/drinkWater')}>Agua Potable</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/waterTreatment/wasteWater')}>Aguas Residuales</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/waterTreatment/industryWater')}>Tratamiento Industrial del Agua</li>
+                  </ul>
+                )}
+              </li>
             </ul>
           </li>
           <li>
-            <span onClick={()=> handleClickNavigate('/products')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Productos  </span>
+            <span onClick={()=> handleClickNavigate('/products')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Productos</span>
             <ul id={styles.dropDos} className={`${styles.dropdowns}`}>
               <li>
-                <h6>Cales</h6>
+                <h6 onClick={() => handleClickNavigate('/products/cales')}>Cales</h6>
                 <ul>
-                  <li onClick={() => handleClickNavigate('/quicklime')}>Cal Viva</li>
-                  <li onClick={() => handleClickNavigate('/hydratedlime')}>Cal Hidratada</li>
-                  <li onClick={() => handleClickNavigate('/dolomiticlime')}>Cal Dòlomita</li>
-                  <li onClick={() => handleClickNavigate('/agriculturallime')}>Cal Agricola</li>
+                  <li onClick={() => handleClickNavigate('/products/cales/quicklime')}>Cal Viva</li>
+                  <li onClick={() => handleClickNavigate('/products/cales/hydratedlime')}>Cal Hidratada</li>
+                  <li onClick={() => handleClickNavigate('/products/cales/dolomiticlime')}>Cal Dòlomita</li>
+                  <li onClick={() => handleClickNavigate('/products/cales/agriculturallime')}>Cal Agricola</li>
                 </ul>
               </li>
               <li>
-                <h6>Piedra</h6>
+                <h6 onClick={() => handleClickNavigate('/products/stone')}>Piedra</h6>
                 <ul>
-                  <li onClick={() => handleClickNavigate('/limestone')}>Piedra Caliza</li>
-                  <li onClick={() => handleClickNavigate('/carbonate')}>Carbonato</li>
+                  <li onClick={() => handleClickNavigate('/products/stone/limestone')}>Piedra Caliza</li>
+                  <li onClick={() => handleClickNavigate('/products/stone/carbonate')}>Carbonato</li>
                 </ul>
               </li>
               <li>
                 <h6>Nuevos Productos</h6>
                 <ul>
-                  <li onClick={() => handleClickNavigate('/neutramol')}>Neutramol</li>
+                  <li onClick={() => handleClickNavigate('/products/neutramol')}>Neutramol</li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li onClick={() => handleClickNavigate('/plasticRubber')}  className={`${styles.menuPrincipal} `}>Sostenibilidad</li>
+          <li onClick={() => handleClickNavigate('/plasticRubber')} className={`${styles.menuPrincipal} `}>Sostenibilidad</li>
           <li onClick={() => handleClickNavigate('/services')} className={`${styles.menuPrincipal} `}>Servicios</li>
         </ul>
         <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>

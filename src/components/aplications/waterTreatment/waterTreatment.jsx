@@ -23,19 +23,19 @@ export const WaterTreatment = () => {
       id: 1,
       image: "agua1",
       description: 'Agua Potable',
-      link: 'drinkWater'
+      link: 'Aplications/waterTreatment/drinkWater'
     },
     {
       id: 2,
       image: "wasteWater",
       description: 'Tratamiento de Aguas Residuales',
-      link: 'wasteWater'
+      link: 'Aplications/waterTreatment/wasteWater'
     },
     {
       id: 3,
       image: "agua",
       description: 'Tratamiento Industrial del Agua',
-      link: 'industryWater'
+      link: 'Aplications/waterTreatment/industryWater'
     },
   ])
 

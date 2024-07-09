@@ -34,8 +34,9 @@ h3{
     background-color: var(--blue3-color);
 }
 
-.contenedor div:hover {
+.boxes:hover {
     background-color: var(--orange2-color);
+    color: white;
 }
 
 

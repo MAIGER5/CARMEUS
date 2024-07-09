@@ -1,0 +1,49 @@
+@import url('../../variables.module.css');
+
+.contenedor{
+  margin- : 150px;
+}
+
+.mainScreen{
+  width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  background: var(--blue2-color);
+}
+
+.textMainScreen{
+  width: 60%;
+  top: 50%;
+  margin: auto;
+}
+
+.textMainScreen> p, h1{
+  width: 60%;
+  text-wrap: pretty;
+  color: white;
+}
+
+.textMainScreen> p{
+  color: rgb(155, 199, 240);
+  font-weight: 600;
+}
+
+.bodyBackground{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  margin-bottom: ;
+}
+
+.bodyBackground> div{
+  width: 50%;
+  margin-top: 90px;
+  border: 1px solid red;
+  height: auto;
+}
+
+.bodyBackground p{
+  color: var(--grey2-color);
+}

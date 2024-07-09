@@ -166,6 +166,8 @@
     display: flex;
     gap: 30px;
     margin-left: auto;
+    background-color: var(--grey6-color);
+    /* border: 1px solid var(--grey5-color); */
 }
 
 .feuatures{
@@ -254,8 +256,7 @@
 .cardProductRelationed{
     width: 40%;
     height: 500px;
-    border: 1px solid  var(--grey4-color);
-    background-color: transparent;
+    background-color: var(--grey6-color);
     cursor: pointer;
     transition: background-color .7s;
 

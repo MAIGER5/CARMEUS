@@ -9,15 +9,15 @@ export const FirstRowX3 = () => {
 
   return (
     <div className={`${styles.contenedor}`}>
-      <Link to={'/cales'} className={styles.boxes}>
+      <Link to={'/products/cales'} className={styles.boxes}>
         <h5>Cales</h5>
         <h3>{signo}</h3>
       </Link>
-      <Link to={'/stone'} className={styles.boxes}>
+      <Link to={'/products/stone'} className={styles.boxes}>
         <h5>Piedra</h5>
         <h3>{signo}</h3>
       </Link>
-      <Link to={'/neutramol'} className={styles.boxes}>
+      <Link to={'/products/neutramol'} className={styles.boxes}>
         <h5>Neutramol</h5>
         <h3>{signo}</h3>
       </Link>

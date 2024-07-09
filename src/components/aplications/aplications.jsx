@@ -31,55 +31,55 @@ export const Aplications = () => {
       id: 1,
       image: "Agriculture",
       description: 'Soluciones Agricolas',
-      link: 'solutionAgrico',
+      link: 'Aplications/chemical',
     },
     {
       id: 2,
       image: "building",
       description: 'Ingenieria Civil & Construcción',
-      link: 'engeneerBuilding'
+      link: 'Aplications/engeneerBuilding'
     },
     {
       id: 3,
       image: "chemical3",
       description: 'Industria Química',
-      link: 'chemical',
+      link: 'Aplications/chemical',
     },
     {
       id: 4,
       image: "desulfuration_mulqte",
       description: 'Tratamiento de Gases & Combustión',
-      link: 'flueGasTreatment'
+      link: 'Aplications/flueGasTreatment'
     },
     {
       id: 5,
       image: "vidrio",
       description: 'Cerámica & Vidrio',
-      link: 'glassCeramic'
+      link: 'Aplications/glassCeramic'
     },
     {
       id: 6,
       image: "metalurgica_qhjycc",
       description: 'Hierro & Acero',
-      link: 'steel'
+      link: 'Aplications/steel'
     },
     {
       id: 7,
       image: "construccion_n6hksp",
       description: 'Mineria & Metales No Ferrosos',
-      link: 'noFerrousMining'
+      link: 'Aplications/noFerrousMining'
     },
     {
       id: 8,
       image: "paper_mhw9sk",
       description: 'Pulpa & Papel',
-      link: 'pccPulPaper'
+      link: 'Aplications/pccPulPaper'
     },
     {
       id: 9,
       image: "agua",
       description: 'Tratamiento de Agua',
-      link: 'waterTreatment'
+      link: 'Aplications/waterTreatment'
     },
   ]);
 
