@@ -8,13 +8,13 @@ import { FaHandHoldingWater } from 'react-icons/fa';
 import { LiaNewspaper } from 'react-icons/lia';
 import { AiOutlineGold } from 'react-icons/ai';
 
-const dataCalHidratada = {
+const dataCalHidratadaTypeB = {
   
   Screen: [
     {
       id: 1,
       image: 'hidratada',
-      title: "CAL HIDRATADA",
+      title: "CAL HIDRATADA TIPO B",
       description: 'La Cal Hidratada de Carmeuse Colombia es de alta calidad y baja en contaminantes, siendo ideal para el proceso de trefilado en frío. En el tratamiento de aguas y efluentes industriales, la cal hidratada libera poco calor exotérmico al entrar en contacto con el agua, lo que facilita y hace más seguro su uso en determinadas aplicaciones en comparación con la cal viva.'
     }
   ],
@@ -22,7 +22,7 @@ const dataCalHidratada = {
   CardProduct: [
     {
       id: 1,
-      title1: "CAL HIDRATADA",
+      title1: "CAL HIDRATADA TIPO B",
       title2: "BENEFICIOS",
       description: 'La Cal Hidratada, químicamente conocida como hidróxido de calcio (Ca(OH)2), o cal apagada, es un polvo blanco seco derivado de la cal viva mezclada con agua. La cal hidratada con alto contenido de calcio Carmeuse está disponible como producto seco a granel o en bolsas y se utiliza en diversas aplicaciones industriales, como el tratamiento de gases de combustión, el tratamiento de aguas, la siderurgia y la construcción, entre otras.',
       cifra1: 10000,
@@ -93,6 +93,7 @@ const dataCalHidratada = {
       especificacion2Text: '2,5" hasta 7 micras',
     }
   ],
+
   Mercados: [
     {
       id: 1,
@@ -148,6 +149,7 @@ const dataCalHidratada = {
     },
   ],
 
+  
   Sheet: [
     {
       id: 1,
@@ -162,4 +164,4 @@ const dataCalHidratada = {
   ]
 }
 
-export default dataCalHidratada;
+export default dataCalHidratadaTypeB;

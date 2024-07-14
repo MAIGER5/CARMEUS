@@ -52,13 +52,13 @@ export const AnimalCare = () =>{
           id: 1,
           image: 'agricola',
           title: 'Cal Viva',
-          description: 'Conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.',
+          description: 'En el cuidado animal, la cal viva se utiliza para desinfectar instalaciones, eliminando patógenos y parásitos. También ayuda a controlar olores neutralizando compuestos malolientes y se emplea en el manejo de residuos, reduciendo la presencia de microorganismos en el estiércol y otros desechos animales.',
         },
         {
           id: 2,
-          image: 'dolomita',
-          title: 'Cal Dolomita',
-          description: 'Nuestra Cal viva Dolomítica tiene el contenido de magnesio adecuado para equilibrar y proteger sus refractarios, es fundamental para producir acero de calidad y controlar sus costes.',
+          image: 'vaca',
+          title: 'Piedra Caliza',
+          description: 'El carbonato de calcio es esencial para la nutrición animal porque proporciona el calcio necesario para la salud ósea, la función muscular y nerviosa, y la producción de huevos en aves. También ayuda en la digestión y previene enfermedades metabólicas. Es una fuente vital de calcio en dietas y suplementos para animales.',
         },
       ]
     },

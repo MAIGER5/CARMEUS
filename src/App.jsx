@@ -43,6 +43,8 @@ import { Agropecuario } from './components/aplications/agropecuario/agropecuario
 import { SugarIndustry } from './components/aplications/agropecuario/sugarIndustry/sugarIndustry';
 import { AnimalCare } from './components/aplications/agropecuario/animalCare/animalCare';
 import { Food } from './components/aplications/agropecuario/food/food';
+import { Services } from './components/services/services';
+import ScrollToTop from './ScrollToTop';
 
 
 
@@ -51,6 +53,7 @@ import { Food } from './components/aplications/agropecuario/food/food';
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop/>
       <NavBar/>
       <Routes>
 
@@ -62,7 +65,9 @@ function App() {
         
         <Route path='/aboutUs' element={<AboutUs/>}/>
         <Route path='/products' element={<ProductsGRAL/>}/>
+        <Route path='/services' element={<Services/>}/>
         <Route path='/aplications' element={<Aplications/>}/>
+
         <Route path='/products/cales/quicklime' element={<CalViva/>}/>
         <Route path='/products/cales/hydratedlime' element={<CalHidratada/>}/>
         <Route path='/products/cales/hydratedlimeTipoA' element={<CalHidratadaTipoA/>}/>

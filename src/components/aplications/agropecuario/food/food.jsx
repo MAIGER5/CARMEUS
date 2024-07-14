@@ -14,20 +14,23 @@ export const Food = () => {
       id: 1,
       nombre: 'componente1',
       title: 'INDUSTRIA ALIMENTARIA',
-      description: 'Carmeuse Colombia es líder y experto en el suministro de productos y soluciones de cal adaptados a las necesidades de las aplicaciones siderúrgicas. Carmeuse ofrece una gran variedad de productos de cal y dolomía con alto contenido en calcio, incluida la cal en guijarros, así como cal triturada y piedra caliza para los procesos de hornos básicos de oxígeno (BOF) y hornos de arco eléctrico (EAF). Los productos de cal son los principales componentes (fundentes) para fabricar escorias que protegen y purifican el acero y ayudan notablemente a eliminar el fósforo y la sílice. El uso adecuado de la cal de calidad de Carmeuse permite mejorar la productividad y la sostenibilidad.',
-      image: 'iron',
+      description: 'La cal desempeña un papel fundamental en una amplia gama de aplicaciones alimentarias, contribuyendo a la calidad, la estabilidad y el contenido nutricional del producto. Sus propiedades versátiles lo convierten en un ingrediente indispensable en la industria alimentaria.',
+      image: 'food',
     },
     {
       id: 2,
       nombre: 'componente2 Caracteristic and benfefits',
       caracteristic: [
-        'La fabricación de acero inoxidable modifica las propiedades del acero procedente de procesos de horno básico de oxígeno (BOF) u horno de arco eléctrico (EAF) para formar un acero altamente resistente a la corrosión. El acero inoxidable es una aleación de hierro que contiene cromo y, normalmente, níquel.', 
-        'La química del cromo es esencial para la producción de acero inoxidable y perderlo en el proceso puede repercutir negativamente en la calidad del producto final. La adición de cal y fluorita mejora el proceso de reducción del Cr2O3 y mantiene fluida la escoria. Controlar el oxígeno y el azufre dentro del baño metálico también es fundamental para conseguir un acero inoxidable de calidad. La mezcla adecuada de productos también puede ayudar a prolongar la vida útil del refractario.'
+        'El proceso de fortificación normalmente implica incorporar cantidades cuidadosamente medidas de carbonato de calcio al producto alimenticio durante su producción. Esto asegura que el producto final contenga una cantidad adecuada y estandarizada de calcio. La adición de cal debe cumplir con las pautas y estándares regulatorios establecidos por las autoridades de seguridad alimentaria para garantizar la seguridad y eficacia.',
+        "La fortificación de productos alimenticios con cal o carbonato de calcio implica la adición intencional de este compuesto para aumentar el contenido de calcio del alimento. Este proceso se lleva a cabo para mejorar el valor nutricional del producto, proporcionando a los consumidores una fuente adicional de calcio dietético."
       ],
       benefits: [
-        'La fabricación de acero inoxidable modifica las propiedades del acero procedente de procesos de horno básico de oxígeno (BOF) u horno de arco eléctrico (EAF) para formar un acero altamente resistente a la corrosión. El acero inoxidable es una aleación de hierro que contiene cromo y, normalmente, níquel.', 
-        'Mantenimiento de la viscosidad de la escoria: la cal viva con alto contenido en calcio ayuda a mantener la viscosidad de la escoria para aumentar el rendimiento térmico. La correcta formación de la capa de escoria protege el refractario de los daños del arco, concentra y transfiere el calor al acero líquido y atrapa las inclusiones y los óxidos metálicos.',
-        'Prolongación de la vida útil del refractario - El contenido de magnesio de la cal viva dolomítica evita la fusión del refractario y contribuye a prolongar su vida útil.'
+        "Aditivos: La cal produce sales de calcio como lactato y citrato, fortaleciendo alimentos con calcio esencial y actuando como conservantes y estabilizadores.",
+        "Papas fritas: En la producción de chips de maíz, la cal mejora textura y sabor, enriquece con calcio esencial y ayuda en la conservación, mejorando la calidad y valor nutricional.",
+        "ddAjuste de pH y Neutralización: La cal estabiliza la acidez o alcalinidad en aceites, gelatinas, mermeladas, salsas y encurtidos.d",
+        "Horneado y acondicionamiento de masa: En repostería, la cal mejora la textura y estabilidad de la masa, y actúa como agente leudante en productos horneados como pan, pasteles y galletas.",
+        "Agente desecante y antiaglomerante: La cal evita el apelotonamiento de alimentos en polvo o granulados absorbiendo el exceso de humedad, garantizando fluidez en especias, mezclas para hornear y bebidas secas.",
+        "Otros beneficios pueden apreciarse en los siguientes procesos: Clarificación de Jugos, procesamiento de lácteos, alternativas lácteas, fórmulas infantiles y alimentos para bebés, fortificación - Suplementos nutricionales, productos de panadería, cereales y alimentos para el desayuno.",
       ]
     },
     {
@@ -36,13 +39,13 @@ export const Food = () => {
       data:[
         {
           id: 1,
-          image: 'agricola',
+          image: 'food1',
           title: 'Cal Viva',
           description: 'Conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.',
         },
         {
           id: 2,
-          image: 'dolomita',
+          image: 'food3',
           title: 'Cal Dolomita',
           description: 'Nuestra Cal viva Dolomítica tiene el contenido de magnesio adecuado para equilibrar y proteger sus refractarios, es fundamental para producir acero de calidad y controlar sus costes.',
         },

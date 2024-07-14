@@ -98,26 +98,31 @@ const dataCalHidratadaTypeA = {
       id: 1,
       icon: <SlChemistry />,
       title: "Industria Química ",
+      link: '/Aplications/chemical'
     },
     {
       id: 2,
       icon: <BsBuildingGear />,
       title: "Ingenieria Civil & Construcción",
+      link: '/Aplications/engeneerBuilding'
     },
     {
       id: 3,
       icon: <LuConstruction />,
       title: "Hierro & Acero",
+      link: '/Aplications/steel'
     },
     {
       id: 4,
       icon: <MdOutlineAgriculture />,
       title: "Soluciones Agricolas",
+      link: '/Aplications/agropecuario'
     },
     {
       id: 5,
       icon: <MdOutlineGasMeter />,
       title: "Tratamiento de Gases & Combustión",
+      link: '/Aplications/flueGasTreatment'
     },
     // {
     //   id: 6,
@@ -128,6 +133,7 @@ const dataCalHidratadaTypeA = {
       id: 7,
       icon: <FaHandHoldingWater />,
       title: "Tratamiento de Agua",
+      link: '/Aplications/waterTreatment'
     },
     // {
     //   id: 8,
@@ -138,6 +144,7 @@ const dataCalHidratadaTypeA = {
       id: 9,
       icon: <AiOutlineGold />,
       title: "Minería & Metales No Ferrosos",
+      link: '/Aplications/noFerrousMining'
     },
   ],
 

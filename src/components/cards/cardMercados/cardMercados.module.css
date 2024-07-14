@@ -26,6 +26,7 @@
   align-items: center;
   justify-content: center;
   background-color:var(--grey6-color);
+  cursor: pointer;
 }
 
 .cards > :first-child {

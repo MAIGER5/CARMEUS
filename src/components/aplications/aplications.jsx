@@ -31,7 +31,7 @@ export const Aplications = () => {
       id: 1,
       image: "Agriculture",
       description: 'Soluciones Agricolas',
-      link: 'Aplications/chemical',
+      link: 'Aplications/agropecuario',
     },
     {
       id: 2,

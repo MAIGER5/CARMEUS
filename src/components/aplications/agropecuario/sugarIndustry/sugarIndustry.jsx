@@ -21,13 +21,12 @@ export const SugarIndustry = () => {
       id: 2,
       nombre: 'componente2 Caracteristic and benfefits',
       caracteristic: [
-        'La fabricación de acero inoxidable modifica las propiedades del acero procedente de procesos de horno básico de oxígeno (BOF) u horno de arco eléctrico (EAF) para formar un acero altamente resistente a la corrosión. El acero inoxidable es una aleación de hierro que contiene cromo y, normalmente, níquel.', 
-        'La química del cromo es esencial para la producción de acero inoxidable y perderlo en el proceso puede repercutir negativamente en la calidad del producto final. La adición de cal y fluorita mejora el proceso de reducción del Cr2O3 y mantiene fluida la escoria. Controlar el oxígeno y el azufre dentro del baño metálico también es fundamental para conseguir un acero inoxidable de calidad. La mezcla adecuada de productos también puede ayudar a prolongar la vida útil del refractario.'
+        'La cal juega un papel fundamental en la producción y refinación del azúcar. Se utiliza principalmente para ajustar los niveles de pH del jugo de azúcar. Al agregar cal, el jugo se vuelve menos ácido, creando un ambiente donde las impurezas, como proteínas y colorantes, pueden coagularse y eliminarse fácilmente. La cal ayuda en el proceso de clarificación, lo que da como resultado un jugo de azúcar más limpio. Además, ayuda a eliminar colorantes no deseados, contribuyendo a la producción de azúcar blanco refinado. La cal también favorece la precipitación de impurezas como el carbonato de calcio y el hidróxido de magnesio, que pueden separarse eficazmente del jugo de azúcar. Sus propiedades antimicrobianas ayudan a prevenir el crecimiento microbiano en el jugo, mejorando la calidad general y la vida útil del azúcar.'
       ],
       benefits: [
-        'La fabricación de acero inoxidable modifica las propiedades del acero procedente de procesos de horno básico de oxígeno (BOF) u horno de arco eléctrico (EAF) para formar un acero altamente resistente a la corrosión. El acero inoxidable es una aleación de hierro que contiene cromo y, normalmente, níquel.', 
-        'Mantenimiento de la viscosidad de la escoria: la cal viva con alto contenido en calcio ayuda a mantener la viscosidad de la escoria para aumentar el rendimiento térmico. La correcta formación de la capa de escoria protege el refractario de los daños del arco, concentra y transfiere el calor al acero líquido y atrapa las inclusiones y los óxidos metálicos.',
-        'Prolongación de la vida útil del refractario - El contenido de magnesio de la cal viva dolomítica evita la fusión del refractario y contribuye a prolongar su vida útil.'
+        "Regulación del pH: la cal viva crea un ambiente donde las impurezas se pueden eliminar de manera eficiente, lo que garantiza un producto de azúcar más puro y de mayor calidad.",
+        "Eliminación de color: la cal viva es fundamental en la eliminación de colorantes en el jugo de azúcar, contribuyendo a la producción de azúcar blanco cristalino.",
+        "Eliminación de impurezas: la cal viva fomenta la precipitación de impurezas como el carbonato de calcio y el hidróxido de magnesio, que se pueden separar fácilmente del jugo de azúcar.",
       ]
     },
     {
@@ -36,15 +35,15 @@ export const SugarIndustry = () => {
       data:[
         {
           id: 1,
-          image: 'agricola',
+          image: 'sugar2',
           title: 'Cal Viva',
-          description: 'Conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.',
+          description: 'En la industria azucarera, la cal viva se usa principalmente para la purificación del jugo de caña o remolacha. Se añade al jugo para neutralizar ácidos, ayudando a precipitar impurezas y facilitando su eliminación. Este proceso mejora la clarificación del jugo y aumenta la eficiencia en la producción de azúcar.',
         },
         {
           id: 2,
-          image: 'dolomita',
-          title: 'Cal Dolomita',
-          description: 'Nuestra Cal viva Dolomítica tiene el contenido de magnesio adecuado para equilibrar y proteger sus refractarios, es fundamental para producir acero de calidad y controlar sus costes.',
+          image: 'sugar',
+          title: 'Cal Hidratada',
+          description: 'la cal hidratada se utiliza para purificar el jugo de caña o remolacha mediante la neutralización de ácidos y el ajuste del pH. Facilita la precipitación de impurezas y mejora la clarificación del jugo al promover la coagulación y floculación de partículas suspendidas. Esto resulta en un proceso más eficiente y en un azúcar de mayor calidad..',
         },
       ]
     },

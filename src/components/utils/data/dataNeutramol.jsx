@@ -101,26 +101,31 @@ const dataNeutramol = {
       id: 2,
       icon: <BsBuildingGear />,
       title: "Ingenieria Civil & Construcción",
+      link: '/Aplications/engeneerBuilding'
     },
     {
       id: 3,
       icon: <LuConstruction />,
       title: "Hierro & Acero",
+      link: '/Aplications/steel'
     },
     {
       id: 4,
       icon: <MdOutlineAgriculture />,
       title: "Soluciones Agricolas",
+      link: '/Aplications/agropecuario'
     },
     {
       id: 5,
       icon: <MdOutlineGasMeter />,
       title: "Tratamiento de Gases & Combustión",
+      link: '/Aplications/flueGasTreatment'
     },
     {
       id: 6,
       icon: <SiEquinixmetal />,
       title: "Cerámica & Vidrio",
+      link: '/Aplications/glassCeramic'
     },
     // {
     //   id: 7,

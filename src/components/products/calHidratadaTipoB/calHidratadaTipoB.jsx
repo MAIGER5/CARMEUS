@@ -7,12 +7,12 @@ import { CardProtoypeProd } from '../../cards/cardProtoypeProd/cardProtoypeProd'
 import { CardMercados } from '../../cards/cardMercados/cardMercados';
 import { CardDatasheet } from '../../cards/cardDatasheet/cardDatasheet';
 import { CardUses } from '../../cards/cardUses/cardUses';
-import dataCalHidratada from '../../utils/data/dataCalHidratada';
+import dataCalHidratadaTypeB from '../../utils/data/dataCalHidratadaTypeB';
 
 
 export const CalHidratadaTipoB = () => {
 
-  const data = dataCalHidratada;
+  const data = dataCalHidratadaTypeB;
 
   const [ dataScreen ] = useState(data.Screen)
   const [ dataCardProduct ] = useState(data.CardProduct)
