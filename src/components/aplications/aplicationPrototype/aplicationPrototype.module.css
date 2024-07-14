@@ -181,6 +181,7 @@
 
 .feuatures > h1{
     font-size: 30px;
+    color: var(--blue2-color);
 }
 
 .feuatures > ul li{

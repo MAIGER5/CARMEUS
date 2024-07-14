@@ -10,24 +10,27 @@ export const FourRowX3 = () => {
 
     {
       id: 1,
-      title: "SOLUCIONES QUE HACEN LA DIFERENCIA",
+      title: "PRODUCTOS QUE HACEN LA DIFERENCIA",
       image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi voluptate distinctio soluta debitis ipsam perspiciatis laboriosam !',
-      buttomInfo: 'Productos & Servicios',
+      description: 'En Carmeuse Colombia, nuestra gente marca la diferencia y trabaja con usted. Nos centramos en sus necesidades específicas y le ofrecemos las soluciones adecuadas donde y cuando las necesite para que nunca tenga que preocuparse.',
+      buttomInfo: 'Nuestros Productos',
+      link: '/products'
     },
     {
       id: 2,
       title: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      image: "seis",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.!',
+      image: "cinco-2",
+      description: 'Cal Hidratada Tipo A',
       buttomInfo: 'Productos & Servicios',
+      link: '/products/cales/hydratedlimeTipoA'
     },
     {
       id: 3,
       title: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      image: "cinco-2",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      image: "calViva",
+      description: 'Cal Hidratada Tipo B',
       buttomInfo: 'Productos & Servicios',
+      link: '/products/cales/hydratedlimeTipoB'
     },
 
   ])

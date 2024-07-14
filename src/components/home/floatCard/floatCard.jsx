@@ -11,6 +11,7 @@ export const FloatCard = () => {
       id:1,
       image: 'floatImg',
       title: "Trabaja con Nosotros",
+      title1: 'NUESTRAS MARCAS',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cumque soluta explicabo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam' ,
       infoButtom: "Contactanos",
     }

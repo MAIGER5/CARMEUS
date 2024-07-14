@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import styles from './row_1Text_2Card.module.css';
+import { useNavigate } from 'react-router-dom'
 import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage} from '@cloudinary/react';
 import DataContext from '../../dataContext/dataContext';
@@ -7,6 +8,8 @@ import { ButtomProduct } from '../../buttoms/buttomProducts/buttomProduct';
 
 
 export const Row_1Text_2Card = () => {
+
+  const navigate = useNavigate()
   
   const data = useContext(DataContext);
 
@@ -20,8 +23,12 @@ export const Row_1Text_2Card = () => {
     }
   });
   
-  const myImage = cld.image(data[0].image); 
-  const myImage2 = cld.image(data[1].image); 
+  const myImage = cld.image(data[1].image); 
+  const myImage2 = cld.image(data[2].image); 
+
+  const handleClickNavigate = (path)=>{
+    navigate(path)
+  }
 
 
   return (
@@ -32,18 +39,26 @@ export const Row_1Text_2Card = () => {
             <div className="card-body">
               <h1 className="card-title">{data[0].title}</h1>
               <p className="card-text">{data[0].description}.</p>
-              <ButtomProduct infoboton={data[0].buttomInfo}/>
+              <div className={styles.containerBoton} 
+                onClick={ ()=> handleClickNavigate(data[0].link) }
+              >
+                <ButtomProduct infoboton={data[0].buttomInfo}/>
+              </div>
             </div>
           </div>
         </div>
         <div className={styles.group}>
-          <div className={`${styles.cardSmall}`}>
+          <div className={`${styles.cardSmall}`}
+            onClick={ ()=> handleClickNavigate(data[1].link)}
+          >
               <div className={styles.cardImg}>
                 <AdvancedImage cldImg={myImage} />
               </div>
               <div className={`${styles.textInt}`}>{data[1].description}</div>
           </div>
-          <div className={`${styles.cardSmall}`}>
+          <div className={`${styles.cardSmall}`}
+            onClick={ ()=> handleClickNavigate(data[2].link)}
+          >
               <div className={styles.cardImg}>
                 <AdvancedImage cldImg={myImage2} />
               </div>

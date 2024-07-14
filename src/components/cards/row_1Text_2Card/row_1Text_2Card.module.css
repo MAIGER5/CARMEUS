@@ -38,11 +38,15 @@
 
 
 .cardBig h1{
-    width: 100%;
+    width: 80%;
     font-size: 40px;
     font-weight: 600;
     color: var(--blue2-color);
-    text-align: left;
+    margin-right: auto;
+}
+
+.containerBoton{
+    width: 100%;
 }
 
 .group{

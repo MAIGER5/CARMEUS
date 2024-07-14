@@ -1,0 +1,12 @@
+@import url('../../../variables.module.css');
+
+
+.contenedor{
+    margin-top: 160px;
+}
+
+.aplications{
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+}

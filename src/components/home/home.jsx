@@ -47,9 +47,9 @@ export const Home = () => {
           <FourRowX3/>
         </div>
       </div>
-      <div className={styles.marginTop}>  {/*this className is to hidden or show the component to make responsive*/}
+      {/* <div className={styles.marginTop}> 
         <FiveRowX3/>
-      </div>
+      </div> */}
       <div className={`${styles.boxSombra}`}>  {/*this className is to hidden or show the component to make responsive*/}
         <div className={styles.marginTop2}>
           <SixRowX2/>

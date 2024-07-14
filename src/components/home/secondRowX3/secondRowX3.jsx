@@ -11,17 +11,20 @@ export const SecondRowX3 = () => {
     {
       id: 1,
       image: "uno",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptates accusantium ducimus labore sequi soluta',
+      description: 'Apoyo a la Educación infantil en la Danta, Antioquia ',
+      link:'newOne'
     },
     {
       id: 2,
       image: "dos",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptates accusantium ducimus labore sequi soluta',
+      description: 'Mejorando la Calida de los Rios y los Habitantes',
+      link:'newTwo'
     },
     {
       id: 3,
       image: "imgUno",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptates accusantium ducimus labore sequi soluta',
+      description: 'Nuestro Porgreso es el Progreso de la Comunidad, Brindando Oportunidades Laborales',
+      link:'newThree'
     },
   ])
   return (

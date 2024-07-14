@@ -34,7 +34,15 @@ import { WasteWater } from './components/aplications/waterTreatment/wasteWater/w
 import { IndustryWater } from './components/aplications/waterTreatment/industryWater/industryWater';
 import { Cales } from './components/products/productsByGroup/cales/cales';
 import { Piedra } from './components/products/productsByGroup/piedra/piedra';
-import { Newsroom } from './components/newsroom/newsroom';
+import { NewOne } from './components/newsroom/news/newOne';
+import { NewTwo } from './components/newsroom/news/newTwo';
+import { NewThree } from './components/newsroom/news/newThree';
+import { CalHidratadaTipoA } from './components/products/calHidratadaTipoA/calHidratadaTipoA';
+import { CalHidratadaTipoB } from './components/products/calHidratadaTipoB/calHidratadaTipoB';
+import { Agropecuario } from './components/aplications/agropecuario/agropecuario';
+import { SugarIndustry } from './components/aplications/agropecuario/sugarIndustry/sugarIndustry';
+import { AnimalCare } from './components/aplications/agropecuario/animalCare/animalCare';
+import { Food } from './components/aplications/agropecuario/food/food';
 
 
 
@@ -48,13 +56,17 @@ function App() {
 
         <Route path='/' element={<Home/>}/>
 
-        <Route path='/newsroom' element={<Newsroom/>}/>
+        <Route path='/newOne' element={<NewOne/>}/>
+        <Route path='/newTwo' element={<NewTwo/>}/>
+        <Route path='/newThree' element={<NewThree/>}/>
         
         <Route path='/aboutUs' element={<AboutUs/>}/>
         <Route path='/products' element={<ProductsGRAL/>}/>
         <Route path='/aplications' element={<Aplications/>}/>
         <Route path='/products/cales/quicklime' element={<CalViva/>}/>
         <Route path='/products/cales/hydratedlime' element={<CalHidratada/>}/>
+        <Route path='/products/cales/hydratedlimeTipoA' element={<CalHidratadaTipoA/>}/>
+        <Route path='/products/cales/hydratedlimeTipoB' element={<CalHidratadaTipoB/>}/>
         <Route path='/products/cales/dolomiticlime' element={<CalDolomita/>}/>
         <Route path='/products/cales/agriculturallime' element={<CalAgricola/>}/>
         <Route path='/products/stone/limestone' element={<PiedraCaliza/>}/>
@@ -64,6 +76,7 @@ function App() {
         <Route path='/products/cales' element={<Cales/>}/>
         <Route path='/products/stone' element={<Piedra/>}/>
 
+        <Route path='/Aplications/agropecuario' element={<Agropecuario/>}/>
         <Route path='/Aplications/engeneerBuilding' element={<EngeneerBuilding/>}/>
         <Route path='/Aplications/chemical' element={<Chemestry/>}/>
         <Route path='/Aplications/steel' element={<IronSteel/>}/>
@@ -72,6 +85,10 @@ function App() {
         <Route path='/Aplications/noFerrousMining' element={<NoFerrousMining/>}/>
         <Route path='/Aplications/pccPulPaper' element={<PccPulPaper/>}/>
         <Route path='/Aplications/waterTreatment' element={<WaterTreatment/>}/>
+
+        <Route path='/Aplications/agropecuario/sugar' element={<SugarIndustry/>}/>
+        <Route path='/Aplications/agropecuario/animal' element={<AnimalCare/>}/>
+        <Route path='/Aplications/agropecuario/food' element={<Food/>}/>
 
         <Route path='/Aplications/chemical/plasticRubber' element={<PlasticRubber/>}/>
         <Route path='/Aplications/chemical/chemicalCompounds' element={<ChemicalCompounds/>}/>

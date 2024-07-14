@@ -1,7 +1,7 @@
 @import url('../../variables.module.css');
 
 .contenedor{
-  margin- : 150px;
+  margin-top : 150px;
 }
 
 .mainScreen{
@@ -33,17 +33,49 @@
   width: 80%;
   margin: auto;
   display: flex;
-  gap: 50px;
+  gap: 150px;
   margin-bottom: ;
 }
 
 .bodyBackground> div{
   width: 50%;
   margin-top: 90px;
-  border: 1px solid red;
   height: auto;
 }
 
 .bodyBackground p{
   color: var(--grey2-color);
 }
+
+.imgBody{
+  overflow: hidden;
+}
+
+.imgBody> img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logosRedes {
+  width: 80%;
+  margin: auto;
+  padding-block: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconRedes{
+  width: 30px;
+  height:30px ;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue2-color);
+  color: white;
+}
+

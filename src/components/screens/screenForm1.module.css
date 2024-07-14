@@ -44,6 +44,7 @@
 .cardDescription > h1{
     text-align: justify;
     color: white;
+    width: 90%;
 }
 
 .cardDescription p{

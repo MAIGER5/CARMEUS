@@ -76,8 +76,22 @@ export const NavBar = () => {
           <li>
             <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones</span>
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
-              <li onClick={() => handleClickNavigate('/agricola')}>
-                <MdOutlineAgriculture /> <span>Soluciones Agricolas</span>
+
+              <li 
+                className={`${styles.prueba}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                
+              >
+                <MdOutlineAgriculture /> <span className={`${styles.prueba}`} onClick={() => handleClickNavigate('/Aplications/agropecuario')}>Agropecuario</span> 
+                <span className={styles.triangulo2}></span>
+                {hovered && (
+                  <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
+                    <li onClick={() => handleClickNavigate('/Aplications/agropecuario/animal')}>Cuidado Animal</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/agropecuario/sugar')}>Producción de Azúcar</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/agropecuario/food')}>Industria Alimentaria</li>
+                  </ul>
+                )}
               </li>
               <li 
                 className={`${styles.prueba}`}

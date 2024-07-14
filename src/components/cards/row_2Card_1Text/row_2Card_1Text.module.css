@@ -53,6 +53,9 @@
     gap: 20px;
 }
 
+.containerBoton{
+    width: 100%;
+}
 
 .firstCard> :first-child{
     width: 100%;
