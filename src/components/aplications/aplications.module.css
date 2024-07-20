@@ -5,7 +5,7 @@
 .contenedor{
     position: relative;
     margin-top: 152px;
-    /* border: 1px solid green; */
+    margin-bottom: 100px;
 }
 
 .cardX3{
@@ -18,9 +18,29 @@
 }
 
 
-@media only screen and (max-width: 1100px) {
-    .cardX3{
-        display: none;
+@media only screen and (max-width: 1080px){
+
+    .contenedor{
+        margin-top: 90px;
     }
-    
+
+    .cardX3{
+        margin-top: 152px;
+        gap: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .cardX3{
+        margin-top: 192px;
+        gap: 20px;
+
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .cardX3{
+        margin-top: 242px;
+    }
 }

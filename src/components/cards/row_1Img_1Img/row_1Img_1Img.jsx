@@ -36,6 +36,12 @@ export const Row_1Img_1Img = () => {
               </div>
               <div className={`${styles.textInt}`}>{data[6].description}</div>
           </Link>
+          <Link to={`/${data[7].link}`} className={`${styles.cardSmall} ${styles.responsiveHidden}`}>
+              <div className={styles.cardImg}>
+                <AdvancedImage cldImg={myImageBig} />
+              </div>
+              <div className={`${styles.textInt}`}>{data[7].description}</div>
+          </Link>
         </div>
 
         <Link to={`/${data[7].link}`} className={styles.cardBig}>

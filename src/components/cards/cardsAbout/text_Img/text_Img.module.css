@@ -100,6 +100,7 @@
     .cardBig {
         width: 100%;
         margin: auto;
+        padding-inline: 10px;
     }
 
     .firstCard{
@@ -115,6 +116,7 @@
     .firstCard p{
         font-size: 18px;
         padding: 0px;
+        text-align: justify;
     }
     .firstCard h1{
         padding: 0px;

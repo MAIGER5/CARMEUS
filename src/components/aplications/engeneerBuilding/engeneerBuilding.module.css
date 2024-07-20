@@ -10,3 +10,38 @@
     margin: auto;
     margin-top: 200px;
 }
+
+
+@media only screen and (max-width: 1080px){
+    .contenedor{
+        margin-top: 87px;
+    }
+    .aplications{
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 862px){
+    .aplications{
+        width: 95%;
+        margin-top: 190px;
+
+    }
+
+}
+
+@media only screen and (min-width: 860px) and (max-width: 870px) {
+
+    .aplications{
+        margin-top: 290px;
+    }
+
+}
+
+
+@media only screen and (max-width: 410px){
+
+    .aplications{
+        margin-top: -90px;
+    }
+}

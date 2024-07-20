@@ -3,12 +3,14 @@ import styles from './cardAplications.module.css';
 import DataContext from '../../dataContext/dataContext';
 import {AdvancedImage} from '@cloudinary/react';
 import { Cloudinary } from '@cloudinary/url-gen/index';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 
 export const CardAplications = () => {
+
+  const navigate = useNavigate();
 
   const data = useContext(DataContext)
 
@@ -22,6 +24,9 @@ export const CardAplications = () => {
     }
   });
 
+  const handleClickNavigate = (path)=>{
+    navigate(path)
+  }
   // const myImageCero = cld.image(data[0].image);
 
   return (
@@ -29,12 +34,12 @@ export const CardAplications = () => {
     <div className={styles.contenedor}>
       {
         data.map((ele, index)=>(
-          <Link to={`/${ele.link}`} className={styles.card} key={index}>
+          <div onClick={()=> handleClickNavigate(`/${ele.link}`)} className={styles.card} key={index}>
             <div>{ele.description}</div>
             <div>
               <AdvancedImage cldImg={cld.image(ele.image)} />
             </div>
-          </Link>
+          </div>
         ))
       }
     </div>

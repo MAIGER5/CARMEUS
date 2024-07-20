@@ -43,6 +43,15 @@ export const Row_2Card_1Img = () => {
               </div>
               <div className={`${styles.textInt}`}>{data[1].description}</div>
           </Link>
+          {/* solo se muestra cuando es responsive la web */}
+          <Link to={`/${data[2].link}`} className={`${styles.cardSmall} ${styles.responsiveHidden}` }>
+              <div className={styles.cardImg}>
+                <AdvancedImage cldImg={myImageBig} />
+              </div>
+              <div className={`${styles.textInt}`}>{data[2].description}</div>
+          </Link>
+
+          
         </div>
 
         <Link to={`/${data[2].link}`} className={styles.cardBig}>

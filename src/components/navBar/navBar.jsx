@@ -10,8 +10,8 @@ import { SiEquinixmetal } from 'react-icons/si';
 import { FaHandHoldingWater } from 'react-icons/fa';
 import { LiaNewspaper } from 'react-icons/lia';
 import { AiOutlineGold } from 'react-icons/ai';
-import carmeusWhite from '../utils/logos/carmeusWhite.png';
-import carmeusBlue from '../utils/logos/blue.png';
+import carmeusWhite from '../utils/logos/CARMEUSE-and-Colombia.png';
+import carmeusBlue from '../utils/logos/CARMEUSE-BLUE-and-Colombia.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export const NavBar = () => {
@@ -203,7 +203,7 @@ export const NavBar = () => {
               </li>
             </ul>
           </li>
-          <li onClick={() => handleClickNavigate('/plasticRubber')} className={`${styles.menuPrincipal} `}>Sostenibilidad</li>
+          {/* <li onClick={() => handleClickNavigate('/plasticRubber')} className={`${styles.menuPrincipal} `}>Sostenibilidad</li> */}
           <li onClick={() => handleClickNavigate('/services')} className={`${styles.menuPrincipal} `}>Servicios</li>
         </ul>
         <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>

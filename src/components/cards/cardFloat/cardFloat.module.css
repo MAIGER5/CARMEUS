@@ -68,7 +68,7 @@
     text-align: center;
     padding: 20px;
     color: var(--blue1-color);
-    font-size: 26px;
+    font-size: calc(20px + .5vw);
     font-weight: 600;
 }
 
@@ -114,6 +114,21 @@
         margin: auto;
         height: auto;
         margin-bottom: 30px;
+        background-color: transparent;
+    }
+
+    .containerMarcas{
+        width: 100%;
+    }
+
+    .containerMarcas{
+        width: 100%;
+    }
+
+    .logosMarcas> div{
+        width: 20%;
+        gap: 10px;
+    
     }
 
     .images{

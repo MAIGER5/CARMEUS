@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.boxPrincipalNone{
+    display: none;
+}
+
 .contenedor{
     position: relative;
     width: 100%;

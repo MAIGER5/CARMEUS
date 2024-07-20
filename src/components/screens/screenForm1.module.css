@@ -69,6 +69,11 @@
         height: 300px;
     }
 
+    .cardDescription p{
+        font-size: calc(10px + 1vw);
+    
+    }
+
 }
 
 @media (871px <= width <= 1020px){

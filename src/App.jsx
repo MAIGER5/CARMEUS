@@ -45,12 +45,14 @@ import { AnimalCare } from './components/aplications/agropecuario/animalCare/ani
 import { Food } from './components/aplications/agropecuario/food/food';
 import { Services } from './components/services/services';
 import ScrollToTop from './ScrollToTop';
+import { Contact } from './components/contact/contact';
 
 
 
 
 
 function App() {
+  
   return (
     <HashRouter>
       <ScrollToTop/>
@@ -67,6 +69,7 @@ function App() {
         <Route path='/products' element={<ProductsGRAL/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/aplications' element={<Aplications/>}/>
+        <Route path='/contact' element={<Contact/>}/>
 
         <Route path='/products/cales/quicklime' element={<CalViva/>}/>
         <Route path='/products/cales/hydratedlime' element={<CalHidratada/>}/>

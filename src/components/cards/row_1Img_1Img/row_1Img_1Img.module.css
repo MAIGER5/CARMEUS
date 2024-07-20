@@ -131,3 +131,60 @@
     z-index: 2;
 }
 
+
+
+.responsiveHidden{
+    display: none;
+}
+
+@media only screen and (max-width: 1020px){
+    .contenedor{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .group{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cardBig{
+        display: none;
+    }
+
+    .cardSmall{
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+    }
+    .cardImg{
+        width: 30%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .cardImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .textInt{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+    }
+
+    .responsiveHidden{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .cardSmall{
+        height: 65px;
+    }
+    .cardSmall> :nth-child(2){
+        font-size: 15px;
+    }
+
+}

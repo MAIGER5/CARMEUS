@@ -35,6 +35,15 @@ export const Row_1Img_2Card = () => {
           <h5>{data[3].description}</h5>
         </Link>
         <div className={styles.group}>
+
+          {/* solo se muestra cuando es responsive la web */}
+          <Link to={`/${data[3].link}`} className={`${styles.cardSmall} ${styles.responsiveHidden}` }>
+            <div className={styles.cardImg}>
+              <AdvancedImage cldImg={myImageBig} />
+            </div>
+            <div className={`${styles.textInt}`}>{data[3].description}</div>
+          </Link>
+
           <Link to={`/${data[4].link}`} className={`${styles.cardSmall}`}>
               <div className={styles.cardImg}>
                 <AdvancedImage cldImg={myImageCero} />

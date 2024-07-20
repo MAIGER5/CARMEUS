@@ -31,19 +31,19 @@ export const Services = () => {
   const [ dataServices, setDataServices] = useState([
     {
       id: 1,
-      image: 'chemical1',
+      image: 'logistic',
       title: 'Carga y Logística',
       description: 'Permita que nuestro equipo minimice las molestias de la gestión de transporte y logística. Nuestros expertos en cadena de suministro tienen alianzas con transportistas cualificados para asegurar que el producto llegue al lugar adecuado en el momento adecuado.',
     },
     {
       id: 2,
-      image: 'chemical1',
+      image: 'tecnic',
       title: 'Asistencia técnica',
       description: 'Nuestros equipos técnicos pueden asesorar y comprobar la calidad del material, visitando las instalaciones de los clientes para inspeccionar sus procesos. A menudo, realizamos recomendaciones que ahorran dinero y mejoran las operaciones.',
     },
     {
       id: 3,
-      image: 'chemical1',
+      image: 'carro',
       title: 'Sistema de Transporte',
       description: [
         'Camiones 10 Ton',
@@ -54,7 +54,7 @@ export const Services = () => {
     },
     {
       id: 4,
-      image: 'chemical1',
+      image: 'asisten',
       title: 'Asistencia para pedidos y programación',
       description: 'Desde los pedidos rutinarios hasta las necesidades urgentes, nuestros coordinadores de planificación de suministros trabajan para conseguirle el producto que necesita'
     },

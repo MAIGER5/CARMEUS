@@ -12,7 +12,7 @@ export const Chemestry = () => {
 
     {
       id:1,
-      image: 'chemistry',
+      image: 'chemical5',
       title: "QUIMICA",
       description: 'Los productos de carmeuse se utilizan en todo tipo de aplicaciones, desde la producción de compuestos químicos, piezas de automóviles, plásticos, pinturas, caucho, grasas y lubricantes hasta el curtido comercial de pieles. Incluso se utilizan en algunos dentífricos como agentes abrasivos suaves. La cal se utiliza, por supuesto, como álcali en la industria química, pero también como fuente de calcio, agentes caustificantes, coadyuvantes de secado, agentes saponificantes, agentes aglutinantes, floculantes, lubricantes y cargas.',
     }

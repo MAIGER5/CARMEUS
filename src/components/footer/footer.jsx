@@ -5,78 +5,24 @@ import { FaFacebookF } from "react-icons/fa6";
 import { PiInstagramLogoLight } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-
-
-
-
-
-// import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-// import LinkedInIcon from '@mui/icons-material/LinkedIn';
-// import InstagramIcon from '@mui/icons-material/Instagram';
-// import YouTubeIcon from '@mui/icons-material/YouTube';
 import { CardFooter } from '../cards/cardFooter/cardFooter';
 import DataContext from '../dataContext/dataContext';
+import { useLocation } from 'react-router-dom';
+import dataFooter from '../utils/data/data.footer';
 
 
 
 
 export const Footer = () => {
 
-    const [ data5, setData5 ] = useState([
-        {
-            id:1,
-            view: "home",
-            title:"HOLA CRECE CON NOSOTROS",
-            description: "texto cualquiera para probar el frontend",
-            buttomInfo: "Contactanos"
-        },
-        {
-            id:2,
-            view: "productos",
-            title:"HOLA CRECE CON NOSOTROS",
-            description: "texto cualquiera para probar el frontend",
-            buttomInfo: "Contactanos"
-        },
-        {
-            id:3,
-            view: "about",
-            title:"HOLA CRECE CON NOSOTROS",
-            description: "texto cualquiera para probar el frontend",
-            buttomInfo: "Contactanos"
-        },
-        {
-            id:4,
-            view: "history",
-            title:"HOLA CRECE CON NOSOTROS",
-            description: "texto cualquiera para probar el frontend",
-            buttomInfo: "Contactanos"
-        },
-        {
-            id:5,
-            view: "sustentabilidad",
-            title:"HOLA CRECE CON NOSOTROS",
-            description: "texto cualquiera para probar el frontend",
-            buttomInfo: "Contactanos"
-        },
-        {
-            id:6,
-            view: "contact",
-            title:"HOLA CRECE CON NOSOTROS",
-            description: "texto cualquiera para probar el frontend",
-            buttomInfo: "Contactanos"
-        },
-        {
-            id:7,
-            view: "services",
-            title:"HOLA CRECE CON NOSOTROS",
-            description: "texto cualquiera para probar el frontend",
-            buttomInfo: "Contactanos"
-        }
-    ])
+    const location = useLocation();
 
+    const [ data5, setData5 ] = useState(
+        dataFooter
+    )
     
   return (
-    <div className={` ${styles.boxPrincipal}`}>
+    <div className={location.pathname !== '/contact'? styles.boxPrincipal: styles.boxPrincipalNone}>
         <div className={styles.responsiveCard}>
             <DataContext.Provider value={data5}>
                 <CardFooter/>

@@ -15,7 +15,7 @@ export const Acero = () => {
       nombre: 'componente1',
       title: 'ACERO',
       description: 'Carmeuse Colombia es líder y experto en el suministro de productos y soluciones de cal adaptados a las necesidades de las aplicaciones siderúrgicas. Carmeuse ofrece una gran variedad de productos de cal y dolomía con alto contenido en calcio, incluida la cal en guijarros, así como cal triturada y piedra caliza para los procesos de hornos básicos de oxígeno (BOF) y hornos de arco eléctrico (EAF). Los productos de cal son los principales componentes (fundentes) para fabricar escorias que protegen y purifican el acero y ayudan notablemente a eliminar el fósforo y la sílice. El uso adecuado de la cal de calidad de Carmeuse permite mejorar la productividad y la sostenibilidad.',
-      image: 'iron',
+      image: 'steel',
     },
     {
       id: 2,

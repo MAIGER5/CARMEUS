@@ -123,4 +123,16 @@
     .firstCard{
         height: 100%;
     }
+
+    .cardBig h1{
+        width: 100%;
+        font-size: 27px;
+    }
+}
+
+@media (min-width: 1021px) and (max-width: 1300px) {
+    .cardBig h1 {
+        width: 100%;
+        font-size: 34px;
+    }
 }
