@@ -28,10 +28,12 @@ h3{
 
 .contenedor > :nth-child(2) {
     background-color: var(--blue2-color);
+    cursor: pointer;
 }
 
 .contenedor > :nth-child(odd) {
     background-color: var(--blue3-color);
+    cursor: pointer;
 }
 
 .boxes:hover {

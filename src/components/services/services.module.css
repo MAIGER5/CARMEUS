@@ -97,6 +97,12 @@
 }
 
 
+@media (width < 1080px) {
+    .contenedor{
+        margin-top: 85px;
+    }
+}
+
 
 @media (width < 1240px) {
 

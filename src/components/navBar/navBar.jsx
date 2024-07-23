@@ -10,6 +10,9 @@ import { SiEquinixmetal } from 'react-icons/si';
 import { FaHandHoldingWater } from 'react-icons/fa';
 import { LiaNewspaper } from 'react-icons/lia';
 import { AiOutlineGold } from 'react-icons/ai';
+import { IoMdClose } from "react-icons/io";
+import { FaPlus } from "react-icons/fa6";
+import { CgMathMinus } from "react-icons/cg";
 import carmeusWhite from '../utils/logos/CARMEUSE-and-Colombia.png';
 import carmeusBlue from '../utils/logos/CARMEUSE-BLUE-and-Colombia.png';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -19,6 +22,9 @@ export const NavBar = () => {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [openMenuMobil, setOpenMenuMobil] = useState(false);
+  const [openMenuApli, setOpenMenuApli] = useState(false);
+  const [openMenuProd, setOpenMenuProd] = useState(false);
 
   useEffect(() => {
     const handleScrolled = () => {
@@ -32,18 +38,50 @@ export const NavBar = () => {
     };
   }, []);
 
-  const colorChangeNavbar = !scrolled && location.pathname === '/' 
-    ? styles.contenedorHome 
-    : scrolled && location.pathname === '/' 
-    ? styles.contenedorScrolled 
-    : !scrolled && location.pathname !== '/' 
-    ? styles.contenedorScrolled2 
-    : styles.contenedorScrolled;
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1080) {
+        setOpenMenuMobil(false);
+        setOpenMenuApli(false);
+        setOpenMenuProd(false);
+      }
+    };
 
-  const logoChange = !scrolled && location.pathname === '/' ? carmeusWhite : carmeusBlue;
+    handleResize(); // Initialize the state based on the current window size
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+  const colorChangeNavbar = 
+    openMenuMobil 
+    ? styles.contenedorScrolled 
+    : !scrolled && location.pathname === '/' 
+    ? styles.contenedorHome 
+    : scrolled 
+    ? styles.contenedorScrolled 
+    : styles.contenedorScrolled2;
+
+  const logoChange = 
+    openMenuMobil
+    ? carmeusBlue
+    :!scrolled && location.pathname === '/' 
+    ? carmeusWhite 
+    : carmeusBlue;
+
+  const resetStates = ()=>{
+    setOpenMenuMobil(false);
+    setOpenMenuApli(false);
+    setOpenMenuProd(false);
+  }
 
   const handleClickNavigate = (path) => {
     navigate(path);
+    setOpenMenuMobil(false)
+    resetStates()
   };
 
   const handleMouseEnter = () => {
@@ -53,6 +91,24 @@ export const NavBar = () => {
   const handleMouseLeave = () => {
     setHovered(false);
   };
+  
+  const handleClikOpenMenuMobil = () => {
+    setOpenMenuMobil(true);
+  };
+
+  const handleClickCloseMenuMobil = () => {
+    resetStates()
+  };
+
+  const handleClickOpenMenu = (handle) => {
+    handle(true);
+  };
+
+  const handleClickCloseMenu = (handle) => {
+    handle(false);
+  };
+
+  
 
   return (
     <div id={styles.navBar} className={`${styles.contenedor} ${colorChangeNavbar}`}>
@@ -181,9 +237,11 @@ export const NavBar = () => {
             <ul id={styles.dropDos} className={`${styles.dropdowns}`}>
               <li>
                 <h6 onClick={() => handleClickNavigate('/products/cales')}>Cales</h6>
-                <ul>
+                <ul className={styles.specialDropDos}>
                   <li onClick={() => handleClickNavigate('/products/cales/quicklime')}>Cal Viva</li>
                   <li onClick={() => handleClickNavigate('/products/cales/hydratedlime')}>Cal Hidratada</li>
+                  <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoA')}>Hidratada Tipo A</li>
+                  <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Hidratada Tipo B</li>
                   <li onClick={() => handleClickNavigate('/products/cales/dolomiticlime')}>Cal Dòlomita</li>
                   <li onClick={() => handleClickNavigate('/products/cales/agriculturallime')}>Cal Agricola</li>
                 </ul>
@@ -208,7 +266,7 @@ export const NavBar = () => {
         </ul>
         <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>
       </nav>
-      <div className={styles.menuMobil}>
+      <div className={styles.LogoMenuMobil}>
         <div className={styles.contenedorLogo}>
           <img 
             src={logoChange} 
@@ -219,130 +277,57 @@ export const NavBar = () => {
         </div>
         <div className={styles.contenedorIcons}>
           <div onClick={() => handleClickNavigate('/search')}><IoSearchSharp/></div>
-          <div onClick={() => handleClickNavigate('/menu')}><VscMenu/></div>
+          {
+            !openMenuMobil
+            ? <div onClick={()=> handleClikOpenMenuMobil()} ><VscMenu/></div>
+            : <div onClick={()=> handleClickCloseMenuMobil(setOpenMenuMobil)} ><IoMdClose/></div>
+          }
+          
         </div>
       </div>
+      <div className={openMenuMobil? styles.menuMobil: styles.menuMobilHidden}>
+        <ul>
+          <li onClick={()=> handleClickNavigate('/')} className={styles.itemsMenuMobil}>
+            <span>Inicio</span>
+          </li>
+          <li onClick={()=> handleClickNavigate('/aboutUs')} className={styles.itemsMenuMobil}>
+            <span>Nosotros</span>
+          </li>
+          <li className={styles.itemsMenuMobil}>
+            <span onClick={()=> handleClickNavigate('/aplications')}>Aplicaciones</span> <span >{!openMenuApli?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuApli)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuApli)}/>}</span>
+          </li>
+            <ul className={!openMenuApli? styles.subMenuMobilHidden: styles.subMenuMobil}>
+              <li onClick={()=>handleClickNavigate('/Aplications/agropecuario')}><MdOutlineAgriculture /> <span>Agropecuario</span></li>
+              <li onClick={()=>handleClickNavigate('/Aplications/engeneerBuilding')}><BsBuildingGear /> <span>Ingenieria Civil & Construcción</span></li>
+              <li onClick={()=>handleClickNavigate('/Aplications/chemical')}><SlChemistry /> <span>Industria Quimica</span></li>
+              <li onClick={()=>handleClickNavigate('/Aplications/flueGasTreatment')}><MdOutlineGasMeter /> <span>Gases & Combustión</span></li>
+              <li onClick={()=>handleClickNavigate('/Aplications/glassCeramic')}><SiEquinixmetal /> <span>Cerámica & Vidrio</span></li>
+              <li onClick={()=>handleClickNavigate('/Aplications/steel')}><LuConstruction /> <span>Hiero & Acero</span></li>
+              <li onClick={()=>handleClickNavigate('/Aplications/noFerrousMining')}><AiOutlineGold /> <span>Minería & Metales No Ferrosos</span></li>
+              <li onClick={()=>handleClickNavigate('/Aplications/pccPulPaper')}><LiaNewspaper /> <span>Pulpa & Papel</span></li>
+              <li onClick={()=>handleClickNavigate('/Aplications/waterTreatment')}><FaHandHoldingWater /> <span>Tratamiento de Agua</span></li>
+            </ul>
+            <li className={styles.itemsMenuMobil}>
+            <span onClick={()=> handleClickNavigate('/products')}>Productos</span> <span >{!openMenuProd?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuProd)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuProd)}/>}</span>
+          </li>
+            <ul className={!openMenuProd? styles.subMenuMobilHidden: styles.subMenuMobil}>
+              <li onClick={()=> handleClickNavigate('/products/cales/quicklime')}><span>Cal Viva</span></li>
+              <li onClick={()=> handleClickNavigate('/products/cales/hydratedlime')}><span>Cal Hidratada</span></li>
+              <li onClick={()=> handleClickNavigate('/products/cales/hydratedlimeTipoA')}><span>Cal Hidratada Tipo A</span></li>
+              <li onClick={()=> handleClickNavigate('/products/cales/hydratedlimeTipoB')}><span>Cal Hidratada Tipo B</span></li>
+              <li onClick={()=> handleClickNavigate('/products/cales/dolomiticlime')}><span>Cal Dolomita</span></li>
+              <li onClick={()=> handleClickNavigate('/products/cales/agriculturallime')}><span>Cal Agricola</span></li>
+              <li onClick={()=> handleClickNavigate('/products/stone/limestone')}><span>Piedra Caliza</span></li>
+              <li onClick={()=> handleClickNavigate('/products/stone/carbonate')}><span>Carbonato</span></li>
+              <li onClick={()=> handleClickNavigate('/products/neutramol')}><span>Neutramol</span></li>
+            </ul>
+          <li onClick={()=> handleClickNavigate('/services')} className={styles.itemsMenuMobil}>
+            <span>Servicios</span>
+          </li>
+        </ul>
+        <div onClick={()=> handleClickNavigate('/contact')} className={styles.contacto}>Contacto</div>
+      </div>
+
     </div>
   );
 };
-
-
-// import React, { useEffect, useState } from 'react';
-// import styles from './navBar.module.css';
-// import { VscMenu } from "react-icons/vsc";
-// import { IoSearchSharp } from "react-icons/io5";
-// import carmeusWhite from '../utils/logos/carmeusWhite.png';
-// import carmeusBlue from '../utils/logos/blue.png';
-// import { Link, useLocation, useNavigate } from 'react-router-dom'
-
-
-// export const NavBar = () => {
-
-//   const navigate = useNavigate();
-
-//   const location = useLocation();
-
-//   const [scrolled, setScrolled] = useState(false);
-
-//   useEffect(()=>{
-//     const handelScrolled = ()=>{
-//       window.scrollY > 0 ? setScrolled(true): setScrolled(false)
-//     };
-
-//     window.addEventListener('scroll', handelScrolled);
-
-//     return ()=>{
-//       window.removeEventListener('scroll', handelScrolled);
-//     };
-
-//   },[])
-
-//   const colorChangeNavbar = !scrolled && location.pathname ==='/'? styles.contenedorHome: scrolled && location.pathname ==='/'? styles.contenedorScrolled: !scrolled && location.pathname !=='/'? styles.contenedorScrolled2: styles.contenedorScrolled
-
-//   const logoChange = !scrolled && location.pathname ==='/'? carmeusWhite : scrolled && location.pathname ==='/'? carmeusBlue: !scrolled && location.pathname !=='/'? carmeusBlue: carmeusBlue
-  
-//   const logoChangeMobil = !scrolled && location.pathname ==='/'? carmeusWhite : scrolled && location.pathname ==='/'? carmeusBlue: !scrolled && location.pathname !=='/'? carmeusBlue: carmeusBlue
-
-//   const handleCickNavigate = (path)=>{
-//     navigate(path)
-//   }
-
-
-//   return (
-//     <div className={`${styles.contenedor} ${colorChangeNavbar}`}>
-//       <section className={styles.navbarUper}>
-//         <ul>
-//             <li>Acerca de Nosotros</li>
-//             <li>Actualidad</li>
-//             <li>Busqueda</li>
-//             <li>En</li>
-//         </ul>
-//       </section>
-//       <nav className={logoChange}>
-//           <img  src={logoChange} alt="" />
-//           <ul>
-//             <li onClick={()=>{handleCickNavigate('/aboutUs')}}><a href="">Nosotros</a>
-//             </li>
-//             <li>
-//               <a className={styles.triangulo} href="">Aplicaciones </a>
-//               <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
-//                 <li>Agricultura</li>
-//                 <li>Sector Construcción</li>
-//                 <li>Industria Químca</li>
-//                 <li>Tratamiento de Gases & Combustión</li>
-//                 <li>Cerámica & Vidrio</li>
-//                 <li>Hierro & Acero</li>
-//                 <li>Minería & Metales No Ferrosos</li>
-//                 <li>PCC y Pulpa & Paper</li>
-//                 <li>Tratamiento de Agua</li>
-//               </ul>
-//             </li>
-//             <li>
-//               <a className={styles.triangulo} href="">Productos </a>
-//               <ul id={styles.dropDos} className={`${styles.dropdowns}`}>
-//                 <li>
-//                   <h6>Cales</h6>
-//                   <ul>
-//                     <li>Cal Viva</li>
-//                     <li>Cal Hidratada</li>
-//                     <li>Cal Dòlomita</li>
-//                     <li>Cal Agricola</li>
-    
-//                   </ul>
-//                 </li>
-//                 <li>
-//                   <h6>Pidera</h6>
-//                   <ul>
-//                     <li>Piedra Caliza</li>
-//                     <li>Carbonato</li>
-//                   </ul>
-//                 </li>
-//                 <li>
-//                   <h6>Nuevos Productos</h6>
-//                   <ul>
-//                     <li>Neutramol</li>
-//                   </ul>
-//                 </li>
-//               </ul>
-//             </li>
-//             <li><a href="">Sostenibilidad</a></li>
-//             <li><a href="">Servicios</a></li>
-//             {/* <li>
-//               <a className={styles.boton} href="">Contacto</a>
-//               <a className={styles.botonHiden} href=""></a>
-//             </li> */}
-//           </ul>
-//           <a className={styles.boton} href="">Contacto</a>
-//       </nav>
-//       <div className={styles.menuMobil}>
-//         <div className={styles.contenedorLogo}>
-//           <img src={logoChangeMobil} alt="" />
-//         </div>
-//         <div className={styles.contenedorIcons}>
-//           <div><IoSearchSharp/></div>
-//           <div><VscMenu/></div>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }

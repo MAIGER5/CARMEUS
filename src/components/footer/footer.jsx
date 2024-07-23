@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from './footer.module.css'
 import carmeusWhite from '../utils/logos/carmeusWhite.png';
 import { FaFacebookF } from "react-icons/fa6";
@@ -7,6 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { CardFooter } from '../cards/cardFooter/cardFooter';
 import DataContext from '../dataContext/dataContext';
+import DataMenuMobilContext from '../dataContext/dataMenuMobilContext';
 import { useLocation } from 'react-router-dom';
 import dataFooter from '../utils/data/data.footer';
 
@@ -20,9 +21,9 @@ export const Footer = () => {
     const [ data5, setData5 ] = useState(
         dataFooter
     )
-    
+
   return (
-    <div className={location.pathname !== '/contact'? styles.boxPrincipal: styles.boxPrincipalNone}>
+    <div className={location.pathname !== '/contact' ? styles.boxPrincipal: styles.boxPrincipalNone}>
         <div className={styles.responsiveCard}>
             <DataContext.Provider value={data5}>
                 <CardFooter/>
