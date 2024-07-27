@@ -19,4 +19,4 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist # Directorio local a subir
-          remote-dir: /public_html/carmeuseColombia # Directorio remoto
+          remote-dir: /public_html/carmeuseColombia
