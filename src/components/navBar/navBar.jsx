@@ -13,6 +13,8 @@ import { AiOutlineGold } from 'react-icons/ai';
 import { IoMdClose } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import { CgMathMinus } from "react-icons/cg";
+import { BsFillPlusSquareFill } from "react-icons/bs";
+import { GoTriangleRight } from "react-icons/go";
 import carmeusWhite from '../utils/logos/CARMEUSE-and-Colombia.png';
 import carmeusBlue from '../utils/logos/CARMEUSE-BLUE-and-Colombia.png';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -128,7 +130,6 @@ export const NavBar = () => {
           style={{ cursor: 'pointer' }}
         />
         <ul>
-          <li onClick={() => handleClickNavigate('/aboutUs')} className={`${styles.menuPrincipal}`}>Nosotros</li>
           <li>
             <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones</span>
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
@@ -139,7 +140,7 @@ export const NavBar = () => {
                 onMouseLeave={handleMouseLeave}
                 
               >
-                <MdOutlineAgriculture /> <span className={`${styles.prueba}`} onClick={() => handleClickNavigate('/Aplications/agropecuario')}>Agropecuario</span> 
+                <MdOutlineAgriculture /> <span className={`${styles.prueba}`} onClick={() => handleClickNavigate('/Aplications/agropecuario')}>Agricola</span> 
                 <span className={styles.triangulo2}></span>
                 {hovered && (
                   <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
@@ -173,11 +174,11 @@ export const NavBar = () => {
                 <SlChemistry /> <span 
                                   className={`${styles.prueba}`} 
                                   onClick={() => handleClickNavigate('/Aplications/chemical')}
-                                >Industria Quimica</span> 
+                                >Industria Química</span> 
                 <span className={styles.triangulo2}></span>
                 {hovered && (
                   <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
-                    <li onClick={() => handleClickNavigate('/Aplications/chemical/plasticRubber')}>Plástico y Cauhco</li>
+                    <li onClick={() => handleClickNavigate('/Aplications/chemical/plasticRubber')}>Plástico y Cauchco</li>
                     <li onClick={() => handleClickNavigate('/Aplications/chemical/chemicalCompounds')}>Compuesto Químico</li>
                     <li onClick={() => handleClickNavigate('/Aplications/chemical/chemicalCalciumSalts')}>Sales de Calcio</li>
                   </ul>
@@ -197,7 +198,7 @@ export const NavBar = () => {
                 <LuConstruction /><span 
                                     className={`${styles.prueba}`}
                                     onClick={() => handleClickNavigate('/Aplications/steel')}
-                                  >Hiero & Acero</span> 
+                                  >Hierro & Acero</span> 
                 <span className={styles.triangulo2}></span>
                 {hovered && (
                   <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
@@ -236,31 +237,46 @@ export const NavBar = () => {
             <span onClick={()=> handleClickNavigate('/products')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Productos</span>
             <ul id={styles.dropDos} className={`${styles.dropdowns}`}>
               <li>
-                <h6 onClick={() => handleClickNavigate('/products/cales')}>Cales</h6>
+                <h6 onClick={() => handleClickNavigate('/products/cales')}>Productos Calcarios</h6>
                 <ul className={styles.specialDropDos}>
                   <li onClick={() => handleClickNavigate('/products/cales/quicklime')}>Cal Viva</li>
-                  <li onClick={() => handleClickNavigate('/products/cales/hydratedlime')}>Cal Hidratada</li>
-                  <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoA')}>Hidratada Tipo A</li>
-                  <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Hidratada Tipo B</li>
+                  <li 
+                    className={`${styles.hidratada}`}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                  <span 
+                    onClick={() => handleClickNavigate('/products/cales/hydratedlime')}
+                  >Cal Hidratada</span> 
+                  <GoTriangleRight/>
+                  {hovered && (
+                    <ul className={`${styles.dropUnoPuntoDos}`}>
+                      <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoA')}>Hidratada Tipo A</li>
+                      <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Hidratada Tipo B</li>
+                    </ul>
+                  )}
+                  </li>
                   <li onClick={() => handleClickNavigate('/products/cales/dolomiticlime')}>Cal Dòlomita</li>
                   <li onClick={() => handleClickNavigate('/products/cales/agriculturallime')}>Cal Agricola</li>
                 </ul>
               </li>
               <li>
-                <h6 onClick={() => handleClickNavigate('/products/stone')}>Piedra</h6>
+                <h6 onClick={() => handleClickNavigate('/products/stone')}>Piedra Caliza</h6>
                 <ul>
-                  <li onClick={() => handleClickNavigate('/products/stone/limestone')}>Piedra Caliza</li>
+                  <li onClick={() => handleClickNavigate('/products/stone/limestone')}>Agregados</li>
                   <li onClick={() => handleClickNavigate('/products/stone/carbonate')}>Carbonato</li>
                 </ul>
               </li>
               <li>
-                <h6>Nuevos Productos</h6>
+                <h6>Productos Especiales</h6>
                 <ul>
                   <li onClick={() => handleClickNavigate('/products/neutramol')}>Neutramol</li>
                 </ul>
               </li>
             </ul>
           </li>
+          <li onClick={() => handleClickNavigate('/carmeuseMas')} className={`${styles.menuPrincipal}`}> <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/> </li>
+
           {/* <li onClick={() => handleClickNavigate('/plasticRubber')} className={`${styles.menuPrincipal} `}>Sostenibilidad</li> */}
           <li onClick={() => handleClickNavigate('/services')} className={`${styles.menuPrincipal} `}>Servicios</li>
         </ul>

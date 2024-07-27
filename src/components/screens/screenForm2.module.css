@@ -1,0 +1,85 @@
+@import url('../../variables.module.css');
+
+
+.contenedor{
+    width: 100%;
+    height: 600px;
+    /* overflow: hidden; */
+    position: relative;
+    z-index: 1;
+}
+
+
+.contenedor img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.contenedor::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 20%;
+    z-index: 2;
+}
+
+.cardDescription{
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 70px 70px 30px 70px;
+    opacity: 85%;
+    z-index: 3;
+    border: 1px solid red;
+}
+
+.cardDescription > h1{
+    text-align: justify;
+    color: white;
+    width: 90%;
+}
+
+.cardDescription p{
+    text-align: justify;
+    font-size: calc(15px + .2vw);
+
+}
+
+
+
+
+@media (870px >= width){
+    .cardDescription{
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        padding: 20px;
+        margin-bottom: 500px;
+    }
+
+    .contenedor{
+        height: 300px;
+    }
+
+    .cardDescription p{
+        font-size: calc(10px + 1vw);
+    
+    }
+
+}
+
+@media (871px <= width <= 1020px){
+    .cardDescription{
+        left: 30%;
+    }
+}

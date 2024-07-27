@@ -1,13 +1,13 @@
 import React from "react";
 import { useLocation } from 'react-router-dom'
-import styles from './screenForm1.module.css';
+import styles from './screenForm2.module.css';
 import DataContext from "../dataContext/dataContext";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
 import { useContext } from "react";
 
 
-export const ScreenForm1 = () =>{
+export const ScreenForm2 = () =>{
 
     const location = useLocation();
 

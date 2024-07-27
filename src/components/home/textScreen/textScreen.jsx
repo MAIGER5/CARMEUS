@@ -16,9 +16,9 @@ export const TextScreen = () => {
   return (
 
     <div className={styles.contenedor}>
-        <h1>CRECE CON NOSOTROS</h1>
+        <h1>IMPACTANTO LA VIDA COTIDIANA</h1>
         <p>Fabricante líder de cal, piedra caliza y productos minerales, proporcionamos un suministro fiable y ayudamos a nuestros clientes a optimizar sus procesos, mejorar la seguridad y reducir su huella de carbono.</p>
-        <button onClick={ ()=> handleClickNavigate('/products')} className={`${styles.boton}`}type="submit">Explora Nuestros Productos</button>
+        <button onClick={ ()=> handleClickNavigate('/aboutUs')} className={`${styles.boton}`}type="submit">Acerca de Nosotros</button>
     </div>
 
   )

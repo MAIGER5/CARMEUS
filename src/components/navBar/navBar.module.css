@@ -213,8 +213,11 @@ h6{
 }
 
 
-
 .dropdowns2Nivel li {
+    color: var(--blue2-color);
+}
+
+.dropdowns3Nivel li {
     color: var(--blue2-color);
 }
 
@@ -222,9 +225,14 @@ h6{
     display: block;
 }
 
+.prueba:hover .dropdowns3Nivel{
+    display: block;
+}
+
 #dropDos{
-    width: auto;
+    width: 800px;
     display: flex;
+    gap: 60px;
     padding-inline: 30px;
     margin-left: 1px;
 }
@@ -235,7 +243,7 @@ h6{
 }
 #dropDos li > ul{
    padding-left: 0;
-   width: 400%;
+   width: 120%;
    padding-bottom: 0;
    margin-left: 0;
 }
@@ -251,6 +259,17 @@ h6{
 .dropUnoPuntoUno{
     width: 350px;
     padding-block: 15px;
+}
+
+
+
+.dropUnoPuntoDos> li{
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.hidratada > :nth-child(2){
+    margin-left: 30px;
 }
 
 #dropUno{
@@ -306,6 +325,10 @@ ul li:hover .triangulo::after{
     color: #b44404;
 }
 
+
+#carmeuseMas{
+    color: var(--orange2-color);
+}
 
 /*******SECTION SUPERIOS ****/
 

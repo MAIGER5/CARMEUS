@@ -11,19 +11,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background: var(--blue2-color);
-    opacity: 70%;
-    backdrop-filter: blur(5px); */
     padding-inline: 40px;
-    /* border: 2px solid rgb(209, 212, 219);
-    border-radius: 1px; */
 }
 
-.contenedor > h1, p {
-    text-align: center;
+.contenedor > :nth-child(2) {
     color: white;
     padding-block: 15px;
+    text-align: center;
 }
+
+
 
 button {
     text-align: center;
@@ -34,6 +31,10 @@ button {
 .contenedor h1{
     font-size: 30px;
     font-weight: 700;
+    text-align: center;
+    color: white;
+    padding-block: 15px;
+
 }
 
 

@@ -46,6 +46,7 @@ import { Food } from './components/aplications/agropecuario/food/food';
 import { Services } from './components/services/services';
 import ScrollToTop from './ScrollToTop';
 import { Contact } from './components/contact/contact';
+import { CarmeuseMas } from './components/carmeuseMas/carmeuseMas';
 
 
 
@@ -67,6 +68,7 @@ function App() {
         
         <Route path='/aboutUs' element={<AboutUs/>}/>
         <Route path='/products' element={<ProductsGRAL/>}/>
+        <Route path='/carmeuseMas' element={<CarmeuseMas/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/aplications' element={<Aplications/>}/>
         <Route path='/contact' element={<Contact/>}/>

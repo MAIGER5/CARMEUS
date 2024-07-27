@@ -32,8 +32,8 @@ export const Services = () => {
     {
       id: 1,
       image: 'logistic',
-      title: 'Carga y Logística',
-      description: 'Permita que nuestro equipo minimice las molestias de la gestión de transporte y logística. Nuestros expertos en cadena de suministro tienen alianzas con transportistas cualificados para asegurar que el producto llegue al lugar adecuado en el momento adecuado.',
+      title: 'Logística y Despachos',
+      description: 'Permita que nuestro equipo minimice las molestias de la gestión de transporte y logística. Nuestros expertos en cadena de suministro tienen alianzas con transportistas cualificados para asegurar que el producto llegue al lugar adecuado en el momento adecuado. Vehículos de 10, 18, 34 toneladas y cisternas.',
     },
     {
       id: 2,
@@ -44,12 +44,16 @@ export const Services = () => {
     {
       id: 3,
       image: 'carro',
-      title: 'Sistema de Transporte',
+      title: 'Canales de Distribución',
       description: [
-        'Camiones 10 Ton',
-        'Camiones doble troque 18 Ton',
-        'Tractomulas 34 Ton',
-        'Camiones sisterna',
+        'Consumidor final',
+        'Fabricante distribuidor final',
+        'Sector ferretero',
+
+        // 'Camiones 10 Ton',
+        // 'Camiones doble troque 18 Ton',
+        // 'Tractomulas 34 Ton',
+        // 'Camiones sisterna',
       ]
     },
     {
