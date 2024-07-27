@@ -15,7 +15,7 @@ jobs:
       - name: Upload files via FTP
         uses: sebastianpopp/ftp-action@v2
         with:
-          host: ftp://grupopso.com.co
+          host: grupopso.com.co
           user: u347257743.maigerprofile.com
           password: Linda4785
           local-dir: ./
