@@ -18,5 +18,5 @@ jobs:
           host: ftp.maigerprofile.com	
           user: u347257743.maiger5	
           password: Linda4785
-          local-dir: ./dist # Directorio local a subir
-          remote-dir: /public_html/carmeuseColombia
+          local-dir: ./
+          remote-dir: /home/u347257743/domains/maigerprofile.com/public_html/carmeuseColombia	
