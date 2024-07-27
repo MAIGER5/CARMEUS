@@ -31,4 +31,4 @@ jobs:
         ftp-username: u347257743.maiger5	
         ftp-password: Linda4785
         local-dir: ./
-        server-dir: /public_html/carmeuseColombia
+        server-dir: /home/u347257743/domains/maigerprofile.com/public_html/carmeuseColombia	
