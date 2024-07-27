@@ -18,5 +18,5 @@ jobs:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./ # Directorio local a subir
+          local-dir: ./dist # Directorio local a subir
           remote-dir: ${{ secrets.FTP_PATH }} # Directorio remoto
