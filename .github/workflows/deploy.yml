@@ -1,4 +1,4 @@
-name: Deploy to Hostingar via FTP
+name: Deploy to Hostinger
 
 on:
   push:
@@ -6,29 +6,17 @@ on:
       - master
 
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build the project
-      run: npm run build
-
-    - name: Deploy to Hostingar via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      with:
-        ftp-server: ftp.maigerprofile.com	
-        ftp-username: u347257743.maiger5	
-        ftp-password: Linda4785
-        local-dir: ./
-        server-dir: /home/u347257743/domains/maigerprofile.com/public_html/carmeuseColombia	
+      - name: Upload files via FTP
+        uses: sebastianpopp/ftp-action@v2
+        with:
+          host: ftp://grupopso.com.co
+          user: u347257743.maigerprofile.com
+          password: Linda4785
+          local-dir: ./
+          remote-dir: /public_html
