@@ -15,8 +15,8 @@ jobs:
       - name: Upload files via FTP
         uses: sebastianpopp/ftp-action@v2
         with:
-          host: ${{ secrets.FTP_HOST }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          host: ftp.maigerprofile.com	
+          user: u347257743.maiger5	
+          password: Linda4785
           local-dir: ./dist # Directorio local a subir
           remote-dir: /public_html/carmeuseColombia
