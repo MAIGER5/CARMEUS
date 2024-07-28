@@ -18,5 +18,5 @@ jobs:
           server: grupopso.com.co
           username: u347257743.maigerprofile.com
           password: Linda4785
-          local-dir: ./dist
+          local-dir: dist/
           server-dir: /public_html/carmeuseColombia/
