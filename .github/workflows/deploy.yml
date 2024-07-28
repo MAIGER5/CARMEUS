@@ -15,8 +15,8 @@ jobs:
       - name: Upload files via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.SERVER_FTP }}
-          username: ${{ secrets.USERNAME_FTP }}
+          server: grupopso.com.co
+          username: ${{ secrets.FTP_PASSWORD }}
           password: ${{ secrets.PASSWORD_FTP }}
           local-dir: dist/
           server-dir: /public_html/carmeuseColombia/
