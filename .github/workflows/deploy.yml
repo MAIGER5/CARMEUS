@@ -15,8 +15,8 @@ jobs:
       - name: Upload files via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: grupopso.com.co
-          username: u347257743.maigerprofile.com
-          password: Linda4785
-          local-dir: dist/
-          server-dir: /public_html/carmeuseColombia/
+          server: ${{ secrets.SERVER_FTP }}
+          username: ${{ secrets.USERNAME_FTP }}
+          password: ${{ secrets.PASSWORD_FTP }}
+          local-dir: ${{ LOCAL_DIR_FTP }}
+          server-dir: ${{ SERVER_DIR_FTP }}
