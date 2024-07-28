@@ -16,7 +16,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: grupopso.com.co
-          username: ${{ secrets.FTP_PASSWORD }}
-          password: ${{ secrets.PASSWORD_FTP }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
           server-dir: /public_html/carmeuseColombia/
