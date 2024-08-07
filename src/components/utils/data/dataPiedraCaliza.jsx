@@ -24,7 +24,7 @@ const dataPiedraCaliza = {
       id: 1,
       title1: "PIEDRA CALIZA",
       title2: "BENEFICIOS",
-      description: 'La caliza es una roca sedimentaria natural compuesta casi en su totalidad por carbonato cálcico (CaCO3), que se considera caliza con alto contenido en calcio. Es increíblemente versátil y se utiliza en muchas industrias, desde la agricultura hasta la siderurgia, por sus propiedades beneficiosas y su alto contenido en calcio.',
+      description: 'Los áridos para la construcción son un producto esencial para numerosas aplicaciones de construcción. En el caso de los pavimentos, actúan como el principal componente de soporte de carga. Para el hormigón, el agregado de piedra caliza ofrece mejor resistencia y mejor valor que los agregados graníticos comúnmente utilizados. También se utilizan en base de carreteras, relleno estructural, lastre, drenaje y piedra de armadura.',
       cifra1: 10000,
       cifra2: 17,
       cifra3: 50,

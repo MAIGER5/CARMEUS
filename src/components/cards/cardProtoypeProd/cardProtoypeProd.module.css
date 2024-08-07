@@ -32,6 +32,7 @@
 .cardDesciption > h1{
     color: var(--blue2-color);
     text-align: left;
+    margin-bottom: 10px;
 
 }
 

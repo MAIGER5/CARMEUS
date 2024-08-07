@@ -115,18 +115,18 @@ const dataCalViva = {
       title: "Soluciones Agricolas",
       link: '/Aplications/agropecuario'
     },
-    {
-      id: 5,
-      icon: <MdOutlineGasMeter />,
-      title: "Tratamiento de Gases & Combustión",
-      link: '/Aplications/flueGasTreatment'
-    },
-    {
-      id: 6,
-      icon: <SiEquinixmetal />,
-      title: "Cerámica & Vidrio",
-      link: '/Aplications/glassCeramic'
-    },
+    // {
+    //   id: 5,
+    //   icon: <MdOutlineGasMeter />,
+    //   title: "Tratamiento de Gases & Combustión",
+    //   link: '/Aplications/flueGasTreatment'
+    // },
+    // {
+    //   id: 6,
+    //   icon: <SiEquinixmetal />,
+    //   title: "Cerámica & Vidrio",
+    //   link: '/Aplications/glassCeramic'
+    // },
     {
       id: 7,
       icon: <FaHandHoldingWater />,

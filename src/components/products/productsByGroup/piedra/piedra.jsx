@@ -11,7 +11,7 @@ export const Piedra = () => {
       title1: "PIEDRA",
       title2: "Prodcutos de Piedra",
       title3: "Servicios Integrales",
-      description: "Carmeuse es líder mundial en la producción y distribución de productos de piedra caliza de alta calidad. Nuestra piedra caliza se extrae de canteras de todo el mundo y se transforma en una amplia gama de productos que se utilizan en diversas industrias. Nuestros productos de piedra caliza son versátiles, sostenibles y rentables, lo que los convierte en la opción ideal para una gran variedad de aplicaciones. Desde la construcción a la agricultura, desde la producción de acero a la gestión medioambiental, nuestros productos de piedra caliza son un componente esencial para muchas industrias.",
+      description: "La piedra caliza es una roca sedimentaria natural que está compuesta casi en su totalidad por carbonato de calcio (CaCO3), que se considera piedra caliza con alto contenido de calcio. Es increíblemente versátil y se utiliza en muchas industrias, desde la agricultura hasta la siderurgia, debido a sus propiedades beneficiosas y su alto contenido de calcio.",
       image: 'cinco-2',
       boton: 'Contactate con Nuestros Expertos',
       boxProduct: [

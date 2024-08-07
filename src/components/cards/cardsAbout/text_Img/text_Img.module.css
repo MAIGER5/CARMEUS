@@ -17,7 +17,9 @@
 
 .firstCard p{
     color: black;
-    text-align: left;
+    text-align: justify;
+    font-size: clamp(1rem, .9vw, 2rem);
+
 }
 .cardBig {
     background: transparent;
@@ -25,6 +27,7 @@
     background-position: center;
     width: 50%;
     overflow: hidden;
+    /* border: 1px solid red; */
 }
 
 .firstCard{
@@ -39,9 +42,9 @@
     display: flex;
     margin: auto;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-inline: 80px;
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+    padding-inline: 50px;
     padding-top: 0px;
     margin-top: 0;
 
@@ -50,7 +53,7 @@
 
 .cardBig h1{
     width: 100%;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 600;
     color: var(--blue2-color);
     text-align: left;

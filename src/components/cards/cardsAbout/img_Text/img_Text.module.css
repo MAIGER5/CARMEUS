@@ -8,15 +8,17 @@
     flex-direction: row;
     /* display: grid;
     grid-template-columns: 1fr 1fr 2fr; */
-    gap: 20px;
+    gap: 10px;
 }
 
 
 
 .firstCard p{
     color: black;
-    text-align: left;
+    text-align: justify;
+    font-size: clamp(1rem, .9vw, 2rem);
 }
+
 .cardBig {
     width: 50%;
     overflow: hidden;
@@ -41,14 +43,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-inline: 80px;
+    padding-inline: 50px;
     /* border: 1px solid black; */
 }
 
 
 .cardBig h1{
     width: 100%;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 600;
     color: var(--blue2-color);
     text-align: left;

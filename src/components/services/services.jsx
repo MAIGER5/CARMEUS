@@ -24,7 +24,7 @@ export const Services = () => {
       id:1,
       image: 'ocho',
       title: "SERVICIOS",
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cumque soluta explicabo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam bo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam  quaerat sapiente veniam bo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam' ,
+      description: 'Carmeuse Colombia es más que un proveedor de cal. Nos comprometemos a apoyar a nuestros clientes en cada paso del proceso. Desde el pedido, ofrecemos un servicio integral que incluye la entrega de cal y productos minerales, así como la optimización de sistemas de manejo. Nuestro objetivo es garantizar eficiencia y eficacia en cada etapa, contribuyendo al éxito y sostenibilidad de sus operaciones.' ,
     }
   ]);
 
@@ -33,28 +33,19 @@ export const Services = () => {
       id: 1,
       image: 'logistic',
       title: 'Logística y Despachos',
-      description: 'Permita que nuestro equipo minimice las molestias de la gestión de transporte y logística. Nuestros expertos en cadena de suministro tienen alianzas con transportistas cualificados para asegurar que el producto llegue al lugar adecuado en el momento adecuado. Vehículos de 10, 18, 34 toneladas y cisternas.',
+      description: 'En Carmeuse Colombia nuestro equipo se asegura de cumplir con su pedido de manera eficiente y puntual. Nuestros equipos de planificación de producción, coordinadores de planificación de suministros y analistas de transporte trabajan en estrecha colaboración para garantizar una ejecución impecable. Contamos con una amplia red sólida de asociaciones con transportistas orientados a soluciones, lo que nos permite ofrecer un servicio integral y confiable en cada etapa del proceso.',
+    },
+    {
+      id: 3,
+      image: 'carro',
+      title: 'Servicio al Cliente',
+      description: 'En Carmeuse Colombia, nuestro equipo se dedica a cumplir con su pedido de manera eficiente y puntual. Los equipos de planificación de producción, coordinación de suministros y análisis de transporte trabajan juntos para asegurar una ejecución impecable. Gracias a nuestra red de asociaciones con transportistas orientados a soluciones, ofrecemos un servicio integral y confiable en cada etapa del proceso.'
     },
     {
       id: 2,
       image: 'tecnic',
       title: 'Asistencia técnica',
       description: 'Nuestros equipos técnicos pueden asesorar y comprobar la calidad del material, visitando las instalaciones de los clientes para inspeccionar sus procesos. A menudo, realizamos recomendaciones que ahorran dinero y mejoran las operaciones.',
-    },
-    {
-      id: 3,
-      image: 'carro',
-      title: 'Canales de Distribución',
-      description: [
-        'Consumidor final',
-        'Fabricante distribuidor final',
-        'Sector ferretero',
-
-        // 'Camiones 10 Ton',
-        // 'Camiones doble troque 18 Ton',
-        // 'Tractomulas 34 Ton',
-        // 'Camiones sisterna',
-      ]
     },
     {
       id: 4,

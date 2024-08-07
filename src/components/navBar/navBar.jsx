@@ -253,6 +253,7 @@ export const NavBar = () => {
                     <ul className={`${styles.dropUnoPuntoDos}`}>
                       <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoA')}>Hidratada Tipo A</li>
                       <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Hidratada Tipo B</li>
+                      <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Mundo Ferretero</li>
                     </ul>
                   )}
                   </li>

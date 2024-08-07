@@ -33,7 +33,7 @@ export const Img_Text = () => {
           <div className="card-body">
             <h1 className="card-title">{data[0].title}</h1>
             <p className="card-text">{data[0].description}.</p>
-            <BotonLearnMore infoboton={data[0].buttomInfo}/>
+            {/* <BotonLearnMore infoboton={data[0].buttomInfo}/> */}
           </div>
         </div>
       </div>

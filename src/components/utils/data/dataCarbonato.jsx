@@ -24,7 +24,7 @@ const dataCarbonato = {
       id: 1,
       title1: "CARBONATO DE CALCIO",
       title2: "BENEFICIOS",
-      description: 'El carbonato cálcico es uno de los materiales más útiles y versátiles conocidos por el ser humano y tiene muchas aplicaciones prácticas, como su uso en suelos (moqueta, baldosas de vinilo de lujo, compuesto de piedra y plástico), pintura, adhesivos, papel, plásticos, caucho, cubiertas de asfalto y muchos otros fines, incluida la agricultura.',
+      description: 'El carbonato de calcio (CaCO3) es un compuesto químico muy común que constituye el 4% de la corteza terrestre y es el constituyente principal de la piedra caliza. Si bien es abundante, no toda la piedra caliza es adecuada para la producción de carbonato de calcio molido (GCC) debido a sus impurezas. El carbonato de calcio es uno de los materiales más útiles y versátiles conocidos por los humanos y tiene muchas aplicaciones prácticas, como el uso en pisos (alfombras, losetas de vinilo de lujo, compuestos de piedra y plástico), pinturas, adhesivos, papel, plásticos, caucho, techos de asfalto y para muchos otros fines, incluida la agricultura.l carbonato cálcico es uno de los materiales más útiles y versátiles conocidos por el ser humano y tiene muchas aplicaciones prácticas, como su uso en suelos (moqueta, baldosas de vinilo de lujo, compuesto de piedra y plástico), pintura, adhesivos, papel, plásticos, caucho, cubiertas de asfalto y muchos otros fines, incluida la agricultura.',
       cifra1: 10000,
       cifra2: 17,
       cifra3: 50,

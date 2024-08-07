@@ -15,7 +15,7 @@ const dataCalDolomita = {
       id: 1,
       image: 'dolomita',
       title: "CAL DOLOMITA",
-      description: 'Nuestra Cal viva Dolomítica tiene el contenido de magnesio adecuado para equilibrar y proteger sus refractarios. El contenido en calcio de la cal dolomítica se utiliza en combinación con la cal de alto contenido en calcio como agente fundente para conseguir una química de la escoria y unas propiedades físicas adecuadas. La cal viva dolomítica es fundamental para producir acero de calidad y controlar sus costes.'
+      description: 'Nuestra cal viva dolomítica tiene el contenido de magnesio adecuado para equilibrar y proteger sus refractarios. El contenido de calcio de la cal dolomítica se utiliza en combinación con la cal de alto contenido en calcio como agente fundente para conseguir una química de la escoria y unas propiedades físicas adecuadas. La cal viva dolomítica es fundamental para producir acero de calidad y controlar sus costes..'
     }
   ],
 
@@ -24,7 +24,7 @@ const dataCalDolomita = {
       id: 1,
       title1: "CAL DOLOMITA",
       title2: "BENEFICIOS",
-      description: 'Carmeuse suministra Cal viva Dolomítica de calidad para aplicaciones industriales que requieren el equilibrio adecuado de contenido de calcio y magnesio. La cal viva dolomítica, químicamente conocida como óxido de calcio y magnesio (CaO-MgO), o comúnmente denominada dolomía, se obtiene de piedra caliza con un contenido de carbonato de magnesio de entre el 35% y el 46%. Nuestro material se somete a pruebas rutinarias de calidad y consistencia, para garantizar las propiedades químicas y físicas adecuadas para las aplicaciones industriales.',
+      description: 'Carmeuse suministra cal viva dolomítica de calidad para aplicaciones industriales que requieren un equilibrio adecuado de calcio y magnesio. La cal viva dolomítica, químicamente conocida como óxido de calcio y magnesio (CaO-MgO) o comúnmente denominada dolomía, se obtiene de piedra caliza con un contenido de carbonato de magnesio entre el 35% y el 46%. Nuestro material se somete a pruebas rutinarias de calidad y consistencia para garantizar las propiedades químicas y físicas adecuadas para las aplicaciones industriales.',
       cifra1: 10000,
       cifra2: 17,
       cifra3: 50,
@@ -88,40 +88,40 @@ const dataCalDolomita = {
   ],
 
   Mercados: [
-    {
-      id: 1,
-      icon: <SlChemistry />,
-      title: "Industria Química ",
-      link: '/Aplications/chemical'
-    },
-    {
-      id: 2,
-      icon: <BsBuildingGear />,
-      title: "Ingenieria Civil & Construcción",
-      link: '/Aplications/engeneerBuilding'
-    },
+    // {
+    //   id: 1,
+    //   icon: <SlChemistry />,
+    //   title: "Industria Química ",
+    //   link: '/Aplications/chemical'
+    // },
+    // {
+    //   id: 2,
+    //   icon: <BsBuildingGear />,
+    //   title: "Ingenieria Civil & Construcción",
+    //   link: '/Aplications/engeneerBuilding'
+    // },
     {
       id: 3,
       icon: <LuConstruction />,
       title: "Hierro & Acero",
       link: '/Aplications/steel'
     },
-    // {
-    //   id: 4,
-    //   icon: <MdOutlineAgriculture />,
-    //   title: "Soluciones Agricolas",
-    // },
+    {
+      id: 4,
+      icon: <MdOutlineAgriculture />,
+      title: "Soluciones Agricolas",
+    },
     // {
     //   id: 5,
     //   icon: <MdOutlineGasMeter />,
     //   title: "Tratamiento de Gases & Combustión",
     // },
-    {
-      id: 6,
-      icon: <SiEquinixmetal />,
-      title: "Cerámica & Vidrio",
-      link: '/Aplications/glassCeramic'
-    },
+    // {
+    //   id: 6,
+    //   icon: <SiEquinixmetal />,
+    //   title: "Cerámica & Vidrio",
+    //   link: '/Aplications/glassCeramic'
+    // },
     // {
     //   id: 7,
     //   icon: <FaHandHoldingWater />,

@@ -15,7 +15,7 @@ const dataCalAgricola = {
       id: 1,
       image: 'agricola',
       title: "CAL AGRICOLA",
-      description: 'Como productor líder de cal viva con alto contenido en calcio, Carmeuse trabaja con usted para suministrarle un producto de alto rendimiento que satisfaga sus necesidades específicas. La cal viva con alto contenido de calcio, conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.'
+      description: 'La Cal AGRICOLA de Carmeuse Colombia destaca por su contenido en calcio y es ideal para corregir el pH del suelo y aportar calcio y magnesio a los cultivos. Este producto se obtiene mediante la calcinación de piedra caliza en hornos a altas temperaturas, lo que resulta en la formación de óxidos de calcio y magnesio.'
     }
   ],
 

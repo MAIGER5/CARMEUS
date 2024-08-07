@@ -1,5 +1,118 @@
 @import url('../../variables.module.css');
 
 .contenedor{
-  margin-top: 150px;
+  margin: auto;
+  margin-top: 190px;
+  width: 80%;
+  height: 1000px;
+  
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+
+  /* border: 1px solid red; */
 }
+
+.firstColumn{
+  /* border: 1px solid green; */
+}
+
+.firstColumn > p{
+  color: var(--blue2-color);
+  font-size: 15px;
+  font-weight: 600;
+  
+}
+
+.firstColumn > h1{
+  width: 90%;
+  color: var(--blue2-color);
+  /* font-size: 15px; */
+  font-weight: 700;
+
+}
+
+.firstColumn> :nth-child(3){
+  color: var(--orange2-color);
+}
+
+.firstColumn > span{
+  color: var(--blue2-color);
+  font-size: 15px;
+  font-weight: 400;
+  
+}
+
+.servicesColumn{
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.cardServices{
+  width: 100%;
+  display: flex;
+  background-color: var(--blue2-color);
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  transition: background-color .5s;
+}
+
+.cardServices:hover{
+  background-color: var(--orange2-color);
+}
+
+.cardServices> :first-child{
+  width: 25%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  /* border: 1px solid blue; */
+}
+
+.cardServices> :nth-child(2){
+  width: 75%;
+  height: 100%;
+  display: grid;
+  gap: 8px;
+  padding: 26px 10px;
+}
+
+
+.contentServices> :first-child{
+  font-size: larger;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color: white;
+}
+
+.contentServices> :nth-child(2){
+  color: white;
+  margin-bottom: 0px;
+  font-size: medium;
+}
+
+.contentServices> :nth-child(3){
+  color: var(--blue4-color);
+  margin-bottom: 0px;
+  font-size: small;
+  font-weight: 600;
+}
+
+
+
+.containerIcon{
+  width: 70%;
+  overflow: hidden;
+}
+
+.containerIcon> img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+

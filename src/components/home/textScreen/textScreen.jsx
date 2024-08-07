@@ -17,7 +17,7 @@ export const TextScreen = () => {
 
     <div className={styles.contenedor}>
         <h1>IMPACTANTO LA VIDA COTIDIANA</h1>
-        <p>Fabricante líder de cal, piedra caliza y productos minerales, proporcionamos un suministro fiable y ayudamos a nuestros clientes a optimizar sus procesos, mejorar la seguridad y reducir su huella de carbono.</p>
+        <p>Carmeuse Colombia, líder en la producción de cal y minerales, ofrece un suministro fiable y consistente. Nos comprometemos a optimizar procesos y asegurar calidad y sostenibilidad en cada producto, contribuyendo a un futuro más eficiente y respetuoso con el medio ambiente..</p>
         <button onClick={ ()=> handleClickNavigate('/aboutUs')} className={`${styles.boton}`}type="submit">Acerca de Nosotros</button>
     </div>
 

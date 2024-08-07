@@ -29,8 +29,8 @@ export const Text_Img = () => {
         <div className={`card  ${styles.firstCard}`}>
           <div className="card-body">
             <h1 className="card-title">{data[1].title}</h1>
-            <p className="card-text">{data[0].description}.</p>
-            <BotonLearnMore infoboton={data[0].buttomInfo}/>
+            <p className="card-text">{data[1].description}.</p>
+            {/* <BotonLearnMore infoboton={data[1].buttomInfo}/> */}
           </div>
         </div>
       </div>
