@@ -108,6 +108,8 @@
 .containerIcon{
   width: 70%;
   overflow: hidden;
+  /* border: 1px solid red; */
+  border-radius: 50%;
 }
 
 .containerIcon> img{
@@ -116,3 +118,7 @@
   object-position: center;
 }
 
+
+.secondColumn{
+  /* border: 1px solid red; */
+}

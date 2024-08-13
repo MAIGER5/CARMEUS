@@ -5,7 +5,6 @@ import DataContext from '../dataContext/dataContext';
 import { ScreenForm2 } from '../screens/screenForm2';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import dataCarmeuseMas from '../utils/data/dataCarmeuseMas';
-import pseBoton from '../utils/icon/pse.png'
 
 
 export const CarmeuseMas = () => {
@@ -34,7 +33,7 @@ export const CarmeuseMas = () => {
               <div className={styles.cardServices}>
                 <div>
                   <div className={styles.containerIcon}>
-                    <img src={pseBoton} alt="" />
+                    <img src={ele.icon} alt="" />
                   </div>
                 </div>
                 <div className={styles.contentServices}>
@@ -49,7 +48,7 @@ export const CarmeuseMas = () => {
       </div>
 
 
-      <div></div>
+      <div className={styles.secondColumn}></div>
       
     </div>
   )
