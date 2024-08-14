@@ -38,7 +38,7 @@ export const CarmeuseMas = () => {
                 </div>
                 <div className={styles.contentServices}>
                   <p>{ele.title}</p>
-                  <p>{ele.description}</p>
+                  {/* <p>{ele.description}</p> */}
                   <p>Leer mas</p>
                 </div>
               </div>
@@ -48,7 +48,45 @@ export const CarmeuseMas = () => {
       </div>
 
 
-      <div className={styles.secondColumn}></div>
+      <div className={styles.secondColumn}>
+        <form action="" className={styles.formPagos}>
+          <h1>Pagos PayU</h1>
+          <div className={styles.nameApellido}>
+            <input 
+              type="text"
+              name='nombre'
+              placeholder='Nombres'
+              required
+            />
+            <input 
+              type="text"
+              name='apellido'
+              placeholder='Apellidos'
+              required
+            />
+          </div>
+          <input 
+            type="number"
+            name='nit'
+            placeholder='Nit o Cedula'
+            required
+            color='#fafafa'
+          />
+          <input 
+            type="email"
+            name='mail'
+            placeholder='Correo electrónico'
+            required
+          />
+          <input 
+            type="number"
+            name='monto'
+            placeholder='Monto'
+            required
+          />
+          <button>Pagar</button>
+        </form>
+      </div>
       
     </div>
   )

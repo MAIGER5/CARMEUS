@@ -4,9 +4,9 @@
   margin: auto;
   margin-top: 190px;
   width: 80%;
-  height: 1000px;
   
   display: grid;
+  gap: 30px;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
 
@@ -60,6 +60,7 @@
   cursor: pointer;
   color: white;
   transition: background-color .5s;
+  padding-block: 10px;
 }
 
 .cardServices:hover{
@@ -90,13 +91,13 @@
   color: white;
 }
 
-.contentServices> :nth-child(2){
+/* .contentServices> :nth-child(2){
   color: white;
   margin-bottom: 0px;
   font-size: medium;
-}
+} */
 
-.contentServices> :nth-child(3){
+.contentServices> :nth-child(2){
   color: var(--blue4-color);
   margin-bottom: 0px;
   font-size: small;
@@ -121,4 +122,42 @@
 
 .secondColumn{
   /* border: 1px solid red; */
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.formPagos{
+  display: grid;
+  gap: 20px;
+  width: 70%;
+  margin: auto;
+  /* border: 1px solid var(--blue2-color); */
+  border-radius: 15px;
+  padding: 30px 40px;
+  background-image: url('../utils/icon/tttt.jpg');
+}
+
+.formPagos > h1{
+  color: var(--blue2-color);
+  margin-bottom: 30px;
+}
+
+.formPagos input{
+  border-radius: 8px;
+  /* border-color: var(--blue2-color); */
+  color: var(--blue2-color);
+  border: none;
+}
+
+.nameApellido{
+  display: flex;
+  gap: 10px;
+}
+
+.formPagos button{
+  background-color: var(--orange2-color);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
 }
