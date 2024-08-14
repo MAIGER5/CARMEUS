@@ -3,6 +3,7 @@
 .contenedor{
   margin: auto;
   margin-top: 190px;
+  padding: 50px 0px 100px 0px;
   width: 80%;
   
   display: grid;
@@ -121,43 +122,22 @@
 
 
 .secondColumn{
-  /* border: 1px solid red; */
-  border-radius: 15px;
-  padding: 30px;
-}
-
-.formPagos{
-  display: grid;
-  gap: 20px;
-  width: 70%;
-  margin: auto;
   /* border: 1px solid var(--blue2-color); */
   border-radius: 15px;
-  padding: 30px 40px;
-  background-image: url('../utils/icon/tttt.jpg');
+  padding: 30px 30px 0px 30px;
+  /* background-color: var(--grey6-color); */
 }
 
-.formPagos > h1{
-  color: var(--blue2-color);
-  margin-bottom: 30px;
+.ferretero{
+  display: grid;
+  gap: 19px;
 }
 
-.formPagos input{
+.screenFerretero{
+  width: 100%;
+  height: 150px;
+  background-image: url('../utils/icon/fer.jpeg');
+  background-size: cover;
+  background-position: bottom;
   border-radius: 8px;
-  /* border-color: var(--blue2-color); */
-  color: var(--blue2-color);
-  border: none;
-}
-
-.nameApellido{
-  display: flex;
-  gap: 10px;
-}
-
-.formPagos button{
-  background-color: var(--orange2-color);
-  border-radius: 10px;
-  border: none;
-  color: white;
-  font-weight: 600;
 }

@@ -1,0 +1,39 @@
+@import url('../../../variables.module.css');
+
+.formPagos{
+  display: grid;
+  gap: 20px;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  /* border: 1px solid var(--blue2-color); */
+  border-radius: 15px;
+  padding: 30px;
+  background-image: url('../../utils/icon/tttt.jpg');
+}
+
+.formPagos > h1{
+  color: var(--blue2-color);
+  margin-bottom: 30px;
+}
+
+.formPagos input{
+  border-radius: 8px;
+  width: 100%;
+  /* border-color: var(--blue2-color); */
+  color: var(--blue2-color);
+  border: none;
+}
+
+.nameApellido{
+  display: flex;
+  gap: 10px;
+}
+
+.formPagos button{
+  background-color: var(--orange2-color);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
