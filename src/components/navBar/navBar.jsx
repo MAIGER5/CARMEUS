@@ -341,6 +341,9 @@ export const NavBar = () => {
           <li onClick={()=> handleClickNavigate('/services')} className={styles.itemsMenuMobil}>
             <span>Servicios</span>
           </li>
+          <li onClick={() => handleClickNavigate('/carmeuseMas')} > 
+            <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/>
+          </li>
         </ul>
         <div onClick={()=> handleClickNavigate('/contact')} className={styles.contacto}>Contacto</div>
       </div>
