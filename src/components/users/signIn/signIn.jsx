@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import styles from './signIn.module.css';
+import { useDispatch } from 'react-redux';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
+import { number } from 'prop-types';
+import { registerUserAction } from '../../../Redux/Actions/registerUserAction';
 
 
 export const SignIn = () => {
+
+  const dispatch = useDispatch();
 
   const [ register, setRegister] = useState(false)
 
@@ -18,6 +23,7 @@ export const SignIn = () => {
   const [formSignUp, setFormSignUp] = useState({
     
     name:'',
+    phone: number,
     mail:'',
     password1:'',
     password2:'',
@@ -37,6 +43,23 @@ export const SignIn = () => {
       [property]:value
     })
 
+  }
+
+  const handleLogin = (event)=>{
+    event.preventDefault();
+
+    dispatch(registerUserAction(formSignUp))
+
+    setFormSignUp({
+    
+      name:'',
+      phone: number,
+      mail:'',
+      password1:'',
+      password2:'',
+      aceptConditions:'',
+  
+    })
   }
 
   const handleFormSignUp = (event)=>{
@@ -101,7 +124,7 @@ export const SignIn = () => {
             <span>Olvidó la contraseña</span>
             <p>No tiene una cuenta? <span onClick={()=> HhandleChangeForm("no")}>Registrese aquí</span></p>
           </form>:
-          <form action="" className={styles.textForm} id={styles.resgistro}>
+          <form onSubmit={handleLogin} action="" className={styles.textForm} id={styles.resgistro}>
             <div>
               <h1>Registro</h1>
             </div>
@@ -110,6 +133,14 @@ export const SignIn = () => {
               name='name'
               placeholder='Nombre completo'
               value={formSignUp.name}
+              onChange={handleFormSignUp}
+              required
+            />
+            <input 
+              type="number"
+              name='phone'
+              placeholder='Número de contacto'
+              value={formSignUp.phone}
               onChange={handleFormSignUp}
               required
             />
@@ -137,7 +168,7 @@ export const SignIn = () => {
               onChange={handleFormSignUp}
               required
             />
-            <button>Registrar</button>
+            <button type='submit'>Registrar</button>
             <span>Sujeto a validación del Administrador</span>
             <p>Tiene una cuenta? <span onClick={()=> HhandleChangeForm("si")}>Inicie sesión aquí</span></p>
           </form>

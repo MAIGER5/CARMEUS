@@ -32,6 +32,21 @@
   gap: 10px;
 }
 
+.formulario> button{
+  width: 40%;
+  border: none;
+  background-color: var(--orange2-color);
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color .5s;
+}
+
+.formulario> button:hover{
+  background-color: var(--blue2-color);
+}
+
+
 input{
   padding: 10px;
   border: 1px solid var(--grey5-color);

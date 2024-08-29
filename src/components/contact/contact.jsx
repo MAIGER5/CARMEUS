@@ -6,12 +6,16 @@ import { AdvancedImage } from '@cloudinary/react';
 import { ScreenForm1 } from '../screens/screenFom1';
 import { ButtomOther } from '../buttoms/buttomOther/buttomOther';
 import { BsTelephoneForward } from "react-icons/bs";
+import { useDispatch } from 'react-redux';
+import { postContactAction } from '../../Redux/Actions/postContactAction';
 
 
 
 
 
 export const Contact = () => {
+
+  const dispatch = useDispatch()
 
   const [ data ] = useState([
     {
@@ -25,16 +29,15 @@ export const Contact = () => {
   const [ form, setForm ] = useState({
 
     name:"",
-    empresa:"",
-    telefono:"", 
-    email:"",
-    pais:"",
-    mensaje:""
+    company:"",
+    phone:"", 
+    mail:"",
+    country:"",
+    message:""
 
   })
 
   const handleForm = (event)=>{
-
 
     const property = event.target.name;
     const value = event.target.value
@@ -45,6 +48,22 @@ export const Contact = () => {
         [property]:value}
     )
 
+  }
+
+  const handleSubmitForm = (event)=>{
+    event.preventDefault()
+
+    dispatch(postContactAction(form))
+
+    setForm({
+
+      name:"",
+      company:"",
+      phone:"", 
+      mail:"",
+      country:"",
+      message:""
+    })
   }
 
   const cld = new Cloudinary({
@@ -66,7 +85,7 @@ export const Contact = () => {
       </h1>
       
       <div className={styles.containerForm}>
-        <div className={styles.formulario}>
+        <form onSubmit={handleSubmitForm} className={styles.formulario}>
           <div>
             <label htmlFor="">Apellido y Nombre</label>
             <input 
@@ -82,64 +101,65 @@ export const Contact = () => {
           <div>
             <label htmlFor="">Compañia</label>
             <input 
-              name='empresa'
+              name='company'
               type="text" 
               placeholder='Jose Ltda'
               required
               // size={60}
-              value={form.empresa}
+              value={form.company}
               onChange={handleForm}
             />
           </div>
           <div>
             <label htmlFor="">Número de Teléfono o Celular</label>
             <input 
-              name='telefono'
+              name='phone'
               type='number' 
               placeholder='+573013456798'
               required
               // size={60}
-              value={form.telefono}
+              value={form.phone}
               onChange={handleForm}
             />
           </div>
           <div>
             <label htmlFor="">Correo Electrónico</label>
             <input 
-              name='email'
+              name='mail'
               type="email" 
               placeholder='jose@gmail.com'
               required
               // size={60}
-              value={form.email}
+              value={form.mail}
               onChange={handleForm}
             />
           </div>
           <div>
             <label htmlFor="">País</label>
             <input 
-              name='pais'
+              name='country'
               type="text" 
               placeholder='Colombia'
               required
               // size={60}
-              value={form.pais}
+              value={form.country}
               onChange={handleForm}
             />
           </div>
           <div>
             <label htmlFor="">Mensaje</label>
             <input 
-              name='mensaje'
+              name='message'
               type="text" 
               placeholder='Estoy interesado en...'
               required
               // size={60}
-              value={form.mensaje}
+              value={form.message}
               onChange={handleForm}
             />
           </div>
-        </div>
+          <button type='submit'>Enviar</button>
+        </form>
         <div className={styles.emergency}>
           <BsTelephoneForward />
           <h1>Algún problema urgente o buscas hablar con alguien</h1>
