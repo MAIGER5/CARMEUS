@@ -18,6 +18,7 @@ import { GoTriangleRight } from "react-icons/go";
 import carmeusWhite from '../utils/logos/CARMEUSE-and-Colombia.png';
 import carmeusBlue from '../utils/logos/CARMEUSE-BLUE-and-Colombia.png';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { IoPerson } from "react-icons/io5";
 
 export const NavBar = () => {
   const navigate = useNavigate();
@@ -118,7 +119,7 @@ export const NavBar = () => {
         <ul>
           <li onClick={() => handleClickNavigate('/aboutUs')}>Acerca de Nosotros</li>
           <li onClick={() => handleClickNavigate('/news')}>Actualidad</li>
-          <li onClick={() => handleClickNavigate('/search')}>Busqueda</li>
+          {/* <li onClick={() => handleClickNavigate('/sigIn')}>Inicio Sesión</li> */}
           <li onClick={() => handleClickNavigate('/en')}>En</li>
         </ul>
       </section>
@@ -281,7 +282,10 @@ export const NavBar = () => {
           {/* <li onClick={() => handleClickNavigate('/plasticRubber')} className={`${styles.menuPrincipal} `}>Sostenibilidad</li> */}
           <li onClick={() => handleClickNavigate('/services')} className={`${styles.menuPrincipal} `}>Servicios</li>
         </ul>
-        <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>
+        <div className={styles.contactAndLogin}>
+          <IoPerson onClick={() => handleClickNavigate('/sigIn')}/>
+          <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>
+        </div>
       </nav>
       <div className={styles.LogoMenuMobil}>
         <div className={styles.contenedorLogo}>
@@ -301,6 +305,8 @@ export const NavBar = () => {
           }
           
         </div>
+
+      {/* AQUI EMPIEZA EL MENU RESPONSIVE */}
       </div>
       <div className={openMenuMobil? styles.menuMobil: styles.menuMobilHidden}>
         <ul>
@@ -343,6 +349,9 @@ export const NavBar = () => {
           </li>
           <li onClick={() => handleClickNavigate('/carmeuseMas')} > 
             <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/>
+          </li>
+          <li onClick={() => handleClickNavigate('/sigIn')} > 
+            <span>Iniciar sesion</span>
           </li>
         </ul>
         <div onClick={()=> handleClickNavigate('/contact')} className={styles.contacto}>Contacto</div>

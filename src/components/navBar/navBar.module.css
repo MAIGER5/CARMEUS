@@ -57,6 +57,13 @@
     & .contenedorIcons > :first-child {
         color: var(--blue3-color);
     }
+
+    & .contactAndLogin> :first-child{
+        font-size: 25px;
+        color: var(--blue2-color);
+        cursor: pointer;
+        transition: color .5s;
+    }
 }
 
 .contenedorScrolled2{
@@ -87,6 +94,13 @@
 
     & .contenedorIcons > :first-child {
         color: var(--blue3-color);
+    }
+
+    & .contactAndLogin> :first-child{
+        font-size: 25px;
+        color: var(--blue2-color);
+        cursor: pointer;
+        transition: color .5s;
     }
 }
 
@@ -333,6 +347,24 @@ ul li:hover .triangulo::after{
 
 
 #carmeuseMas{
+    color: var(--orange2-color);
+}
+
+.contactAndLogin{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactAndLogin> :first-child{
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+.contactAndLogin> :first-child:hover{
     color: var(--orange2-color);
 }
 

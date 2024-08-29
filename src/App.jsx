@@ -47,6 +47,7 @@ import { Services } from './components/services/services';
 import ScrollToTop from './ScrollToTop';
 import { Contact } from './components/contact/contact';
 import { CarmeuseMas } from './components/carmeuseMas/carmeuseMas';
+import { SignIn } from './components/users/signIn/signIn';
 
 
 
@@ -65,6 +66,8 @@ function App() {
         <Route path='/newOne' element={<NewOne/>}/>
         <Route path='/newTwo' element={<NewTwo/>}/>
         <Route path='/newThree' element={<NewThree/>}/>
+
+        <Route path='/sigIn' element={<SignIn/>}/>
         
         <Route path='/aboutUs' element={<AboutUs/>}/>
         <Route path='/products' element={<ProductsGRAL/>}/>
