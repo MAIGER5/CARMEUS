@@ -48,6 +48,7 @@ import ScrollToTop from './ScrollToTop';
 import { Contact } from './components/contact/contact';
 import { CarmeuseMas } from './components/carmeuseMas/carmeuseMas';
 import { SignIn } from './components/users/signIn/signIn';
+import PrototypeDashBoard from './components/dashBoards/prototypeDashBoard/prototypeDashBoard';
 
 
 
@@ -118,6 +119,9 @@ function App() {
         <Route path='/Aplications/waterTreatment/wasteWater' element={<WasteWater/>}/>
         <Route path='/Aplications/waterTreatment/industryWater' element={<IndustryWater/>}/> 
         
+        <Route path='/AdminContacts' element={<PrototypeDashBoard/>}/> 
+
+
       </Routes>
       <Footer/>
     </HashRouter>

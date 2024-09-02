@@ -297,7 +297,7 @@ export const NavBar = () => {
           />
         </div>
         <div className={styles.contenedorIcons}>
-          <div onClick={() => handleClickNavigate('/search')}><IoSearchSharp/></div>
+          <div onClick={() => handleClickNavigate('/sigIn')}>{!openMenuApli? <IoPerson/>: <IoSearchSharp/>}</div>
           {
             !openMenuMobil
             ? <div onClick={()=> handleClikOpenMenuMobil()} ><VscMenu/></div>
@@ -350,9 +350,9 @@ export const NavBar = () => {
           <li onClick={() => handleClickNavigate('/carmeuseMas')} > 
             <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/>
           </li>
-          <li onClick={() => handleClickNavigate('/sigIn')} > 
+          {/* <li onClick={() => handleClickNavigate('/sigIn')} > 
             <span>Iniciar sesion</span>
-          </li>
+          </li> */}
         </ul>
         <div onClick={()=> handleClickNavigate('/contact')} className={styles.contacto}>Contacto</div>
       </div>

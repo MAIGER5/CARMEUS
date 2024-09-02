@@ -7,8 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { CardFooter } from '../cards/cardFooter/cardFooter';
 import DataContext from '../dataContext/dataContext';
-import DataMenuMobilContext from '../dataContext/dataMenuMobilContext';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import dataFooter from '../utils/data/data.footer';
 
 
@@ -22,8 +21,14 @@ export const Footer = () => {
         dataFooter
     )
 
+    const handleExceptionFooter = ()=>{
+        return location.pathname !== '/contact' && location.pathname !== '/AdminContacts' 
+            ? styles.boxPrincipal
+            : styles.boxPrincipalNone
+    }
+
   return (
-    <div className={location.pathname !== '/contact' ? styles.boxPrincipal: styles.boxPrincipalNone}>
+    <div className={handleExceptionFooter()}>
         <div className={styles.responsiveCard}>
             <DataContext.Provider value={data5}>
                 <CardFooter/>

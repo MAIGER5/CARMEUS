@@ -33,7 +33,7 @@ export const Contact = () => {
     phone:"", 
     mail:"",
     country:"",
-    message:""
+    mensaje:""
 
   })
 
@@ -62,7 +62,7 @@ export const Contact = () => {
       phone:"", 
       mail:"",
       country:"",
-      message:""
+      mensaje:""
     })
   }
 
@@ -149,12 +149,12 @@ export const Contact = () => {
           <div>
             <label htmlFor="">Mensaje</label>
             <input 
-              name='message'
+              name='mensaje'
               type="text" 
               placeholder='Estoy interesado en...'
               required
               // size={60}
-              value={form.message}
+              value={form.mensaje}
               onChange={handleForm}
             />
           </div>
