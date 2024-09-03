@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from './prototypeDash.module.css'
+import { BsFillPlusSquareFill } from 'react-icons/bs';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -8,6 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { useNavigate } from 'react-router-dom';
 
 const columns = [
   { id: 'name', label: 'Name', minWidth: 170 },
@@ -59,6 +61,13 @@ const rows = [
 ];
 
 export default function PrototypeDashBoard() {
+
+  const nagivate = useNavigate();
+
+  const handleNavigate = (path)=>{
+    nagivate(path)
+  }
+
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -73,6 +82,7 @@ export default function PrototypeDashBoard() {
 
   return (
     <div className={styles.contenedor} >
+      <p onClick={()=> handleNavigate('/carmeuseMas')} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
       <Paper sx={{ width: '100%', overflow: 'hidden' }}>
         <TableContainer sx={{ maxHeight: 440, backgroundColor: '#89C6E8'}}>
           <Table stickyHeader aria-label="sticky table">

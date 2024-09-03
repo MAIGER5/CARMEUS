@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './carmeuseMas.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import dataCarmeuseMas from '../utils/data/dataCarmeuseMas';
-import { FormPay } from './formPay/formPay';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -44,10 +43,6 @@ export const CarmeuseMas = () => {
           }
         </div>
       </div>
-{/* 
-      <div className={styles.secondColumn}>
-        <FormPay/>
-      </div> */}
       
     </div>
   )

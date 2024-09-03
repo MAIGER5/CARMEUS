@@ -6,3 +6,12 @@
   margin: auto;
   margin-top: 230px;
 }
+
+.contenedor > p{
+  color: var(--blue2-color);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 30px;
+  
+}

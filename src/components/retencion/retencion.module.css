@@ -1,0 +1,71 @@
+@import url('../../variables.module.css');
+
+
+.contenedor{
+  width: 80%;
+  margin: auto;
+  margin-top: 190px;
+  margin-bottom: 100px;
+  display: grid;
+  gap: 30px;
+}
+
+.contenedor > p{
+  color: var(--blue2-color);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  
+}
+
+.contenedor > h1{
+  width: 90%;
+  color: var(--orange2-color);
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.contenedor> form{
+  width: 30%;
+  display: grid;
+  gap: 10px;
+  border-radius: 15px;
+}
+
+.contenedor> input{
+  border-radius: 5px;
+}
+
+.resultado{
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid var(--grey5-color);
+  border-radius: 5px;
+}
+
+.contenedor> span{
+  color: var(--blue2-color);
+}
+
+.contenedor> form> button{
+  width: 70%;
+  background-color: var(--orange2-color);
+  border: 1px solid var(--grey5-color);
+  border-radius: 5px;
+  padding-block: 10px;
+}
+
+@media (1080px > width){
+  .contenedor{
+    margin-top: 130px;
+  }
+}
+
+@media (560px > width){
+  .contenedor{
+    width: 85%;
+  }
+  .contenedor > h1{
+    font-size: 30px;
+  }
+}

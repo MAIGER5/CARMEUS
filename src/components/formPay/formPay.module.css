@@ -1,0 +1,80 @@
+@import url('../../variables.module.css');
+
+
+.contenedor{
+  margin-block: 190px;
+}
+
+.contenedor> p{
+  width: 80%;
+  margin: auto;
+  color: var(--blue2-color);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.formPagos{
+  display: grid;
+  gap: 20px;
+  width: 40%;
+  height: 100%;
+  margin: auto;
+  /* border: 1px solid var(--blue2-color); */
+  border-radius: 15px;
+  padding: 30px;
+  background-image: url('../utils/icon/tttt.jpg');
+}
+
+.formPagos > h1{
+  color: var(--blue2-color);
+  margin-bottom: 30px;
+}
+
+.formPagos input{
+  border-radius: 8px;
+  width: 100%;
+  /* border-color: var(--blue2-color); */
+  color: var(--blue2-color);
+  border: none;
+}
+
+.nameApellido{
+  display: flex;
+  gap: 10px;
+}
+
+.formPagos button{
+  background-color: var(--orange2-color);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+@media (780px > width){
+  .formPagos{
+    width: 70%;
+  }
+  .contenedor{
+    margin-top: 150px;
+    margin-bottom: 100px;
+  }
+  .contenedor> p{
+    width: 70%;
+  }
+}
+
+@media (450px > width){
+  .formPagos{
+    width: 90%;
+  }
+  .contenedor{
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+  .contenedor> p{
+    width: 90%;
+  }
+}

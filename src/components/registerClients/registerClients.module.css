@@ -1,0 +1,146 @@
+@import url('../../variables.module.css');
+
+.contenedor{
+  margin-top: 80px;
+  background-color: var(--blue2-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 150px;
+}
+
+.contSection{
+  width: 70%;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+.screenForm{
+  width: 40%;
+  overflow: hidden;
+}
+
+
+.textForm{
+  width: 60%;
+  background-color: white;
+  padding: 70px;
+  display: grid;
+  gap: 20px;
+}
+
+.screenForm> img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.textForm> :first-child> img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.textForm> :first-child> h1{
+  color: var(--blue2-color);
+  font-size: 30px;
+}
+
+.textForm> input{
+  width: 70%;
+  border-radius: 5px;
+}
+
+.textForm> button{
+  width: 70%;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--orange2-color);
+  font-size: 20px;
+  transition: background-color .5s;
+
+}
+
+.textForm> button:hover{
+  background-color: var(--blue2-color);
+
+}
+
+.textForm> p{
+  color: black;
+  font-size: 16px;
+}
+
+.textForm span{
+  color: var(--grey3-color);
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoratio .5s;
+}
+
+.textForm span:hover{
+  text-decoration: underline;
+
+}
+
+@media only screen and (max-width: 720px){
+
+  .contenedor{
+    padding-block: 70px;
+  }
+
+  .contSection{
+    width: 90%;
+  }
+  
+  .screenForm{
+    display: none;
+  }
+
+  .textForm{
+    width: 100%;
+    padding: 25px;
+
+  }
+
+  .textForm> input,
+  .textForm> button
+  {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width:721px) and (max-width: 992px){
+
+  .contenedor{
+    padding-block: 70px;
+  }
+
+  .contSection{
+    width: 50%;
+  }
+  
+  .screenForm{
+    display: none;
+  }
+
+  .textForm{
+    width: 100%;
+  }
+
+  .textForm> input,
+  .textForm> button
+  {
+    width: 100%;
+  }
+
+}
+

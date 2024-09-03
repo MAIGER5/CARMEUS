@@ -139,3 +139,9 @@
     width: 100%;
   }
 }
+
+@media (1080px > width){
+  .contenedor{
+    margin-top: 100px;
+  }
+}
