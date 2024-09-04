@@ -2,7 +2,11 @@ import React from "react";
 import pseBoton from '../icon/pse.png';
 import recip from '../icon/images.png';
 import factura from '../icon/factura1.jpg';
-import retencion from '../icon/impuesto.webp';
+import retencion from '../icon/retencion.png';
+import iconClient from '../icon/iconclient.png'
+import clientMas from '../icon/clientMas.png'
+import userAdmin from '../icon/clientAdmin.png'
+import adminContact from '../icon/adminContact.png'
 
 
 const dataCarmeuseMas = {
@@ -38,28 +42,28 @@ const dataCarmeuseMas = {
     },
     {
       id:5,
-      icon:retencion,
-      title:'Administrar Usuarios',
-      description:'Selecciona el servicio que se ajuste a su necesidad',
-      link:'/AdminContacts',
-    },
-    {
-      id:6,
-      icon:retencion,
-      title:'Administrar Contactos',
-      description:'Selecciona el servicio que se ajuste a su necesidad',
-      link:'/AdminContacts',
-    },
-    {
-      id:7,
-      icon:retencion,
+      icon:clientMas,
       title:'Registrar Cliente',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/registerClients',
     },
     {
+      id:6,
+      icon:userAdmin,
+      title:'Administrar Usuarios',
+      description:'Selecciona el servicio que se ajuste a su necesidad',
+      link:'/AdminContacts',
+    },
+    {
       id:7,
-      icon:retencion,
+      icon:adminContact,
+      title:'Administrar Contactos',
+      description:'Selecciona el servicio que se ajuste a su necesidad',
+      link:'/AdminContacts',
+    },
+    {
+      id:8,
+      icon:iconClient,
       title:'Administrar Clientes',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/AdminContacts',

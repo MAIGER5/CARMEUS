@@ -84,7 +84,7 @@ export default function PrototypeDashBoard() {
     <div className={styles.contenedor} >
       <p onClick={()=> handleNavigate('/carmeuseMas')} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
       <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-        <TableContainer sx={{ maxHeight: 440, backgroundColor: '#89C6E8'}}>
+        <TableContainer sx={{ maxHeight: 440, backgroundColor: 'white'}}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>

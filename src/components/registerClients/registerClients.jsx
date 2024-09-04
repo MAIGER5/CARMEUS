@@ -4,10 +4,15 @@ import { useDispatch } from 'react-redux';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
 import { number } from 'prop-types';
+import { BsFillPlusSquareFill } from 'react-icons/bs';
+import { Navigate, useNavigate } from 'react-router-dom';
+
 // import { registerUserAction } from '../../../Redux/Actions/registerUserAction';
 
 
 export const RegisterClients = () => {
+
+  const nagivate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -82,6 +87,10 @@ export const RegisterClients = () => {
     : setRegister(false)
   }
 
+  const handleNavigate = (path)=>{
+    nagivate(path)
+  }
+
   const cld = new Cloudinary({
     cloud:{
       cloudName:'dbn2bb4e2'
@@ -93,6 +102,9 @@ export const RegisterClients = () => {
 
   return (
     <main className={styles.contenedor}>
+
+      <p onClick={()=> handleNavigate('/carmeuseMas')} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
+
       <section className={styles.contSection}>
 
         <div className={styles.screenForm} id={styles.inicio}> 

@@ -1,19 +1,29 @@
 @import url('../../variables.module.css');
 
 .contenedor{
-  margin-top: 80px;
+  margin-top: 70px;
   background-color: var(--blue2-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  gap: 40px;
   padding-block: 150px;
+}
+
+.contenedor > p{
+  width: 70%;
+  margin: auto;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .contSection{
   width: 70%;
+  margin: auto;
   display: flex;
   border-radius: 20px;
   overflow: hidden;
+  border: 3px solid white;
 
 }
 
@@ -94,9 +104,14 @@
 
   .contenedor{
     padding-block: 70px;
+    margin-top: 50px;
   }
 
   .contSection{
+    width: 90%;
+  }
+
+  .contenedor > p{
     width: 90%;
   }
   
@@ -122,6 +137,7 @@
 
   .contenedor{
     padding-block: 70px;
+    margin-top: 50px;
   }
 
   .contSection{
