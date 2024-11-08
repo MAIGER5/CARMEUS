@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
 import { number } from 'prop-types';
-import { registerUserAction } from '../../../Redux/Actions/registerUserAction';
+// import { registerUserAction } from '../../../Redux/Actions/registerUserAction';
 
 
 export const SignIn = () => {

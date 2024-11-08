@@ -250,16 +250,17 @@ export const NavBar = () => {
                     onClick={() => handleClickNavigate('/products/cales/hydratedlime')}
                   >Cal Hidratada</span> 
                   <GoTriangleRight/>
-                  {hovered && (
+                  {/* {hovered && ( */}
                     <ul className={`${styles.dropUnoPuntoDos}`}>
                       <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoA')}>Hidratada Tipo A</li>
                       <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Hidratada Tipo B</li>
-                      <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Mundo Ferretero</li>
+                      {/* <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Red de Distribución</li> */}
                     </ul>
-                  )}
+                  {/* )} */}
                   </li>
                   <li onClick={() => handleClickNavigate('/products/cales/dolomiticlime')}>Cal Dòlomita</li>
                   <li onClick={() => handleClickNavigate('/products/cales/agriculturallime')}>Cal Agricola</li>
+                  <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')} id={styles.resaltarOrange}>Red de Distribución</li>
                 </ul>
               </li>
               <li>

@@ -20,7 +20,7 @@ export const Aplications = () => {
   const [ dataScreenApli, setDataScreenApli ] = useState([
     {
       id:1,
-      image: 'ocho',
+      image: 'wasteWater',
       title: "APLICACIONES",
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cumque soluta explicabo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam bo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam  quaerat sapiente veniam bo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam' ,
     }

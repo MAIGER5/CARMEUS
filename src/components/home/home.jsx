@@ -50,12 +50,12 @@ export const Home = () => {
       {/* <div className={styles.marginTop}> 
         <FiveRowX3/>
       </div> */}
-      <div className={`${styles.boxSombra}`}>  {/*this className is to hidden or show the component to make responsive*/}
+      {/* <div className={`${styles.boxSombra}`}> 
         <div className={styles.marginTop2}>
           <SixRowX2/>
         </div>
 
-      </div>
+      </div> */}
       {/* <Card/> */}
     </div>
   )

@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './registerClients.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
-import { number } from 'prop-types';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { postClientAction } from '../../Redux/Actions/postClientAction';
+import { Modals } from '../modals/modals';
+import { IoCloseOutline } from "react-icons/io5";
 
-// import { registerUserAction } from '../../../Redux/Actions/registerUserAction';
+
 
 
 export const RegisterClients = () => {
@@ -16,7 +18,14 @@ export const RegisterClients = () => {
 
   const dispatch = useDispatch();
 
+  const selectorSuccessClient = useSelector(state => state.client.success)
+  const selectorResponseClient = useSelector(state => state.client.response)
+  
+
+
   const [ register, setRegister] = useState(false)
+
+  const [ responseClient, setResponseClient ] = useState()
 
   const [formSignIn, setFormSignIn] = useState({
 
@@ -27,14 +36,16 @@ export const RegisterClients = () => {
 
   const [formSignUp, setFormSignUp] = useState({
     
-    name:'',
-    nit: number,
-    phone: number,
+    firstName:'',
+    secondName:'',
+    firstLastName:'',
+    secondLastName:'',
+    company:'',
+    nit: '',
     mail:'',
+    phone: '',
     password1:'',
     password2:'',
-    aceptConditions:'',
-
   });
 
   const handleFormSignIn = (event)=>{
@@ -54,18 +65,20 @@ export const RegisterClients = () => {
   const handleLogin = (event)=>{
     event.preventDefault();
 
-    // dispatch(registerUserAction(formSignUp))
+    dispatch(postClientAction(formSignUp))
 
     setFormSignUp({
     
-      name:'',
-      nit: number,
-      phone: number,
+      firstName:'',
+      secondName:'',
+      firstLastName:'',
+      secondLastName:'',
+      company:'',
+      nit: '',
       mail:'',
+      phone: '',
       password1:'',
       password2:'',
-      aceptConditions:'',
-  
     })
   }
 
@@ -91,6 +104,22 @@ export const RegisterClients = () => {
     nagivate(path)
   }
 
+  const handleClickCloseModal = ()=>{
+    setResponseClient(undefined)
+  }
+
+  useEffect(()=>{
+    if (selectorResponseClient) {
+      setResponseClient(selectorResponseClient)
+    }
+  }, [selectorResponseClient]);
+
+  useEffect(() => {
+    if (responseClient) {
+      console.log(responseClient);
+    }
+  }, [responseClient]); // Se ejecuta solo cuando cambia responseClient
+
   const cld = new Cloudinary({
     cloud:{
       cloudName:'dbn2bb4e2'
@@ -111,15 +140,47 @@ export const RegisterClients = () => {
           <AdvancedImage cldImg={myImage}/>
         </div>
 
-        <form onSubmit={handleLogin} action="" className={styles.textForm} id={styles.resgistro}>
+        <form onSubmit={handleLogin} className={styles.textForm} id={styles.resgistro}>
             <div>
               <h1>Registro de Clientes</h1>
             </div>
             <input 
               type="text"
-              name='name'
-              placeholder='Nombre completo'
-              value={formSignUp.name}
+              name='firstName'
+              placeholder='Primer nombre'
+              value={formSignUp.firstName}
+              onChange={handleFormSignUp}
+              required
+            />
+            <input 
+              type="text"
+              name='secondName'
+              placeholder='Segundo nombre'
+              value={formSignUp.secondName}
+              onChange={handleFormSignUp}
+              required
+            />
+            <input 
+              type="text"
+              name='firstLastName'
+              placeholder='Primer apellido'
+              value={formSignUp.firstLastName}
+              onChange={handleFormSignUp}
+              required
+            />
+            <input 
+              type="text"
+              name='secondLastName'
+              placeholder='Segundo apellido'
+              value={formSignUp.secondLastName}
+              onChange={handleFormSignUp}
+              required
+            />
+            <input 
+              type="text"
+              name='company'
+              placeholder='Nombre de la empresa'
+              value={formSignUp.company}
               onChange={handleFormSignUp}
               required
             />
@@ -167,7 +228,12 @@ export const RegisterClients = () => {
             <span>Sujeto a validación del Administrador</span>
             <p>Tiene una cuenta? <span onClick={()=> HhandleChangeForm("si")}>Inicie sesión aquí</span></p>
         </form>
-          
+        <div className={`${responseClient? styles.modals: styles.modals1}`}>
+          <Modals response={responseClient}/>
+          <div className={styles.close} onClick={handleClickCloseModal}>
+            <IoCloseOutline />
+          </div>
+        </div>
       </section>
     </main>
   )

@@ -12,7 +12,7 @@ export const ThirdRowX3 = () => {
       id: 1,
       title: "SOLUCIONES PARA LA INDUSTRIA",
       image: "building",
-      description: 'Carmeuse Colombia es un líder de la industria, no solo por la variedad de productos de cal y piedra caliza que ofrecemos, sino también por los equipos personalizados y las soluciones de ingeniería que brindamos para sus necesidades de planta, almacenamiento y transferencia de productos.',
+      description: 'Carmeuse Colombia es un líder de la industria, no solo por la variedad de productos de cal y piedra caliza que ofrecemos, sino también por los equipos personalizados y las soluciones de ingeniería que brindamos para sus necesidades de planta, almacenamiento y transferencia de productos',
       buttomInfo: 'Todas Nuestras Aplicaciones',
       link: '/Aplications'
     },

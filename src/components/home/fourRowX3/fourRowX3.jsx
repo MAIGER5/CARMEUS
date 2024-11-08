@@ -12,7 +12,7 @@ export const FourRowX3 = () => {
       id: 1,
       title: "PRODUCTOS QUE HACEN LA DIFERENCIA",
       image: "https://colomaconsultores.cl/wp-content/uploads/2020/09/Coloma-mercado-cal-mineria-chile-2020.jpg",
-      description: 'En Carmeuse Colombia, nuestra gente marca la diferencia y trabaja con usted. Nos centramos en sus necesidades específicas y le ofrecemos las soluciones adecuadas donde y cuando las necesite para que nunca tenga que preocuparse.',
+      description: 'En Carmeuse Colombia, nuestra gente marca la diferencia y trabaja con usted. Nos centramos en sus necesidades específicas y le ofrecemos las soluciones adecuadas donde y cuando las necesite para que nunca tenga que preocuparse',
       buttomInfo: 'Nuestros Productos',
       link: '/products'
     },
