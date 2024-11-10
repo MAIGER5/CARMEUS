@@ -13,13 +13,20 @@
 
 .firstColumn{
   width: 100%;
+  display: grid;
 }
 
 .firstColumn > p{
   color: var(--blue2-color);
-  font-size: 15px;
+  font-size: clamp(2rem, 2vw, 2rem);
   font-weight: 600;
   
+}
+
+.firstColumn > :nth-child(2){
+  font-size: clamp(1rem, 1vw, 2rem);
+  color: var(--orange2-color);
+
 }
 
 .firstColumn > h1{
@@ -30,16 +37,6 @@
 
 }
 
-.firstColumn> :nth-child(3){
-  color: var(--orange2-color);
-}
-
-.firstColumn > span{
-  color: var(--blue2-color);
-  font-size: 15px;
-  font-weight: 400;
-  
-}
 
 .servicesColumn{
   max-width: 1200px;

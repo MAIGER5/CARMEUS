@@ -54,6 +54,8 @@ import { Factura } from './components/factura/factura';
 import { Retencion } from './components/retencion/retencion';
 import { SoportePago } from './components/soportePago/soportePago';
 import { RegisterClients } from './components/registerClients/registerClients';
+import { AdminClient } from './components/carmeuseMas/adminClient/adminClient';
+import { AdminContact } from './components/carmeuseMas/adminContact/adminContact';
 
 
 
@@ -124,7 +126,8 @@ function App() {
         <Route path='/Aplications/waterTreatment/wasteWater' element={<WasteWater/>}/>
         <Route path='/Aplications/waterTreatment/industryWater' element={<IndustryWater/>}/> 
         
-        <Route path='/AdminContacts' element={<PrototypeDashBoard/>}/> 
+        <Route path='/AdminClients' element={<AdminClient/>}/> 
+        <Route path='/AdminContacts' element={<AdminContact/>}/> 
         <Route path='/formPay' element={<FormPay/>}/> 
         <Route path='/factura' element={<Factura/>}/> 
         <Route path='/retencion' element={<Retencion/>}/> 

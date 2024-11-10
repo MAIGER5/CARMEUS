@@ -21,7 +21,10 @@ export const RegisterClients = () => {
   const selectorSuccessClient = useSelector(state => state.client.success)
   const selectorResponseClient = useSelector(state => state.client.response)
   
-
+  const infoModal = {
+    text1:'Cliente creado', 
+    text2:'Muchas gracias por registrarse. Usted recibira un mensaje de confirmaciòn a su correo'
+  }
 
   const [ register, setRegister] = useState(false)
 
@@ -36,16 +39,13 @@ export const RegisterClients = () => {
 
   const [formSignUp, setFormSignUp] = useState({
     
-    firstName:'',
-    secondName:'',
-    firstLastName:'',
-    secondLastName:'',
     company:'',
+    contacto:'',
     nit: '',
     mail:'',
     phone: '',
-    password1:'',
-    password2:'',
+    ciudad:'',
+    password:'',
   });
 
   const handleFormSignIn = (event)=>{
@@ -69,16 +69,13 @@ export const RegisterClients = () => {
 
     setFormSignUp({
     
-      firstName:'',
-      secondName:'',
-      firstLastName:'',
-      secondLastName:'',
       company:'',
+      contacto:'',
       nit: '',
       mail:'',
       phone: '',
-      password1:'',
-      password2:'',
+      ciudad:'',
+      password:'',
     })
   }
 
@@ -114,12 +111,6 @@ export const RegisterClients = () => {
     }
   }, [selectorResponseClient]);
 
-  useEffect(() => {
-    if (responseClient) {
-      console.log(responseClient);
-    }
-  }, [responseClient]); // Se ejecuta solo cuando cambia responseClient
-
   const cld = new Cloudinary({
     cloud:{
       cloudName:'dbn2bb4e2'
@@ -146,41 +137,17 @@ export const RegisterClients = () => {
             </div>
             <input 
               type="text"
-              name='firstName'
-              placeholder='Primer nombre'
-              value={formSignUp.firstName}
-              onChange={handleFormSignUp}
-              required
-            />
-            <input 
-              type="text"
-              name='secondName'
-              placeholder='Segundo nombre'
-              value={formSignUp.secondName}
-              onChange={handleFormSignUp}
-              required
-            />
-            <input 
-              type="text"
-              name='firstLastName'
-              placeholder='Primer apellido'
-              value={formSignUp.firstLastName}
-              onChange={handleFormSignUp}
-              required
-            />
-            <input 
-              type="text"
-              name='secondLastName'
-              placeholder='Segundo apellido'
-              value={formSignUp.secondLastName}
-              onChange={handleFormSignUp}
-              required
-            />
-            <input 
-              type="text"
               name='company'
-              placeholder='Nombre de la empresa'
+              placeholder='Nombre / Razon social'
               value={formSignUp.company}
+              onChange={handleFormSignUp}
+              required
+            />
+            <input 
+              type="text"
+              name='contacto'
+              placeholder='Nombre completo de contacto'
+              value={formSignUp.contacto}
               onChange={handleFormSignUp}
               required
             />
@@ -203,24 +170,24 @@ export const RegisterClients = () => {
             <input 
               type="number"
               name='phone'
-              placeholder='Número de contacto'
+              placeholder='Teléfono de contacto'
               value={formSignUp.phone}
               onChange={handleFormSignUp}
               required
             />
             <input 
-              type="password"
-              name='password1'
-              placeholder='Crea una contraseña'
-              value={formSignUp.password1}
+              type="text"
+              name='ciudad'
+              placeholder='Paìs y Ciudad'
+              value={formSignUp.ciudad}
               onChange={handleFormSignUp}
               required
             />
             <input 
               type="password"
-              name='password2'
-              placeholder='Repite la contraseña'
-              value={formSignUp.password2}
+              name='password'
+              placeholder='Crea una contraseña'
+              value={formSignUp.password}
               onChange={handleFormSignUp}
               required
             />
@@ -229,7 +196,7 @@ export const RegisterClients = () => {
             <p>Tiene una cuenta? <span onClick={()=> HhandleChangeForm("si")}>Inicie sesión aquí</span></p>
         </form>
         <div className={`${responseClient? styles.modals: styles.modals1}`}>
-          <Modals response={responseClient}/>
+          <Modals response={responseClient} infoModal={infoModal} />
           <div className={styles.close} onClick={handleClickCloseModal}>
             <IoCloseOutline />
           </div>

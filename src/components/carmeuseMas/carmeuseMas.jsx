@@ -25,15 +25,13 @@ export const CarmeuseMas = () => {
       </DataContext.Provider> */}
 
       <div className={styles.firstColumn}>
-        <p>Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
-        <h1>Todos los servicios en</h1>
-        <h1>un solo lugar</h1>
-        <span>Selecciona el servicio que se ajuste a su necesidad</span>
+        <p>Bienvenido a Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
+        <span>Todos los servicios en un solo lugar</span>
         <div className={styles.servicesColumn}>
           {
             dataServiceMas?
             dataServiceMas.map((ele)=>(
-              <div onClick={()=>hangleNavigate(ele.link)} className={styles.cardServices}>
+              <div key={ele.id} onClick={()=>hangleNavigate(ele.link)} className={styles.cardServices}>
                 <div className={styles.containerIcon}>
                   <img src={ele.icon} alt="" />
                 </div>

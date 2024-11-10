@@ -5,9 +5,12 @@ import { IoCloseOutline } from "react-icons/io5";
 
 
 
-export const Modals = ({response}) => {
+export const Modals = ({response, infoModal}) => {
+
 
   const mail = response?.mail || '';
+  const message1 = infoModal?.text1 || '';
+  const message2 = infoModal?.text2 || ''
 
   return (
     <div className={styles.card}> 
@@ -20,8 +23,8 @@ export const Modals = ({response}) => {
           </div> 
         </div> 
         <div className={styles.content}>
-          <span className={styles.title}>Cliente creado</span> 
-          <p className={styles.message}>Muchas gracias por registrarse. Usted recibira un mensaje de confirmaciòn a su correo {mail || 'no disponible'} </p> 
+          <span className={styles.title}>{message1}</span> 
+          <p className={styles.message}>{message2} {mail || ''} </p> 
         </div> 
       </div> 
     </div>

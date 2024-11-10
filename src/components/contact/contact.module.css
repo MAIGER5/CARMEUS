@@ -20,6 +20,10 @@
   /* border: 1px solid green;   */
 }
 
+.containerForm{
+  position: relative;
+}
+
 .formulario{
   width: 50%;
   display: grid;
@@ -142,6 +146,34 @@ input{
 .ubicacion> :nth-child(3){
   color: var(--blue2-color);
 }
+
+
+.modals{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modals1{
+  display: none;
+}
+
+.close{
+  position: absolute;
+  top: 4%;
+  right: 2%;
+}
+
+.close > :first-child{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.close:hover :first-child{
+  color: var(--orange2-color);
+}
+
 
 
 @media (1081px > width){

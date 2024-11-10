@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './contact.module.css';
 import DataContext from '../dataContext/dataContext';
 import { Cloudinary } from '@cloudinary/url-gen';
@@ -6,8 +6,10 @@ import { AdvancedImage } from '@cloudinary/react';
 import { ScreenForm1 } from '../screens/screenFom1';
 import { ButtomOther } from '../buttoms/buttomOther/buttomOther';
 import { BsTelephoneForward } from "react-icons/bs";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { postContactAction } from '../../Redux/Actions/postContactAction';
+import { Modals } from '../modals/modals';
+import { IoCloseOutline } from "react-icons/io5";
 
 
 
@@ -16,6 +18,21 @@ import { postContactAction } from '../../Redux/Actions/postContactAction';
 export const Contact = () => {
 
   const dispatch = useDispatch()
+
+  const [ contactSuccess, setContactSuccess ] = useState()
+
+  const selectorResponseContact = useSelector(state => state.contact.success)
+
+  useEffect(()=>{
+    if (selectorResponseContact) {
+      setContactSuccess(selectorResponseContact)
+    }
+  }, [selectorResponseContact])
+
+
+  const handleClickCloseModal = ()=>{
+    setContactSuccess(undefined)
+  }
 
   const [ data ] = useState([
     {
@@ -87,7 +104,7 @@ export const Contact = () => {
       <div className={styles.containerForm}>
         <form onSubmit={handleSubmitForm} className={styles.formulario}>
           <div>
-            <label htmlFor="">Apellido y Nombre</label>
+            <label htmlFor="">Nombre y Apellido</label>
             <input 
               name='name'
               type="text" 
@@ -99,7 +116,7 @@ export const Contact = () => {
             />
           </div>
           <div>
-            <label htmlFor="">Compañia</label>
+            <label htmlFor="">Razón Social</label>
             <input 
               name='company'
               type="text" 
@@ -165,6 +182,12 @@ export const Contact = () => {
           <h1>Algún problema urgente o buscas hablar con alguien</h1>
           <p>Si desea comunicarse con nosotros urgentemente, llame a la oficina más cercana a su ubicación.</p>
           <ButtomOther infoboton={'Encuentranos'}/>
+        </div>
+        <div className={`${contactSuccess? styles.modals: styles.modals1}`}>
+          <Modals infoModal={contactSuccess} />
+          <div className={styles.close} onClick={handleClickCloseModal}>
+            <IoCloseOutline />
+          </div>
         </div>
       </div>
 

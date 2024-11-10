@@ -15,14 +15,14 @@ const dataCarmeuseMas = {
     {
       id:1,
       icon:pseBoton,
-      title:'Pagos PSE',
+      title:'Pagos',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/formPay',
     },
     {
       id:2,
       icon:factura,
-      title:'Descarga tu factura',
+      title:'Facturación',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/factura',
     },
@@ -43,30 +43,37 @@ const dataCarmeuseMas = {
     {
       id:5,
       icon:clientMas,
-      title:'Registrar Cliente',
+      title:'Registro de  Cliente',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/registerClients',
     },
     {
       id:6,
+      icon:clientMas,
+      title:'Hisotorial de pedidos',
+      description:'Selecciona el servicio que se ajuste a su necesidad',
+      link:'/historialPedidos',
+    },
+    {
+      id:7,
       icon:userAdmin,
       title:'Administrar Usuarios',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/AdminContacts',
     },
     {
-      id:7,
+      id:8,
       icon:adminContact,
       title:'Administrar Contactos',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/AdminContacts',
     },
     {
-      id:8,
+      id:9,
       icon:iconClient,
       title:'Administrar Clientes',
       description:'Selecciona el servicio que se ajuste a su necesidad',
-      link:'/AdminContacts',
+      link:'/AdminClients',
     },
   ]
 
