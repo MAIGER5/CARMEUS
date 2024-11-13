@@ -5,9 +5,10 @@ import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
-import { postClientAction } from '../../Redux/Actions/postClientAction';
+import { cleanClient, postClientAction } from '../../Redux/Actions/postClientAction';
 import { Modals } from '../modals/modals';
 import { IoCloseOutline } from "react-icons/io5";
+import { ModalsError } from '../modals/modalsError';
 
 
 
@@ -20,15 +21,22 @@ export const RegisterClients = () => {
 
   const selectorSuccessClient = useSelector(state => state.client.success)
   const selectorResponseClient = useSelector(state => state.client.response)
+  const selectorErrorClient = useSelector(state => state.client.ResponseError) || []
   
   const infoModal = {
     text1:'Cliente creado', 
     text2:'Muchas gracias por registrarse. Usted recibira un mensaje de confirmaciòn a su correo'
   }
 
+  const infoModalError = {
+    text1:'Error en la creación del cliente', 
+    text2:'Tener en cuenta los siguientes parametros'
+  }
+
   const [ register, setRegister] = useState(false)
 
   const [ responseClient, setResponseClient ] = useState()
+  const [ errorClient, setErrorClient ] = useState()
 
   const [formSignIn, setFormSignIn] = useState({
 
@@ -103,6 +111,7 @@ export const RegisterClients = () => {
 
   const handleClickCloseModal = ()=>{
     setResponseClient(undefined)
+    setErrorClient(undefined)
   }
 
   useEffect(()=>{
@@ -110,6 +119,21 @@ export const RegisterClients = () => {
       setResponseClient(selectorResponseClient)
     }
   }, [selectorResponseClient]);
+
+  useEffect(()=>{
+    if (selectorErrorClient.length) {
+      setErrorClient(selectorErrorClient)
+    }
+    
+  }, [selectorErrorClient]);
+
+  useEffect(()=>{
+    return () => {
+      setErrorClient(undefined);
+      dispatch(cleanClient())
+    };
+    
+  }, [dispatch]);
 
   const cld = new Cloudinary({
     cloud:{
@@ -197,6 +221,12 @@ export const RegisterClients = () => {
         </form>
         <div className={`${responseClient? styles.modals: styles.modals1}`}>
           <Modals response={responseClient} infoModal={infoModal} />
+          <div className={styles.close} onClick={handleClickCloseModal}>
+            <IoCloseOutline />
+          </div>
+        </div>
+        <div className={`${errorClient? styles.modals: styles.modals1}`}>
+          <ModalsError errors={errorClient} infoModalError={infoModalError} />
           <div className={styles.close} onClick={handleClickCloseModal}>
             <IoCloseOutline />
           </div>

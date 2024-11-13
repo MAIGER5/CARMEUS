@@ -21,6 +21,16 @@
   padding: 35px;
 }
 
+.divImageError {
+  background: red;
+  border-bottom: none;
+  position: relative;
+  text-align: center;
+  margin: -20px -20px 0;
+  border-radius: 5px 5px 0 0;
+  padding: 35px;
+}
+
 .dismiss {
   position: absolute;
   right: 10px;
@@ -88,6 +98,19 @@
   color: #595b5f;
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+
+.card ol{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+
+.card ul li::before{
+  content: circle;
 }
 
 
