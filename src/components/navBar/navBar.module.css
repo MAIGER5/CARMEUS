@@ -176,9 +176,9 @@ h6{
     cursor: pointer;
     padding-block: 10px;
     box-shadow: inset 0 0 0 0 var(--blue2-color);
-    -webkit-transition: ease-out 1s;
-    -moz-transition: ease-out 1s;
-    transition: ease-out 1s;
+    -webkit-transition: ease-out .5s;
+    -moz-transition: ease-out .5s;
+    transition: ease-out .5s;
 }
 
 .boton:hover {
@@ -213,7 +213,7 @@ h6{
     border: solid 0.1px var(--grey4-color);
     opacity: 0; /* Comienza invisible */
     visibility: hidden; /* Comienza oculto */
-    transition: opacity 1s, visibility 0s 1s; /* Transición de opacidad */
+    transition: opacity .5s, visibility 0s .5s; /* Transición de opacidad */
 }
 
 .dropdowns2Nivel {

@@ -20,10 +20,6 @@ export const CarmeuseMas = () => {
   return (
     <div className={styles.contenedor}>
 
-      {/* <DataContext.Provider value={data}>
-        <ScreenForm2/>
-      </DataContext.Provider> */}
-
       <div className={styles.firstColumn}>
         <p>Bienvenido a Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
         <span>Todos los servicios en un solo lugar</span>

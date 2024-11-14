@@ -29,6 +29,7 @@
   padding: 70px;
   display: grid;
   gap: 20px;
+  position: relative;
 }
 
 .screenForm> img{
@@ -46,9 +47,35 @@
   object-position: center;
 }
 
-.textForm> :first-child> h1{
+.titles{
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
+.titles h1{
+  cursor: pointer;
+  font-size: clamp(1rem, 1vw, 2rem);
+  text-align: center;
   color: var(--blue2-color);
-  font-size: 30px;
+  padding-block: 10px;
+
+}
+
+.titlesAltern{
+  border: 1px solid var(--blue2-color);
+  border-radius: 10px;
+
+}
+.titlesAltern2{
+  opacity: 40%;
+
+}
+
+.titleRegister{
+  color: var(--blue2-color);
+  font-size: clamp(1.5rem, 1vw, 2rem);
+
 }
 
 .textForm> input{
@@ -75,6 +102,16 @@
 .textForm> p{
   color: black;
   font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  
+}
+
+.strong{
+  font-weight: normal;
+  color: var(--orange2-color);
 }
 
 .textForm span{
@@ -88,6 +125,32 @@
 .textForm span:hover{
   text-decoration: underline;
 
+}
+
+.modals{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modals1{
+  display: none;
+}
+
+.close{
+  position: absolute;
+  top: 4%;
+  right: 2%;
+}
+
+.close > :first-child{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.close:hover :first-child{
+  color: var(--orange2-color);
 }
 
 @media only screen and (max-width: 720px){

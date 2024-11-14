@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { cleanClient, postClientAction } from '../../Redux/Actions/postClientAction';
 import { Modals } from '../modals/modals';
 import { IoCloseOutline } from "react-icons/io5";
@@ -217,12 +217,12 @@ export const RegisterClients = () => {
             />
             <button type='submit'>Registrar</button>
             <span>Sujeto a validación del Administrador</span>
-            <p>Tiene una cuenta? <span onClick={()=> HhandleChangeForm("si")}>Inicie sesión aquí</span></p>
+            <p>Tiene una cuenta? <span onClick={()=> handleNavigate('/sigIn')}>Inicie sesión aquí</span></p>
         </form>
         <div className={`${responseClient? styles.modals: styles.modals1}`}>
           <Modals response={responseClient} infoModal={infoModal} />
           <div className={styles.close} onClick={handleClickCloseModal}>
-            <IoCloseOutline />
+            <IoCloseOutline onClick={()=>handleNavigate('/sigIn')}/>
           </div>
         </div>
         <div className={`${errorClient? styles.modals: styles.modals1}`}>
