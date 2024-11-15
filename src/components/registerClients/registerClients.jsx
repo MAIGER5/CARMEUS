@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { cleanClient, postClientAction } from '../../Redux/Actions/postClientAction';
 import { Modals } from '../modals/modals';
 import { IoCloseOutline } from "react-icons/io5";

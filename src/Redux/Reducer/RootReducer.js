@@ -174,6 +174,7 @@ const RootReducer = (state = initialState, action) => {
             };
         
         case POST_EMPLOYEE_SUCCESS:
+            console.log('estoy en el reducer')
             return {
                 ...state,
                 employee: { 
