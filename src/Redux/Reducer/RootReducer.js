@@ -3,6 +3,7 @@ import { POST_CLIENT_REQUEST, POST_CLIENT_SUCCESS, POST_CLIENT_FAILURE, POST_CLI
 import { GET_CLIENTS_FAILURE, GET_CLIENTS_REQUEST, GET_CLIENTS_SUCCESS } from "../Actions/getClientsAction";
 import { GET_CONTACTS_FAILURE, GET_CONTACTS_REQUEST, GET_CONTACTS_SUCCESS } from "../Actions/getContactAction";
 import { POST_EMPLOYEE_FAILURE, POST_EMPLOYEE_REQUEST, POST_EMPLOYEE_SUCCESS } from "../Actions/postEmployeeAction";
+import { POST_LOGIN_CLIENT_FAILURE, POST_LOGIN_CLIENT_REQUEST, POST_LOGIN_CLIENT_SUCCESS } from "../Actions/postLoginClientrAction";
 
 const initialState = {
     contact: {
@@ -25,7 +26,15 @@ const initialState = {
         responseEmployees:[],
         error:null,
         ResponseError:[]
+    },
+    login:{
+        loading:false,
+        success:'',
+        tokenClient:null,
+        tokenEmployee:null,
+        ResponseError:null,
     }
+
 
 };
 
@@ -192,6 +201,34 @@ const RootReducer = (state = initialState, action) => {
                     ResponseError: action.error },
             };
         
+        case POST_LOGIN_CLIENT_REQUEST:
+            return{
+                ...state,
+                login:{
+                    ...state.login,
+                    loading:true,
+                    error:null,
+                }
+            }
+        case POST_LOGIN_CLIENT_SUCCESS:
+            return{
+                ...state,
+                login:{
+                    ...state.login,
+                    loading:false,
+                    success:'login correcto',
+                    tokenClient:action.payload
+                }
+            }
+        case POST_LOGIN_CLIENT_FAILURE:
+            return{
+                ...state,
+                login:{
+                    ...state.login,
+                    loading:false,
+                    ResponseError: action.error,
+                }
+            }
         default:
             return {...state}
     }
