@@ -9,12 +9,29 @@ const URL = 'http://localhost:3000/login/client';
 
 
 export const postLoginClientrAction = (payload)=>{
-  return async (dispatch)=>{
+  return async (dispatch, getState)=>{
     dispatch({type:POST_LOGIN_CLIENT_REQUEST})
     try {
-      const response = await axios.post(`${URL}`,payload)
-      dispatch({type:POST_LOGIN_CLIENT_SUCCESS, payload: response.data})
-      console.log(response.data)
+      const response = await axios.post(`${URL}`,payload);
+      if (response.data && response.data.token) {
+        const currenToken = getState().login.tokenClient;
+        if (currenToken !== response.data.token ) {
+          localStorage.setItem('token', response.data.token,)
+          localStorage.setItem('company', response.data.company)
+          localStorage.setItem('email', response.data.email)
+          dispatch({
+            type:POST_LOGIN_CLIENT_SUCCESS, 
+            payload: response.data.token,
+            company: response.data.company,
+            email: response.data.email,
+          })
+          console.log({
+            token: response.data.token, 
+            company: response.data.company,
+            email: response.data.email
+          })
+        }
+      }
     } catch (error) {
       // Comprueba si el error tiene una respuesta del servidor y extrae los detalles de los errores de validación
       const errorMessage = error.response && error.response.data && error.response.data.errors 

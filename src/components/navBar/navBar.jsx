@@ -19,6 +19,11 @@ import carmeusWhite from '../utils/logos/CARMEUSE-and-Colombia.png';
 import carmeusBlue from '../utils/logos/CARMEUSE-BLUE-and-Colombia.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { IoPerson } from "react-icons/io5";
+import { useSelector } from 'react-redux';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange, deepPurple } from '@mui/material/colors';
+import PopoverLogin from './popoverLogin';
 
 export const NavBar = () => {
   const navigate = useNavigate();
@@ -28,6 +33,10 @@ export const NavBar = () => {
   const [openMenuMobil, setOpenMenuMobil] = useState(false);
   const [openMenuApli, setOpenMenuApli] = useState(false);
   const [openMenuProd, setOpenMenuProd] = useState(false);
+  const [localStorageFillUp, setLocalStorageFillUp] = useState(false);
+
+  const selectorLoginClientToken = useSelector(state => state.login.tokenClient)
+  const selectorLoginState = useSelector(state => state.login)
 
   useEffect(() => {
     const handleScrolled = () => {
@@ -112,6 +121,13 @@ export const NavBar = () => {
   };
 
   
+  //LA SIGUIENT FUNCION TIENE EL OBJETIVO DE VERIFICAR SI EXITE LA PROPIEDAD TOKEN Y COMPANY EN EL LOCALSTORAGE Y CAMBIAN EL LOGO DE PERSON POR UN AVATAR 
+
+
+  useEffect(() => {
+    setLocalStorageFillUp(!!selectorLoginClientToken);
+  }, [selectorLoginClientToken]);
+
 
   return (
     <div id={styles.navBar} className={`${styles.contenedor} ${colorChangeNavbar}`}>
@@ -284,7 +300,12 @@ export const NavBar = () => {
           <li onClick={() => handleClickNavigate('/services')} className={`${styles.menuPrincipal} `}>Servicios</li>
         </ul>
         <div className={styles.contactAndLogin}>
-          <IoPerson onClick={() => handleClickNavigate('/sigIn')}/>
+        {
+          !localStorageFillUp
+          ? <IoPerson />
+          : <PopoverLogin storage={selectorLoginState} />
+        }
+          {/* <IoPerson onClick={() => handleClickNavigate('/sigIn')}/> */}
           <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>
         </div>
       </nav>

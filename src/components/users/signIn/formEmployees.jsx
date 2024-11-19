@@ -56,12 +56,21 @@ export const FormEmployees = ({setRegister}) => {
     navigate(path)
   }
 
-  const handleSubmitForm = ()=>{
-    dispatch(postLoginClientrAction(formSignIn))
+  const handleSubmitForm = (event)=>{
+    event.preventDefault()
+    dispatch(postLoginClientrAction(formSignIn));
+
+    setFormSignIn(
+      {
+        mail:'',
+        password:''
+      }
+    )
   }
+  
 
   return (
-    <form action="" className={styles.textForm} onSubmit={handleSubmitForm}>
+    <form onSubmit={handleSubmitForm} action="" className={styles.textForm}>
       <div className={styles.titles}> 
         <h1 onClick={handleTitleClient} className={titleClient? styles.titlesAltern:styles.titlesAltern2}>Clientes</h1>
         <h1 onClick={handleTitleEmployee} className={titleEmployee? styles.titlesAltern: styles.titlesAltern2} >Empleados</h1>

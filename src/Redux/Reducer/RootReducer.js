@@ -4,6 +4,7 @@ import { GET_CLIENTS_FAILURE, GET_CLIENTS_REQUEST, GET_CLIENTS_SUCCESS } from ".
 import { GET_CONTACTS_FAILURE, GET_CONTACTS_REQUEST, GET_CONTACTS_SUCCESS } from "../Actions/getContactAction";
 import { POST_EMPLOYEE_FAILURE, POST_EMPLOYEE_REQUEST, POST_EMPLOYEE_SUCCESS } from "../Actions/postEmployeeAction";
 import { POST_LOGIN_CLIENT_FAILURE, POST_LOGIN_CLIENT_REQUEST, POST_LOGIN_CLIENT_SUCCESS } from "../Actions/postLoginClientrAction";
+import { CLOSE_LOGIN_CLIENT_REQUEST, CLOSE_LOGIN_CLIENT_SUCCESS } from "../Actions/closeLoginClientAction";
 
 const initialState = {
     contact: {
@@ -30,8 +31,9 @@ const initialState = {
     login:{
         loading:false,
         success:'',
-        tokenClient:null,
-        tokenEmployee:null,
+        tokenClient: localStorage.getItem('token') || null,
+        company:localStorage.getItem('company') || null,
+        email:localStorage.getItem('email') || null,
         ResponseError:null,
     }
 
@@ -217,7 +219,9 @@ const RootReducer = (state = initialState, action) => {
                     ...state.login,
                     loading:false,
                     success:'login correcto',
-                    tokenClient:action.payload
+                    tokenClient: action.payload,
+                    company: action.company,
+                    email: action.email,
                 }
             }
         case POST_LOGIN_CLIENT_FAILURE:
@@ -227,6 +231,49 @@ const RootReducer = (state = initialState, action) => {
                     ...state.login,
                     loading:false,
                     ResponseError: action.error,
+                }
+            }
+
+        case CLOSE_LOGIN_CLIENT_REQUEST:
+            return{
+                ...state,
+                loging:{
+                    ...state.login,
+                    loading: true,
+                    error: null
+                }
+            }
+        case CLOSE_LOGIN_CLIENT_SUCCESS:
+            return{
+                ...state,
+                loging:{
+                    ...state.login,
+                    loading:false,
+                    success:'Sesión cerrada',
+                    tokenClient: null,
+                    company: null,
+                    email: null,
+                }
+            }
+        case CLOSE_LOGIN_CLIENT_SUCCESS:
+            return{
+                ...state,
+                loging:{
+                    ...state.login,
+                    loading:false,
+                    success:'Sesión cerrada',
+                    tokenClient: null,
+                    company: null,
+                    email: null,
+                }
+            }
+        case CLOSE_LOGIN_CLIENT_SUCCESS:
+            return{
+                ...state,
+                loging:{
+                    ...state.login,
+                    loading:false,
+                    ResponseError: 'Sesión aun sin Cerrar',
                 }
             }
         default:
