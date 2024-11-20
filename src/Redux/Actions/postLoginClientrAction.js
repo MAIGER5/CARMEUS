@@ -25,18 +25,20 @@ export const postLoginClientrAction = (payload)=>{
             company: response.data.company,
             email: response.data.email,
           })
-          console.log({
-            token: response.data.token, 
-            company: response.data.company,
-            email: response.data.email
-          })
+          // console.log({
+          //   token: response.data.token, 
+          //   company: response.data.company,
+          //   email: response.data.email
+          // })
         }
       }
     } catch (error) {
+      console.log({mensaje:error.response.data});
+
       // Comprueba si el error tiene una respuesta del servidor y extrae los detalles de los errores de validación
       const errorMessage = error.response && error.response.data && error.response.data.errors 
         ? error.response.data.errors 
-        : [{ message: error.message }]; // Mensaje general si no es de validación
+        : [{ message: error.response.data.error }]; // Mensaje general si no es de validación
       dispatch({ type: POST_LOGIN_CLIENT_FAILURE, error: errorMessage });
     }
   };

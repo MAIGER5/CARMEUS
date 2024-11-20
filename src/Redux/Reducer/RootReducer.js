@@ -4,7 +4,8 @@ import { GET_CLIENTS_FAILURE, GET_CLIENTS_REQUEST, GET_CLIENTS_SUCCESS } from ".
 import { GET_CONTACTS_FAILURE, GET_CONTACTS_REQUEST, GET_CONTACTS_SUCCESS } from "../Actions/getContactAction";
 import { POST_EMPLOYEE_FAILURE, POST_EMPLOYEE_REQUEST, POST_EMPLOYEE_SUCCESS } from "../Actions/postEmployeeAction";
 import { POST_LOGIN_CLIENT_FAILURE, POST_LOGIN_CLIENT_REQUEST, POST_LOGIN_CLIENT_SUCCESS } from "../Actions/postLoginClientrAction";
-import { CLOSE_LOGIN_CLIENT_REQUEST, CLOSE_LOGIN_CLIENT_SUCCESS } from "../Actions/closeLoginClientAction";
+import { CLOSE_LOGIN_CLIENT_FAILURE, CLOSE_LOGIN_CLIENT_REQUEST, CLOSE_LOGIN_CLIENT_SUCCESS } from "../Actions/closeLoginClientAction";
+import { CLEAN_LOGIN_RESPONSEERROR } from "../Actions/cleanLoginResponseErrorAction";
 
 const initialState = {
     contact: {
@@ -237,7 +238,7 @@ const RootReducer = (state = initialState, action) => {
         case CLOSE_LOGIN_CLIENT_REQUEST:
             return{
                 ...state,
-                loging:{
+                login:{
                     ...state.login,
                     loading: true,
                     error: null
@@ -246,7 +247,7 @@ const RootReducer = (state = initialState, action) => {
         case CLOSE_LOGIN_CLIENT_SUCCESS:
             return{
                 ...state,
-                loging:{
+                login:{
                     ...state.login,
                     loading:false,
                     success:'Sesión cerrada',
@@ -255,25 +256,24 @@ const RootReducer = (state = initialState, action) => {
                     email: null,
                 }
             }
-        case CLOSE_LOGIN_CLIENT_SUCCESS:
+
+        case CLOSE_LOGIN_CLIENT_FAILURE:
             return{
                 ...state,
-                loging:{
+                login:{
                     ...state.login,
                     loading:false,
-                    success:'Sesión cerrada',
-                    tokenClient: null,
-                    company: null,
-                    email: null,
+                    ResponseError: action.error,
                 }
             }
-        case CLOSE_LOGIN_CLIENT_SUCCESS:
+
+        case CLEAN_LOGIN_RESPONSEERROR:
             return{
                 ...state,
-                loging:{
+                login:{
                     ...state.login,
                     loading:false,
-                    ResponseError: 'Sesión aun sin Cerrar',
+                    ResponseError: null,
                 }
             }
         default:

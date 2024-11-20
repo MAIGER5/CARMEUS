@@ -302,7 +302,7 @@ export const NavBar = () => {
         <div className={styles.contactAndLogin}>
         {
           !localStorageFillUp
-          ? <IoPerson />
+          ? <IoPerson onClick={()=>handleClickNavigate('/sigIn')} />
           : <PopoverLogin storage={selectorLoginState} />
         }
           {/* <IoPerson onClick={() => handleClickNavigate('/sigIn')}/> */}
@@ -319,7 +319,15 @@ export const NavBar = () => {
           />
         </div>
         <div className={styles.contenedorIcons}>
-          <div onClick={() => handleClickNavigate('/sigIn')}>{!openMenuApli? <IoPerson/>: <IoSearchSharp/>}</div>
+          <div>
+            {
+              !openMenuApli && !localStorageFillUp
+              ? <IoPerson onClick={()=>handleClickNavigate('/sigIn')} />
+              : !openMenuApli && localStorageFillUp
+              ? <PopoverLogin storage={selectorLoginState} />
+              : ''
+            }
+          </div>
           {
             !openMenuMobil
             ? <div onClick={()=> handleClikOpenMenuMobil()} ><VscMenu/></div>
