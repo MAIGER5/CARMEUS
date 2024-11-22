@@ -6,6 +6,9 @@ import { POST_EMPLOYEE_FAILURE, POST_EMPLOYEE_REQUEST, POST_EMPLOYEE_SUCCESS } f
 import { POST_LOGIN_CLIENT_FAILURE, POST_LOGIN_CLIENT_REQUEST, POST_LOGIN_CLIENT_SUCCESS } from "../Actions/postLoginClientrAction";
 import { CLOSE_LOGIN_CLIENT_FAILURE, CLOSE_LOGIN_CLIENT_REQUEST, CLOSE_LOGIN_CLIENT_SUCCESS } from "../Actions/closeLoginClientAction";
 import { CLEAN_LOGIN_RESPONSEERROR } from "../Actions/cleanLoginResponseErrorAction";
+import { POST_LOGIN_EMPLOYEE_FAILURE, POST_LOGIN_EMPLOYEE_REQUEST, POST_LOGIN_EMPLOYEE_SUCCESS } from "../Actions/postLoginEmployeeAction";
+import { name } from "@cloudinary/url-gen/actions/namedTransformation";
+import { CLOSE_LOGIN_EMPLOYEE_FAILURE, CLOSE_LOGIN_EMPLOYEE_REQUEST, CLOSE_LOGIN_EMPLOYEE_SUCCESS } from "../Actions/closeLoginEmployeeAction";
 
 const initialState = {
     contact: {
@@ -32,9 +35,17 @@ const initialState = {
     login:{
         loading:false,
         success:'',
-        tokenClient: localStorage.getItem('token') || null,
+        tokenClient: localStorage.getItem('tokenClient') || null,
         company:localStorage.getItem('company') || null,
-        email:localStorage.getItem('email') || null,
+        email:localStorage.getItem('emailClient') || null,
+        ResponseError:null,
+    },
+    loginEmployee:{
+        loading:false,
+        success:'',
+        tokenEmployee: localStorage.getItem('tokenEmployee') || null,
+        name: localStorage.getItem('name') || null,
+        email:localStorage.getItem('emailEmployee') || null,
         ResponseError:null,
     }
 
@@ -274,8 +285,82 @@ const RootReducer = (state = initialState, action) => {
                     ...state.login,
                     loading:false,
                     ResponseError: null,
+                },
+                loginEmployee:{
+                    ...state.loginEmployee,
+                    loading:false,
+                    ResponseError: null,
                 }
             }
+
+
+        //AQUI EMPIEZA EL LOGIN DEL EMPLEADO
+        case POST_LOGIN_EMPLOYEE_REQUEST:
+            return{
+                ...state,
+                loginEmployee:{
+                    ...state.loginEmployee,
+                    loading:true,
+                    error:null,
+                }
+            }
+        case POST_LOGIN_EMPLOYEE_SUCCESS:
+            return{
+                ...state,
+                loginEmployee:{
+                    ...state.loginEmployee,
+                    loading:false,
+                    success:'login correcto',
+                    tokenEmployee: action.payload,
+                    name: action.name,
+                    email: action.email,
+                }
+            }
+        case POST_LOGIN_EMPLOYEE_FAILURE:
+            return{
+                ...state,
+                loginEmployee:{
+                    ...state.loginEmployee,
+                    loading:false,
+                    ResponseError: action.error,
+                }
+            }
+        
+
+        // AQUI EMPLIEZA EL RESET DEL ESTADO GLOBAL DE EMPLOYEE CUANDO SE CIERRA LA SESION
+        case CLOSE_LOGIN_EMPLOYEE_REQUEST:
+            return{
+                ...state,
+                loginEmployee:{
+                    ...state.loginEmployee,
+                    loading: true,
+                    error: null
+                }
+            }
+        case CLOSE_LOGIN_EMPLOYEE_SUCCESS:
+            return{
+                ...state,
+                loginEmployee:{
+                    ...state.loginEmployee,
+                    loading:false,
+                    success:'Sesión cerrada',
+                    tokenEmployee: null,
+                    name: null,
+                    email: null,
+                }
+            }
+
+        case CLOSE_LOGIN_EMPLOYEE_FAILURE:
+            return{
+                ...state,
+                loginEmployee:{
+                    ...state.loginEmployee,
+                    loading:false,
+                    ResponseError: action.error,
+                }
+            }
+
+            
         default:
             return {...state}
     }

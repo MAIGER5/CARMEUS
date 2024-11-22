@@ -1,28 +1,28 @@
 import axios from "axios";
 
-export const POST_LOGIN_CLIENT_REQUEST = 'POST_LOGIN_CLIENT_REQUEST';
-export const POST_LOGIN_CLIENT_SUCCESS = 'POST_LOGIN_CLIENT_SUCCESS';
-export const POST_LOGIN_CLIENT_FAILURE = 'POST_LOGIN_CLIENT_FAILURE';
+export const POST_LOGIN_EMPLOYEE_REQUEST = 'POST_LOGIN_EMPLOYEE_REQUEST';
+export const POST_LOGIN_EMPLOYEE_SUCCESS = 'POST_LOGIN_EMPLOYEE_SUCCESS';
+export const POST_LOGIN_EMPLOYEE_FAILURE = 'POST_LOGIN_EMPLOYEE_FAILURE';
 
 
-const URL = 'http://localhost:3000/login/client';
+const URL = 'http://localhost:3000/login/Employee';
 
 
-export const postLoginClientrAction = (payload)=>{
+export const postLoginEmployeeAction = (payload)=>{
   return async (dispatch, getState)=>{
-    dispatch({type:POST_LOGIN_CLIENT_REQUEST})
+    dispatch({type:POST_LOGIN_EMPLOYEE_REQUEST})
     try {
       const response = await axios.post(`${URL}`,payload);
       if (response.data && response.data.token) {
-        const currenToken = getState().login.tokenClient;
+        const currenToken = getState().loginEmployee.tokenEmployee;
         if (currenToken !== response.data.token ) {
-          localStorage.setItem('tokenClient', response.data.token,)
-          localStorage.setItem('company', response.data.company)
-          localStorage.setItem('emailClient', response.data.email)
+          localStorage.setItem('tokenEmployee', response.data.token,)
+          localStorage.setItem('name', response.data.name)
+          localStorage.setItem('emailEmployee', response.data.email)
           dispatch({
-            type:POST_LOGIN_CLIENT_SUCCESS, 
+            type:POST_LOGIN_EMPLOYEE_SUCCESS, 
             payload: response.data.token,
-            company: response.data.company,
+            name: response.data.name,
             email: response.data.email,
           })
           // console.log({
@@ -39,7 +39,7 @@ export const postLoginClientrAction = (payload)=>{
       const errorMessage = error.response && error.response.data && error.response.data.errors 
         ? error.response.data.errors 
         : [{ message: error.response.data.error }]; // Mensaje general si no es de validación
-      dispatch({ type: POST_LOGIN_CLIENT_FAILURE, error: errorMessage });
+      dispatch({ type: POST_LOGIN_EMPLOYEE_FAILURE, error: errorMessage });
     }
   };
 };

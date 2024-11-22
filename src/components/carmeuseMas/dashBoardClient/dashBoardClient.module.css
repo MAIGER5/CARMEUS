@@ -1,0 +1,147 @@
+@import url('../../../variables.module.css');
+
+.contenedor{
+  margin: auto;
+  margin-top: 150px;
+  padding: 50px 0px 100px 0px;
+  width: 80%;
+  
+  gap: 20px;
+
+}
+
+.firstColumn{
+  width: 100%;
+  display: grid;
+}
+
+.firstColumn > p{
+  color: var(--blue2-color);
+  font-size: clamp(2rem, 2vw, 2rem);
+  font-weight: 600;
+  
+}
+
+.firstColumn > :nth-child(2){
+  font-size: clamp(1rem, 1vw, 2rem);
+  color: var(--orange2-color);
+
+}
+
+.firstColumn > h1{
+  width: 90%;
+  color: var(--blue2-color);
+  /* font-size: 15px; */
+  font-weight: 700;
+
+}
+
+
+.servicesColumn{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 40px;
+}
+
+
+
+.servicesColumn> :nth-child(odd){
+  background-color: var(--blue2-color);
+}
+
+
+.cardServices{
+  display: grid;
+  gap: 5px;
+  background-color: var(--grey4-color);
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  transition: background-color .5s;
+  transition: transform .5s;
+  padding-block: 20px;
+}
+
+.cardServices:hover{
+  background-color: var(--orange2-color);
+  transform: scale(1.07);
+}
+
+.cardServices> :first-child{
+  width: 25%;
+  height: 100%;
+  margin: auto;
+}
+
+.cardServices> :nth-child(2){
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  color: white;
+  text-align: center;
+  padding-inline: 10px;
+}
+
+
+.containerIcon{
+  width: 70%;
+  overflow: hidden;
+  /* border: 1px solid red; */
+  border-radius: 50%;
+}
+
+.containerIcon> img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* .servicesColumn > :first-child{
+  background-color: var(--orange2-color);
+} */
+
+/* .servicesColumn > :first-child:hover{
+  background-color: var(--blue2-color);
+} */
+
+/* .secondColumn{
+  width: 50%;
+  border-radius: 15px;
+  padding: 30px 0px 0px 0px;
+}
+
+.ferretero{
+  display: grid;
+  gap: 19px;
+}
+
+.screenFerretero{
+  width: 100%;
+  height: 150px;
+  background-image: url('../utils/icon/fer.jpeg');
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 8px;
+} */
+
+
+@media only screen and (max-width: 1240px){
+  .contenedor{
+    flex-direction: column;
+  }
+  .firstColumn{
+    width: 100%;
+  }
+
+  .secondColumn{
+    width: 100%;
+  }
+}
+
+@media (1080px > width){
+  .contenedor{
+    margin-top: 100px;
+  }
+}

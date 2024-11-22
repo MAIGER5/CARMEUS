@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useDispatch } from 'react-redux';
 import { closeLoginClientAction } from '../../Redux/Actions/closeLoginClientAction';
+import { closeLoginEmployeeAction } from '../../Redux/Actions/closeLoginEmployeeAction';
 
 const bull = (
   <Box
@@ -23,6 +24,7 @@ export default function CardAvatar({storage}) {
 
   const handleCloseSesion = ()=>{
     dispatch(closeLoginClientAction());
+    dispatch(closeLoginEmployeeAction());
     window.location.reload();
   }
 
@@ -35,7 +37,7 @@ export default function CardAvatar({storage}) {
               Actualmente en
             </Typography>
             <Typography variant="h5" component="div">
-              {storage.company}
+              {storage.company?storage.company:storage.name}
             </Typography>
             <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>
               {storage.email}

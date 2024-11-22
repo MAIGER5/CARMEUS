@@ -6,6 +6,7 @@ import { postLoginClientrAction } from '../../../Redux/Actions/postLoginClientrA
 import { ModalsError } from '../../modals/modalsError';
 import { IoCloseOutline } from "react-icons/io5";
 import { cleanLoginResponseErrorAction } from '../../../Redux/Actions/cleanLoginResponseErrorAction';
+import { postLoginEmployeeAction } from '../../../Redux/Actions/postLoginEmployeeAction';
 
 
 export const FormEmployees = ({setRegister}) => {
@@ -19,8 +20,12 @@ export const FormEmployees = ({setRegister}) => {
   const [ errorLoginClient, setErrorLoginClient ] = useState()
 
 
-  const globalStateLoginClient = useSelector(state => state.login.tokenLoginClient)
+  const selectorStateLoginClient = useSelector(state => state.login.tokenClient)
   const selectorErrorLoginClient = useSelector(state => state.login.ResponseError) || []
+  const selectorStateLoginEmployee = useSelector(state => state.loginEmployee.tokenEmployee)
+  const selectorErrorLoginEmployee = useSelector(state => state.loginEmployee.ResponseError) || []
+
+
 
   const [formSignIn, setFormSignIn] = useState({
 
@@ -64,15 +69,17 @@ export const FormEmployees = ({setRegister}) => {
   }
 
   const handleSubmitForm = (event)=>{
-    event.preventDefault()
-    dispatch(postLoginClientrAction(formSignIn));
+    event.preventDefault();
+
+    titleClient? dispatch(postLoginClientrAction(formSignIn)): dispatch(postLoginEmployeeAction(formSignIn));
 
     setFormSignIn(
       {
         mail:'',
         password:''
       }
-    )
+    );
+
   }
   
   const infoModalError = {
@@ -80,17 +87,27 @@ export const FormEmployees = ({setRegister}) => {
     text2:'Tener en cuenta los siguientes parametros'
   }
 
-  const handleClickCloseModal = ()=>{
+  const handleClickCloseModal = (event)=>{
+    event.preventDefault()
     setErrorLoginClient(undefined)
     dispatch(cleanLoginResponseErrorAction())
   }
 
   useEffect(()=>{
-    if (selectorErrorLoginClient.length) {
-      setErrorLoginClient(selectorErrorLoginClient)
-    }
-    
-  }, [selectorErrorLoginClient]);
+    selectorStateLoginClient
+    ? navigate('/sigIn/dashBoardClient')
+    :selectorStateLoginEmployee
+    ? navigate('/sigIn/dashBoardEmployee')
+    :''
+  },[selectorStateLoginClient, selectorStateLoginEmployee])
+
+  useEffect(()=>{
+    selectorErrorLoginClient.length
+    ? setErrorLoginClient(selectorErrorLoginClient)
+    : selectorErrorLoginEmployee.length
+    ? setErrorLoginClient(selectorErrorLoginEmployee)
+    :''
+  }, [selectorErrorLoginClient, selectorErrorLoginEmployee]);
 
   useEffect(()=>{
     return () => {

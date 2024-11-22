@@ -12,9 +12,9 @@ export const closeLoginClientAction = ()=>{
     dispatch({type:CLOSE_LOGIN_CLIENT_REQUEST});
     try {
       dispatch({type:CLOSE_LOGIN_CLIENT_SUCCESS})
-      localStorage.removeItem('token')
+      localStorage.removeItem('tokenClient')
       localStorage.removeItem('company')
-      localStorage.removeItem('email')
+      localStorage.removeItem('emailClient')
     } catch (error) {
       dispatch({type:CLOSE_LOGIN_CLIENT_FAILURE})
     }

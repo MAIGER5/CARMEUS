@@ -26,6 +26,7 @@ import { deepOrange, deepPurple } from '@mui/material/colors';
 import PopoverLogin from './popoverLogin';
 
 export const NavBar = () => {
+
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
@@ -35,8 +36,11 @@ export const NavBar = () => {
   const [openMenuProd, setOpenMenuProd] = useState(false);
   const [localStorageFillUp, setLocalStorageFillUp] = useState(false);
 
-  const selectorLoginClientToken = useSelector(state => state.login.tokenClient)
-  const selectorLoginState = useSelector(state => state.login)
+  const selectorLoginClientToken = useSelector(state => state.login.tokenClient);
+  const selectorLoginEmployeeToken = useSelector(state => state.loginEmployee.tokenEmployee);
+
+  const selectorLoginStateClient = useSelector(state => state.login)
+  const selectorLoginStateEmployee = useSelector(state => state.loginEmployee)
 
   useEffect(() => {
     const handleScrolled = () => {
@@ -125,8 +129,8 @@ export const NavBar = () => {
 
 
   useEffect(() => {
-    setLocalStorageFillUp(!!selectorLoginClientToken);
-  }, [selectorLoginClientToken]);
+    !!selectorLoginClientToken || !!selectorLoginEmployeeToken? setLocalStorageFillUp(true): setLocalStorageFillUp(false);
+  }, [selectorLoginClientToken, selectorLoginEmployeeToken]);
 
 
   return (
@@ -294,7 +298,7 @@ export const NavBar = () => {
               </li>
             </ul>
           </li>
-          <li onClick={() => handleClickNavigate('/carmeuseMas')} className={`${styles.menuPrincipal}`}> <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/> </li>
+          <li onClick={() => handleClickNavigate(selectorLoginClientToken?'/sigIn/dashBoardClient': selectorLoginEmployeeToken?'/sigIn/dashBoardEmployee':'/carmeuseMas')} className={`${styles.menuPrincipal}`}> <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/> </li>
 
           {/* <li onClick={() => handleClickNavigate('/plasticRubber')} className={`${styles.menuPrincipal} `}>Sostenibilidad</li> */}
           <li onClick={() => handleClickNavigate('/services')} className={`${styles.menuPrincipal} `}>Servicios</li>
@@ -303,7 +307,7 @@ export const NavBar = () => {
         {
           !localStorageFillUp
           ? <IoPerson onClick={()=>handleClickNavigate('/sigIn')} />
-          : <PopoverLogin storage={selectorLoginState} />
+          : <PopoverLogin storage={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
         }
           {/* <IoPerson onClick={() => handleClickNavigate('/sigIn')}/> */}
           <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>
@@ -324,7 +328,7 @@ export const NavBar = () => {
               !openMenuApli && !localStorageFillUp
               ? <IoPerson onClick={()=>handleClickNavigate('/sigIn')} />
               : !openMenuApli && localStorageFillUp
-              ? <PopoverLogin storage={selectorLoginState} />
+              ? <PopoverLogin storage={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
               : ''
             }
           </div>
@@ -377,7 +381,7 @@ export const NavBar = () => {
           <li onClick={()=> handleClickNavigate('/services')} className={styles.itemsMenuMobil}>
             <span>Servicios</span>
           </li>
-          <li onClick={() => handleClickNavigate('/carmeuseMas')} > 
+          <li onClick={() => handleClickNavigate(selectorLoginClientToken?'/sigIn/dashBoardClient': selectorLoginEmployeeToken?'/sigIn/dashBoardEmployee':'/carmeuseMas')} > 
             <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/>
           </li>
           {/* <li onClick={() => handleClickNavigate('/sigIn')} > 

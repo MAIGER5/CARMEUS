@@ -56,6 +56,8 @@ import { SoportePago } from './components/soportePago/soportePago';
 import { RegisterClients } from './components/registerClients/registerClients';
 import { AdminClient } from './components/carmeuseMas/adminClient/adminClient';
 import { AdminContact } from './components/carmeuseMas/adminContact/adminContact';
+import { DashBoardClient } from './components/carmeuseMas/dashBoardClient/dashBoardClient';
+import { DashBoardEmployee } from './components/carmeuseMas/dashBoardEmployee/dashBoardEmployee';
 
 
 
@@ -133,6 +135,9 @@ function App() {
         <Route path='/retencion' element={<Retencion/>}/> 
         <Route path='/soportePago' element={<SoportePago/>}/> 
         <Route path='/registerClients' element={<RegisterClients/>}/> 
+
+        <Route path='/sigIn/dashBoardClient' element={<DashBoardClient/>}/>
+        <Route path='/sigIn/dashBoardEmployee' element={<DashBoardEmployee/>}/>
 
 
       </Routes>

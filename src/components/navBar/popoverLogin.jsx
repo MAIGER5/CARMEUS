@@ -18,9 +18,17 @@ export default function PopoverLogin({storage}) {
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
 
+
   return (
     <Stack direction="row" spacing={2}>
-      <Avatar aria-describedby={id} variant="contained" onClick={handleClick} data-bs-toggle="tooltip" data-bs-placement="left" title={storage}>{storage.company[0]}</Avatar>
+      <Avatar style={{backgroundColor:'#f95959'}}
+        aria-describedby={id} 
+        variant="contained" 
+        onClick={handleClick} 
+        data-bs-toggle="tooltip" 
+        data-bs-placement="left" 
+        title={storage.company?storage.company:storage.name}
+      >{storage.company?storage.company[0]:storage.name[0]}</Avatar>
       <Popover
         id={id}
         open={open}
