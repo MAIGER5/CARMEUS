@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:3000/employee';
+const URL = 'https://proy-canada-backend.onrender.com';
+// const URL = 'http://localhost:3000/employee';
 
 export const POST_EMPLOYEE_REQUEST = 'POST_EMPLOYEE_REQUEST';
 export const POST_EMPLOYEE_SUCCESS = 'POST_EMPLOYEE_SUCCESS';
@@ -10,7 +11,7 @@ export const postEmplyeeAction = (payload) =>{
   return async (dispatch) =>{
     dispatch({type:POST_EMPLOYEE_REQUEST})
     try {
-      const response = await axios.post(`${URL}/`, payload)
+      const response = await axios.post(`${URL}/employee/`, payload)
       dispatch({
         type:POST_EMPLOYEE_SUCCESS,
         payload:response.data

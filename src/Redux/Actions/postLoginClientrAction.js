@@ -5,14 +5,15 @@ export const POST_LOGIN_CLIENT_SUCCESS = 'POST_LOGIN_CLIENT_SUCCESS';
 export const POST_LOGIN_CLIENT_FAILURE = 'POST_LOGIN_CLIENT_FAILURE';
 
 
-const URL = 'http://localhost:3000/login/client';
+const URL = 'https://proy-canada-backend.onrender.com';
+// const URL = 'http://localhost:3000/login/client';
 
 
 export const postLoginClientrAction = (payload)=>{
   return async (dispatch, getState)=>{
     dispatch({type:POST_LOGIN_CLIENT_REQUEST})
     try {
-      const response = await axios.post(`${URL}`,payload);
+      const response = await axios.post(`${URL}/login/client`,payload);
       if (response.data && response.data.token) {
         const currenToken = getState().login.tokenClient;
         if (currenToken !== response.data.token ) {

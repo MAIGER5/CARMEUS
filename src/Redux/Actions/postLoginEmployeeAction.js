@@ -5,14 +5,15 @@ export const POST_LOGIN_EMPLOYEE_SUCCESS = 'POST_LOGIN_EMPLOYEE_SUCCESS';
 export const POST_LOGIN_EMPLOYEE_FAILURE = 'POST_LOGIN_EMPLOYEE_FAILURE';
 
 
-const URL = 'http://localhost:3000/login/Employee';
+const URL = 'https://proy-canada-backend.onrender.com';
+// const URL = 'http://localhost:3000/login/Employee';
 
 
 export const postLoginEmployeeAction = (payload)=>{
   return async (dispatch, getState)=>{
     dispatch({type:POST_LOGIN_EMPLOYEE_REQUEST})
     try {
-      const response = await axios.post(`${URL}`,payload);
+      const response = await axios.post(`${URL}/login/Employee`,payload);
       if (response.data && response.data.token) {
         const currenToken = getState().loginEmployee.tokenEmployee;
         if (currenToken !== response.data.token ) {
