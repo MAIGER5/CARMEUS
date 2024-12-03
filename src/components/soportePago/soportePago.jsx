@@ -3,6 +3,7 @@ import styles from './soportePago.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import { number } from 'prop-types';
+import { useSelector } from 'react-redux';
 
 
 export const SoportePago = () => {
@@ -15,6 +16,18 @@ export const SoportePago = () => {
     soporte:''
 
   });
+
+  const selectorLoginClient = useSelector(state => state.login.tokenClient) || null
+  const selectorLoginEmployee = useSelector(state => state.loginEmployee.tokenEmployee) || null
+
+  const handleOptionView = ()=>{
+    return selectorLoginClient
+      ? '/sigIn/dashBoardClient'
+      : selectorLoginEmployee
+      ? '/sigIn/dashBoardEmployee'
+      : '/carmeuseMas'
+  }
+
 
   const nagivate = useNavigate();
 
@@ -37,7 +50,7 @@ export const SoportePago = () => {
 
   return (
     <div className={styles.contenedor}>
-      <p onClick={()=> handleNavigate('/carmeuseMas')} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
+      <p onClick={()=> handleNavigate(handleOptionView())} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
       <h1>Envía tu Soporte de Pago</h1>
 
       <form action="">

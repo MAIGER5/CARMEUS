@@ -60,6 +60,8 @@ export const AdminContact = () => {
   },[])
 
   const contactsState = useSelector(state => state.contact.responseContacts) || [];
+  const selectorLoginClient = useSelector(state => state.login.tokenClient) || null
+  const selectorLoginEmployee = useSelector(state => state.loginEmployee.tokenEmployee) || null
 
   const nagivate = useNavigate();
 
@@ -79,10 +81,18 @@ export const AdminContact = () => {
     setPage(0);
   };
 
+  const handleOptionView = ()=>{
+    return selectorLoginClient
+      ? '/sigIn/dashBoardClient'
+      : selectorLoginEmployee
+      ? '/sigIn/dashBoardEmployee'
+      : '/carmeuseMas'
+  }
+
 
   return (
     <div className={styles.contenedor} >
-      <p onClick={()=> handleNavigate('/carmeuseMas')} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
+      <p onClick={()=> handleNavigate(handleOptionView())} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
       <h1>Contactos Recibidos</h1>
       <Paper sx={{ width: '100%', overflow: 'hidden' }}>
         <TableContainer sx={{ maxHeight: 440, backgroundColor: 'white'}}>

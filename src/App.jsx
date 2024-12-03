@@ -58,6 +58,7 @@ import { AdminClient } from './components/carmeuseMas/adminClient/adminClient';
 import { AdminContact } from './components/carmeuseMas/adminContact/adminContact';
 import { DashBoardClient } from './components/carmeuseMas/dashBoardClient/dashBoardClient';
 import { DashBoardEmployee } from './components/carmeuseMas/dashBoardEmployee/dashBoardEmployee';
+import { DistributionNetwork } from './components/products/distributionNetwork/distributionNetwork';
 
 
 
@@ -98,6 +99,8 @@ function App() {
 
         <Route path='/products/cales' element={<Cales/>}/>
         <Route path='/products/stone' element={<Piedra/>}/>
+        
+        <Route path='/products/distriburionNetwork' element={<DistributionNetwork/>}/>
 
         <Route path='/Aplications/agropecuario' element={<Agropecuario/>}/>
         <Route path='/Aplications/engeneerBuilding' element={<EngeneerBuilding/>}/>

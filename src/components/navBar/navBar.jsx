@@ -24,6 +24,7 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import PopoverLogin from './popoverLogin';
+import { jwtDecode } from 'jwt-decode';
 
 export const NavBar = () => {
 
@@ -37,6 +38,29 @@ export const NavBar = () => {
   const [localStorageFillUp, setLocalStorageFillUp] = useState(false);
 
   const selectorLoginClientToken = useSelector(state => state.login.tokenClient);
+
+  if (selectorLoginClientToken) {
+    try {
+      // Decodifica el JWT
+      const decodedToken = jwtDecode(selectorLoginClientToken);
+  
+      // Visualiza el payload en la consola o muéstralo en la UI
+      console.log('Contenido del token:', decodedToken);
+  
+      // Por ejemplo, puedes convertirlo en texto legible
+      const readablePayload = JSON.stringify(decodedToken, null, 2);
+      console.log('Token legible:', readablePayload);
+  
+      // Muéstralo en el DOM (por ejemplo, en un elemento <pre>)
+      // const displayElement = document.getElementById('jwt-display');
+      // if (displayElement) {
+      //   displayElement.textContent = readablePayload;
+      // }
+    } catch (error) {
+      console.error('Error al decodificar el token:', error);
+    }
+  }
+
   const selectorLoginEmployeeToken = useSelector(state => state.loginEmployee.tokenEmployee);
 
   const selectorLoginStateClient = useSelector(state => state.login)
@@ -280,7 +304,7 @@ export const NavBar = () => {
                   </li>
                   <li onClick={() => handleClickNavigate('/products/cales/dolomiticlime')}>Cal Dòlomita</li>
                   <li onClick={() => handleClickNavigate('/products/cales/agriculturallime')}>Cal Agricola</li>
-                  <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')} id={styles.resaltarOrange}>Red de Distribución</li>
+                  <li onClick={() => handleClickNavigate('/products/distriburionNetwork')} id={styles.resaltarOrange}>Red de Distribución</li>
                 </ul>
               </li>
               <li>

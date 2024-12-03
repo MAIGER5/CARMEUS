@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './formPay.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
@@ -9,15 +10,25 @@ import { useNavigate } from 'react-router-dom';
 export const FormPay = () => {
 
   const navigate = useNavigate();
-
+  
   const handleNavigate = (path)=>{
     navigate(path)
   }
 
+  const selectorLoginClient = useSelector(state => state.login.tokenClient) || null
+  const selectorLoginEmployee = useSelector(state => state.loginEmployee.tokenEmployee) || null
+
+  const handleOptionView = ()=>{
+    return selectorLoginClient
+      ? '/sigIn/dashBoardClient'
+      : selectorLoginEmployee
+      ? '/sigIn/dashBoardEmployee'
+      : '/carmeuseMas'
+  }
 
   return (
     <div className={styles.contenedor}>
-      <p onClick={()=> handleNavigate('/carmeuseMas')}>Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
+      <p onClick={()=> handleNavigate(handleOptionView())}>Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
       <form action="" className={styles.formPagos}>
         <h1>Pagos PayU</h1>
         <div className={styles.nameApellido}>

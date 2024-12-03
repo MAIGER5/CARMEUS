@@ -3,6 +3,7 @@ import styles from './retencion.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import { number } from 'prop-types';
+import { useSelector } from 'react-redux';
 
 
 export const Retencion = () => {
@@ -13,6 +14,18 @@ export const Retencion = () => {
     password:''
 
   });
+
+  const selectorLoginClient = useSelector(state => state.login.tokenClient) || null
+  const selectorLoginEmployee = useSelector(state => state.loginEmployee.tokenEmployee) || null
+
+  const handleOptionView = ()=>{
+    return selectorLoginClient
+      ? '/sigIn/dashBoardClient'
+      : selectorLoginEmployee
+      ? '/sigIn/dashBoardEmployee'
+      : '/carmeuseMas'
+  }
+
 
   const nagivate = useNavigate();
 
@@ -35,7 +48,7 @@ export const Retencion = () => {
 
   return (
     <div className={styles.contenedor}>
-      <p onClick={()=> handleNavigate('/carmeuseMas')} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
+      <p onClick={()=> handleNavigate(handleOptionView())} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
       <h1>Documento de Retención</h1>
 
       <form action="">
