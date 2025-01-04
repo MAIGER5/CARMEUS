@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { useDispatch } from 'react-redux';
 import { closeLoginClientAction } from '../../Redux/Actions/closeLoginClientAction';
 import { closeLoginEmployeeAction } from '../../Redux/Actions/closeLoginEmployeeAction';
+import { useNavigate } from 'react-router-dom';
 
 const bull = (
   <Box
@@ -18,13 +19,16 @@ const bull = (
   </Box>
 );
 
-export default function CardAvatar({storage}) {
+export default function CardAvatar({infoAditionalAvatar}) {
+
+  const navigate = useNavigate()
 
   const dispatch = useDispatch()
 
   const handleCloseSesion = ()=>{
     dispatch(closeLoginClientAction());
     dispatch(closeLoginEmployeeAction());
+    navigate('/sigIn')
     window.location.reload();
   }
 
@@ -37,10 +41,10 @@ export default function CardAvatar({storage}) {
               Actualmente en
             </Typography>
             <Typography variant="h5" component="div">
-              {storage.company?storage.company:storage.name}
+              {infoAditionalAvatar.company?infoAditionalAvatar.company:infoAditionalAvatar.name}
             </Typography>
             <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>
-              {storage.email}
+              {infoAditionalAvatar.email}
             </Typography>
           </CardContent>
           <CardActions>

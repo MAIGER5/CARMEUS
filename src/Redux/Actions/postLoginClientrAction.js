@@ -5,8 +5,8 @@ export const POST_LOGIN_CLIENT_SUCCESS = 'POST_LOGIN_CLIENT_SUCCESS';
 export const POST_LOGIN_CLIENT_FAILURE = 'POST_LOGIN_CLIENT_FAILURE';
 
 
-const URL = 'https://proy-canada-backend.onrender.com';
-// const URL = 'http://localhost:3000/login/client';
+// const URL = 'https://proy-canada-backend.onrender.com';
+const URL = 'http://localhost:3000';
 
 
 export const postLoginClientrAction = (payload)=>{

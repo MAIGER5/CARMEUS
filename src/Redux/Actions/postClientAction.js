@@ -5,8 +5,8 @@ export const POST_CLIENT_SUCCESS = 'POST_CLIENT_SUCCESS';
 export const POST_CLIENT_FAILURE = 'POST_CLIENT_FAILURE';
 export const POST_CLIENT_CLEANE = 'POST_CLIENT_CLEAN';
 
-const URL = 'https://proy-canada-backend.onrender.com'
-// const URL = 'http://localhost:3000/client'
+// const URL = 'https://proy-canada-backend.onrender.com'
+const URL = 'http://localhost:3000'
 
 export const postClientAction = (payload)=>{
   return async (dispatch)=>{

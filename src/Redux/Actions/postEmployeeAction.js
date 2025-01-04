@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const URL = 'https://proy-canada-backend.onrender.com';
-// const URL = 'http://localhost:3000/employee';
+// const URL = 'https://proy-canada-backend.onrender.com';
+const URL = 'http://localhost:3000';
 
 export const POST_EMPLOYEE_REQUEST = 'POST_EMPLOYEE_REQUEST';
 export const POST_EMPLOYEE_SUCCESS = 'POST_EMPLOYEE_SUCCESS';

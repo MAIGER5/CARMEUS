@@ -5,8 +5,8 @@ export const POST_LOGIN_EMPLOYEE_SUCCESS = 'POST_LOGIN_EMPLOYEE_SUCCESS';
 export const POST_LOGIN_EMPLOYEE_FAILURE = 'POST_LOGIN_EMPLOYEE_FAILURE';
 
 
-const URL = 'https://proy-canada-backend.onrender.com';
-// const URL = 'http://localhost:3000/login/Employee';
+// const URL = 'https://proy-canada-backend.onrender.com';
+const URL = 'http://localhost:3000';
 
 
 export const postLoginEmployeeAction = (payload)=>{

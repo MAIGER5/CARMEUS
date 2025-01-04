@@ -4,8 +4,8 @@ export const POST_CONTACT_REQUEST = 'POST_CONTACT_REQUEST';
 export const POST_CONTACT_SUCCESS = 'POST_CONTACT_SUCCESS';
 export const POST_CONTACT_FAILURE = 'POST_CONTACT_FAILURE';
 
-const URL = 'https://proy-canada-backend.onrender.com';
-// const URL = 'http://localhost:3000/contact';
+// const URL = 'https://proy-canada-backend.onrender.com';
+const URL = 'http://localhost:3000';
 
 
 export const postContactAction = (payload) => {

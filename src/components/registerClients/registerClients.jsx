@@ -178,7 +178,8 @@ export const RegisterClients = () => {
             <input 
               type="number"
               name='nit'
-              placeholder='Nit o Cédula'
+              placeholder='NIT o Cédula'
+
               value={formSignUp.nit}
               onChange={handleFormSignUp}
               required

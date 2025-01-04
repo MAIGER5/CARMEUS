@@ -105,28 +105,28 @@ const dataCarmeuseMas = {
   dataDashBoardEmployee:[
 
     {
-      id:7,
+      id:1,
       icon:PQRS,
       title:'PQRS',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/historialPedidos',
     },
     {
-      id:7,
+      id:2,
       icon:userAdmin,
       title:'Administrar Usuarios',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/AdminContacts',
     },
     {
-      id:8,
+      id:3,
       icon:adminContact,
       title:'Administrar Contactos',
       description:'Selecciona el servicio que se ajuste a su necesidad',
       link:'/AdminContacts',
     },
     {
-      id:9,
+      id:4,
       icon:iconClient,
       title:'Administrar Clientes',
       description:'Selecciona el servicio que se ajuste a su necesidad',

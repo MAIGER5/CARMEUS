@@ -4,8 +4,8 @@ export const GET_CONTACTS_REQUEST = 'GET_CONTACTS_REQUEST';
 export const GET_CONTACTS_SUCCESS = 'GET_CONTACTS_SUCCESS';
 export const GET_CONTACTS_FAILURE = 'GET_CONTACTS_FAILURE';
 
-const URL = 'https://proy-canada-backend.onrender.com';
-// const URL = 'http://localhost:3000/contact';
+// const URL = 'https://proy-canada-backend.onrender.com';
+const URL = 'http://localhost:3000';
 
 export const getContactsAction = () =>{
   return async (dispatch)=>{

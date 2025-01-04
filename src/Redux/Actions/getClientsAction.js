@@ -4,8 +4,8 @@ export const GET_CLIENTS_REQUEST = 'GET_CLIENTS_REQUEST';
 export const GET_CLIENTS_SUCCESS = 'GET_CLIENTS_SUCCESS';
 export const GET_CLIENTS_FAILURE = 'GET_CLIENTS_FAILURE';
 
-const URL = 'https://proy-canada-backend.onrender.com'
-// const URL = 'http://localhost:3000/client'
+// const URL = 'https://proy-canada-backend.onrender.com'
+const URL = 'http://localhost:3000'
 
 export const getClientsAction = ()=>{
   return async (dispatch) =>{

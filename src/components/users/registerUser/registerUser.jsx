@@ -68,6 +68,7 @@ export const RegisterUser = ({HhandleChangeForm}) => {
   const handleClickCloseModal = ()=>{
     setResponseEmployee(undefined)
     setErrorEmployee(undefined)
+    navigate('/sigIn')
   }
 
   useEffect(()=>{

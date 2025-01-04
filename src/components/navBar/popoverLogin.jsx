@@ -1,9 +1,23 @@
 import * as React from 'react';
+import styles from './popoverLogin.module.css'
 import Popover from '@mui/material/Popover';
-import { Avatar, Stack } from '@mui/material';
+import { Avatar, Stack, Typography } from '@mui/material';
 import CardAvatar from './cardAvatar';
+import { useSelector } from 'react-redux';
+import { decodeJWT } from '../hooks/decodeJWT';
 
-export default function PopoverLogin({storage}) {
+export default function PopoverLogin({infoAvatar}) {
+
+  const stateLogignClientToken = useSelector(state => state.login.tokenClient)
+  const stateLogignEmployeeToken = useSelector(state => state.loginEmployee.tokenEmployee)
+  const decodeToken = decodeJWT(stateLogignClientToken || stateLogignEmployeeToken)
+
+
+  // const nameAvatar = storage.company || storage.name || ""; es lo mismo que el siguiente solo que primero confirmo storage, pero no lo necesito porque si estoy en este componente es porque hay un estado anterior en otro componente que me lo confirma
+  const nameAvatar = decodeToken.company || decodeToken.name || '';
+  const firstLeterAvatar = nameAvatar.charAt(0).toUpperCase() ;
+
+
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -21,14 +35,19 @@ export default function PopoverLogin({storage}) {
 
   return (
     <Stack direction="row" spacing={2}>
-      <Avatar style={{backgroundColor:'#f95959'}}
-        aria-describedby={id} 
-        variant="contained" 
-        onClick={handleClick} 
-        data-bs-toggle="tooltip" 
-        data-bs-placement="left" 
-        title={storage.company?storage.company:storage.name}
-      >{storage.company?storage.company[0]:storage.name[0]}</Avatar>
+      <Avatar
+        sx={{ backgroundColor: '#f95959', fontSize:'15px', fontWeight: 'bold' }}
+        alt="Remy Sharp"
+        aria-describedby={id}
+        variant="contained"
+        onClick={handleClick}
+        data-bs-toggle="tooltip"
+        data-bs-placement="left"
+        title={nameAvatar}
+        translate = 'no'
+      >
+        {firstLeterAvatar}
+      </Avatar>
       <Popover
         id={id}
         open={open}
@@ -39,8 +58,9 @@ export default function PopoverLogin({storage}) {
           horizontal: 'left',
         }}
       >
-        <CardAvatar storage={storage}/>
+        <CardAvatar infoAditionalAvatar={infoAvatar} />
       </Popover>
     </Stack>
   );
+  
 }

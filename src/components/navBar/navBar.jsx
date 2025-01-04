@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './navBar.module.css';
 import { VscMenu } from "react-icons/vsc";
-import { IoSearchSharp } from "react-icons/io5";
 import { SlChemistry } from 'react-icons/sl';
 import { BsBuildingGear } from 'react-icons/bs';
 import { LuConstruction, LuDownload } from 'react-icons/lu';
@@ -20,8 +19,6 @@ import carmeusBlue from '../utils/logos/CARMEUSE-BLUE-and-Colombia.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { IoPerson } from "react-icons/io5";
 import { useSelector } from 'react-redux';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import PopoverLogin from './popoverLogin';
 import { jwtDecode } from 'jwt-decode';
@@ -331,7 +328,7 @@ export const NavBar = () => {
         {
           !localStorageFillUp
           ? <IoPerson onClick={()=>handleClickNavigate('/sigIn')} />
-          : <PopoverLogin storage={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
+          : <PopoverLogin infoAvatar={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
         }
           {/* <IoPerson onClick={() => handleClickNavigate('/sigIn')}/> */}
           <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>
@@ -352,7 +349,7 @@ export const NavBar = () => {
               !openMenuApli && !localStorageFillUp
               ? <IoPerson onClick={()=>handleClickNavigate('/sigIn')} />
               : !openMenuApli && localStorageFillUp
-              ? <PopoverLogin storage={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
+              ? <PopoverLogin infoAvatar={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
               : ''
             }
           </div>
