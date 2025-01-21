@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styles from './row_1Img.module.css';
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage} from '@cloudinary/react';
 import DataContext from '../../dataContext/dataContext';
@@ -10,7 +10,6 @@ export const Row_1Img = () => {
 
   const navigate = useNavigate();
 
-  const location = useLocation();
 
   const data = useContext(DataContext)
 
@@ -29,22 +28,21 @@ export const Row_1Img = () => {
   }
 
   const myImageBig = cld.image(data[8].image);
-  // console.log(data);
 
   return (
     <div className={`${styles.contenedor}`}>
 
-      <div onClick={()=> handleClickNavigate(`/${data[8].div}`)} className={styles.cardBig}>
+      <div onClick={()=> handleClickNavigate(`/${data[8].link}`)} className={styles.cardBig}>
         <AdvancedImage cldImg={myImageBig} />
         <h5>{data[8].description}</h5>
       </div>
-
-      <div onClick={()=> handleClickNavigate(`/${data[8].div}`)} className={`${styles.cardSmall} ${styles.responsiveHidden}`}>
+{/* 
+      <div onClick={()=> handleClickNavigate(`/${data[8].link}`)} className={`${styles.cardSmall} ${styles.responsiveHidden}`}>
         <div className={styles.cardImg}>
           <AdvancedImage cldImg={myImageBig} />
         </div>
         <div className={`${styles.textInt}`}>{data[7].description}</div>
-      </div>
+      </div> */}
       
     </div>
   )

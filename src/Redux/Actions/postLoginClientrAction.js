@@ -1,4 +1,6 @@
 import axios from "axios";
+import { decodeJWT } from "../../components/hooks/decodeJWT";
+
 
 export const POST_LOGIN_CLIENT_REQUEST = 'POST_LOGIN_CLIENT_REQUEST';
 export const POST_LOGIN_CLIENT_SUCCESS = 'POST_LOGIN_CLIENT_SUCCESS';
@@ -14,30 +16,30 @@ export const postLoginClientrAction = (payload)=>{
     dispatch({type:POST_LOGIN_CLIENT_REQUEST})
     try {
       const response = await axios.post(`${URL}/login/client`,payload);
-      if (response.data && response.data.token) {
+      if (response?.data?.token) {
+        const token = response.data.token;
+        const decodeToken = decodeJWT(token);
+        const company = decodeToken.company;
+        const mail = decodeToken.mail;
+
         const currenToken = getState().login.tokenClient;
-        if (currenToken !== response.data.token ) {
-          localStorage.setItem('tokenClient', response.data.token,)
-          localStorage.setItem('company', response.data.company)
-          localStorage.setItem('emailClient', response.data.email)
+        if (currenToken !== token ) {
+          localStorage.setItem('tokenClient', token,)
+          localStorage.setItem('company', company)
+          localStorage.setItem('emailClient', mail)
           dispatch({
             type:POST_LOGIN_CLIENT_SUCCESS, 
-            payload: response.data.token,
-            company: response.data.company,
-            email: response.data.email,
+            payload: token,
+            company: company,
+            email: mail,
           })
-          // console.log({
-          //   token: response.data.token, 
-          //   company: response.data.company,
-          //   email: response.data.email
-          // })
         }
       }
     } catch (error) {
       console.log({mensaje:error.response.data});
 
       // Comprueba si el error tiene una respuesta del servidor y extrae los detalles de los errores de validación
-      const errorMessage = error.response && error.response.data && error.response.data.errors 
+      const errorMessage = error?.response?.data?.errors 
         ? error.response.data.errors 
         : [{ message: error.response.data.error }]; // Mensaje general si no es de validación
       dispatch({ type: POST_LOGIN_CLIENT_FAILURE, error: errorMessage });

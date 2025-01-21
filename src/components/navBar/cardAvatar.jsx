@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { closeLoginClientAction } from '../../Redux/Actions/closeLoginClientAction';
 import { closeLoginEmployeeAction } from '../../Redux/Actions/closeLoginEmployeeAction';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const bull = (
   <Box
@@ -19,39 +20,53 @@ const bull = (
   </Box>
 );
 
-export default function CardAvatar({infoAditionalAvatar}) {
+
+const  CardAvatar = ({token}) => {
+
+  const { company = '', name = '', mail = '' } = token || {};
+
+  const userName = company || name || 'no disponible'
+
 
   const navigate = useNavigate()
 
   const dispatch = useDispatch()
 
-  const handleCloseSesion = ()=>{
+  const handleCloseSession = ()=>{
     dispatch(closeLoginClientAction());
     dispatch(closeLoginEmployeeAction());
     navigate('/sigIn')
-    window.location.reload();
+    // window.location.reload();
   }
 
   return (
     <Box sx={{ minWidth: 230}}>
       <Card variant="outlined">
-        <React.Fragment>
           <CardContent>
             <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
               Actualmente en
             </Typography>
             <Typography variant="h5" component="div">
-              {infoAditionalAvatar.company?infoAditionalAvatar.company:infoAditionalAvatar.name}
+              {userName || ''}
             </Typography>
             <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>
-              {infoAditionalAvatar.email}
+              {mail || ''}
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" onClick={handleCloseSesion}>Cerrar Sesión</Button>
+            <Button size="small" onClick={handleCloseSession}>Cerrar Sesión</Button>
           </CardActions>
-        </React.Fragment>
       </Card>
     </Box>
   );
 }
+
+CardAvatar.propTypes = {
+  token: PropTypes.shape({
+    company: PropTypes.string,
+    name: PropTypes.string,
+    mail: PropTypes.string,
+  }).isRequired,
+};
+
+export default CardAvatar;

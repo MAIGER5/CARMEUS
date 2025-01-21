@@ -1,4 +1,5 @@
 import axios from "axios";
+import { decodeJWT } from "../../components/hooks/decodeJWT";
 
 export const POST_LOGIN_EMPLOYEE_REQUEST = 'POST_LOGIN_EMPLOYEE_REQUEST';
 export const POST_LOGIN_EMPLOYEE_SUCCESS = 'POST_LOGIN_EMPLOYEE_SUCCESS';
@@ -14,23 +15,25 @@ export const postLoginEmployeeAction = (payload)=>{
     dispatch({type:POST_LOGIN_EMPLOYEE_REQUEST})
     try {
       const response = await axios.post(`${URL}/login/Employee`,payload);
-      if (response.data && response.data.token) {
+      if (response?.data?.token) {
+
+        const token = response.data.token;
+        const decodeToken = decodeJWT(token);
+        const name = decodeToken.name;
+        const mail = decodeToken.mail;
+
         const currenToken = getState().loginEmployee.tokenEmployee;
         if (currenToken !== response.data.token ) {
-          localStorage.setItem('tokenEmployee', response.data.token,)
-          localStorage.setItem('name', response.data.name)
-          localStorage.setItem('emailEmployee', response.data.email)
+          localStorage.setItem('tokenEmployee', token,)
+          localStorage.setItem('name', name)
+          localStorage.setItem('emailEmployee', mail)
           dispatch({
             type:POST_LOGIN_EMPLOYEE_SUCCESS, 
-            payload: response.data.token,
-            name: response.data.name,
-            email: response.data.email,
+            payload: token,
+            name: name,
+            email: mail,
           })
-          // console.log({
-          //   token: response.data.token, 
-          //   company: response.data.company,
-          //   email: response.data.email
-          // })
+
         }
       }
     } catch (error) {

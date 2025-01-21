@@ -6,15 +6,22 @@ import CardAvatar from './cardAvatar';
 import { useSelector } from 'react-redux';
 import { decodeJWT } from '../hooks/decodeJWT';
 
-export default function PopoverLogin({infoAvatar}) {
+export default function PopoverLogin() {
 
   const stateLogignClientToken = useSelector(state => state.login.tokenClient)
   const stateLogignEmployeeToken = useSelector(state => state.loginEmployee.tokenEmployee)
-  const decodeToken = decodeJWT(stateLogignClientToken || stateLogignEmployeeToken)
+
+   // Validar el token antes de decodificar
+  const validToken =
+  (typeof stateLogignClientToken === 'string' && stateLogignClientToken) ||
+  (typeof stateLogignEmployeeToken === 'string' && stateLogignEmployeeToken) ||
+  null;
+
+  const decodeToken = validToken? decodeJWT(validToken): {};
 
 
   // const nameAvatar = storage.company || storage.name || ""; es lo mismo que el siguiente solo que primero confirmo storage, pero no lo necesito porque si estoy en este componente es porque hay un estado anterior en otro componente que me lo confirma
-  const nameAvatar = decodeToken.company || decodeToken.name || '';
+  const nameAvatar = decodeToken?.company || decodeToken?.name || 'Usuario';
   const firstLeterAvatar = nameAvatar.charAt(0).toUpperCase() ;
 
 
@@ -58,7 +65,7 @@ export default function PopoverLogin({infoAvatar}) {
           horizontal: 'left',
         }}
       >
-        <CardAvatar infoAditionalAvatar={infoAvatar} />
+        <CardAvatar token={decodeToken} />
       </Popover>
     </Stack>
   );

@@ -3,7 +3,7 @@ import styles from './navBar.module.css';
 import { VscMenu } from "react-icons/vsc";
 import { SlChemistry } from 'react-icons/sl';
 import { BsBuildingGear } from 'react-icons/bs';
-import { LuConstruction, LuDownload } from 'react-icons/lu';
+import { LuConstruction } from 'react-icons/lu';
 import { MdOutlineAgriculture, MdOutlineGasMeter } from 'react-icons/md';
 import { SiEquinixmetal } from 'react-icons/si';
 import { FaHandHoldingWater } from 'react-icons/fa';
@@ -16,12 +16,10 @@ import { BsFillPlusSquareFill } from "react-icons/bs";
 import { GoTriangleRight } from "react-icons/go";
 import carmeusWhite from '../utils/logos/CARMEUSE-and-Colombia.png';
 import carmeusBlue from '../utils/logos/CARMEUSE-BLUE-and-Colombia.png';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { IoPerson } from "react-icons/io5";
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { IoPersonOutline } from "react-icons/io5";
 import { useSelector } from 'react-redux';
-import { deepOrange, deepPurple } from '@mui/material/colors';
 import PopoverLogin from './popoverLogin';
-import { jwtDecode } from 'jwt-decode';
 
 export const NavBar = () => {
 
@@ -36,27 +34,6 @@ export const NavBar = () => {
 
   const selectorLoginClientToken = useSelector(state => state.login.tokenClient);
 
-  if (selectorLoginClientToken) {
-    try {
-      // Decodifica el JWT
-      const decodedToken = jwtDecode(selectorLoginClientToken);
-  
-      // Visualiza el payload en la consola o muéstralo en la UI
-      console.log('Contenido del token:', decodedToken);
-  
-      // Por ejemplo, puedes convertirlo en texto legible
-      const readablePayload = JSON.stringify(decodedToken, null, 2);
-      console.log('Token legible:', readablePayload);
-  
-      // Muéstralo en el DOM (por ejemplo, en un elemento <pre>)
-      // const displayElement = document.getElementById('jwt-display');
-      // if (displayElement) {
-      //   displayElement.textContent = readablePayload;
-      // }
-    } catch (error) {
-      console.error('Error al decodificar el token:', error);
-    }
-  }
 
   const selectorLoginEmployeeToken = useSelector(state => state.loginEmployee.tokenEmployee);
 
@@ -93,21 +70,32 @@ export const NavBar = () => {
   }, []);
 
 
-  const colorChangeNavbar = 
-    openMenuMobil 
-    ? styles.contenedorScrolled 
-    : !scrolled && location.pathname === '/' 
-    ? styles.contenedorHome 
-    : scrolled 
-    ? styles.contenedorScrolled 
-    : styles.contenedorScrolled2;
+  const colorChange = () => {
+    if (openMenuMobil) {
+      return styles.contenedorScrolled;
+    } else if (!scrolled && location.pathname === '/') {
+      return styles.contenedorHome;
+    } else if (scrolled) {
+      return styles.contenedorScrolled;
+    } else {
+      return styles.contenedorScrolled2;
+    }
+  }
 
-  const logoChange = 
-    openMenuMobil
-    ? carmeusBlue
-    :!scrolled && location.pathname === '/' 
-    ? carmeusWhite 
-    : carmeusBlue;
+  const colorChangeNavbar = colorChange()
+
+
+ const logoDiferent = ()=>{
+  if (openMenuMobil) {
+    return carmeusBlue
+  } else if(!scrolled && location.pathname === '/'){
+    return carmeusWhite
+  } else {
+    return carmeusBlue
+  }
+ }
+
+  const logoChange = logoDiferent();
 
   const resetStates = ()=>{
     setOpenMenuMobil(false);
@@ -145,7 +133,30 @@ export const NavBar = () => {
     handle(false);
   };
 
+  const menuCarmeuseMas = ()=>{
+    if (selectorLoginClientToken) {
+      return '/sigIn/dashBoardClient'
+    } else if(selectorLoginEmployeeToken){
+      return '/sigIn/dashBoardEmployee'
+    } else {
+      return '/carmeuseMas'
+    }
+  }
+
+  const changeCarmeuseMas = menuCarmeuseMas()
+
+  const changeLogoPerson = ()=>{
+    if (!openMenuApli && !localStorageFillUp) {
+      return <IoPersonOutline onClick={()=>handleClickNavigate('/sigIn')} />
+    } else if(!openMenuApli && localStorageFillUp){
+      return <PopoverLogin infoAvatar={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
+    } else {
+      return ''
+    }
+  }
   
+  const logoPersonOPover = changeLogoPerson();
+
   //LA SIGUIENT FUNCION TIENE EL OBJETIVO DE VERIFICAR SI EXITE LA PROPIEDAD TOKEN Y COMPANY EN EL LOCALSTORAGE Y CAMBIAN EL LOGO DE PERSON POR UN AVATAR 
 
 
@@ -158,22 +169,22 @@ export const NavBar = () => {
     <div id={styles.navBar} className={`${styles.contenedor} ${colorChangeNavbar}`}>
       <section className={styles.navbarUper}>
         <ul>
-          <li onClick={() => handleClickNavigate('/aboutUs')}>Acerca de Nosotros</li>
-          <li onClick={() => handleClickNavigate('/news')}>Actualidad</li>
-          {/* <li onClick={() => handleClickNavigate('/sigIn')}>Inicio Sesión</li> */}
-          <li onClick={() => handleClickNavigate('/en')}>En</li>
+          <li><Link to={'/aboutUs'}>Acerca de Nosotros</Link></li>
+          <li><Link to={'/news'}>Actualidad</Link></li>
+          <li><Link to={'/en'}>En</Link></li>
         </ul>
       </section>
       <nav>
-        <img 
-          src={logoChange} 
-          alt="logo" 
-          onClick={() => handleClickNavigate('/')} 
-          style={{ cursor: 'pointer' }}
-        />
+        <Link to={'/'}>
+          <img 
+            src={logoChange} 
+            alt="logo" 
+            style={{ cursor: 'pointer' }}
+          />
+        </Link>
         <ul>
           <li>
-            <span onClick={()=> handleClickNavigate('/aplications')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones</span>
+            <Link to={'/aplications'} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Aplicaciones</Link>
             <ul id={styles.dropUno} className={`${styles.dropdowns}`}>
 
               <li 
@@ -182,13 +193,13 @@ export const NavBar = () => {
                 onMouseLeave={handleMouseLeave}
                 
               >
-                <MdOutlineAgriculture /> <span className={`${styles.prueba}`} onClick={() => handleClickNavigate('/Aplications/agropecuario')}>Agricola</span> 
+                <MdOutlineAgriculture /> <Link to={'/Aplications/agropecuario'} className={`${styles.prueba}`}>Agricola</Link> 
                 <span className={styles.triangulo2}></span>
                 {hovered && (
                   <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
-                    <li onClick={() => handleClickNavigate('/Aplications/agropecuario/animal')}>Cuidado Animal</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/agropecuario/sugar')}>Producción de Azúcar</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/agropecuario/food')}>Industria Alimentaria</li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/agropecuario/animal'}>Cuidado Animal</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/agropecuario/sugar'}>Producción de Azúcar</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/agropecuario/food'}>Industria Alimentaria</Link></li>
                   </ul>
                 )}
               </li>
@@ -198,13 +209,13 @@ export const NavBar = () => {
                 onMouseLeave={handleMouseLeave}
                 
               >
-                <BsBuildingGear /> <span className={`${styles.prueba}`} onClick={() => handleClickNavigate('/Aplications/engeneerBuilding')}>Ingenieria Civil & Construcción</span> 
+                <BsBuildingGear /> <Link to={'/Aplications/engeneerBuilding'} className={`${styles.prueba}`}>Ingenieria Civil & Construcción</Link> 
                 <span className={styles.triangulo2}></span>
                 {hovered && (
                   <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
-                    <li onClick={() => handleClickNavigate('/Aplications/engeneerBuilding/aggregado')}>Agregados</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/engeneerBuilding/asphalt')}>Asfalto</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/engeneerBuilding/soilTreatment')}>Tratamiento de Suelos</li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/engeneerBuilding/aggregado'}>Agregados</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/engeneerBuilding/asphalt'}>Asfalto</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/engeneerBuilding/soilTreatment'}>Tratamiento de Suelos</Link></li>
                   </ul>
                 )}
               </li>
@@ -213,144 +224,132 @@ export const NavBar = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <SlChemistry /> <span 
+                <SlChemistry /> <Link to={'/Aplications/chemical'}
                                   className={`${styles.prueba}`} 
-                                  onClick={() => handleClickNavigate('/Aplications/chemical')}
-                                >Industria Química</span> 
+                                >Industria Química</Link> 
                 <span className={styles.triangulo2}></span>
                 {hovered && (
                   <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
-                    <li onClick={() => handleClickNavigate('/Aplications/chemical/plasticRubber')}>Plástico y Cauchco</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/chemical/chemicalCompounds')}>Compuesto Químico</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/chemical/chemicalCalciumSalts')}>Sales de Calcio</li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/chemical/plasticRubber'}>Plástico y Cauchco</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/chemical/chemicalCompounds'}>Compuesto Químico</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/chemical/chemicalCalciumSalts'}>Sales de Calcio</Link></li>
                   </ul>
                 )}
               </li>
-              <li onClick={() => handleClickNavigate('/Aplications/flueGasTreatment')}>
-                <MdOutlineGasMeter /> <span>Tratamiento de Gases & Combustión</span>
+              <li>
+                <MdOutlineGasMeter /> <Link to={'/Aplications/flueGasTreatment'} className={`${styles.prueba}`}>Tratamiento de Gases & Combustión</Link>
               </li>
-              <li onClick={() => handleClickNavigate('/Aplications/glassCeramic')}>
-                <SiEquinixmetal /> <span>Cerámica & Vidrio</span>
+              <li>
+                <SiEquinixmetal /> <Link to={'/Aplications/glassCeramic'} className={`${styles.prueba}`}>Cerámica & Vidrio</Link>
               </li>
               <li 
                 className={`${styles.prueba}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <LuConstruction /><span 
+                <LuConstruction /><Link to={'/Aplications/steel'}
                                     className={`${styles.prueba}`}
-                                    onClick={() => handleClickNavigate('/Aplications/steel')}
-                                  >Hierro & Acero</span> 
+                                  >Hierro & Acero</Link> 
                 <span className={styles.triangulo2}></span>
                 {hovered && (
                   <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
-                    <li onClick={() => handleClickNavigate('/Aplications/steel/iron')}>Producción de Hierro</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/steel/acero')}>Producción de Acero</li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/steel/iron'}>Producción de Hierro</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/steel/acero'}>Producción de Acero</Link></li>
                   </ul>
                 )}
               </li>
-              <li onClick={() => handleClickNavigate('/Aplications/noFerrousMining')}>
-                <AiOutlineGold /> <span>Minería & Metales No Ferrosos</span>
+              <li>
+                <AiOutlineGold /> <Link to={'/Aplications/noFerrousMining'} className={`${styles.prueba}`}>Minería & Metales No Ferrosos</Link>
               </li>
-              <li onClick={() => handleClickNavigate('/Aplications/pccPulPaper')}>
-                <LiaNewspaper /> <span>Pulpa & Papel</span>
+              <li>
+                <LiaNewspaper /> <Link to={'/Aplications/pccPulPaper'} className={`${styles.prueba}`}>Pulpa & Papel</Link>
               </li>
               <li 
                 className={`${styles.prueba}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <FaHandHoldingWater /><span 
+                <FaHandHoldingWater /><Link to={'/Aplications/waterTreatment'}
                                         className={`${styles.prueba}`}
-                                        onClick={() => handleClickNavigate('/Aplications/waterTreatment')}
-                                      >Tratamiento de Agua</span> 
+                                      >Tratamiento de Agua</Link> 
                 <span className={styles.triangulo2}></span>
                 {hovered && (
                   <ul className={`${styles.dropUnoPuntoUno} ${styles.dropdowns2Nivel}`}>
-                    <li onClick={() => handleClickNavigate('/Aplications/waterTreatment/drinkWater')}>Agua Potable</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/waterTreatment/wasteWater')}>Aguas Residuales</li>
-                    <li onClick={() => handleClickNavigate('/Aplications/waterTreatment/industryWater')}>Tratamiento Industrial del Agua</li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/waterTreatment/drinkWater'}>Agua Potable</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/waterTreatment/wasteWater'}>Aguas Residuales</Link></li>
+                    <li><Link className={styles.linkstyles} to={'/Aplications/waterTreatment/industryWater'}>Tratamiento Industrial del Agua</Link></li>
                   </ul>
                 )}
               </li>
             </ul>
           </li>
           <li>
-            <span onClick={()=> handleClickNavigate('/products')} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Productos</span>
+            <Link to={'/products'} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Productos</Link>
             <ul id={styles.dropDos} className={`${styles.dropdowns}`}>
               <li>
-                <h6 onClick={() => handleClickNavigate('/products/cales')}>Productos Calcarios</h6>
+                <Link to={'/products/cales'} className={styles.subProductos}>Productos Calcarios</Link>
                 <ul className={styles.specialDropDos}>
-                  <li onClick={() => handleClickNavigate('/products/cales/quicklime')}>Cal Viva</li>
+                  <li><Link to={'/products/cales/quicklime'} className={`${styles.prueba}`}>Cal Viva</Link></li>
                   <li 
                     className={`${styles.hidratada}`}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
-                  <span 
-                    onClick={() => handleClickNavigate('/products/cales/hydratedlime')}
-                  >Cal Hidratada</span> 
+                  <Link to={'/products/cales/hydratedlime'} className={`${styles.prueba}`}>Cal Hidratada</Link> 
                   <GoTriangleRight/>
-                  {/* {hovered && ( */}
                     <ul className={`${styles.dropUnoPuntoDos}`}>
-                      <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoA')}>Hidratada Tipo A</li>
-                      <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Hidratada Tipo B</li>
-                      {/* <li onClick={() => handleClickNavigate('/products/cales/hydratedlimeTipoB')}>Red de Distribución</li> */}
+                      <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoA'}>Hidratada Tipo A</Link></li>
+                      <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoB'}>Hidratada Tipo B</Link></li>
                     </ul>
-                  {/* )} */}
                   </li>
-                  <li onClick={() => handleClickNavigate('/products/cales/dolomiticlime')}>Cal Dòlomita</li>
-                  <li onClick={() => handleClickNavigate('/products/cales/agriculturallime')}>Cal Agricola</li>
-                  <li onClick={() => handleClickNavigate('/products/distriburionNetwork')} id={styles.resaltarOrange}>Red de Distribución</li>
+                  <li><Link to={'/products/cales/dolomiticlime'} className={`${styles.prueba}`}>Cal Dòlomita</Link></li>
+                  <li><Link to={'/products/cales/agriculturallime'} className={`${styles.prueba}`}>Cal Agricola</Link></li>
+                  <li><Link to={'/products/distriburionNetwork'} id={styles.resaltarOrange} className={`${styles.prueba}`}>Red de Distribución</Link></li>
                 </ul>
               </li>
               <li>
-                <h6 onClick={() => handleClickNavigate('/products/stone')}>Piedra Caliza</h6>
+                <Link to={'/products/stone'} className={styles.subProductos}>Piedra Caliza</Link>
                 <ul>
-                  <li onClick={() => handleClickNavigate('/products/stone/limestone')}>Agregados</li>
-                  <li onClick={() => handleClickNavigate('/products/stone/carbonate')}>Carbonato</li>
+                  <li><Link to={'/products/stone/limestone'} className={`${styles.prueba}`}>Agregados</Link></li>
+                  <li><Link to={'/products/stone/carbonate'} className={`${styles.prueba}`}>Carbonato</Link></li>
                 </ul>
               </li>
               <li>
-                <h6>Productos Especiales</h6>
+                <Link className={styles.subProductos}>Productos Especiales</Link>
                 <ul>
-                  <li onClick={() => handleClickNavigate('/products/neutramol')}>Neutramol</li>
+                  <li><Link to={'/products/neutramol'} className={`${styles.prueba}`}>Neutramol</Link></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li onClick={() => handleClickNavigate(selectorLoginClientToken?'/sigIn/dashBoardClient': selectorLoginEmployeeToken?'/sigIn/dashBoardEmployee':'/carmeuseMas')} className={`${styles.menuPrincipal}`}> <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/> </li>
+          <li><Link to={changeCarmeuseMas} className={`${styles.menuPrincipal}`}>Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></Link></li>
 
-          {/* <li onClick={() => handleClickNavigate('/plasticRubber')} className={`${styles.menuPrincipal} `}>Sostenibilidad</li> */}
-          <li onClick={() => handleClickNavigate('/services')} className={`${styles.menuPrincipal} `}>Servicios</li>
+          <li><Link to={'/services'} className={`${styles.menuPrincipal} `}>Servicios</Link></li>
         </ul>
         <div className={styles.contactAndLogin}>
         {
           !localStorageFillUp
-          ? <IoPerson onClick={()=>handleClickNavigate('/sigIn')} />
+          ? <IoPersonOutline onClick={()=>handleClickNavigate('/sigIn')} />
           : <PopoverLogin infoAvatar={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
         }
-          {/* <IoPerson onClick={() => handleClickNavigate('/sigIn')}/> */}
+          {/* <IoPersonOutline onClick={() => handleClickNavigate('/sigIn')}/> */}
           <button onClick={() => handleClickNavigate('/contact')} className={`${styles.boton} ${styles.menuPrincipal} `}>Contacto</button>
         </div>
       </nav>
       <div className={styles.LogoMenuMobil}>
         <div className={styles.contenedorLogo}>
-          <img 
-            src={logoChange} 
-            alt="logo" 
-            onClick={() => handleClickNavigate('/')} 
-            style={{ cursor: 'pointer' }}
-          />
+          <Link to={'/'}>
+            <img 
+              src={logoChange} 
+              alt="logo" 
+              style={{ cursor: 'pointer' }}
+            />
+          </Link>
         </div>
         <div className={styles.contenedorIcons}>
           <div>
             {
-              !openMenuApli && !localStorageFillUp
-              ? <IoPerson onClick={()=>handleClickNavigate('/sigIn')} />
-              : !openMenuApli && localStorageFillUp
-              ? <PopoverLogin infoAvatar={selectorLoginClientToken? selectorLoginStateClient: selectorLoginStateEmployee} />
-              : ''
+              logoPersonOPover
             }
           </div>
           {
