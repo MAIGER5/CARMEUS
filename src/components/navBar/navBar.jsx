@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './navBar.module.css';
 import { VscMenu } from "react-icons/vsc";
 import { SlChemistry } from 'react-icons/sl';
-import { BsBuildingGear } from 'react-icons/bs';
+import { BsBuildingGear, BsFillPlusSquareFill } from 'react-icons/bs';
 import { LuConstruction } from 'react-icons/lu';
 import { MdOutlineAgriculture, MdOutlineGasMeter } from 'react-icons/md';
 import { SiEquinixmetal } from 'react-icons/si';
@@ -12,7 +12,6 @@ import { AiOutlineGold } from 'react-icons/ai';
 import { IoMdClose } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import { CgMathMinus } from "react-icons/cg";
-import { BsFillPlusSquareFill } from "react-icons/bs";
 import { GoTriangleRight } from "react-icons/go";
 import carmeusWhite from '../utils/logos/CARMEUSE-and-Colombia.png';
 import carmeusBlue from '../utils/logos/CARMEUSE-BLUE-and-Colombia.png';
@@ -354,8 +353,8 @@ export const NavBar = () => {
           </div>
           {
             !openMenuMobil
-            ? <div onClick={()=> handleClikOpenMenuMobil()} ><VscMenu/></div>
-            : <div onClick={()=> handleClickCloseMenuMobil(setOpenMenuMobil)} ><IoMdClose/></div>
+            ? <button onClick={()=> handleClikOpenMenuMobil()} ><VscMenu/></button>
+            : <button onClick={()=> handleClickCloseMenuMobil()} ><IoMdClose/></button>
           }
           
         </div>
@@ -364,51 +363,52 @@ export const NavBar = () => {
       </div>
       <div className={openMenuMobil? styles.menuMobil: styles.menuMobilHidden}>
         <ul>
-          <li onClick={()=> handleClickNavigate('/')} className={styles.itemsMenuMobil}>
-            <span>Inicio</span>
-          </li>
-          <li onClick={()=> handleClickNavigate('/aboutUs')} className={styles.itemsMenuMobil}>
-            <span>Nosotros</span>
+          <li className={styles.itemsMenuMobil}>
+            <Link to={'/'}>Inicio</Link>
           </li>
           <li className={styles.itemsMenuMobil}>
-            <span onClick={()=> handleClickNavigate('/aplications')}>Aplicaciones</span> <span >{!openMenuApli?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuApli)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuApli)}/>}</span>
+            <Link to={'/aboutUs'}>Nosotros</Link>
+          </li>
+
+          <li className={styles.itemsMenuMobil}>
+            <Link to={'/aplications'}>Aplicaciones</Link> <span >{!openMenuApli?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuApli)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuApli)}/>}</span>
           </li>
             <ul className={!openMenuApli? styles.subMenuMobilHidden: styles.subMenuMobil}>
-              <li onClick={()=>handleClickNavigate('/Aplications/agropecuario')}><MdOutlineAgriculture /> <span>Agropecuario</span></li>
-              <li onClick={()=>handleClickNavigate('/Aplications/engeneerBuilding')}><BsBuildingGear /> <span>Ingenieria Civil & Construcción</span></li>
-              <li onClick={()=>handleClickNavigate('/Aplications/chemical')}><SlChemistry /> <span>Industria Quimica</span></li>
-              <li onClick={()=>handleClickNavigate('/Aplications/flueGasTreatment')}><MdOutlineGasMeter /> <span>Gases & Combustión</span></li>
-              <li onClick={()=>handleClickNavigate('/Aplications/glassCeramic')}><SiEquinixmetal /> <span>Cerámica & Vidrio</span></li>
-              <li onClick={()=>handleClickNavigate('/Aplications/steel')}><LuConstruction /> <span>Hiero & Acero</span></li>
-              <li onClick={()=>handleClickNavigate('/Aplications/noFerrousMining')}><AiOutlineGold /> <span>Minería & Metales No Ferrosos</span></li>
-              <li onClick={()=>handleClickNavigate('/Aplications/pccPulPaper')}><LiaNewspaper /> <span>Pulpa & Papel</span></li>
-              <li onClick={()=>handleClickNavigate('/Aplications/waterTreatment')}><FaHandHoldingWater /> <span>Tratamiento de Agua</span></li>
+              <li><MdOutlineAgriculture /> <Link to={'/Aplications/agropecuario'}>Agropecuario</Link></li>
+              <li><BsBuildingGear /> <Link to={'/Aplications/engeneerBuilding'}>Ingenieria Civil & Construcción</Link></li>
+              <li><SlChemistry /> <Link to={'/Aplications/chemical'}>Industria Quimica</Link></li>
+              <li><MdOutlineGasMeter /> <Link to={'/Aplications/flueGasTreatment'}>Gases & Combustión</Link></li>
+              <li><SiEquinixmetal /> <Link to={'/Aplications/glassCeramic'}>Cerámica & Vidrio</Link></li>
+              <li><LuConstruction /> <Link to={'/Aplications/steel'}>Hiero & Acero</Link></li>
+              <li><AiOutlineGold /> <Link to={'/Aplications/noFerrousMining'}>Minería & Metales No Ferrosos</Link></li>
+              <li><LiaNewspaper /> <Link to={'/Aplications/pccPulPaper'}>Pulpa & Papel</Link></li>
+              <li><FaHandHoldingWater /> <Link to={'/Aplications/waterTreatment'}>Tratamiento de Agua</Link></li>
             </ul>
             <li className={styles.itemsMenuMobil}>
-            <span onClick={()=> handleClickNavigate('/products')}>Productos</span> <span >{!openMenuProd?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuProd)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuProd)}/>}</span>
+            <Link to={'/products'}>Productos</Link> <span >{!openMenuProd?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuProd)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuProd)}/>}</span>
           </li>
             <ul className={!openMenuProd? styles.subMenuMobilHidden: styles.subMenuMobil}>
-              <li onClick={()=> handleClickNavigate('/products/cales/quicklime')}><span>Cal Viva</span></li>
-              <li onClick={()=> handleClickNavigate('/products/cales/hydratedlime')}><span>Cal Hidratada</span></li>
-              <li onClick={()=> handleClickNavigate('/products/cales/hydratedlimeTipoA')}><span>Cal Hidratada Tipo A</span></li>
-              <li onClick={()=> handleClickNavigate('/products/cales/hydratedlimeTipoB')}><span>Cal Hidratada Tipo B</span></li>
-              <li onClick={()=> handleClickNavigate('/products/cales/dolomiticlime')}><span>Cal Dolomita</span></li>
-              <li onClick={()=> handleClickNavigate('/products/cales/agriculturallime')}><span>Cal Agricola</span></li>
-              <li onClick={()=> handleClickNavigate('/products/stone/limestone')}><span>Piedra Caliza</span></li>
-              <li onClick={()=> handleClickNavigate('/products/stone/carbonate')}><span>Carbonato</span></li>
-              <li onClick={()=> handleClickNavigate('/products/neutramol')}><span>Neutramol</span></li>
+              <li><Link to={'/products/cales/quicklime'}>Cal Viva</Link></li>
+              <li><Link to={'/products/cales/hydratedlime'}>Cal Hidratada</Link></li>
+              <li><Link to={'/products/cales/hydratedlimeTipoA'}>Cal Hidratada Tipo A</Link></li>
+              <li><Link to={'/products/cales/hydratedlimeTipoB'}>Cal Hidratada Tipo B</Link></li>
+              <li><Link to={'/products/cales/dolomiticlime'}>Cal Dolomita</Link></li>
+              <li><Link to={'/products/cales/agriculturallime'}>Cal Agricola</Link></li>
+              <li><Link to={'/products/stone/limestone'}>Piedra Caliza</Link></li>
+              <li><Link to={'/products/stone/carbonate'}>Carbonato</Link></li>
+              <li><Link to={'/products/neutramol'}>Neutramol</Link></li>
             </ul>
-          <li onClick={()=> handleClickNavigate('/services')} className={styles.itemsMenuMobil}>
-            <span>Servicios</span>
+          <li className={styles.itemsMenuMobil}>
+            <Link to={'/services'}>Servicios</Link>
           </li>
-          <li onClick={() => handleClickNavigate(selectorLoginClientToken?'/sigIn/dashBoardClient': selectorLoginEmployeeToken?'/sigIn/dashBoardEmployee':'/carmeuseMas')} > 
-            <span>Carmeuse</span> <BsFillPlusSquareFill id={styles.carmeuseMas}/>
+          <li> 
+            <Link to={changeCarmeuseMas} className={styles.carmeuseMasMenuMobil}>Carmeuse</Link> <BsFillPlusSquareFill id={styles.carmeuseMas}/>
           </li>
           {/* <li onClick={() => handleClickNavigate('/sigIn')} > 
             <span>Iniciar sesion</span>
           </li> */}
         </ul>
-        <div onClick={()=> handleClickNavigate('/contact')} className={styles.contacto}>Contacto</div>
+        <button onClick={()=> handleClickNavigate('/contact')} className={styles.contacto}>Contacto</button>
       </div>
 
     </div>

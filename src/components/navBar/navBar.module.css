@@ -11,7 +11,6 @@
     position: fixed;
     z-index: 1000;
     top: 0; /* Siempre está en la parte superior */
-    /* border: 1px solid red; */
   }
   
   .contenedorHome {
@@ -396,7 +395,6 @@ div > section {
     align-items: center;
     margin: auto;
     padding-top: 10px;
-    /* border: 2px solid yellow; */
 
 }
 
@@ -459,6 +457,12 @@ div > section {
     display: flex;
     cursor: pointer;
     margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.itemsMenuMobil > :first-child{
+    color: var(--blue2-color);
+    text-decoration: none;
 }
 
 .itemsMenuMobil> :nth-child(2){
@@ -475,6 +479,7 @@ div > section {
     background-color: var(--orange2-color);
     color: white;
     margin-top: 50px;
+    border: none;
 }
 
 .subMenuMobilHidden{
@@ -493,6 +498,10 @@ div > section {
     font-size: 16px;
 }
 
+.subMenuMobil > li > *{
+    text-decoration: none;
+    color: var(--blue2-color);
+}
 
 
 .contenedorLogo {
@@ -519,6 +528,16 @@ div > section {
     color: white;
 }
 
+.contenedorIcons > button {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+}
+
 .contenedorIcons > :first-child {
     font-size: 30px;
     border-left: 0.1px solid var(--grey4-color);
@@ -536,6 +555,10 @@ div > section {
     text-decoration: underline;
 }
 
+.carmeuseMasMenuMobil{
+    text-decoration: none;
+    color: var(--blue2-color);
+}
 
 @media only screen and (max-width: 1250px){
     nav{
