@@ -2,17 +2,19 @@
 
 .contenedor{
   margin: auto;
-  margin-top: 150px;
+  margin-top: 180px;
   padding: 50px 0px 100px 0px;
   width: 80%;
   
   gap: 20px;
+  background-color: var(--grey6-color);
 
 }
 
 .firstColumn{
   width: 100%;
   display: grid;
+  margin-left: 50px;
 }
 
 .firstColumn > p{
@@ -23,19 +25,37 @@
 }
 
 .firstColumn > :nth-child(2){
-  font-size: clamp(1rem, 1vw, 2rem);
+  font-size: clamp(1.3rem, 1vw, 2rem);
+  font-weight: 600;
   color: var(--orange2-color);
+  margin-top: 50px;
 
 }
 
 .firstColumn > h1{
   width: 90%;
   color: var(--blue2-color);
-  /* font-size: 15px; */
   font-weight: 700;
 
 }
 
+.transacciones{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.transacciones > *{
+  flex-grow: 1;
+  flex-basis: 400px;
+  cursor: pointer;
+}
+
+.transacciones > *:hover{
+  background-color: var(--blue2-color);
+  color: white;
+}
 
 .servicesColumn{
   width: 100%;
