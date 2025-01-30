@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import dataCarmeuseMas from '../../utils/data/dataCarmeuseMas';
 import { useSelector } from 'react-redux';
 import BotonTransaccion from './components/botonTransaccion';
+import BotonDocuments from './components/botonDocuments';
 
 
 export const DashBoardClient = () => {
@@ -27,39 +28,60 @@ export const DashBoardClient = () => {
 
       <div className={styles.firstColumn}>
         <p>!Hola, {selectorStateTokenClient.company} Bienvenido al Módulo Clientes de Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
-        <span>Gestión de Pagos</span>
-        <div className={styles.transacciones}>
-          {
-            data?
-            data.map((ele)=>(
-              <BotonTransaccion 
-                key={ele.id}
-                icon={ele.icon}
-                title={ele.title}
-                subtitle={ele.subtitle}
-                description={ele.description}
-                link={ele.link}
-              />
-            )) :''
-          }
+        <div className={styles.compScroll}>
+          <span className={styles.subtitle}>Gestión de Pagos</span>
+
+          <div className={styles.transacciones}>
+            {
+              data.pagos?
+              data.pagos.map((ele)=>(
+                <BotonTransaccion 
+                  key={ele.id}
+                  icon={ele.icon}
+                  title={ele.title}
+                  subtitle={ele.subtitle}
+                  description={ele.description}
+                  link={ele.link}
+                />
+              )) :''
+            }
+          </div>
+          <span className={styles.subtitle}>Gestión de Documentos</span>
+          <div className={styles.transacciones}>
+            {
+              data.documentos?
+              data.documentos.map((ele)=>(
+                <BotonDocuments
+                  key={ele.id}
+                  icon={ele.icon}
+                  title={ele.title}
+                  subtitle={ele.subtitle}
+                  description={ele.description}
+                  link={ele.link}
+                />
+              )) :''
+            }
+          </div>
+          <span className={styles.subtitle}>Otros</span>
+          <div className={styles.transacciones}>
+            {
+              data.otros?
+              data.otros.map((ele)=>(
+                <BotonDocuments
+                  key={ele.id}
+                  icon={ele.icon}
+                  title={ele.title}
+                  subtitle={ele.subtitle}
+                  description={ele.description}
+                  link={ele.link}
+                />
+              )) :''
+            }
+          </div>
         </div>
+
       </div>
       
     </div>
   )
 }
-
-
-{/* <div className={styles.servicesColumn}>
-{
-  data?
-  data.map((ele)=>(
-    <Link to={ele.link} key={ele.id} className={styles.cardServices}>
-      <div className={styles.containerIcon}>
-        <img src={ele.icon} alt="" />
-      </div>
-      <p>{ele.title}</p>
-    </Link>
-  )) :''
-}
-</div> */}

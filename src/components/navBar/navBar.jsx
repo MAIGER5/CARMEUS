@@ -364,45 +364,45 @@ export const NavBar = () => {
       <div className={openMenuMobil? styles.menuMobil: styles.menuMobilHidden}>
         <ul>
           <li className={styles.itemsMenuMobil}>
-            <Link to={'/'}>Inicio</Link>
+            <Link to={'/'} onClick={()=> handleClickCloseMenuMobil()}>Inicio</Link>
           </li>
           <li className={styles.itemsMenuMobil}>
-            <Link to={'/aboutUs'}>Nosotros</Link>
+            <Link to={'/aboutUs'} onClick={()=> handleClickCloseMenuMobil()}>Nosotros</Link>
           </li>
 
           <li className={styles.itemsMenuMobil}>
-            <Link to={'/aplications'}>Aplicaciones</Link> <span >{!openMenuApli?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuApli)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuApli)}/>}</span>
+            <Link to={'/aplications'} onClick={()=> handleClickCloseMenuMobil()}>Aplicaciones</Link> <span >{!openMenuApli?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuApli)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuApli)}/>}</span>
           </li>
             <ul className={!openMenuApli? styles.subMenuMobilHidden: styles.subMenuMobil}>
-              <li><MdOutlineAgriculture /> <Link to={'/Aplications/agropecuario'}>Agropecuario</Link></li>
-              <li><BsBuildingGear /> <Link to={'/Aplications/engeneerBuilding'}>Ingenieria Civil & Construcción</Link></li>
-              <li><SlChemistry /> <Link to={'/Aplications/chemical'}>Industria Quimica</Link></li>
-              <li><MdOutlineGasMeter /> <Link to={'/Aplications/flueGasTreatment'}>Gases & Combustión</Link></li>
-              <li><SiEquinixmetal /> <Link to={'/Aplications/glassCeramic'}>Cerámica & Vidrio</Link></li>
-              <li><LuConstruction /> <Link to={'/Aplications/steel'}>Hiero & Acero</Link></li>
-              <li><AiOutlineGold /> <Link to={'/Aplications/noFerrousMining'}>Minería & Metales No Ferrosos</Link></li>
-              <li><LiaNewspaper /> <Link to={'/Aplications/pccPulPaper'}>Pulpa & Papel</Link></li>
-              <li><FaHandHoldingWater /> <Link to={'/Aplications/waterTreatment'}>Tratamiento de Agua</Link></li>
+              <li><MdOutlineAgriculture /> <Link to={'/Aplications/agropecuario'} onClick={()=> handleClickCloseMenuMobil()}>Agropecuario</Link></li>
+              <li><BsBuildingGear /> <Link to={'/Aplications/engeneerBuilding'}onClick={()=> handleClickCloseMenuMobil()}>Ingenieria Civil & Construcción</Link></li>
+              <li><SlChemistry /> <Link to={'/Aplications/chemical'}onClick={()=> handleClickCloseMenuMobil()}>Industria Quimica</Link></li>
+              <li><MdOutlineGasMeter /> <Link to={'/Aplications/flueGasTreatment'}onClick={()=> handleClickCloseMenuMobil()}>Gases & Combustión</Link></li>
+              <li><SiEquinixmetal /> <Link to={'/Aplications/glassCeramic'}onClick={()=> handleClickCloseMenuMobil()}>Cerámica & Vidrio</Link></li>
+              <li><LuConstruction /> <Link to={'/Aplications/steel'}onClick={()=> handleClickCloseMenuMobil()}>Hiero & Acero</Link></li>
+              <li><AiOutlineGold /> <Link to={'/Aplications/noFerrousMining'}onClick={()=> handleClickCloseMenuMobil()}>Minería & Metales No Ferrosos</Link></li>
+              <li><LiaNewspaper /> <Link to={'/Aplications/pccPulPaper'}onClick={()=> handleClickCloseMenuMobil()}>Pulpa & Papel</Link></li>
+              <li><FaHandHoldingWater /> <Link to={'/Aplications/waterTreatment'}onClick={()=> handleClickCloseMenuMobil()}>Tratamiento de Agua</Link></li>
             </ul>
             <li className={styles.itemsMenuMobil}>
-            <Link to={'/products'}>Productos</Link> <span >{!openMenuProd?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuProd)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuProd)}/>}</span>
+            <Link to={'/products'} onClick={()=> handleClickCloseMenuMobil()}>Productos</Link> <span >{!openMenuProd?<FaPlus onClick={ ()=> handleClickOpenMenu(setOpenMenuProd)}/>: <CgMathMinus onClick={ ()=> handleClickCloseMenu(setOpenMenuProd)}/>}</span>
           </li>
             <ul className={!openMenuProd? styles.subMenuMobilHidden: styles.subMenuMobil}>
-              <li><Link to={'/products/cales/quicklime'}>Cal Viva</Link></li>
-              <li><Link to={'/products/cales/hydratedlime'}>Cal Hidratada</Link></li>
-              <li><Link to={'/products/cales/hydratedlimeTipoA'}>Cal Hidratada Tipo A</Link></li>
-              <li><Link to={'/products/cales/hydratedlimeTipoB'}>Cal Hidratada Tipo B</Link></li>
-              <li><Link to={'/products/cales/dolomiticlime'}>Cal Dolomita</Link></li>
-              <li><Link to={'/products/cales/agriculturallime'}>Cal Agricola</Link></li>
-              <li><Link to={'/products/stone/limestone'}>Piedra Caliza</Link></li>
-              <li><Link to={'/products/stone/carbonate'}>Carbonato</Link></li>
-              <li><Link to={'/products/neutramol'}>Neutramol</Link></li>
+              <li><Link to={'/products/cales/quicklime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Viva</Link></li>
+              <li><Link to={'/products/cales/hydratedlime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Hidratada</Link></li>
+              <li><Link to={'/products/cales/hydratedlimeTipoA'} onClick={()=> handleClickCloseMenuMobil()}>Cal Hidratada Tipo A</Link></li>
+              <li><Link to={'/products/cales/hydratedlimeTipoB'} onClick={()=> handleClickCloseMenuMobil()}>Cal Hidratada Tipo B</Link></li>
+              <li><Link to={'/products/cales/dolomiticlime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Dolomita</Link></li>
+              <li><Link to={'/products/cales/agriculturallime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Agricola</Link></li>
+              <li><Link to={'/products/stone/limestone'} onClick={()=> handleClickCloseMenuMobil()}>Piedra Caliza</Link></li>
+              <li><Link to={'/products/stone/carbonate'} onClick={()=> handleClickCloseMenuMobil()}>Carbonato</Link></li>
+              <li><Link to={'/products/neutramol'} onClick={()=> handleClickCloseMenuMobil()}>Neutramol</Link></li>
             </ul>
           <li className={styles.itemsMenuMobil}>
-            <Link to={'/services'}>Servicios</Link>
+            <Link to={'/services'} onClick={()=> handleClickCloseMenuMobil()}>Servicios</Link>
           </li>
           <li> 
-            <Link to={changeCarmeuseMas} className={styles.carmeuseMasMenuMobil}>Carmeuse</Link> <BsFillPlusSquareFill id={styles.carmeuseMas}/>
+            <Link to={changeCarmeuseMas} className={styles.carmeuseMasMenuMobil} onClick={()=> handleClickCloseMenuMobil()}>Carmeuse</Link> <BsFillPlusSquareFill id={styles.carmeuseMas}/>
           </li>
           {/* <li onClick={() => handleClickNavigate('/sigIn')} > 
             <span>Iniciar sesion</span>

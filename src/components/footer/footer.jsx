@@ -17,7 +17,7 @@ export const Footer = () => {
 
     const location = useLocation();
 
-    const [ data5, setData5 ] = useState(
+    const [ data5 ] = useState(
         dataFooter
     )
 

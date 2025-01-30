@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './soportePago.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { number } from 'prop-types';
 import { useSelector } from 'react-redux';
 
@@ -21,19 +21,17 @@ export const SoportePago = () => {
   const selectorLoginEmployee = useSelector(state => state.loginEmployee.tokenEmployee) || null
 
   const handleOptionView = ()=>{
-    return selectorLoginClient
-      ? '/sigIn/dashBoardClient'
-      : selectorLoginEmployee
-      ? '/sigIn/dashBoardEmployee'
-      : '/carmeuseMas'
+
+    if (selectorLoginClient) {
+      return '/sigIn/dashBoardClient'
+    } else if(selectorLoginEmployee){
+      return '/sigIn/dashBoardEmployee'
+    } else {
+      return '/carmeuseMas'
+    }
+
   }
 
-
-  const nagivate = useNavigate();
-
-  const handleNavigate = (path)=>{
-    nagivate(path)
-  }
 
   const HhandleChangeForm = (event)=>{
     event.preventDefault();
@@ -50,7 +48,7 @@ export const SoportePago = () => {
 
   return (
     <div className={styles.contenedor}>
-      <p onClick={()=> handleNavigate(handleOptionView())} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
+      <p><Link to={handleOptionView()} className={styles.linkes}>Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></Link></p>
       <h1>Envía tu Soporte de Pago</h1>
 
       <form action="">
@@ -81,6 +79,7 @@ export const SoportePago = () => {
         <span>Adjuntar soporte de pago</span>
         <input id={styles.adjuntar}
           type='file'
+          capture='environment'
           name='soporte'
           value={formRetencion.soporte}
           onChange={HhandleChangeForm}

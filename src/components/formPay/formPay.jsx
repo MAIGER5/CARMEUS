@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './formPay.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 
@@ -19,16 +19,25 @@ export const FormPay = () => {
   const selectorLoginEmployee = useSelector(state => state.loginEmployee.tokenEmployee) || null
 
   const handleOptionView = ()=>{
-    return selectorLoginClient
-      ? '/sigIn/dashBoardClient'
-      : selectorLoginEmployee
-      ? '/sigIn/dashBoardEmployee'
-      : '/carmeuseMas'
+    if (selectorLoginClient) {
+      return '/sigIn/dashBoardClient'
+    } else if (selectorLoginEmployee) {
+      return '/sigIn/dashBoardEmployee'
+    } else {
+      return '/carmeuseMas'
+    }
+    
+    // selectorLoginClient
+    //   ? '/sigIn/dashBoardClient'
+    //   : selectorLoginEmployee
+    //   ? '/sigIn/dashBoardEmployee'
+    //   : '/carmeuseMas'
   }
+  const opcionViewCarmeuse = handleOptionView()
 
   return (
     <div className={styles.contenedor}>
-      <p onClick={()=> handleNavigate(handleOptionView())}>Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
+      <p><Link to={opcionViewCarmeuse} className={styles.linkes}>Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></Link></p>
       <form action="" className={styles.formPagos}>
         <h1>Pagos PayU</h1>
         <div className={styles.nameApellido}>

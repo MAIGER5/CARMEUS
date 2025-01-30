@@ -58,37 +58,58 @@ const dataCarmeuseMas = {
       link:'/historialPedidos',
     },
   ],
-  dataDashBoardClient:[
+  
+  dataDashBoardClient:
     {
-      id:1,
-      icon:pseBoton,
-      title:'Pagos PSE',
-      subtitle:'Realice aquí sus pagos Electrónicos',
-      description:'Continuar',
-      link:'/formPay',
+      pagos:[
+        {
+          id:1,
+          icon:pseBoton,
+          title:'Pagos PSE',
+          subtitle:'Realice aquí sus pagos Electrónicos',
+          description:'Continuar',
+          link:'/formPay',
+        },
+        {
+          id:2,
+          icon:recip,
+          title:'Soportes de pago',
+          subtitle:'Envíe sus soporte de pago',
+          description:'Continuar',
+          link:'/soportePago',
+        },
+      ],
+      documentos:[
+        {
+           id:1,
+           icon:factura,
+           title:'Facturación',
+           subtitle:'Solicite aquí su factura o la copia de la misma',
+           description:'Una vez solicitada, uno de nuestros agentes financieros le enviará el documento al correo registrado',
+           link:'/factura',
+         },
+         {
+           id:2,
+           icon:retencion,
+           title:'Certificado de retención',
+           subtitle:'Solicite aquí su Certificado de retención o la copia del mismo',
+           description:'Una vez solicitada, uno de nuestros agentes financieros le enviará el documento al correo registrado',
+           link:'/retencion',
+         },
+      ],
+      otros:[
+        {
+           id:1,
+           icon:PQRS,
+           title:'PQRS',
+           subtitle:'Recepción de quejas y sugerencias',
+           description:'Su opinión es importante para nosotros, ya que ayudará a la mejora continua de nuestros procesos internos y, lo más importante, a fortalecer nuestra relación con los clientes.',
+           link:'/factura',
+         },
+      ],
+
     },
-    {
-      id:2,
-      icon:recip,
-      title:'Soportes de pago',
-      subtitle:'Envíe sus soporte de pago',
-      description:'Continuar',
-      link:'/soportePago',
-    },
-    // {
-    //   id:3,
-    //   icon:factura,
-    //   title:'Facturación',
-    //   description:'Selecciona el servicio que se ajuste a su necesidad',
-    //   link:'/factura',
-    // },
-    // {
-    //   id:5,
-    //   icon:retencion,
-    //   title:'Certificado de retención',
-    //   description:'Selecciona el servicio que se ajuste a su necesidad',
-    //   link:'/retencion',
-    // },
+
     // {
     //   id:6,
     //   icon:clientMas,
@@ -103,7 +124,7 @@ const dataCarmeuseMas = {
     //   description:'Selecciona el servicio que se ajuste a su necesidad',
     //   link:'/historialPedidos',
     // },
-  ],
+  
   dataDashBoardEmployee:[
 
     {
