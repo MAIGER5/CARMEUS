@@ -86,11 +86,11 @@
 
 .contenedor > :nth-child(2),
 .contenedor > :nth-child(4) {
-    background-color: var(--blue2-color);
+    background-color: var(--blue3-color);
 }
 
 .contenedor > :nth-child(3) {
-    background-color: var(--blue3-color);
+    background-color: var(--blue1-color);
 }
 
 .cardText > h1, p{

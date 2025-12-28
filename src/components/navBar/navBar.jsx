@@ -286,7 +286,7 @@ export const NavBar = () => {
             <Link to={'/products'} className={`${styles.triangulo} ${styles.menuPrincipal} `}>Productos</Link>
             <ul id={styles.dropDos} className={`${styles.dropdowns}`}>
               <li>
-                <Link to={'/products/cales'} className={styles.subProductos}>Productos Calcarios</Link>
+                <Link to={'/products/cales'} className={styles.subProductos}>Productos Calcinados</Link>
                 <ul className={styles.specialDropDos}>
                   <li><Link to={'/products/cales/quicklime'} className={`${styles.prueba}`}>Cal Viva</Link></li>
                   <li 
@@ -307,7 +307,7 @@ export const NavBar = () => {
                 </ul>
               </li>
               <li>
-                <Link to={'/products/stone'} className={styles.subProductos}>Piedra Caliza</Link>
+                <Link to={'/products/stone'} className={styles.subProductos}>Productos No Calcinados</Link>
                 <ul>
                   <li><Link to={'/products/stone/limestone'} className={`${styles.prueba}`}>Agregados</Link></li>
                   <li><Link to={'/products/stone/carbonate'} className={`${styles.prueba}`}>Carbonato</Link></li>

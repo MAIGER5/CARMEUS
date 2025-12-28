@@ -7,6 +7,7 @@ import iconClient from '../icon/iconclient.png'
 import clientMas from '../icon/clientMas.png'
 import userAdmin from '../icon/clientAdmin.png'
 import adminContact from '../icon/adminContact.png'
+import historialPagos from '../icon/factura.png'
 import PQRS from '../icon/PQRS.png'
 
 
@@ -77,6 +78,14 @@ const dataCarmeuseMas = {
           subtitle:'Envíe sus soporte de pago',
           description:'Continuar',
           link:'/soportePago',
+        },
+        {
+          id:3,
+          icon:historialPagos,
+          title:'Historial de pagos',
+          subtitle:'Envíe sus soporte de pago',
+          description:'Continuar',
+          link:'/adminPayClient',
         },
       ],
       documentos:[

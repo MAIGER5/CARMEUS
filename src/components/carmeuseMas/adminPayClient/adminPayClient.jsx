@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './adminClient.module.css'
+import styles from './adminPayClient.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getClientsAction } from '../../../Redux/Actions/getClientsAction';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
@@ -57,7 +57,7 @@ const columns = [
 
 
 
-export const AdminClient = () => {
+export const  AdminPayClient = () => {
 
   const dispatch = useDispatch()
 
@@ -106,7 +106,7 @@ export const AdminClient = () => {
   return (
     <div className={styles.contenedor} >
       <p onClick={()=> handleNavigate(handleOptionView())} >Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></p>
-      <h1>Clientes Registrados</h1>
+      <h1>HISTORIAL DE PAGOS</h1>
       <Paper sx={{ width: '100%', overflow: 'hidden' }}>
         <TableContainer sx={{ maxHeight: 440, backgroundColor: 'white'}}>
           <Table stickyHeader aria-label="sticky table">
@@ -116,7 +116,7 @@ export const AdminClient = () => {
                   <TableCell
                     key={column.id}
                     align={column.align}
-                    style={{ minWidth: column.minWidth, backgroundColor:'#323e48', color:'white' }}
+                    style={{ minWidth: column.minWidth, backgroundColor:'#0063b4', color:'white' }}
                   >
                     {column.label}
                   </TableCell>

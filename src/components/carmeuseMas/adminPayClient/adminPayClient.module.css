@@ -1,0 +1,24 @@
+@import url("../../../variables.module.css");
+
+
+.contenedor{
+  width: 80%;
+  margin: auto;
+  margin-top: 230px;
+  color: rgb(212, 16, 16);
+}
+
+.contenedor > p{
+  color: var(--blue2-color);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 30px;
+  
+}
+
+.contenedor > h1{
+  color: var(--grey2-color);
+  margin-block: 30px;
+  font-size: clamp(2rem, 1vw, 4rem);
+}

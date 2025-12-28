@@ -14,11 +14,11 @@ export const CalAgricola = () => {
 
   const data = dataCalAgricola;
 
-  const [ dataScreen, setDataScreen ] = useState(data.Screen)
-  const [ dataCardProduct, setDataCardProduct ] = useState(data.CardProduct)
-  const [ dataCardTexct, setDataCardTexct ] = useState(data.CardTexct)
-  const [ dataMercados, setDataMercados ] = useState(data.Mercados)
-  const [ dataSheet, setDataSheet ] = useState(data.Sheet)
+  const [ dataScreen ] = useState(data.Screen)
+  const [ dataCardProduct ] = useState(data.CardProduct)
+  const [ dataCardTexct ] = useState(data.CardTexct)
+  const [ dataMercados ] = useState(data.Mercados)
+  const [ dataSheet ] = useState(data.Sheet)
 
 
 

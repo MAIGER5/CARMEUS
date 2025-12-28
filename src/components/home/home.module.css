@@ -14,11 +14,11 @@
     left: 0;
     width: 100%;
     height: 800px;
-    background: #202926;
+    background: #47967b;
     background: linear-gradient(46deg,#292020 40%, #6f757a 100%);
     background: -webkit-linear-gradient(46deg,#292020 40%, #6f757a 100%);
     background: -moz-linear-gradient(46deg,#292020 40%, #6f757a 100%);
-    opacity: 50%; 
+    opacity: 30%; 
     
     /* background: #453434;
     background: linear-gradient(181deg,#453434 10%, #6f757a 80%);

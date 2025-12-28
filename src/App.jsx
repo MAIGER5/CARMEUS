@@ -59,6 +59,7 @@ import { AdminContact } from './components/carmeuseMas/adminContact/adminContact
 import { DashBoardClient } from './components/carmeuseMas/dashBoardClient/dashBoardClient';
 import { DashBoardEmployee } from './components/carmeuseMas/dashBoardEmployee/dashBoardEmployee';
 import { DistributionNetwork } from './components/products/distributionNetwork/distributionNetwork';
+import { AdminPayClient } from './components/carmeuseMas/adminPayClient/adminPayClient';
 
 
 
@@ -133,6 +134,7 @@ function App() {
         
         <Route path='/AdminClients' element={<AdminClient/>}/> 
         <Route path='/AdminContacts' element={<AdminContact/>}/> 
+        <Route path='/adminPayClient' element={<AdminPayClient/>}/> 
         <Route path='/formPay' element={<FormPay/>}/> 
         <Route path='/factura' element={<Factura/>}/> 
         <Route path='/retencion' element={<Retencion/>}/> 
