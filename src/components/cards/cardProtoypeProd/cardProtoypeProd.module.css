@@ -76,7 +76,7 @@
 }
 
 
-.cifrasEstad > h1{
+.cifrasEstad > h1, h2{
     color: var(--blue2-color);
     text-align: left;
 }

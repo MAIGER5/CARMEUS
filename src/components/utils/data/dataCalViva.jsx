@@ -15,7 +15,7 @@ const dataCalViva = {
       id: 1,
       image: 'agricola',
       title: "CAL VIVA",
-      description: 'Como productor líder de cal viva con alto contenido en calcio, Carmeuse trabaja con usted para suministrarle un producto de alto rendimiento que satisfaga sus necesidades específicas. La cal viva con alto contenido de calcio, conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.'
+      description: 'Como productor líder de cal viva con alto contenido en calcio, Carmeuse trabaja con usted para suministrarle un producto de alto rendimiento que satisfaga sus necesidades específicas. La cal viva con alto contenido de calcio, conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir de la piedra caliza.'
     }
   ],
 
@@ -25,16 +25,17 @@ const dataCalViva = {
       title1: "CAL VIVA",
       title2: "BENEFICIOS",
       description: 'Nuestra cal viva Carmeuse con alto contenido en calcio procede de yacimientos selectos de caliza con alto contenido en calcio que no contienen más de un 5% de magnesio. Nuestro material se somete a pruebas rutinarias de calidad y consistencia, para garantizar la química y las propiedades físicas adecuadas para las aplicaciones industriales.',
-      cifra1: 10000,
-      cifra2: 17,
-      cifra3: 50,
-      cifra1text: 'Ton de Acero / año',
-      cifra2text: 'Ton de Acero / año',
-      cifra3text: 'Ton de Acero / año',
+      cifra1: "88%",
+      cifra2: "Alta",
+      cifra3: "ASTM C25",
+      cifra1text: 'Oxido de Calcio típico %',
+      cifra2text: 'Oxido de Calcio típico %',
+      cifra3text: 'Oxido de Calcio típico %',
       formula: 'CaCO3 • MgCO3 + heat --> CaO • MgO + 2 CO2',
       consideraciones: [
-        'Proporciona un alto rendimiento. ',
-        'Atributos rentables y respetuosos con el medio ambiente.',
+        'Proporciona un alto rendimiento.',
+        'Presentación: Sacos de 25 kg y Big Bag x 500 y 1000 kg. ',
+        'Apariencia: Roca solida con presencia de polvo inolora y de color blanco - beige.',
         'Ventajas para numerosas aplicaciones industriales.',
       
       ]
@@ -49,18 +50,18 @@ const dataCalViva = {
       description1: 'La Cal Viva con alto contenido en calcio (CaO) se produce cuando la piedra caliza, o carbonato cálcico (CaCO3), se calienta en un horno mediante el proceso de calcinación.',
       // description2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cumque soluta explicabo. Quos saepe amet dolore quis vero. Earum odio quaerat',
       benefits: [
-        'El alto contenido en calcio (CaO) proporciona un rendimiento superior para las necesidades de la aplicació.', 
+        'El alto contenido en calcio (CaO) proporciona un rendimiento superior para las necesidades de la aplicación.', 
         'Fuente eficaz para el ajuste del pH y el control de la acidez.', 
-        'Uno de los materiales alcalinos más rentables, en comparación con los cáusticos y otros.', 'Fácilmente disponible a través de nuestra red de plantas en una variedad de tamaños, desde guijarros hasta finos', 'Ventajas de seguridad en comparación con la sosa cáustica',
+        'Uno de los materiales alcalinos más rentables, en comparación con los cáusticos y otros.', 'Fácilmente disponible a través de nuestra red de plantas en una variedad de tamaños, desde pulverizados hasta gruesos', 'Ventajas de seguridad en comparación con la soda cáustica',
       ] ,
 
-      formula: 'CaCo3 + heat --> Cao = CO2',
-      especificacion1: 'Intervalo de contenido de calcio (CaO):',
+      formula: 'CaCo3 + calor --> Cao = CO2',
+      especificacion1: 'Intervalo de contenido de calcio disponible (CaO):',
       especificacion2: 'Gama de tamaños:',
       especificacion3: 'Reactividad:',
-      especificacion1Text: '93-97%',
+      especificacion1Text: ' 87-90%',
       especificacion2Text: 'de 2 ¼" a 0',
-      especificacion3Text: '30-50 °C aumento térmico mínimo de 3 minutos',
+      especificacion3Text: ' 30-50 °C aumento térmico mínimo de 3 minutos',
     }
   ],
 

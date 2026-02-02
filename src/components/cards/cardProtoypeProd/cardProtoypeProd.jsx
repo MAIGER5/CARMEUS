@@ -22,16 +22,16 @@ export const CardProtoypeProd = () => {
           <p>{data[0].description}</p>
           <div className={styles.contEstadistic}>
             <div className={styles.cifrasEstad}>
-              <h1>{data[0].cifra1}</h1>
-              <span>Ton de Acero / año</span>
+              <h2>{data[0].cifra1}</h2>
+              <span>CaO Disponible</span>
             </div>
             <div className={styles.cifrasEstad}>
-              <h1>{data[0].cifra2}</h1>
-              <span>Ton de Acero / año</span>
+              <h2>{data[0].cifra2}</h2>
+              <span>Reactividad 40°C-3 min</span>
             </div>
             <div className={styles.cifrasEstad}>
-              <h1>{data[0].cifra3}</h1>
-              <span>Ton de Acero / año</span>
+              <h2>{data[0].cifra3}</h2>
+              <span>Método de Análisis</span>
             </div>
           </div>
           <div className={styles.preguntas}>
