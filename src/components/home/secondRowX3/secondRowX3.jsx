@@ -11,7 +11,7 @@ export const SecondRowX3 = () => {
     {
       id: 1,
       image: "uno",
-      description: 'Apoyo a la educación infantil en la Danta, Antioquia ',
+      description: 'Apoyo a la educación infantil en la Danta, Antioquía ',
       link:'newOne'
     },
     {

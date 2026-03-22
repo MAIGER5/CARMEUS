@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styles from './newsroom.module.css';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
+import {AdvancedVideo} from '@cloudinary/react';
 import { FaFacebookF } from "react-icons/fa6";
 import { PiInstagramLogoLight } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -25,6 +26,9 @@ export const Newsroom = () => {
   });
 
   const myImage = cld.image(data[0].imageActivity)
+  const myVideo = cld.video(data[0].video);
+
+  
 
   return (
     <div className={styles.contenedor}>
@@ -43,9 +47,16 @@ export const Newsroom = () => {
           <p>{data[0].paragraph2}</p>
           <p>{data[0].paragraph3}</p>
         </div>
-        <div className={styles.imgBody}>
+        <AdvancedVideo 
+          // className={styles.screen} 
+          cldVid={myVideo} 
+          autoPlay 
+          // muted 
+          loop
+        />
+        {/* <div className={styles.imgBody}>
           <AdvancedImage cldImg={myImage}/>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.logosRedes}>

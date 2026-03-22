@@ -7,12 +7,13 @@ export const NewOne = () => {
   const [ dataNew, setDataNew ] =useState([
     {
       id: 1,
-      date: 'Diciembre 30, 2023',
-      title: 'CARRERA POR LA EDUCACION INFANTIL EN EL MUNICIPIO DE LA DANTA',
-      paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dicta, accusamus ratione in corrupti quisquam natus temporaet voluptatem optio ipsum dolores suscipit ut cupiditate hicvero quia consequatur? Fugiat, voluptatum.',
-      paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dicta, accusamus ratione in corrupti quisquam natus temporaet voluptatem optio ipsum dolores suscipit ut cupiditate hicvero quia consequatur? Fugiat, voluptatum.',
-      paragraph3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dicta, accusamus ratione in corrupti quisquam natus temporaet voluptatem optio ipsum dolores suscipit ut cupiditate hicvero quia consequatur? Fugiat, voluptatum.',
-      imageActivity: 'nueve'
+      // date: 'Marzo 20, 2026',
+      title: 'CARRERA POR LA EDUCACIÓN INFANTIL EN EL MUNICIPIO DE LA DANTA',
+      paragraph1: 'Carmeuse Colombia cree que la verdadera inclusión comienza en la primera infancia, garantizando igualdad de oportunidades para quienes más lo necesitan.  Por ello, asumimos nuestra responsabilidad social y actuamos para cerrar estas brechas y mejorar su calidad de vida.',
+      paragraph2: 'Santiaguitos: inclusión con amor, educación y bienestar es una estrategia que ofrece atención gratuita e integral a niños y niñas de 2 a 5 años en situación de vulnerabilidad, garantizando educación inicial de calidad, alimentación diaria, uniformes, celebraciones significativas y proyectos pedagógicos innovadores.',
+      paragraph3: 'Creemos que es fundamental invertir en la infancia hoy para construir la próxima generación.',
+      imageActivity: 'nueve',
+      video: 'Video_Estudiantil'
 
     }
   ])

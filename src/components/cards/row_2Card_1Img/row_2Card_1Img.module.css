@@ -23,6 +23,7 @@
     cursor: pointer;
     font-size: clamp(1rem, 0.3043rem + 0.98vw, 3rem);
     text-decoration: none;
+
 }
 
 .group> :first-child{

@@ -30,7 +30,7 @@ export const AboutUs = ()=> {
           },
           {
             id: 2,
-            title: "CARMEUSE AMERICAS",
+            title: "CARMEUSE AMÉRICAS",
             image: "america",
             description: 'Carmeuse Américas, responsable de las operaciones en el Norte, Centro y Sur, es una filial del Grupo Carmeuse. Establecida en Norteamérica desde 1992, ha ampliado su presencia geográfica mediante una serie de adquisiciones. Carmeuse Américas se ha convertido en uno de los principales proveedores de cal, piedra caliza y otros productos minerales, equipos y soluciones de ingeniería en la región de las Américas. Con sede en Pittsburgh (PA), cuenta con más de 30 plantas de producción en el este de Estados Unidos, Canadá y América Latina, con más de 2.500 empleados. Carmeuse Américas ha pasado de ser un productor de minerales a base de calcio a una empresa que continúa agregando nuevas ofertas integradas de productos y servicios. ',
             buttomInfo: 'Learn More >',

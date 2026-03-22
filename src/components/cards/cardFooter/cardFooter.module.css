@@ -13,11 +13,18 @@
     padding: 10%;
 }
 
+.contenedor :first-child{
+    color:var(--orange2-color);
+
+}
+
 h2{
     width: 100%;
     color: white;
     padding-block: 10px;
-    text-align: center;
+    text-align: right;
+        
+
 
 }
 
