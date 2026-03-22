@@ -47,6 +47,11 @@
   color: var(--grey2-color);
 }
 
+.videoEstudiantil{
+  padding-top: 15px;
+  /* border: 1px solid red; */
+}
+
 .imgBody{
   overflow: hidden;
 }

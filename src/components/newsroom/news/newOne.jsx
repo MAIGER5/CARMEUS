@@ -13,7 +13,7 @@ export const NewOne = () => {
       paragraph2: 'Santiaguitos: inclusión con amor, educación y bienestar es una estrategia que ofrece atención gratuita e integral a niños y niñas de 2 a 5 años en situación de vulnerabilidad, garantizando educación inicial de calidad, alimentación diaria, uniformes, celebraciones significativas y proyectos pedagógicos innovadores.',
       paragraph3: 'Creemos que es fundamental invertir en la infancia hoy para construir la próxima generación.',
       imageActivity: 'nueve',
-      video: 'Video_Estudiantil'
+      video: 'Estudiantil'
 
     }
   ])

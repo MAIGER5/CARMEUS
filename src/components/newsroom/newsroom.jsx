@@ -48,7 +48,7 @@ export const Newsroom = () => {
           <p>{data[0].paragraph3}</p>
         </div>
         <AdvancedVideo 
-          // className={styles.screen} 
+          className={styles.videoEstudiantil} 
           cldVid={myVideo} 
           autoPlay 
           // muted 
