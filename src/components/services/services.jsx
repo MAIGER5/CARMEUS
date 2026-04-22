@@ -24,7 +24,7 @@ export const Services = () => {
       id:1,
       image: 'ocho',
       title: "SERVICIOS",
-      description: 'Carmeuse Colombia es más que un proveedor de cal. Nos comprometemos a apoyar a nuestros clientes en cada paso del proceso. Desde el pedido, ofrecemos un servicio integral que incluye la entrega de cal y productos minerales, así como la optimización de sistemas de manejo. Nuestro objetivo es garantizar eficiencia y eficacia en cada etapa, contribuyendo al éxito y sostenibilidad de sus operaciones.' ,
+      description: 'En Carmeuse Colombia, nos diferenciamos por ir más allá de la simple provisión de cal. Somos un socio estratégico comprometido con el éxito de nuestros clientes en cada etapa de su proceso productivo. Ofrecemos un servicio integral que abarca desde la gestión del pedido hasta la entrega de cal y productos minerales, complementado con la optimización de sistemas de manejo. Todo ello con el firme propósito de garantizar la máxima eficiencia y eficacia operativa' ,
     }
   ]);
 
@@ -37,19 +37,19 @@ export const Services = () => {
     },
     {
       id: 3,
-      image: 'carro',
+      image: 'servicio_Cliente',
       title: 'Servicio al Cliente',
-      description: 'En Carmeuse Colombia, nuestro equipo se dedica a cumplir con su pedido de manera eficiente y puntual. Los equipos de planificación de producción, coordinación de suministros y análisis de transporte trabajan juntos para asegurar una ejecución impecable. Gracias a nuestra red de asociaciones con transportistas orientados a soluciones, ofrecemos un servicio integral y confiable en cada etapa del proceso.'
+      description: 'En Carmeuse Colombia, nuestro equipo de Servicio al Cliente está dedicado a brindar una atención oportuna, cercana y eficiente. Somos el punto de contacto principal para la gestión de pedidos, seguimiento de solicitudes y resolución de inquietudes, asegurándonos de que cada cliente reciba una respuesta clara y en el menor tiempo posible.'
     },
     {
       id: 2,
-      image: 'tecnic',
+      image: 'carro',
       title: 'Asistencia técnica',
-      description: 'Nuestros equipos técnicos pueden asesorar y comprobar la calidad del material, visitando las instalaciones de los clientes para inspeccionar sus procesos. A menudo, realizamos recomendaciones que ahorran dinero y mejoran las operaciones.',
+      description: 'Nuestro equipo de expertos técnicos está disponible para asesorar y verificar la calidad de nuestros materiales directamente en las instalaciones de nuestros clientes. A través de visitas especializadas, inspeccionamos los procesos productivos para identificar oportunidades de mejora y optimización.',
     },
     {
       id: 4,
-      image: 'asisten',
+      image: 'Pedido',
       title: 'Asistencia para pedidos y programación',
       description: 'Desde los pedidos rutinarios hasta las necesidades urgentes, nuestros coordinadores de planificación de suministros trabajan para conseguirle el producto que necesita'
     },

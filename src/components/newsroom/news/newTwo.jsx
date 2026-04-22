@@ -9,10 +9,8 @@ export const NewTwo = () => {
       id: 1,
       // date: 'Julio 15, 2024',
       title: 'MEJORAMOS LA CALIDAD DE NUESTROS RIOS Y LA DE LOS HABITANTES',
-      paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dicta, accusamus ratione in corrupti quisquam natus temporaet voluptatem optio ipsum dolores suscipit ut cupiditate hicvero quia consequatur? Fugiat, voluptatum.',
-      paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dicta, accusamus ratione in corrupti quisquam natus temporaet voluptatem optio ipsum dolores suscipit ut cupiditate hicvero quia consequatur? Fugiat, voluptatum.',
-      paragraph3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dicta, accusamus ratione in corrupti quisquam natus temporaet voluptatem optio ipsum dolores suscipit ut cupiditate hicvero quia consequatur? Fugiat, voluptatum.',
-      imageActivity: 'nueve'
+      paragraph1: 'Carmeuse Colombia tiene como premisa establecer relaciones de respeto y confianza con la comunidad que rodea nuestras plantas de produccion, compartiendo conocimiento y construyendo una relación transparente con la comunidad.',
+      imageActivity: 'MedioAmbiente'
 
     }
   ])

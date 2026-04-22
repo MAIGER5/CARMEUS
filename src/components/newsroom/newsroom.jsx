@@ -44,19 +44,19 @@ export const Newsroom = () => {
       <div className={styles.bodyBackground}>
         <div className={styles.textBody}>
           <p>{data[0].paragraph1}</p>
-          <p>{data[0].paragraph2}</p>
-          <p>{data[0].paragraph3}</p>
+          {/* <p>{data[0].paragraph2}</p>
+          <p>{data[0].paragraph3}</p> */}
         </div>
-        <AdvancedVideo 
+        {/* <AdvancedVideo 
           className={styles.videoEstudiantil} 
           cldVid={myVideo} 
           autoPlay 
           // muted 
           loop
-        />
-        {/* <div className={styles.imgBody}>
+        /> */}
+        <div className={styles.imgBody}>
           <AdvancedImage cldImg={myImage}/>
-        </div> */}
+        </div>
       </div>
 
       <div className={styles.logosRedes}>

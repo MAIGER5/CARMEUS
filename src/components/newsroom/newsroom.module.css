@@ -33,23 +33,28 @@
   width: 80%;
   margin: auto;
   display: flex;
-  gap: 150px;
-  margin-bottom: ;
+  align-items: center;
+  gap: 50px;
+  /* border: 1px solid green; */
+
+  /* margin-bottom: ; */
 }
 
 .bodyBackground> div{
   width: 50%;
-  margin-top: 90px;
+  margin-top: 60px;
   height: auto;
+ 
 }
 
 .bodyBackground p{
   color: var(--grey2-color);
+  
 }
 
 .videoEstudiantil{
+  width: 50%;
   padding-top: 15px;
-  /* border: 1px solid red; */
 }
 
 .imgBody{

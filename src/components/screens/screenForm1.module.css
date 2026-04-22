@@ -45,11 +45,12 @@
     text-align: justify;
     color: white;
     width: 90%;
+    font-size: 30px;
 }
 
 .cardDescription p{
     text-align: justify;
-    font-size: calc(15px + .2vw);
+    font-size: calc(13px + .2vw);
 
 }
 
@@ -71,8 +72,12 @@
         height: 300px;
     }
 
+    .cardDescription > h1{
+        font-size: calc(17px + 1vw);
+    }
+
     .cardDescription p{
-        font-size: calc(10px + 1vw);
+        font-size: calc(8px + 1vw);
     
     }
 

@@ -21,8 +21,8 @@ export const Aplications = () => {
     {
       id:1,
       image: 'wasteWater',
-      title: "APLICACIONES",
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cumque soluta explicabo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam bo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam  quaerat sapiente veniam bo. Quos saepe amet dolore quis vero. Earum odio quaerat sapiente veniam' ,
+      title: "COMPRENDIENDO LAS NECESIDADES DE TU MERCADO",
+      description: 'Carmeuse trabaja contigo para entender tus necesidades específicas de mercado, de modo que podamos ofrecerte las soluciones adecuadas para cumplir con tus requerimientos. Haz clic y explora las diversas aplicaciones por mercados a continuación para conocer más sobre los materiales de alto rendimiento y los servicios que ofrecemos para atender tus necesidades particulares. Si no encuentras tu aplicación por mercado en la lista, por favor contáctanos para que podamos asociarnos contigo y diseñar una solución especializada y personalizada.' ,
     }
   ]);
 
