@@ -296,14 +296,17 @@ export const NavBar = () => {
                   >
                   <Link to={'/products/cales/hydratedlime'} className={`${styles.prueba}`}>Cal Hidratada</Link> 
                   <GoTriangleRight/>
+                  {hovered && (                    
                     <ul className={`${styles.dropUnoPuntoDos}`}>
                       <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoA'}>Hidratada Tipo A</Link></li>
+                      <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoB'}>Hidratada Tipo B+</Link></li>
                       <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoB'}>Hidratada Tipo B</Link></li>
-                    </ul>
+                    </ul>)}
+
                   </li>
                   <li><Link to={'/products/cales/dolomiticlime'} className={`${styles.prueba}`}>Cal Dòlomita</Link></li>
                   <li><Link to={'/products/cales/agriculturallime'} className={`${styles.prueba}`}>Cal Agricola</Link></li>
-                  <li><Link to={'/products/distriburionNetwork'} id={styles.resaltarOrange} className={`${styles.prueba}`}>Red de Distribución</Link></li>
+                  <li><Link to={'/products/distriburionNetwork'} className={`${styles.redDstribution}`}>Red de Distribución</Link></li>
                 </ul>
               </li>
               <li>
@@ -313,12 +316,12 @@ export const NavBar = () => {
                   <li><Link to={'/products/stone/carbonate'} className={`${styles.prueba}`}>Carbonato</Link></li>
                 </ul>
               </li>
-              <li>
+              {/* <li>
                 <Link className={styles.subProductos}>Productos Especiales</Link>
                 <ul>
                   <li><Link to={'/products/neutramol'} className={`${styles.prueba}`}>Neutramol</Link></li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
           </li>
           <li><Link to={changeCarmeuseMas} className={`${styles.menuPrincipal}`}>Carmeuse <BsFillPlusSquareFill id={styles.carmeuseMas}/></Link></li>

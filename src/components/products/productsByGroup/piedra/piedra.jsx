@@ -12,7 +12,7 @@ export const Piedra = () => {
       title2: "Prodcutos de Piedra",
       title3: "Servicios Integrales",
       description: "La piedra caliza es una roca sedimentaria natural que está compuesta casi en su totalidad por carbonato de calcio (CaCO3), que se considera piedra caliza con alto contenido de calcio. Es increíblemente versátil y se utiliza en muchas industrias, desde la agricultura hasta la siderurgia, debido a sus propiedades beneficiosas y su alto contenido de calcio.",
-      image: 'cinco-2',
+      image: 'stone',
       boton: 'Contactate con Nuestros Expertos',
       boxProduct: [
         {

@@ -11,19 +11,19 @@ export const SecondRowX3 = () => {
     {
       id: 1,
       image: "uno",
-      description: 'Apoyo a la educación infantil en la Danta, Antioquía ',
+      description: 'Planeta ',
       link:'newOne'
     },
     {
       id: 2,
       image: "dos",
-      description: 'Mejorando la calida de los rios y los habitantes',
+      description: 'Gente',
       link:'newTwo'
     },
     {
       id: 3,
       image: "imgUno",
-      description: 'Nuestro porgreso es el progreso de la comunidad, brindando oportunidades laborales',
+      description: 'Sostenibilidad: Nuestro Compromiso con el Medio Ambiente y la Comunidad',
       link:'newThree'
     },
   ])

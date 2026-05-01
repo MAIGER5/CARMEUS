@@ -18,14 +18,14 @@ const dataProductEmpaque = [
   },
   {
     id:3,
-    nameProduct: 'Cal Hidratada para Blanquear Marca Promical',
-    peso:'10Kg',
+    nameProduct: 'Cal Hidratada Industrial Marca Procecal',
+    peso:'25Kg',
     imagen:IndustrialProcecal
   },
   {
     id:4,
     nameProduct: 'Cal Hidratada Tipo N Marca Promical',
-    peso:'10Kg',
+    peso:'25Kg',
     imagen:HidratadaTipoN
   },
 

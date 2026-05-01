@@ -38,8 +38,9 @@
 .title {
     width: min(100% - 40px, 1300px);
     margin: auto;
+    margin-top: 70px;
     margin-bottom: 30px;
-    color: var(--grey1-color);
+    color: var(--blue1-color);
     font-weight: 500;
     text-align: left;
 }
@@ -56,13 +57,14 @@
     display: block;
     width: min(100% - 40px, 1300px);
     margin: auto;
+    margin-bottom: 300px;
 
 }
 
 .marginTop{
     width: min(100% - 40px, 1300px);
     margin: auto;
-    margin-top: 120px;
+    margin-top: 90px;
 }
 
 /******* ESTE MARGINTOP2 ES PARA LAS TARJETAS QUE TIENEN UN BOX GRIS */
@@ -82,7 +84,7 @@
     width: 100%;
     background-color: var(--grey6-color);
     padding-block: 50px;
-    margin-top: 120px;
+    margin-top: 70px;
 
 }
 

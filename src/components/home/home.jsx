@@ -32,20 +32,21 @@ export const Home = () => {
         <FirstRowX3/>
       </div>
       {/* <SecondRowX3/> */}
-      <h2 className={`${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
       <div className={`${styles.carrusel}`}> {/*this className is to hidden or show the component to make responsive*/}
         <Carrusel/>
       </div>
-      <div className={styles.cardX3}>  {/*this className is to hidden or show the component to make responsive*/}
-        <SecondRowX3/>
-      </div>
-      <div className={styles.marginTop}>  {/*this className is to hidden or show the component to make responsive*/}
-        <ThirdRowX3/>
-      </div>
+      {/*PRODUCTOS QUE HACEN LA DIFERENCIA*/}
       <div className={`${styles.boxSombra}`}>  {/*this className is to hidden or show the component to make responsive*/}
         <div className={styles.marginTop2}>
           <FourRowX3/>
         </div>
+      </div>
+      <div className={styles.marginTop}>  {/*this className is to hidden or show the component to make responsive*/}
+        <ThirdRowX3/>
+      </div>
+      <h2 className={`${styles.title}`}>Descubre Más & Conecta con Nosotros</h2>
+      <div className={styles.cardX3}>  {/*this className is to hidden or show the component to make responsive*/}
+        <SecondRowX3/>
       </div>
       {/* <div className={styles.marginTop}> 
         <FiveRowX3/>

@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  /* border: 1px solid green; */
+  margin-top: 50px;
 
   /* margin-bottom: ; */
 }
@@ -45,6 +45,9 @@
   margin-top: 60px;
   height: auto;
  
+}
+
+.textBody{
 }
 
 .bodyBackground p{

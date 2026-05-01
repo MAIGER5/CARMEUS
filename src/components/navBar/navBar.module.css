@@ -209,6 +209,11 @@ a:hover {
     color: var(--blue2-color);
 }
 
+.redDstribution{
+    text-decoration: none;
+    color: var(--orange2-color);
+}
+
 
 .dropdowns li{
     display: block;
@@ -247,6 +252,7 @@ a:hover {
     color: var(--blue2-color);
     font-size: 16px;
     text-decoration: none;
+    font-weight: normal;
 }
 
 .linkstyles:hover{

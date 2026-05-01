@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from './newsroom.module.css';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
@@ -8,16 +8,18 @@ import { PiInstagramLogoLight } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import DataContext from '../dataContext/dataContext';
+import { ScreenForm1 } from '../screens/screenFom1';
 
 
 
 export const Newsroom = () => {
 
-  const data = useContext(DataContext)
 
-  // if (!data || !Array.isArray(data) || data.length === 0) {
-  //   return <div>No data available</div>;
-  // }
+  const { dataNew, dataScren } = useContext(DataContext);
+
+  if (!dataNew || !Array.isArray(dataNew) || dataNew.length === 0) {
+    return <div>No hay datos disponibles</div>;
+  }
 
   const cld = new Cloudinary({
     cloud:{
@@ -25,27 +27,29 @@ export const Newsroom = () => {
     }
   });
 
-  const myImage = cld.image(data[0].imageActivity)
-  const myVideo = cld.video(data[0].video);
-
-  
+  const myImage = cld.image(dataNew[0].imageActivity);  
 
   return (
     <div className={styles.contenedor}>
 
       <div className={styles.mainScreen}>
+        
+        <DataContext.Provider value={dataScren}>
+          <ScreenForm1/>
+        </DataContext.Provider>
 
-        <div className={styles.textMainScreen}>
+        {/* <div className={styles.textMainScreen}>
           <p>{data[0].date}</p>
           <h1>{data[0].title}</h1>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.bodyBackground}>
         <div className={styles.textBody}>
-          <p>{data[0].paragraph1}</p>
-          {/* <p>{data[0].paragraph2}</p>
-          <p>{data[0].paragraph3}</p> */}
+          {dataNew[0].paragraph1 && <p>{dataNew[0].paragraph1}</p>}
+          {dataNew[0].paragraph2 && <p>{dataNew[0].paragraph2}</p>}
+          {dataNew[0].paragraph3 && <p>{dataNew[0].paragraph3}</p>}
+          {dataNew[0].paragraph4 && <p>{dataNew[0].paragraph4}</p>}
         </div>
         {/* <AdvancedVideo 
           className={styles.videoEstudiantil} 
@@ -55,7 +59,7 @@ export const Newsroom = () => {
           loop
         /> */}
         <div className={styles.imgBody}>
-          <AdvancedImage cldImg={myImage}/>
+          <AdvancedImage cldImg={myImage} />
         </div>
       </div>
 

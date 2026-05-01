@@ -14,9 +14,9 @@ export const CardProductEmpaque = ({nameProduct, peso, imagen}) => {
       </div>
       <div className={styles.textTarjet}> {nameProduct} </div>
       <div className={styles.peso}> {peso} </div>
-      <span className={styles.carrito}>
+      {/* <span className={styles.carrito}>
         Agregar al Carrito <ShoppingCartIcon color='action'/>
-      </span>
+      </span> */}
     </div>
   )
 }

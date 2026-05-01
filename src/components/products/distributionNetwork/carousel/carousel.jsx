@@ -1,7 +1,20 @@
 import React from 'react';
-import styles from './carousel.module.css'
+import styles from './carousel.module.css';
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
 
 export const Carousel = () => {
+
+    const cld = new Cloudinary({
+        cloud: {
+            cloudName: 'dbn2bb4e2'
+        }
+    });
+
+    const myImage1 = cld.image('carruselRDistribution3'); 
+    const myImage2 = cld.image('carruselRDistribution2'); 
+    const myImage3 = cld.image('carruselRDistribution1'); 
   
   return (
     <div id="carouselExampleIndicators" className="carousel slide">
@@ -12,13 +25,22 @@ export const Carousel = () => {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="https://media.licdn.com/dms/image/v2/D4E3DAQHgtRBqc_L9Cw/image-scale_191_1128/image-scale_191_1128/0/1715089995106/carmeuse_cover?e=2147483647&v=beta&t=8jVLotAS-5Ui8dM-u-RgAwdRL6TmdVlYUtdSgRTumi0" className="d-block w-100" alt="..."/>
+          <AdvancedImage
+              className={styles.screen} 
+              cldImg={myImage1} 
+          />
         </div>
         <div className="carousel-item">
-          <img src="https://media.licdn.com/dms/image/v2/D4E3DAQHgtRBqc_L9Cw/image-scale_191_1128/image-scale_191_1128/0/1715089995106/carmeuse_cover?e=2147483647&v=beta&t=8jVLotAS-5Ui8dM-u-RgAwdRL6TmdVlYUtdSgRTumi0" className="d-block w-100" alt="..."/>
+          <AdvancedImage
+              className={styles.screen} 
+              cldImg={myImage2} 
+          />
         </div>
         <div className="carousel-item">
-          <img src="https://media.licdn.com/dms/image/v2/D4E3DAQHgtRBqc_L9Cw/image-scale_191_1128/image-scale_191_1128/0/1715089995106/carmeuse_cover?e=2147483647&v=beta&t=8jVLotAS-5Ui8dM-u-RgAwdRL6TmdVlYUtdSgRTumi0" className="d-block w-100" alt="..."/>
+          <AdvancedImage
+              className={styles.screen} 
+              cldImg={myImage3} 
+          />
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

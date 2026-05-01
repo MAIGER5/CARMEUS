@@ -45,6 +45,8 @@ export const ScreenForm1 = () =>{
             <div className={styles.cardDescription}>
                 <h1>{data[0].title}</h1>
                 <p>{data[0].description}</p>
+                <p>{data[0].description2}</p>
+                <p>{data[0].description3}</p>
             </div>
         </div>
     );

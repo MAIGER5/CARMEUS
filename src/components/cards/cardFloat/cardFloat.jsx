@@ -33,7 +33,7 @@ export const CardFloat = () => {
       </div>
 
       <div className={styles.containerMarcas}>
-        <h1>{data[0].title1}</h1>
+        {/* <h1>{data[0].title1}</h1> */}
         <div className={styles.logosMarcas}>
           <div>
             <img src={procecal} alt="" />
