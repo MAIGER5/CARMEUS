@@ -68,7 +68,7 @@ import { AdminPayClient } from './components/carmeuseMas/adminPayClient/adminPay
 function App() {
   
   return (
-    <BrowserRouter basename='/carmeuseColombia'>
+    <BrowserRouter>
       <ScrollToTop/>
       <NavBar/>
       <Routes>
