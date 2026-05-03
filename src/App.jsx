@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Home } from './components/home/home';
 import { NavBar } from './components/navBar/navBar';
@@ -68,7 +68,7 @@ import { AdminPayClient } from './components/carmeuseMas/adminPayClient/adminPay
 function App() {
   
   return (
-    <HashRouter>
+    <BrowserRouter basename='/carmeuseColombia'>
       <ScrollToTop/>
       <NavBar/>
       <Routes>
@@ -147,7 +147,7 @@ function App() {
 
       </Routes>
       <Footer/>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
