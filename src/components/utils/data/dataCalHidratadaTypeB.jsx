@@ -15,7 +15,7 @@ const dataCalHidratadaTypeB = {
       id: 1,
       image: 'hidratada',
       title: "CAL HIDRATADA TIPO B",
-      description: 'La Cal Hidratada de Carmeuse Colombia es de alta calidad y baja en contaminantes, siendo ideal para el proceso de trefilado en frío. En el tratamiento de aguas y efluentes industriales, la cal hidratada libera poco calor exotérmico al entrar en contacto con el agua, lo que facilita y hace más seguro su uso en determinadas aplicaciones en comparación con la cal viva.'
+      description: 'La Cal Hidratada Tipo B es un producto versátil y funcional, orientado principalmente a los sectores de construcción, agrícola y pecuario. Gracias a sus propiedades químicas y físicas, es ampliamente utilizada en aplicaciones donde se requiere estabilización, desinfección y mejoramiento de materiales y ambientes.'
     }
   ],
 
@@ -24,10 +24,10 @@ const dataCalHidratadaTypeB = {
       id: 1,
       title1: "CAL HIDRATADA TIPO B",
       title2: "BENEFICIOS",
-      description: 'La Cal Hidratada, químicamente conocida como hidróxido de calcio (Ca(OH)2), o cal apagada, es un polvo blanco seco derivado de la cal viva mezclada con agua. La cal hidratada con alto contenido de calcio Carmeuse está disponible como producto seco a granel o en bolsas y se utiliza en diversas aplicaciones industriales, como el tratamiento de gases de combustión, el tratamiento de aguas, la siderurgia y la construcción, entre otras.',
-      cifra1: 10000,
-      cifra2: 17,
-      cifra3: 50,
+      description: 'La Cal Hidratada, químicamente conocida como hidróxido de calcio (Ca(OH)2), o cal apagada, es un polvo blanco seco derivado de la cal viva mezclada con agua. La cal hidratada con alto contenido de calcio Carmeuse está disponible como producto seco a granel o en bolsas y se utiliza en diversas aplicaciones industriales, como la construcción, la fabricación de pinturas, morteros y mezclas. En el sector agropecuario, contribuye a procesos de desinfección, acondicionamiento y control sanitario., entre otras.',
+      cifra1: "90% Ca(OH)2 mín",
+      cifra2: "85% pasante malla 200",
+      cifra3: "NTC 1398",
       cifra1text: 'Ton de Acero / año',
       cifra2text: 'Ton de Acero / año',
       cifra3text: 'Ton de Acero / año',
@@ -38,8 +38,7 @@ const dataCalHidratadaTypeB = {
         'Protege la superficie del acero.',
         'Controla la dureza del agua tratada, reduciendo los problemas de distribución.',
         'Disminuye la frecuencia de mantenimiento de las tuberías.',
-        'Neutraliza la acidez del agua.',
-        'Elimina los metales pesados.',
+        'Neutraliza la acidez del agua y elimina los metales pesados.',
       
       ]
     }
@@ -63,9 +62,9 @@ const dataCalHidratadaTypeB = {
 
       formula: 'CaO + H2O --> Ca(OH)2 + heat',
       especificacion1: 'Química:',
-      especificacion2: 'Dimensionamiento:',
-      especificacion1Text: '  94.0 – 97.0% Ca(OH)2',
-      especificacion2Text: '  92-97% Passing 325 Mesh',
+      especificacion2: 'Granulometría:',
+      especificacion1Text: '  90% Ca(OH)2',
+      especificacion2Text: '  85% malla 200',
     }
   ],
 

@@ -1,0 +1,53 @@
+@import url('../../../variables.module.css');
+
+
+.contenedor{
+    position: relative;
+    margin-top: 152px;
+    /* border: 1px solid green; */
+}
+
+.cards{
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-block: 90px;
+    
+}
+
+
+.cards :first-child{
+    margin-top: 30px;
+}
+
+.cards2{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 90px;
+}
+
+@media(width < 1250px){
+    .contenedor{
+        margin-top: 80px;
+        
+    }
+    .contenedor > :first-child{
+        display: none;
+    }
+    .cards{
+        width: 100%;
+        margin-block: 0px;
+    }
+    .cards2{
+        width: 100%;
+        
+    }
+
+}
+
+@media(1080px < width < 1250px){
+    .contenedor{
+        margin-top: 160px;
+    }
+
+}

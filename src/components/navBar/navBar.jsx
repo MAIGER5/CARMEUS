@@ -299,7 +299,7 @@ export const NavBar = () => {
                   {hovered && (                    
                     <ul className={`${styles.dropUnoPuntoDos}`}>
                       <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoA'}>Hidratada Tipo A</Link></li>
-                      <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoB'}>Hidratada Tipo B+</Link></li>
+                      <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoB+'}>Hidratada Tipo B+</Link></li>
                       <li><Link className={styles.linkstyles} to={'/products/cales/hydratedlimeTipoB'}>Hidratada Tipo B</Link></li>
                     </ul>)}
 

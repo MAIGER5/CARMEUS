@@ -15,7 +15,7 @@ const dataPiedraCaliza = {
       id: 1,
       image: 'caliza',
       title: "PIEDRA CALIZA",
-      description: 'La caliza (calcítica y dolomítica) es un producto mineral industrial versátil ampliamente utilizado en la industria química, agricultura y siderugia. La caliza de Carmeuse Caolombia tiene alta estabilidad química y se comercializa en varias granulometrías. Se utiliza en la producción de medicamentos, alimentos, cosméticos como suplemento de calcio, antiácido, aglutinante de fosfatos, entre otros.'
+      description: 'La caliza es un producto mineral industrial versátil ampliamente utilizado en la industria de la construcción, química, agricultura y siderúrgica. La caliza de Carmeuse Colombia tiene alta estabilidad química y se comercializa en varias granulometrías. Se utiliza en la producción de medicamentos, alimentos, cosméticos como suplemento de calcio, antiácido, aglutinante de fosfatos, entre otros.'
     }
   ],
 
@@ -25,9 +25,9 @@ const dataPiedraCaliza = {
       title1: "PIEDRA CALIZA",
       title2: "BENEFICIOS",
       description: 'Los áridos para la construcción son un producto esencial para numerosas aplicaciones de construcción. En el caso de los pavimentos, actúan como el principal componente de soporte de carga. Para el hormigón, el agregado de piedra caliza ofrece mejor resistencia y mejor valor que los agregados graníticos comúnmente utilizados. También se utilizan en base de carreteras, relleno estructural, lastre, drenaje y piedra de armadura.',
-      cifra1: 10000,
-      cifra2: 17,
-      cifra3: 50,
+      cifra1: "96% mín CaCO3",
+      cifra2: "Finos y gruesos",
+      cifra3: "",
       cifra1text: 'Ton de Acero / año',
       cifra2text: 'Ton de Acero / año',
       cifra3text: 'Ton de Acero / año',

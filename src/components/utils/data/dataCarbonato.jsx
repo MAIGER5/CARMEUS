@@ -25,16 +25,18 @@ const dataCarbonato = {
       title1: "CARBONATO DE CALCIO",
       title2: "BENEFICIOS",
       description: 'El carbonato de calcio (CaCO3) es un compuesto químico muy común que constituye el 4% de la corteza terrestre y es el constituyente principal de la piedra caliza. Si bien es abundante, no toda la piedra caliza es adecuada para la producción de carbonato de calcio molido (GCC) debido a sus impurezas. El carbonato de calcio es uno de los materiales más útiles y versátiles conocidos por los humanos y tiene muchas aplicaciones prácticas, como el uso en pisos (alfombras, losetas de vinilo de lujo, compuestos de piedra y plástico), pinturas, adhesivos, papel, plásticos, caucho, techos de asfalto y para muchos otros fines, incluida la agricultura.l carbonato cálcico es uno de los materiales más útiles y versátiles conocidos por el ser humano y tiene muchas aplicaciones prácticas, como su uso en suelos (moqueta, baldosas de vinilo de lujo, compuesto de piedra y plástico), pintura, adhesivos, papel, plásticos, caucho, cubiertas de asfalto y muchos otros fines, incluida la agricultura.',
-      cifra1: 10000,
-      cifra2: 17,
-      cifra3: 50,
+      cifra1: "96% mín CaCO3",
+      cifra2: "95% Malla 6",
+      cifra3: "NTC 5059",
       cifra1text: 'Ton de Acero / año',
       cifra2text: 'Ton de Acero / año',
       cifra3text: 'Ton de Acero / año',
       formula: 'CaCO3 • MgCO3 + heat --> CaO • MgO + 2 CO2',
       consideraciones: [
-        'Carmeuse Colombia se encuentra diseñando un producto con carbonato de cálcico molido específicamente  para mejorar la durabilidad, el aspecto y el coste del hormigón sin reducir sus propiedades mecánicas. Este producto mejorará su hormigón, tanto física como químicamente, al tiempo que reducirá los costes y el impacto medioambiental. Sustituir una parte del cemento en una mezcla de hormigón para mejorar diversas características, sera un estándar de la industria por las proximas décadas. Dado que la producción y disponibilidad de materiales cementantes suplementarios, antes abundantes, ha cambiado drásticamente, ha llegado el momento de considerar un sustituto más consistente y fiable.',
-      
+        'Alta pureza y excelente poder de relleno y cubrimiento.',
+        'Mejora resistencia, estabilidad y acabado en diferentes aplicaciones.',
+        'Producto versátil para industrias como construcción, pinturas, vidrio y agricultura.',
+        'Contribuye a optimizar costos y desempeño del producto final.',      
       ]
     }
   ],
@@ -49,7 +51,7 @@ const dataCarbonato = {
       benefits: [
         'Alta pureza del CaCO3 para compuestos consistentes y de calidad.', 
         'Reduce los costes al disminuir la cantidad de ingredientes activos necesarios, al tiempo que añade características deseables como eficiencia energética, ignifugación, insonorización, resistencia y durabilidad.', 
-        'Sacos de 50 libras y Super Sacks (1 tonelada) disponibles en ubicaciones específicas.', 
+        'Sacos de 50 kilogramos y bigbags 1.000 Kg (1 tonelada) disponibles en ubicaciones específicas.', 
         'Equipos y servicios para sistemas de manipulación de productos secos a granel.', 
         'Múltiples ofertas de productos con contenido 100% reciclado preconsumo certificado para la sostenibilidad.',
       ] ,

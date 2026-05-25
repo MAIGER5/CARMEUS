@@ -8,38 +8,37 @@ import { FaHandHoldingWater } from 'react-icons/fa';
 import { LiaNewspaper } from 'react-icons/lia';
 import { AiOutlineGold } from 'react-icons/ai';
 
-const dataCalHidratadaTypeA = {
+const dataCalHidratadaTypeBMas = {
   
   Screen: [
     {
       id: 1,
       image: 'hidratada',
-      title: "CAL HIDRATADA TIPO A",
-      description: 'La Hidróxido de calcio Tipo A es un producto de alta pureza, desarrollado para aplicaciones industriales especializadas que requieren un desempeño superior y una granulometría fina y uniforme. Cuenta con un contenido mínimo de hidróxido de calcio del 95% y malla 325, lo que garantiza alta reactividad, excelente dispersión y eficiencia en los procesos industriales.'
+      title: "CAL HIDRATADA TIPO B+",
+      description: 'La Cal Hidratada B+ es un producto intermedio desarrollado para ofrecer un equilibrio entre desempeño técnico y competitividad económica. Está orientada a industrias que requieren buena calidad y eficiencia operativa, manteniendo costos más accesibles frente a productos de grado premium.'
     }
   ],
 
   CardProduct: [
     {
       id: 1,
-      title1: "CAL HIDRATADA TIPO A",
+      title1: "CAL HIDRATADA TIPO B+",
       title2: "BENEFICIOS",
-      description: 'La Cal Hidratada, químicamente conocida como hidróxido de calcio (Ca(OH)2), o cal apagada, es un polvo blanco seco derivado de la cal viva mezclada con agua. La cal hidratada con alto contenido de calcio Carmeuse está disponible como la industria química, fuente alcalina, desecante, agente caustificante, agente saponificante, agente aglutinante, floculante, precipitante, fundente, agente formador de vidrio, degradador de materia orgánica, lubricante, carga mineral y agente.',
-      cifra1: "95% Ca(OH)2",
-      cifra2: "Malla 325 - 95% mín",
+      description: 'La Cal Hidratada, químicamente conocida como hidróxido de calcio (Ca(OH)2), o cal apagada, es un polvo blanco seco derivado de la cal viva mezclada con agua. La cal hidratada con alto contenido de calcio está disponible como producto seco a granel o en bolsas y se utiliza en diversas aplicaciones industriales, como la industria azucarera, química y del cuero, ofreciendo un rendimiento confiable.',
+      cifra1: "92% Ca(OH)2 mín",
+      cifra2: "90% pasante malla 200",
       cifra3: "NTC 1398",
       cifra1text: 'Ton de Acero / año',
       cifra2text: 'Ton de Acero / año',
       cifra3text: 'Ton de Acero / año',
       formula: 'CaCO3 • MgCO3 + heat --> CaO • MgO + 2 CO2',
       consideraciones: [
-        'Alto poder neutralizante de residuos ácidos. ',
-        'Agente lubricante en el proceso de estirado en frío.',
-        'Protege la superficie del acero.',
-        'Controla la dureza del agua tratada, reduciendo los problemas de distribución.',
-        'Disminuye la frecuencia de mantenimiento de las tuberías.',
-        'Neutraliza la acidez del agua.',
-        'Elimina los metales pesados.',
+        'Mejora la clarificación del jugo de caña, ayudando a remover impurezas y sólidos suspendidos.', 
+        'Controla y estabiliza el pH, evitando la inversión de la sacarosa y mejorando el rendimiento del azúcar.', 
+        'Favorece la precipitación, floculación y coagulación de coloides, fosfatos y silicatos.',
+        'Optimiza la cristalización del azúcar y mejora la calidad final del producto.',
+        'Contribuye a disminuir incrustaciones y mejorar la eficiencia operativa de los equipos.',
+        'Permite una menor dosificación y mayor eficiencia en la aplicación de lechada de cal.',
       
       ]
     }
@@ -63,9 +62,9 @@ const dataCalHidratadaTypeA = {
 
       formula: 'CaO + H2O --> Ca(OH)2 + heat',
       especificacion1: 'Química:',
-      especificacion2: 'Granulometria:',
-      especificacion1Text: '  Ca(OH)2 95% mínimo',
-      especificacion2Text: '  95% pasante malla 325',
+      especificacion2: 'Granulometría:',
+      especificacion1Text: '  92% Ca(OH)2',
+      especificacion2Text: '  90% malla 200',
     }
   ],
 
@@ -75,7 +74,7 @@ const dataCalHidratadaTypeA = {
       title1: "PRODUCCION & ESPECIFICACIONES",
       title2: "USOS DE LA CAL HIDRATADA",
       description1: 'Carmeuse suministra piedra caliza de alto contenido en calcio con un 95% o más de carbonato cálcico puro a través de una amplia red de minas subterráneas y de superficie. La piedra caliza con alto contenido en calcio se produce en una variedad de tamaños para satisfacer las necesidades de nuestros clientes, ya sea como piedra en bruto o como carbonato cálcico molido.',
-      description2: 'La piedra caliza con alto contenido en calcio es un material versátil que se utiliza en diversas industrias. Algunos de los principales usos de la piedra caliza con alto contenido en calcio son:',
+      description2: 'Algunos de los principales usos son:',
       benefits: [
         'Agricultura - La cal hidratada con alto contenido en calcio es un material fácil de utilizar para la desinfección agrícola de camas de animales en establos y naves avícolas.',
         '  Tratamiento del agua - ayuda a eliminar una amplia variedad de contaminantes del agua para mejorar la calidad, ajustar el pH y reducir los metales pesados en las aguas residuales.',
@@ -93,6 +92,7 @@ const dataCalHidratadaTypeA = {
       especificacion2Text: '2,5" hasta 7 micras',
     }
   ],
+
   Mercados: [
     {
       id: 1,
@@ -148,6 +148,7 @@ const dataCalHidratadaTypeA = {
     },
   ],
 
+  
   Sheet: [
     {
       id: 1,
@@ -162,4 +163,4 @@ const dataCalHidratadaTypeA = {
   ]
 }
 
-export default dataCalHidratadaTypeA;
+export default dataCalHidratadaTypeBMas;
