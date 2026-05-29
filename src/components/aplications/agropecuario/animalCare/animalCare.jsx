@@ -68,7 +68,7 @@ export const AnimalCare = () =>{
       data:[
         {
           id: 1,
-          image: 'nueve',
+          image: 'carruselRDistribution1',
           title: 'Nuestros Servicios',
           description: [
             'Carga y Logística',

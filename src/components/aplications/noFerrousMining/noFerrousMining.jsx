@@ -57,7 +57,7 @@ export const NoFerrousMining = () => {
       data:[
         {
           id: 1,
-          image: 'nueve',
+          image: 'servicios1',
           title: 'Nuestros Servicios',
           description: [
             'Carga y Logística',

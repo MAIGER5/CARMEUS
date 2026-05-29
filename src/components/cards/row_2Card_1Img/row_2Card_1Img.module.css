@@ -34,6 +34,8 @@
 
 .group> :first-child:hover{
     color: var(--orange2-color);
+    background: var(--orange2-color);
+    color: white;
 
 }
 

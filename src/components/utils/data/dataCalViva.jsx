@@ -25,7 +25,7 @@ const dataCalViva = {
       title1: "CAL VIVA",
       title2: "BENEFICIOS",
       description: 'Nuestra cal viva Carmeuse con alto contenido en calcio procede de yacimientos selectos de caliza con alto contenido en calcio que no contienen más de un 5% de magnesio. Nuestro material se somete a pruebas rutinarias de calidad y consistencia, para garantizar la química y las propiedades físicas adecuadas para las aplicaciones industriales.',
-      cifra1: "88%",
+      cifra1: "87%",
       cifra2: "Pulverizada a Gruesa",
       cifra3: "ASTM C25",
       cifra1text: 'Oxido de Calcio típico %',

@@ -39,7 +39,7 @@ export const Contact = () => {
       id:1,
       image:'contacto3',
       title:'CONTACTANOS',
-      description:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio blanditiis enim consectetur harum magni, corporis et iusto quia quod tenetur aliquid iure possimus eveniet. Magni facere consequuntur cum voluptatem sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, rem consequatur, dolor ver',
+      description:'Estamos comprometidos con brindarle soluciones de calidad y un servicio excepcional. Si desea más información sobre nuestros productos, asesoría técnica o una cotización, complete el formulario y uno de nuestros especialistas se comunicará con usted en el menor tiempo posible.',
     }
   ])
 
@@ -108,7 +108,7 @@ export const Contact = () => {
             <input 
               name='name'
               type="text" 
-              placeholder='Osorio Jose'
+              placeholder='Nombre Completo'
               required
               // size={60}
               value={form.name}
@@ -120,7 +120,7 @@ export const Contact = () => {
             <input 
               name='company'
               type="text" 
-              placeholder='Jose Ltda'
+              placeholder='Razón Social'
               required
               // size={60}
               value={form.company}
@@ -132,7 +132,7 @@ export const Contact = () => {
             <input 
               name='phone'
               type='number' 
-              placeholder='+573013456798'
+              placeholder='+57xxxxxxxxxx'
               required
               // size={60}
               value={form.phone}
@@ -144,7 +144,7 @@ export const Contact = () => {
             <input 
               name='mail'
               type="email" 
-              placeholder='jose@gmail.com'
+              placeholder='email'
               required
               // size={60}
               value={form.mail}
@@ -198,8 +198,8 @@ export const Contact = () => {
             <AdvancedImage cldImg={myImage}/>
           </div>
           <p>Información de Ventas & Producto</p>
-          <p>ventas"carmeuse.com.co</p>
-          <p>+57 4447400</p>
+          <p>ventas@carmeuse.com.co</p>
+          <p>+57 604 4407400</p>
           <p>Kra 39 #5A 95 Edificio Avantgarden, Medellín-Colombia</p>
         </div>
         <div className={styles.ubicacion}>
@@ -207,8 +207,8 @@ export const Contact = () => {
             <AdvancedImage cldImg={myImage}/>
           </div>
           <p>Información de Ventas & Producto</p>
-          <p>ventas"carmeuse.com.co</p>
-          <p>+57 4447400</p>
+          <p>ventas@carmeuse.com.co</p>
+          <p>+57 604 4407400  <br />+57 30534529372</p>
           <p>Kra 39 #5A 95 Edificio Avantgarden, Medellín-Colombia</p>
         </div>
       </div>

@@ -257,8 +257,9 @@
 
 .cardProductRelationed{
     width: 40%;
-    height: 500px;
+    height: 600px;
     background-color: var(--grey6-color);
+
     cursor: pointer;
     transition: background-color .7s;
 
@@ -299,7 +300,7 @@
     color: var(--grey3-color);
     margin-bottom: 1px;
     padding-bottom: 1px;
-    font-size: 15px;
+    font-size: calc(7px + 0.5vw);
 }
 
 

@@ -46,79 +46,42 @@ const dataCalAgricola = {
       id: 1,
       title1: "PRODUCCION & ESPECIFICACIONES",
       title2: "BENEFICIOS",
-      description1: 'La Cal Viva con alto contenido en calcio (CaO) se produce cuando la piedra caliza, o carbonato cálcico (CaCO3), se calienta en un horno mediante el proceso de calcinación.',
+      description1: 'La cal viva agrícola se genera como un subproducto del proceso de calcinación de la piedra caliza. Está compuesta por material que presenta un nivel de calcinación inferior al especificado para aplicaciones industriales de mayor exigencia, pero que conserva propiedades adecuadas para uso agrícola, especialmente en la corrección de suelos ácidos y el aporte de calcio.',
       // description2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam cumque soluta explicabo. Quos saepe amet dolore quis vero. Earum odio quaerat',
       benefits: [
-        'El alto contenido en calcio (CaO) proporciona un rendimiento superior para las necesidades de la aplicació.', 
-        'Fuente eficaz para el ajuste del pH y el control de la acidez.', 
-        'Uno de los materiales alcalinos más rentables, en comparación con los cáusticos y otros.', 'Fácilmente disponible a través de nuestra red de plantas en una variedad de tamaños, desde guijarros hasta finos', 'Ventajas de seguridad en comparación con la sosa cáustica',
+    "  Mejora la disponibilidad de nutrientes: Favorece la absorción de fósforo, calcio, magnesio y otros elementos esenciales, aumentando la eficiencia de los fertilizantes.",
+
+    "Aporta calcio al cultivo: El calcio fortalece el desarrollo de raíces,    tallos y frutos, contribuyendo a plantas más sanas y productivas.", 
+    "Mejora la estructura física del suelo: Reduce la compactación, aumenta     la aireación y favorece el drenaje, permitiendo un mejor desarrollo     radicular.",
+
+    "Ayuda al control de enfermedades y plagas: Su alta alcalinidad puede     disminuir la presencia de algunos hongos, bacterias, nematodos y otros    organismos perjudiciales del suelo.",
+
+    "Estimula la actividad biológica del suelo: Promueve condiciones    favorables para microorganismos beneficiosos que participan en la   descomposición de materia orgánica y liberación de nutrientes.",
+
+    "Promueve condiciones favorables para microorganismos beneficiosos que    participan en la descomposición de materia orgánica y liberación de   nutrientes.",
+
+    "Reduce la toxicidad por aluminio y manganeso: En suelos muy ácidos     disminuye los efectos tóxicos de estos elementos sobre las raíces."
+
       ] ,
 
-      formula: 'CaCo3 + heat --> Cao = CO2',
+      formula: 'CaCo3 + Calor --> Cao = CO2',
       especificacion1: 'Intervalo de contenido de calcio (CaO):',
       especificacion2: 'Gama de tamaños:',
       especificacion3: 'Reactividad:',
-      especificacion1Text: '93-97%',
-      especificacion2Text: 'de 2 ¼" a 0',
-      especificacion3Text: '30-50 °C aumento térmico mínimo de 3 minutos',
+      especificacion1Text: '      67 % mínimo',
+      especificacion2Text: '       Menor a ¼"',
+      especificacion3Text: '       Reactividad baja',
     }
   ],
 
   Mercados: [
     {
       id: 1,
-      icon: <SlChemistry />,
-      title: "Industria Química ",
-      link: '/Aplications/chemical'
-    },
-    {
-      id: 2,
-      icon: <BsBuildingGear />,
-      title: "Ingenieria Civil & Construcción",
-      link: '/Aplications/engeneerBuilding'
-    },
-    {
-      id: 3,
-      icon: <LuConstruction />,
-      title: "Hierro & Acero",
-      link: '/Aplications/steel'
-    },
-    {
-      id: 4,
       icon: <MdOutlineAgriculture />,
       title: "Soluciones Agricolas",
       link: '/Aplications/agropecuario'
     },
-    {
-      id: 5,
-      icon: <MdOutlineGasMeter />,
-      title: "Tratamiento de Gases & Combustión",
-      link: '/Aplications/flueGasTreatment'
-    },
-    {
-      id: 6,
-      icon: <SiEquinixmetal />,
-      title: "Cerámica & Vidrio",
-      link: '/Aplications/glassCeramic'
-    },
-    {
-      id: 7,
-      icon: <FaHandHoldingWater />,
-      title: "Tratamiento de Agua",
-      link: '/Aplications/waterTreatment'
-    },
-    {
-      id: 8,
-      icon: <LiaNewspaper />,
-      title: "PCC y Pulpa & Paper",
-      link: '/Aplications/pccPulPaper'
-    },
-    {
-      id: 9,
-      icon: <AiOutlineGold />,
-      title: "Minería & Metales No Ferrosos",
-      link: '/Aplications/noFerrousMining'
-    },
+
   ],
 
   Sheet: [
