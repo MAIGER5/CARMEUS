@@ -38,12 +38,15 @@ export const SugarIndustry = () => {
           image: 'sugar2',
           title: 'Cal Viva',
           description: 'En la industria azucarera, la cal viva se usa principalmente para la purificación del jugo de caña o remolacha. Se añade al jugo para neutralizar ácidos, ayudando a precipitar impurezas y facilitando su eliminación. Este proceso mejora la clarificación del jugo y aumenta la eficiencia en la producción de azúcar.',
+          link: '/products/cales/quicklime',
+
         },
         {
           id: 2,
           image: 'sugar',
-          title: 'Cal Hidratada',
+          title: 'Cal Hidratada Tipo B+',
           description: 'la cal hidratada se utiliza para purificar el jugo de caña o remolacha mediante la neutralización de ácidos y el ajuste del pH. Facilita la precipitación de impurezas y mejora la clarificación del jugo al promover la coagulación y floculación de partículas suspendidas. Esto resulta en un proceso más eficiente y en un azúcar de mayor calidad..',
+          link: '/products/cales/hydratedlimeTipoB+',
         },
       ]
     },

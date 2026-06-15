@@ -45,12 +45,14 @@ export const IndustryWater = () => {
           image: 'agricola',
           title: 'Cal Viva',
           description: 'Conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.',
+          link: '/products/cales/quicklime',
         },
         {
           id: 2,
           image: 'hidratada',
-          title: 'Cal Hidratada',
+          title: 'Cal Hidratada Tipo B',
           description: 'La cal hidratada, químicamente conocida como hidróxido de calcio (Ca(OH)2), o cal apagada, es un polvo blanco seco derivado de la cal viva mezclada con agua. La cal hidratada con alto contenido de calcio de Carmeuse Colombia está disponible como producto seco a granel o en bolsas y se utiliza en diversas aplicaciones industriales.',
+          link: '/products/cales/hydratedlimeTipoB',
         },
 
       ]

@@ -43,6 +43,7 @@ export const WasteWater = () => {
           image: 'agricola',
           title: 'Cal Viva',
           description: 'Conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.',
+          link: '/products/cales/quicklime',
         },
 
       ]

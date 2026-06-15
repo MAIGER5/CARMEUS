@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styles from './productsByGroup.module.css';
+import { useNavigate } from 'react-router-dom';
 import Data2Context from '../../dataContext/data2Context';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react'
@@ -10,6 +11,8 @@ import icon3 from '../../utils/icon/icon3.png'
 
 
 export const ProductsByGroup = () => {
+
+  const navigate = useNavigate();
 
   const data = useContext(Data2Context);
   
@@ -24,6 +27,10 @@ export const ProductsByGroup = () => {
   });
 
   const myImage = cld.image(data[0].image)
+
+  const handleClick = (pathname) => {
+    navigate(pathname);
+  }
 
   return (
     <div className={styles.contenedor}>
@@ -40,7 +47,10 @@ export const ProductsByGroup = () => {
           <div className={styles.texto}>
             <p>{data[0].description}</p>
             {/* <ButtomOther infoboton={data[0].boton}/> */}
-            <button className={styles.boton}>Conectate con Nuestros Expertos</button>
+            <button 
+              className={styles.boton} 
+              onClick={ () => handleClick('/contact') }
+            >Conectate con Nuestros Expertos</button>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const dataCalHidratadaTypeBMas = {
   Screen: [
     {
       id: 1,
-      image: 'hidratada',
+      image: 'caltipoBPlus',
       title: "CAL HIDRATADA TIPO B+",
       description: 'La Cal Hidratada B+ es un producto intermedio desarrollado para ofrecer un equilibrio entre desempeño técnico y competitividad económica. Está orientada a industrias que requieren buena calidad y eficiencia operativa, manteniendo costos más accesibles frente a productos de grado premium.'
     }

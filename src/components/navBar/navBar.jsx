@@ -169,8 +169,8 @@ export const NavBar = () => {
       <section className={styles.navbarUper}>
         <ul>
           <li><Link to={'/aboutUs'}>Acerca de Nosotros</Link></li>
-          <li><Link to={'/news'}>Actualidad</Link></li>
-          <li><Link to={'/en'}>En</Link></li>
+          {/* <li><Link to={'/news'}>Actualidad</Link></li>
+          <li><Link to={'/en'}>En</Link></li> */}
         </ul>
       </section>
       <nav>

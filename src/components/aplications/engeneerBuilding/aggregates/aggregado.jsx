@@ -36,6 +36,7 @@ export const Aggregado = () => {
           image: 'piedraCaliza',
           title: 'Piedra Caliza',
           description: 'Los áridos de construcción son un producto esencial para numerosas aplicaciones de la construcción. En el caso de los pavimentos, actúan como principal componente de soporte de cargas. Para el hormigón, los áridos calizos ofrecen mayor resistencia y mejor valor que los áridos graníticos comúnmente utilizados.',
+          link: '/products/stone/limestone',
         },
       ]
     },

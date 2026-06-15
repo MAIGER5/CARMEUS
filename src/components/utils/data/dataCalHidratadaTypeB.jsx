@@ -13,7 +13,7 @@ const dataCalHidratadaTypeB = {
   Screen: [
     {
       id: 1,
-      image: 'hidratada',
+      image: 'tipoBSolo',
       title: "CAL HIDRATADA TIPO B",
       description: 'La Cal Hidratada Tipo B es un producto versátil y funcional, orientado principalmente a los sectores de construcción, agrícola y pecuario. Gracias a sus propiedades químicas y físicas, es ampliamente utilizada en aplicaciones donde se requiere estabilización, desinfección y mejoramiento de materiales y ambientes.'
     }
@@ -25,7 +25,7 @@ const dataCalHidratadaTypeB = {
       title1: "CAL HIDRATADA TIPO B",
       title2: "BENEFICIOS",
       description: 'La Cal Hidratada, químicamente conocida como hidróxido de calcio (Ca(OH)2), o cal apagada, es un polvo blanco seco derivado de la cal viva mezclada con agua. La cal hidratada con alto contenido de calcio Carmeuse está disponible como producto seco a granel o en bolsas y se utiliza en diversas aplicaciones industriales, como la construcción, la fabricación de pinturas, morteros y mezclas. En el sector agropecuario, contribuye a procesos de desinfección, acondicionamiento y control sanitario., entre otras.',
-      cifra1: "90% Ca(OH)2 mín",
+      cifra1: "88% Ca(OH)2 mín",
       cifra2: "85% pasante malla 200",
       cifra3: "NTC 1398",
       cifra1text: 'Ton de Acero / año',

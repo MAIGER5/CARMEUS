@@ -40,12 +40,14 @@ export const ChemicalCompounds = () => {
           image: 'calciumSal2',
           title: 'Hidroxido de Calcio Tipo A',
           description: 'El Hidroxido de Calcio de Carmeuse Colombia es de alta calidad y baja en contaminantes, siendo ideal para el proceso de trefilado en frío. En el tratamiento de aguas y afluentes industriales.',
+          link: '/products/cales/hydratedlimeTipoA',
         },
         {
           id: 1,
           image: 'calciumSal',
           title: 'Carbonato de Calcio',
           description: 'El carbonato cálcico es uno de los materiales más útiles y versátiles conocidos por el ser humano y tiene muchas aplicaciones prácticas, como su uso en suelos (moqueta, baldosas de vinilo de lujo, compuesto de piedra y plástico).',
+          link: '/products/stone/carbonate',
         },
       ]
     },

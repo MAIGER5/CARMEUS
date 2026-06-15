@@ -42,12 +42,14 @@ export const Food = () => {
           image: 'food1',
           title: 'Cal Viva',
           description: 'Conocida químicamente como óxido de calcio (CaO), o comúnmente denominada cal, es un compuesto químico ampliamente utilizado que se origina a partir del carbonato de calcio.',
+          link: '/products/cales/quicklime',
         },
         {
           id: 2,
           image: 'food3',
           title: 'Cal Dolomita',
           description: 'Nuestra Cal viva Dolomítica tiene el contenido de magnesio adecuado para equilibrar y proteger sus refractarios, es fundamental para producir acero de calidad y controlar sus costes.',
+          link: '/products/cales/dolomiticlime',
         },
       ]
     },

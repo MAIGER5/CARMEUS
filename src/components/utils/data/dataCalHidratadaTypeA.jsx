@@ -13,7 +13,7 @@ const dataCalHidratadaTypeA = {
   Screen: [
     {
       id: 1,
-      image: 'hidratada',
+      image: 'caltipaA',
       title: "CAL HIDRATADA TIPO A",
       description: 'La Hidróxido de calcio Tipo A es un producto de alta pureza, desarrollado para aplicaciones industriales especializadas que requieren un desempeño superior y una granulometría fina y uniforme. Cuenta con un contenido mínimo de hidróxido de calcio del 95% y malla 325, lo que garantiza alta reactividad, excelente dispersión y eficiencia en los procesos industriales.'
     }

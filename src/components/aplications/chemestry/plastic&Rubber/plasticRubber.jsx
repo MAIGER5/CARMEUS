@@ -32,6 +32,7 @@ export const PlasticRubber = () =>{
           image: 'calciumSal',
           title: 'Carbonato de Calcio',
           description: 'Carmeuse es uno de los principales productores de carbonato cálcico molido. El carbonato cálcico (CaCO3) es un compuesto químico muy común que constituye el 4% de la corteza terrestre y es el componente principal de la piedra caliza.',
+          link: '/products/stone/carbonate',
         },
       ]
     },

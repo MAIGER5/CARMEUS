@@ -1,16 +1,23 @@
 import React, { useContext } from 'react';
 import styles from './cardProtoypeProd.module.css';
 import DataContext from '../../dataContext/dataContext';
+import {useNavigate} from 'react-router-dom';
 
 
 
 
 export const CardProtoypeProd = () => {
 
+  const navigate = useNavigate();
+
   const data = useContext(DataContext);
 
   if (!data || !Array.isArray(data) || data.length === 0) {
     return <div>No data available</div>;
+  }
+
+  const handleClick = (pathname) => {
+    navigate(pathname)
   }
 
   return (
@@ -36,7 +43,9 @@ export const CardProtoypeProd = () => {
           </div>
           <div className={styles.preguntas}>
             <p>Tiene alguna pregunta  acerca de este producto?</p>
-            <button>Pregunta a nuestros Especialistas</button>
+            <button
+              onClick={() => handleClick('/contact')}
+            >Pregunta a nuestros Especialistas</button>
           </div>
         </div>
         <div className={styles.cardConsiderations}>

@@ -13,7 +13,7 @@ const dataCalAgricola = {
   Screen: [
     {
       id: 1,
-      image: 'agricola',
+      image: 'calagricolasPrincipal',
       title: "CAL AGRICOLA",
       description: 'La Cal AGRICOLA de Carmeuse Colombia destaca por su contenido en calcio es ideal para corregir el PH del suelo y aportar calcio y magnesio a los cultivos. Este producto se obtiene mediante la calcinación de piedra caliza en hornos a altas temperaturas, lo que resulta en la formación de óxidos de calcio y magnesio.'
     }

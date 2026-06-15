@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 import styles from './aplicationPrototype.module.css';
 import Data2Context from '../../dataContext/data2Context';
 import { Cloudinary } from '@cloudinary/url-gen';
@@ -9,6 +9,12 @@ import { AdvancedImage } from '@cloudinary/react';
 
 
 export const AplicationPrototype = () => {
+
+  const navigate = useNavigate();
+
+    const handleClickNavigate = (pathname) => {
+    navigate(pathname);
+  }
 
   const info = useContext(Data2Context);
   
@@ -97,6 +103,7 @@ export const AplicationPrototype = () => {
       };
     }, []);
 
+
   return (
     <div className={styles.contenedor}>
 
@@ -106,7 +113,9 @@ export const AplicationPrototype = () => {
           <h1>{info[0].title}</h1>
           <span>{info[0].description}</span>
           <div className={styles.boton}>
-            <button>Pregunta por un Especialista</button>
+            <button
+              onClick={() => handleClickNavigate('/contact')}
+            >Pregunta por un Especialista</button>
           </div>
         </div>
         <div>
@@ -137,7 +146,9 @@ export const AplicationPrototype = () => {
             </p>          </div>
           <div>
             <span>¿Tiene alguna pregunta sobre esta aplicación? Pregunte a nuestros especialistas.  </span>
-            <button>CONTACTANOS</button>
+            <button
+              onClick={() => handleClickNavigate('/contact')}
+            >CONTACTANOS</button>
           </div>
         </div>
         {/**Termina aqui**/}
@@ -174,7 +185,7 @@ export const AplicationPrototype = () => {
         {
           info[2].data.length > 0?
           info[2].data.map((ele, index)=> (
-            <div className={styles.cardProductRelationed} key={index}>
+            <div onClick={() => handleClickNavigate(ele.link)} className={styles.cardProductRelationed} key={index}>
               <div> 
                 <AdvancedImage cldImg={cld.image(ele.image)}/>
               </div>

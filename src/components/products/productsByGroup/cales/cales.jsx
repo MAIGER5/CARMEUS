@@ -20,8 +20,8 @@ export const Cales = () => {
           link: 'products/cales/quicklime',
         },
         {
-          name: 'CAL HIDRATADA',
-          link: 'products/cales/hydratedlime',
+          name: 'CALES HIDRATADAS',
+          link: 'products/cales/calesHidratadas',
         },
         {
           name: 'CAL DOLOMITA',

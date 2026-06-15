@@ -61,6 +61,7 @@ import { DashBoardEmployee } from './components/carmeuseMas/dashBoardEmployee/da
 import { DistributionNetwork } from './components/products/distributionNetwork/distributionNetwork';
 import { AdminPayClient } from './components/carmeuseMas/adminPayClient/adminPayClient';
 import { CalHidratadaTipoBMas } from './components/products/calHidratadaTipoB +/calHidratadaTipoBMas';
+import { CalesHidratadas } from './components/products/calesHidradatas/calesHidratadas';
 
 
 
@@ -91,6 +92,7 @@ function App() {
 
         <Route path='/products/cales/quicklime' element={<CalViva/>}/>
         <Route path='/products/cales/hydratedlime' element={<CalHidratada/>}/>
+        <Route path='/products/cales/calesHidratadas' element={<CalesHidratadas/>}/>
         <Route path='/products/cales/hydratedlimeTipoA' element={<CalHidratadaTipoA/>}/>
         <Route path='/products/cales/hydratedlimeTipoB' element={<CalHidratadaTipoB/>}/>
         <Route path='/products/cales/hydratedlimeTipoB+' element={<CalHidratadaTipoBMas/>}/>

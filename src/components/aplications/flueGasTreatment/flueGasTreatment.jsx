@@ -36,9 +36,10 @@ export const FlueGasTreatment = () => {
       data:[
         {
           id: 1,
-          image: 'hidratada',
+          image: 'hidratada Tipo B',
           title: 'Cal Hidratada',
           description: 'La cal hidratada, químicamente conocida como hidróxido de calcio (Ca(OH)2), o cal apagada, es un polvo blanco seco derivado de la cal viva mezclada con agua. La cal hidratada con alto contenido de calcio de Carmeuse Colombia está disponible como producto seco a granel o en bolsas y se utiliza en diversas aplicaciones industriales.',
+          link: '/products/cales/hydratedlimeTipoB'
         },
       ]
     },
