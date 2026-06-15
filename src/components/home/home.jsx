@@ -33,7 +33,7 @@ export const Home = () => {
       </div>
       {/* <SecondRowX3/> */}
       <div className={`${styles.carrusel}`}> {/*this className is to hidden or show the component to make responsive*/}
-        <Carrusel/>
+        {/* <Carrusel/> */}
       </div>
       {/*PRODUCTOS QUE HACEN LA DIFERENCIA*/}
       <div className={`${styles.boxSombra}`}>  {/*this className is to hidden or show the component to make responsive*/}

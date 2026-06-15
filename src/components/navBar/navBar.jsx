@@ -395,9 +395,10 @@ export const NavBar = () => {
           </li>
             <ul className={!openMenuProd? styles.subMenuMobilHidden: styles.subMenuMobil}>
               <li><Link to={'/products/cales/quicklime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Viva</Link></li>
-              <li><Link to={'/products/cales/hydratedlime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Hidratada</Link></li>
               <li><Link to={'/products/cales/hydratedlimeTipoA'} onClick={()=> handleClickCloseMenuMobil()}>Cal Hidratada Tipo A</Link></li>
+              <li><Link to={'/products/cales/hydratedlimeTipoB+'} onClick={()=> handleClickCloseMenuMobil()}>Cal Hidratada Tipo B+</Link></li>
               <li><Link to={'/products/cales/hydratedlimeTipoB'} onClick={()=> handleClickCloseMenuMobil()}>Cal Hidratada Tipo B</Link></li>
+              <li><Link to={'/products/cales/dolomiticlime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Dolomita</Link></li>
               <li><Link to={'/products/cales/dolomiticlime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Dolomita</Link></li>
               <li><Link to={'/products/cales/agriculturallime'} onClick={()=> handleClickCloseMenuMobil()}>Cal Agricola</Link></li>
               <li><Link to={'/products/stone/limestone'} onClick={()=> handleClickCloseMenuMobil()}>Piedra Caliza</Link></li>
